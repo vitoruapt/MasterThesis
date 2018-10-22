@@ -1,0 +1,165 @@
+Motion Planning in Dynamical Environments - PhD Thesis
+
+->The dynamics of the robot must be taken into account, and there are
+limitations due to the sensors range and uncertainty in measurements,
+that must be reflected on the motion plan. Besides it, a motion plan
+must incorporate time restrictions, meaning the robot will require a
+certain amount of time to accomplish a task
+
+Solutions: 
+-> Configuration-Time Space: one approach is to add the time as another
+dimension to the C-space, creating the configuration-time space, or CT-
+space; this approach requires the motion of the moving objects to be
+fully known, if this is not the case, the motion of the objects must be
+predicted
+- Reif and Sharir ---> visibility graph is created in the CT -space,
+- Erdmann and Lozano-Pérez ---> discretized the time dimension into a
+sequence of slices and solved the path planning problem for each of
+these slices,
+- Fujimura and Samet ---> solving this problem with cell-decomposition.
+
+If the motion of objects is not known a priori, we have to predict the
+movement of the dynamic entity and create a plan that will avoid a
+possible future collision
+- Miura and Shirai ---> develop a method that take into account the
+uncertainties related to the path velocity and observations of the
+dynamic object, resulting in improved behavior of the robot,
+- Zhu ---> HMM (Hidden Markov Model) is used to model and predict the
+motion of dynamic objects in order to generate a collision-free local
+motion plan for the robot.
+
+Decomposition-based Motion Planning: planning a path that would avoid
+static objects using the previously mentioned techniques and then
+changing velocities along this path to avoid dynamic objects
+----> implemented by Kant and Zucker and improved by Fraichard and
+Laugier (where not only one path is computed, but several adjacent
+paths, so the algorithm would provide a solution even if a dynamic
+object stopped over a precomputed path).
+
+trajectory planning, where the motion of the robot along adjacent
+paths is computed in order to avoid dynamic objects and comply with
+kinematic constraints; different classification of motion planning
+algorithms:
+---global motion planning: here, all the information about the
+environment is assumed to be known, and the whole planning is done
+offline (takes place before the maneuvers start). The advantages of
+this approach is that an optimal and complete path can be computed, but
+it is unsuited for dynamic collision avoidance, as seen before, since
+information about the environment can change and then a re-planning is
+required.
+---local motion planning: the objective is to provide a solution as
+fast as possible, with only a partial information about the robot’s
+surroundings. The algorithms are usually reactive, work online and are not computer intensive, but they provide suboptimal solutions and may
+result in the robot being stuck in local minima.
+
+Velocity Obstacles (Fiorini and Shiller): algorithm that uses velocity
+information instead of position and time to compute possible collisions
+and generate motion commands to an agent
+-----------------------------------------------------------------------
+
+---> Paper 00583188 - Fast Path Planning Available for Moving Obstacle Avoidance by Use of Laplace Potential
+
+Theory and experiment of a fast path planning available for moving
+obstacle avoidance for an autonomous mobile robot by use of Laplace
+potential. The experimental systems are composed of a position sensing
+camera, a mobile robot and a computer for processing the position
+signal and for controlling the velocity vector of the robot ---> 3
+examples:
+-the avoidance from a standing obstacle 
+-the avoidance from a moving obstacle in parallel lines-bounded space
+-the avoidance from one moving obstacle and another standing obstacle.
+
+---> Paper 04709234 - Real-time Detection of Dynamic Obstacle Using Laser Radar
+
+An approach to detecting dynamic obstacles using a 2D laser radar in
+real-time is proposed in this paper. After filtering out noisy data,
+sensor readings are mapped into the world coordinate system to build
+grid map and three consecutive grid maps are maintained.
+By comparing the state of the same grid cell in the three consecutive
+grid maps and considering the state of the eight-neighbor cell, static
+obstacles are identified. Dynamic obstacles then are identified by
+comparing the current grid map to the already identified static
+obstacles. The experimental results have demonstrated that mobile
+robots can effectively identify dynamic obstacles in unknown
+environments with good real-time performance and high reliability.
+
+---> Paper 05358824 - Using Particle Swarm Optimization for Robot Path Planning in Dynamic Environments with Moving Obstacles and Target
+
+Robot path planning in known and dynamic environments is feasible for
+mobile robots and its main purpose is to find a collision free path for
+a robot from an initial position to a goal position in an environment
+with obstacles. In this paper the goal position is assumed to be moving
+over the time. Also our environment includes moving obstacles as well
+as static ones. We present a new approach for path planning mobile
+robots using Particle Swarm Optimization in order to minimize total
+path planning time while avoiding the local optimums. Simulation is
+used to validate and illustrate the approach.
+
+---> Paper 05410171 - Moving Obstacle Avoidance for a Mobile Robot
+
+This paper presents the near time-optimal motion planning method for
+moving obstacle avoidance. We decomposed the robot motion into three
+phases: approach, contact, and detachment phase. The constraints of
+each phase for a feasible collision-free robot motion were described by
+three necessary and sufficient conditions and one sufficient condition.
+We formulated the near time-optimal motion planning as optimization
+problem with inequality constraints. Simulations present the efficiency
+of the results by comparing them with two widely used approaches:
+reactive and path-velocity decomposed approach.
+
+
+---> Paper 05420705 - Reactive Deformation of Path for Navigation Among Dynamic Obstacles
+
+This paper presents experimental results of a reactive deforming path
+algorithm, based on elastic strips, in a 2D / 3D simulator. This
+algorithm generates motion plans that respect global constraints while
+making sure that the robot avoids collisions with all stationary,
+moving and unexpected obstacles. The problem is addressed by
+integrating a global planning algorithm with a local reactive approach.
+The planner performs path planning in two stages: (i) Global planning
+of the path is done using a heuristic search algorithm such as A*. (ii)
+In a dynamic environment, with several obstacles moving around in an
+unpredicted fashion, the planner deforms the path reactively by
+subjecting it to artificial forces. For making sure that the robot is
+always on a collision free path, the plan is incrementally updated with
+changes in the environment. The plan representation uses deformable
+links connecting the robot’s configurations along the path, stretching
+or retracting the path as required to avoid collisions.
+
+---> Paper 06393223 - A Predictive Collision-Free Fuzzy Algorithm for Mobile Robots to Avoid Obstacles Moving at Variable Speeds
+
+In this paper, a new algorithm for mobile robot navigation is presented. Some previous works have been proposed to solve this problem which only assumes the obstacles moving at constant speeds. However,
+differently from the unrealistic assumption, the obstacles can move at variable speed in the real world. The goal of the proposed algorithm is assisting mobile robots smoothly avoid moving obstacles which continuously change their speed by predicting collision. The mechanism is based on fuzzy logic system of two inputs which are the angle of obstacle relative to the direction of robot and the distance between obstacle and robot. The output will be adjustment angle of the heading of robot to avoid possible collisions with obstacles.
+
+---> Paper 06618184 - Moving Obstacle Avoidance for the Mobile Robot using the Probabilistic Inference
+
+In this paper, we present a motion planning algorithm using the probabilistic inference for the mobile robot.
+This study aim is for the mobile robot to avoid the moving obstacle and to reach the target position. The proposal algorithm consists of three steps. In the first step, robot system predicts the trajectory of the moving obstacle. Prediction is performed as what the moving obstacle follows to tangential direction by the proposal algorithm. In the second step, robot system calculates the prediction region of the moving obstacle. Mathematical model that is based on the probability density function of two-dimensional normal distribution is used in prediction region. In the third step, robot system plans the mobile robot motion. The potential field method is used in the motion planning for the mobile robot. The proposal algorithm was investigated by simulations in order to be effective. By simulations, we tested whether the mobile robot can avoid the moving obstacle and reach the target position. The mobile robot can avoid the moving obstacle was confirmed by simulation results.
+
+---> Paper 06677324 - Moving Obstacle Avoidance for Mobile Robot Moving on Designated Path
+
+In reality, it is necessary to define the accessible area of the robot in an environment which may consist of door entrance, descending stairways and others.‫ٻ In this paper, a method to closely follow the global designated path by setting manually. In this method, the robot moves in a range of velocities and thus being able to avoid obstacle staying closely to the designated path. The results of the experiments verify that this method is able to let the robot move closely to the designated path while avoiding moving obstacle.
+
+---> Paper 07458179 - Path Planning and Tracking for Vehicle Collision Avoidance Based on Model Predictive Control With Multiconstraints
+
+A path planning and tracking framework is presented to maintain a collision-free path for autonomous vehicles. For path-planning approaches, a 3-D virtual dangerous potential field is constructed as a superposition of trigonometric functions of the road and the exponential function of obstacles, which can generate a desired trajectory for collision avoidance when a vehicle collision with obstacles is likely to happen. Next, to track the planned trajectory for collision avoidance maneuvers, the path-tracking controller formulated the tracking task as a multiconstrained model predictive control (MMPC) problem and calculated the front steering angle to prevent the vehicle from colliding with a moving obstacle vehicle. Simulink and CarSim simulations are conducted in the case where moving obstacles exist. The simulation results show that the proposed path-planning approach is effective for many driving scenarios, and the MMPC-based path-tracking controller provides dynamic tracking performance and maintains good maneuverability.
+
+---> Paper 08016024 - A Novel RRT*-Based Algorithm for Motion Planning in Dynamic Environments
+
+Sampling-based motion planning has become a powerful framework for solving complex robotic motion-planning tasks. Despite the introduction of a multitude of algorithms, most of these deal with the static case involving non-moving obstacles. In this work, we are extending our memory efficient RRT*FN algorithm to dynamic scenarios. Specifically, we retain the useful parts of the tree (the data structure storing the
+motion plan information) after a dynamic obstacle invalidates the solution path. We then employ two greedy heuristics to repair the solution instead of running the whole motion planning process from scratch. We call this new algorithm, RRT*FN-Dynamic (RRT*FND). To compare our method to the state-of-the-art motion planners, RRT* and RRT*FN, we conducted an extensive set of benchmark experiments in dynamic environments using two robot models: a non-holonomic mobile robot and an industrial manipulator. The results of these experiments show that RRT*FND finds the solution path in shorter time in most of the cases and verifies the efficacy of it in dynamic settings.
+
+
+---> Paper 08243459 - Research on Mobile Robot Path Planning in Dynamic
+Environment
+
+The traditional artificial potential field method is suitable for stationary environment. In practical application, mobile robot is in a dynamic environment where the target and the obstacles are moving. For the dynamic environment, the relative position and velocity of the moving target with respect to the mobile robot and the mobile robot with respect to the moving obstacles are taken into account in the potential field function. The traditional potential field function is modified with the size of the mobile robot. In the case of a variety of
+environments with stationary or moving obstacles, the improved artificial potential field method is studied. Finally, the simulation results based on MATLAB platform validates the effectiveness of the algorithm.
+
+---> Paper 08287358 - Moving Obstacle Avoidance Control by Fuzzy Potential Method and Model Predictive Control
+
+In this paper, we propose an obstacle avoidance method considering both the shape and dynamics of robot and the motion of obstacles, using model predictive control (MPC) and fuzzy potential method (FPM). FPM can deal with the shape of robot, but it cannot treat the dynamics of robot. On the other hand, MPC can deal with constraints including the dynamics of both robot and obstacles. The predicted movable range of obstacles is used as a prohibited region for MPC. Thus, combining FPM and MPC, the proposed method achieves moving obstacle avoidance. The effectiveness of the proposed method is verified through numerical simulations.
+
+
+
+

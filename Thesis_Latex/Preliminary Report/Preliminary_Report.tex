@@ -1,0 +1,81 @@
+\documentclass[11pt]{IEEEtran}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{stfloats}
+\usepackage{midfloat}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{lipsum}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+\usepackage{bbm}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Def.}
+\newtheorem{propen}[thm]{Prop.}
+\newtheorem{cor}[thm]{Cor.}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\title{ATLASCAR2 - Path Planning and Tracking with Moving Obstacle Avoidance based on MPC}
+\author{\IEEEauthorblockN{Alberto Franco}\\
+\IEEEauthorblockA{Department of Information Engineering\\
+Università degli Studi di Padova\\ \href{mailto:alberto.franco.3@studenti.unipd.it}{alberto.franco.3@studenti.unipd.it}}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This preliminary report presents the proposal of my master thesis. The aim of this project is to study and implement a path planning and tracking framework in order to prevent ATLASCAR2 collision with a moving obstacle vehicle. The proposed algorithm, based on the Model Predictive Control paradigm, solves an optimal problem formulated in terms of cost minimization under constraints.
+\end{abstract}
+\vspace{-1em}
+\section{Introduction}
+In robotic research, the problem of navigation is among the most important. Basically all autonomous mobile robots need some kind of navigation to fulfill the mobile term.
+We understand navigation as a process of planning a path of a mobile robot from its current position to a desired goal location, following the planned path, and avoiding any discovered obstacles along the way. The desired paths have to
+fulfill several conditions to ensure safety and feasibility of the navigation. Moreover, the paths can be also compared in terms of desirability for example short or smooth paths are usually more desirable than long and curved ones. Such paths should therefore be preferred in the navigation process. Beyond the path planning, the navigation problem also involves reacting to changes of the environment model. Robots are required to move towards target in a short time and avoid either static or dynamic obstacles observed by their sensors, which involves efficient path planning and valid obstacle avoidance. Though these two topics have been well researched, currently, there is no ideal solution to handling the navigation problem within cluttered dynamic environments.
+
+\section{Context of the Problem}
+Dynamic environments pose several added difficulties to the motion planning problem. The dynamics of the ATLASCAR2 must be taken into account, and there are limitations due to the sensors range and uncertainty in measurements, that must be reflected on the motion plan. Besides it, a motion plan must incorporate time restrictions, meaning the vehicle will require a certain amount of time to accomplish a task. For example, when crossing a road, the ATLASCAR2 must do it fast enough to avoid incoming cars. 
+   
+\section{Proposed Solution}
+The idea is to develop a path-planning approach based on the
+theory of virtual potential field and a path-tracking framework using multiconstrained MPC (MMPC) for autonomous vehicles, which seeks to minimize the incidence for collision on roads. By receiving information about vehicle position, road parameters, and obstacles surrounding the vehicle, this framework provides a vehicle trajectory for a collision avoidance system based on a 3-D virtual dangerous potential field, which seeks to minimize risk to the vehicle through evasive maneuvering. A MMPC-based path-tracking system, considering the geometric constraints of road and dynamic constraints of the vehicle, calculates the steering wheel angle to track the planned trajectory and to avoid obstacles.
+
+\section{Phases and Objectives}
+The main phases/objectives include the following:
+\begin{itemize}
+	\item Create the state of the art for this problem and associated techniques, and get acquainted with the existing setup and previous related works;
+	\item Introduce the problem and overall framework of the collision avoidance system;
+	\item Implement the path-planning algorithm that determines a collision-free trajectory based on the 3-D dangerous potential field;
+	\item Develop the augmented vehicle dynamic model used for path tracking;
+	\item Design and implement of multiconstrained Model Predictive Control
+	\item Simulations of path-planning and path-tracking with ATLASCAR2 to verify the effectiveness of the proposed framework;
+	\item Write the thesis and other documentation.
+\end{itemize}
+
+
+\begin{thebibliography}{00}
+	\bibitem{MMPC}J. Ji, A. Khajepour, W. W. Melek and Y. Huang, "Path Planning and Tracking for Vehicle Collision Avoidance Based on Model Predictive Control With Multiconstraints," in IEEE Transactions on Vehicular Technology, vol. 66, no. 2, pp. 952-964, Feb. 2017.
+	
+	\bibitem{onlineMPC}M. Werling and D. Liccardo, "Automatic collision avoidance using model-predictive online optimization," 2012 IEEE 51st IEEE Conference on Decision and Control (CDC), Maui, HI, 2012, pp. 6309-6314.
+	
+	\bibitem{swarms}Wei Xi and J. S. Baras, "MPC based motion control of car-like vehicle swarms," 2007 Mediterranean Conference on Control \& Automation, Athens, 2007, pp. 1-6.
+	
+	\bibitem{autoMPC}J. V. Frasch et al., "An auto-generated nonlinear MPC algorithm for real-time obstacle avoidance of ground vehicles," 2013 European Control Conference (ECC), Zurich, 2013, pp. 4136-4141.
+	
+	\bibitem{safety}T. Xu and H. Yuan, "Autonomous vehicle active safety system based on path planning and predictive control," 2016 35th Chinese Control Conference (CCC), Chengdu, 2016, pp. 8889-8895.
+	
+	\bibitem{matsumoto}N. Wada and T. Matsumoto, "Driver assistance for collision avoidance by constrained MPC," 2017 56th Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Kanazawa, 2017, pp. 90-93.
+	
+	\bibitem{fuzzyMPC}Y. Nishio, K. Nonaka and K. Sekiguchi, "Moving obstacle avoidance control by fuzzy potential method and model predictive control," 2017 11th Asian Control Conference (ASCC), Gold Coast, QLD, 2017, pp. 1298-1303.
+	
+	\bibitem{NONMPC}Yu, S., Li, X., Chen, H. and Allgöwer, F. (2015), "Nonlinear model predictive control for path following problems". Int. J. Robust Nonlinear Control, 25: 1168–1182. 
+\end{thebibliography}
+
+\end{document}
