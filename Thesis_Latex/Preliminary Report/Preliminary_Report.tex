@@ -44,18 +44,18 @@ fulfill several conditions to ensure safety and feasibility of the navigation. M
 Dynamic environments pose several added difficulties to the motion planning problem. The dynamics of the ATLASCAR2 must be taken into account, and there are limitations due to the sensors range and uncertainty in measurements, that must be reflected on the motion plan. Besides it, a motion plan must incorporate time restrictions, meaning the vehicle will require a certain amount of time to accomplish a task. For example, when crossing a road, the ATLASCAR2 must do it fast enough to avoid incoming cars. 
    
 \section{Proposed Solution}
-The idea is to develop a path-planning approach based on the
-theory of virtual potential field and a path-tracking framework using multiconstrained MPC (MMPC) for autonomous vehicles, which seeks to minimize the incidence for collision on roads. By receiving information about vehicle position, road parameters, and obstacles surrounding the vehicle, this framework provides a vehicle trajectory for a collision avoidance system based on a 3-D virtual dangerous potential field, which seeks to minimize risk to the vehicle through evasive maneuvering. A MMPC-based path-tracking system, considering the geometric constraints of road and dynamic constraints of the vehicle, calculates the steering wheel angle to track the planned trajectory and to avoid obstacles.
+The idea is to develop a path planning approach based on the
+theory of virtual potential field and a path tracking framework using multiconstrained MPC (MMPC) for autonomous vehicles, which seeks to minimize the incidence for collision on roads. By receiving information about vehicle position, road parameters, and obstacles surrounding the vehicle, this framework provides a vehicle trajectory for a collision avoidance system based on a 3D virtual dangerous potential field, which seeks to minimize risk to the vehicle through evasive maneuvering. A MMPC-based path tracking system, considering the geometric constraints of road and dynamic constraints of the vehicle, calculates the steering wheel angle to track the planned trajectory and to avoid obstacles.
 
 \section{Phases and Objectives}
-The main phases/objectives include the following:
+The main phases/objectives are the following:
 \begin{itemize}
 	\item Create the state of the art for this problem and associated techniques, and get acquainted with the existing setup and previous related works;
-	\item Introduce the problem and overall framework of the collision avoidance system;
-	\item Implement the path-planning algorithm that determines a collision-free trajectory based on the 3-D dangerous potential field;
+	\item Introduce the problem in the context of ATLASCAR2 and overall framework of the collision avoidance system;
+	\item Implement the path planning algorithm that determines a collision-free trajectory based on the 3D dangerous potential field;
 	\item Develop the augmented vehicle dynamic model used for path tracking;
 	\item Design and implement of multiconstrained Model Predictive Control
-	\item Simulations of path-planning and path-tracking with ATLASCAR2 to verify the effectiveness of the proposed framework;
+	\item Simulations of path planning and path tracking with ATLASCAR2 to verify the effectiveness of the proposed framework;
 	\item Write the thesis and other documentation.
 \end{itemize}
 
