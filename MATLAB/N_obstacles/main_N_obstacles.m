@@ -197,7 +197,6 @@ figure(f)
 % end
 plot(ympc(:,1),ympc(:,2),'-b');
 
-
 %% Animation
 % writerObj = VideoWriter('animation.avi'); % Name it.
 % writerObj.FrameRate = 1/Ts; % How many frames per second.
@@ -223,7 +222,6 @@ for k = 1:length(saveSlope)
     
 %     frame = getframe(gcf);
 %     writeVideo(writerObj, frame);
-    
     
     pause(80/car.V/length(T))
     delete(p)
