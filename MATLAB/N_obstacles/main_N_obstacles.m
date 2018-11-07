@@ -186,7 +186,7 @@ end
 mpcverbosity(status);
 
 %% Results
-% Plot the trajectory of the ATLASCAR2 (black line) and the third mixed
+% Plot the trajectory of the ATLASCAR2 (blue line) and the third mixed
 % I/O constraints (dashed green lines) during the obstacle avoidance
 % maneuver (only for the first obstacle)
 figure(f)
@@ -195,7 +195,7 @@ figure(f)
 %     Y = saveSlope(k)*X + saveIntercept(k);
 %     line(X,Y,'LineStyle','--','Color','g' )  
 % end
-plot(ympc(:,1),ympc(:,2),'-k');
+plot(ympc(:,1),ympc(:,2),'-b');
 
 %% Animation
 for k = 1:length(saveSlope) 
