@@ -197,7 +197,12 @@ figure(f)
 % end
 plot(ympc(:,1),ympc(:,2),'-b');
 
+
 %% Animation
+writerObj = VideoWriter('animation.avi'); % Name it.
+writerObj.FrameRate = 1/Ts; % How many frames per second.
+open(writerObj);
+
 for k = 1:length(saveSlope) 
     hold on 
     grid on
@@ -215,6 +220,12 @@ for k = 1:length(saveSlope)
         safe(i).EdgeColor='[1 0 0]';
         safe(i).LineStyle='--';
     end
+    
+    %if mod(i,4)==0, % Uncomment to take 1 out of every 4 frames.
+        frame = getframe(gcf); % 'gcf' can handle if you zoom in to take a movie.
+        writeVideo(writerObj, frame);
+    %end
+    
     pause(80/car.V/length(T))
     delete(p)
     for i=1:N
@@ -222,5 +233,6 @@ for k = 1:length(saveSlope)
         delete(safe(i))
     end
 end
-
-
+hold off
+close(writerObj); % Saves the movie.
+close(f);
