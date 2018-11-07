@@ -191,9 +191,9 @@ mpcverbosity(status);
 % axis([0 ympc(end,1) -road.laneWidth*road.lanes/2 road.laneWidth*road.lanes/2]) % reset axis
 
 %% Animation
-writerObj = VideoWriter('animation.avi'); % Name it.
-writerObj.FrameRate = 1/Ts; % How many frames per second.
-open(writerObj);
+% writerObj = VideoWriter('animation.avi');
+% writerObj.FrameRate = 1/Ts; 
+% open(writerObj);
 
 for k = 1:length(saveSlope) 
     hold on 
@@ -211,15 +211,15 @@ for k = 1:length(saveSlope)
     safe.EdgeColor='[1 0 0]';
     safe.LineStyle='--';
 
-    frame = getframe(gcf); % 'gcf' can handle if you zoom in to take a movie.
-    writeVideo(writerObj, frame);
+%     frame = getframe(gcf); 
+%     writeVideo(writerObj, frame);
     
     pause(80/car.V/length(T))
     delete(p)
     delete(o)
     delete(safe)
 end
-hold off
-close(writerObj); % Saves the movie.
+% hold off
+% close(writerObj);
 close(f);
 
