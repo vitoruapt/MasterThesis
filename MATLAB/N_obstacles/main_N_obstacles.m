@@ -38,7 +38,7 @@ for i=1:N
     obstacle(i).length = 5;    % The obstacles in this example are moving cars 
     obstacle(i).width = 2;     % with the same size and shape of the ATLASCAR2
 
-    obstacle(i).X = 50*i;      % Initial positions of the N obstacles   
+    obstacle(i).X = 60*i;      % Initial positions of the N obstacles   
     obstacle(i).Y = 0;         % (in this example the obstacles are DYNAMIC)    
 
     obstacle(i).safeDistanceX = obstacle(i).length;    % Length equal to two car lengths
@@ -148,7 +148,7 @@ for k = 1:length(T)
     
     % Create Obstacle Dynamics
     for i=1:N 
-        obstacle(i).X(k+1) = obstacle(i).X(k)-0.15;
+        obstacle(i).X(k+1) = obstacle(i).X(k)+0.15*i;
         % Safe zones for the plot
         flSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
         frSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;

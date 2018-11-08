@@ -8,25 +8,25 @@ carY = x(2);
 for i =1:N
     if detection(:,m)
     slope(i) = ( (obstacle(i).rlSafeY - carY)/(obstacle(i).rlSafeX - carX) );
-    % If ego car is to the left of the obstacle
+    % If the ATLASCAR2 is to the left of the obstacle
     if (carX<=obstacle(i).rlSafeX)
-        % if the ego car is already in the adjacent lane, use the safety
+        % if the ATLASCAR2 is already in the adjacent lane, use the safety
         % zone as the constraint.
         if (carY>obstacle(i).rlSafeY)
             constraintSlope(i) = 0;
             constraintIntercept(i) = obstacle(i).rlSafeY;
         else
-            % The ego car must be above the line formed from the ego car to
+            % The ATLASCAR2 must be above the line formed from the ATLASCAR2 to
             % safe zone corner for left passing.
             constraintSlope(i) = tan(atan2(slope(i),1));
             constraintIntercept(i) = obstacle(i).rlSafeY - constraintSlope(i)*obstacle(i).rlSafeX;
         end
-    % If the ego car is parallel to the obstacle, use the safety zone as
+    % If the ATLASCAR2 is parallel to the obstacle, use the safety zone as
     % the constraint.
     elseif  ((carX>obstacle(i).rlSafeX) && (carX<=obstacle(i).flX))
         constraintSlope(i) = 0;
         constraintIntercept(i) = obstacle(i).rlSafeY; 
-    % If the ego car has passed the obstacle, use the inactive constraint
+    % If the ATLASCAR2 has passed the obstacle, use the inactive constraint
     % to go back to the center lane.
     else 
         constraintSlope(i) = 0;
