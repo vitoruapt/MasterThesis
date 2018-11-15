@@ -32,7 +32,7 @@ dsys.OutputName = dsys.StateName;        % Output y
 road.lanes = 3;            % The road is straight and has 3 lanes.
 road.laneWidth = 4;        % Each lane is |4| meters wide.
 
-N = randi(6,1,1);          % Random number of obstacles (1,2,3,4,5,6)
+N =randi(6,1,1);          % Random number of obstacles (1,2,3,4,5,6)
 road.length = 150;         % length of the street
 car.minimum_dist=40;       % minimum distance between 2 cars
   
@@ -153,7 +153,7 @@ for k = 1:length(T)
     
     % Create Obstacle Dynamics
     for i=1:N 
-        obstacle(i).X(k+1) = obstacle(i).X(k)-0.15*i;
+        obstacle(i).X(k+1) = obstacle(i).X(k)-0.05*i;
         % Safe zones for the plot
         flSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
         frSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
