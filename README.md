@@ -27,12 +27,8 @@ During these weeks I started to implement the basic idea of ​​my project in 
 In this week I continued to work in MATLAB adding some fundamental constraints in the MPC: in the Mixed I/O Constraints I specified an upper and a lower bound for the street limits, and also I have added a "fake" constraint if though no obstacle is detected at the nominal operating condition because it's not possible to change the dimensions of the constraint matrices at run time. In order to complicate the simulation with N obstacles I have made changes to the CustomConstraints so that the ATLASCAR2 can avoid the obstacle by overtaking it to the right: first with only one moving car and later I generalized the algorithm for N random (with respect to the number and the position) obstacles. In the animation, ATLASCAR2 can avoid obstacles by overcoming them on the right and on the left, deciding which is the best way to go.
 
 ---------------------------------------------------------------------------------------------------
-### Week 6 - (13th November 2018 / 19th November 2018)
-
-
----------------------------------------------------------------------------------------------------
-### Week 7 - (20th November 2018 / 26th November 2018)
-
+### Week 6&7 - (13th November 2018 / 26th November 2018)
+In these two weeks I tried to add curves by building a circular path. I found problems in tracking the reference. Probably the model I am using is not suitable for this purpose. So I started making a Simulink scheme to follow a curved line. Also in this case I have adopted an Adaptive MPC but the model considered is different (taking into account both the longitudinal and the lateral velocity).
 
 ---------------------------------------------------------------------------------------------------
 ### Week 8 - (27th November 2018 / 3rd December 2018)
