@@ -17,24 +17,25 @@ road.laneWidth = 4;                     % Each lane is |4| meters wide.
 road.width = road.laneWidth*road.lanes; % Width of the street 12 meters
 road.centre_x0 = 0;                   
 road.centre_y0 = 0;
-road.external_rx = 60;    
-road.external_ry = 60;
+road.external_rx = 300;    
+road.external_ry = 110;
 road.internal_rx = road.external_rx - road.width;
 road.internal_ry = road.external_ry - road.width;
 road.centre_rx=road.external_rx-(road.width)/2;
 road.centre_ry=road.external_ry-(road.width)/2;
 
+Ts = 0.02; 
 car.length = 5;                 % Length of the ATLASCAR2
 car.width = 2;                  % Witdh of the ATLASCAR2
 car.V = 20;                     % Constant speed of the ATLASCAR2
-car.angle_init = pi/4;                                
-car.x_init = road.centre_x0+road.centre_rx*cos(car.angle_init);
-car.y_init = road.centre_y0+road.centre_ry*sin(car.angle_init);
+car.angle_init = pi/5;                                
+car.x_init = road.centre_x0+road.centre_rx*cos(car.angle_init*Ts/35);
+car.y_init = road.centre_y0+road.centre_ry*sin(car.angle_init*Ts/35);
 car.x0 = [car.x_init; car.y_init; 0; car.V];            % Initial conditions
 init_slope = -(road.centre_rx*cos(car.angle_init)*(road.centre_ry^2))/(road.centre_ry*sin(car.angle_init)*(road.centre_rx^2));
 init_delta =  atan2(init_slope,1);
 car.u0 = [0; init_delta];
-Ts = 0.02;                      % Sampling time
+                     
 
 % Obtain a linear plant model at the nominal operating point and convert it
 % into a discrete-time model to be used by the model predictive controller.
@@ -79,16 +80,6 @@ obstacle = obstacleGenerateObstacleGeometryInfo(obstacle, N);
 
 f = obstaclePlotInitialCondition(car, obstacle, road, N);
 
-%% Coordinates  
-constraint_x_iniz_int = road.centre_x0 + road.internal_rx*cos(car.angle_init);
-constraint_y_iniz_int = road.centre_y0 + road.internal_ry*sin(car.angle_init);
-
-constraint_x_iniz_ext = road.centre_x0 + road.external_rx*cos(car.angle_init);
-constraint_y_iniz_ext = road.centre_y0 + road.external_ry*sin(car.angle_init);
-
-constraint_x_iniz = [constraint_x_iniz_int, constraint_x_iniz_ext];
-constraint_y_iniz = [constraint_y_iniz_int, constraint_y_iniz_ext];
-
 %% MPC design
  
 % MPC object: sampling time Ts, Prediction Horizon 10, Control Horizon 2 (Default)
@@ -127,6 +118,17 @@ mpcobj.Model.Nominal = struct('U',U,'Y',Y,'X',X,'DX',DX);
 % variable vector. You can update the constraint matrices E, F, and G when 
 % the controller is running.
 % The first constraint is an upper bound on y
+
+t = linspace(1,360,361) ;
+constraint_x_iniz_int = -(road.centre_x0 + road.internal_rx*cos(t));
+constraint_y_iniz_int = -(road.centre_y0 + road.internal_ry*sin(t));
+
+constraint_x_iniz_ext = road.centre_x0 + road.external_rx*cos(t);
+constraint_y_iniz_ext = road.centre_y0 + road.external_ry*sin(t);
+
+constraint_x_iniz = [constraint_x_iniz_int, constraint_x_iniz_ext];
+constraint_y_iniz = [constraint_y_iniz_int, constraint_y_iniz_ext];
+
 E1 = [0 0];
 F1 = [0 1 0 0];
 G1 = [constraint_y_iniz(2)];
@@ -154,8 +156,8 @@ G5 = [-constraint_x_iniz(1)];
  
  % Specify the mixed input/output constraints in the controller using the
 % |setconstraint| function.
-%setconstraint(mpcobj,[E1;E2;E3;E4;E5;E6],[F1;F2;F3;F4;F5;F6],[G1;G2;G3;G4;G5;G6]);
-
+    setconstraint(mpcobj,[E1;E2;E3;E4;E5;E6],[F1;F2;F3;F4;F5;F6],[G1;G2;G3;G4;G5;G6]);
+    
 %% Simulation
 
 x = car.x0;                        % State initialization
@@ -168,16 +170,21 @@ T = 0:Ts:10;                        % Simulation time
 saveSlope = zeros(length(T),N);         
 saveIntercept = zeros(length(T),N);
 ympc = zeros(length(T),size(Cd,1));
-umpc = zeros(length(T),size(Bd,2));
+umpc = zeros(length(T),size(Bd,2));  
 
-
-
+car.velocity_angle(1)=pi/6;
 % Run the simulation
 for k = 1:length(T) 
     % Obtain new plant model and output measurements for interval |k|.
-    car.velocity_angle(k)=-k*pi/350;
-    ref(k,:) = [road.centre_x0+road.centre_rx*cos(car.angle_init-car.velocity_angle(1)+car.velocity_angle(k)) road.centre_y0+road.centre_ry*sin(car.angle_init-car.velocity_angle(1)+car.velocity_angle(k)) 0 car.V];
-    
+    ref(k,:) = [road.centre_x0+road.centre_rx*cos(car.velocity_angle(k)*Ts/35) road.centre_y0+road.centre_ry*sin(car.velocity_angle(k)*Ts/35) 0 car.V];
+    h=(road.centre_rx-road.centre_ry)/(road.centre_rx+road.centre_ry); 
+    h=3.0*h; 
+    l=pi*(road.centre_rx+road.centre_ry)*(1.0+(h/(10.0+sqrt(4.0-h))));
+    xx(k) = road.centre_x0+road.centre_rx*sin(car.velocity_angle(k));
+    yy(k) = road.centre_y0+road.centre_ry*cos(car.velocity_angle(k));
+    da(k) = l/sqrt((xx(k).*xx(k))+(yy(k).*yy(k)));
+    car.velocity_angle(k+1)=car.velocity_angle(k)-da(k);
+   
     [Ad,Bd,Cd,Dd,U,Y,X,DX] = ATLASCAR2ModelDT(Ts,x,u);
     measurements = Cd * x + Dd * u;
     ympc(k,:) = measurements';
@@ -205,8 +212,8 @@ for k = 1:length(T)
     % Determine whether the vehicle sees the obstacle, and update the mixed
     % I/O constraints when obstacle is detected.
     [detection(k,:) m]= obstacleDetect(x,obstacle,road,N,car);
-    %[E,F,G,saveSlope(k,:),constraint_x(k,:), constraint_y(k,:)] = ...
-    %obstacleComputeCustomConstraint(x,detection(k,:),obstacle,road.laneWidth,road.lanes,N,m,road,car); 
+    [E,F,G,saveSlope(k,:),constraint_x(k,:), constraint_y(k,:)] = ...
+    obstacleComputeCustomConstraint(x,detection(k,:),obstacle,road.laneWidth,road.lanes,N,m,road,car); 
     
   % Prepare new plant model and nominal conditions for adaptive MPC.
     newPlant = ss(Ad,Bd,Cd,Dd,'Ts',Ts);
@@ -254,14 +261,14 @@ for k = 1:length(T)
    % ATLASCAR2 green rectangle
    refp = patch([ref(k,1)-car.length/2 ref(k,1)-car.length/2 ref(k,1)+car.length/2 ref(k,1)+car.length/2],...
         [ref(k,2)-car.width/2, ref(k,2)+car.width/2, ref(k,2)+car.width/2, ref(k,2)-car.width/2], [0 1 0]);
-     slope(k)=-(road.centre_rx*cos(car.angle_init+car.velocity_angle(k))*(road.centre_ry^2))/(road.centre_ry*sin(car.angle_init+car.velocity_angle(k))*(road.centre_rx^2));
+     slope(k)=-(road.centre_rx*cos(car.velocity_angle(k)*Ts/35)*(road.centre_ry^2))/(road.centre_ry*sin(car.velocity_angle(k)*Ts/35)*(road.centre_rx^2));
      angle_turn(k) = atan(slope(k));
      rotate(refp, [0 0 1], rad2deg(angle_turn(k)), [ref(k,1) ref(k,2) 0]);
    %line([constraint_x(k,1) constraint_x(k,2)],[constraint_y(k,1) constraint_y(k,2)]);
    
      p = patch([ympc(k,1)-car.length/2 ympc(k,1)-car.length/2 ympc(k,1)+car.length/2 ympc(k,1)+car.length/2],...
         [ympc(k,2)-car.width/2, ympc(k,2)+car.width/2, ympc(k,2)+car.width/2, ympc(k,2)-car.width/2], [0 1 0]);
-     slope(k)=-(road.centre_rx*cos(car.angle_init+car.velocity_angle(k))*(road.centre_ry^2))/(road.centre_ry*sin(car.angle_init+car.velocity_angle(k))*(road.centre_rx^2));
+     slope(k)=-(road.centre_rx*cos(car.velocity_angle(k)*Ts/30)*(road.centre_ry^2))/(road.centre_ry*sin(car.velocity_angle(k)*Ts/30)*(road.centre_rx^2));
      angle_turn(k) = atan(slope(k));
      rotate(p, [0 0 1], rad2deg(angle_turn(k)), [ympc(k,1) ympc(k,2) 0]);
     % Obstacles with their safe zones

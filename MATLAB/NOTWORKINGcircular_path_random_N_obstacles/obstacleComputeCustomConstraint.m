@@ -3,20 +3,23 @@ function [E,F,G,constraintSlope,constraint_x, constraint_y] = obstacleComputeCus
 
 carX = x(1);
 carY = x(2);
+Ts=0.02;
 slopeangle = -(road.centre_rx*cos(car.angle_init+car.velocity_angle(end))*(road.centre_ry^2))/(road.centre_ry*sin(car.angle_init+car.velocity_angle(end))*(road.centre_rx^2));
 delta =  atan2(slopeangle,1);
 
-constraint_x_int = road.centre_x0 + road.internal_rx*cos(car.angle_init+car.velocity_angle(end));
-constraint_y_int = road.centre_y0 + road.internal_ry*sin(car.angle_init+car.velocity_angle(end));
 
-constraint_x_cen = road.centre_x0 + road.centre_rx*cos(car.angle_init+car.velocity_angle(end));
-constraint_y_cen = road.centre_x0 + road.centre_rx*cos(car.angle_init+car.velocity_angle(end));
+constraint_x_cen = road.centre_x0 + road.centre_rx*cos(car.velocity_angle(end)*Ts/35);
+constraint_y_cen = road.centre_x0 + road.centre_rx*cos(car.velocity_angle(end)*Ts/35);
 
-constraint_x_ext = road.centre_x0 + road.external_rx*cos(car.angle_init+car.velocity_angle(end));
-constraint_y_ext = road.centre_y0 + road.external_ry*sin(car.angle_init+car.velocity_angle(end));
+t = linspace(1,360,361); 
+constraint_x_iniz_int = -(road.centre_x0 + road.internal_rx*cos(t));
+constraint_y_iniz_int = -(road.centre_y0 + road.internal_ry*sin(t));
 
-constraint_x = [constraint_x_int, constraint_x_ext];
-constraint_y = [constraint_y_int, constraint_y_ext];
+constraint_x_iniz_ext = road.centre_x0 + road.external_rx*cos(t);
+constraint_y_iniz_ext = road.centre_y0 + road.external_ry*sin(t);
+
+constraint_x = [constraint_x_iniz_int, constraint_x_iniz_ext];
+constraint_y = [constraint_y_iniz_int, constraint_y_iniz_ext];
 for i=1:N
     x_int_obs(i)= road.centre_x0 + road.internal_rx*cos(obstacle(i).th+obstacle(i).velocity_angle(end));
     y_int_obs(i)= road.centre_x0 + road.internal_ry*sin(obstacle(i).th+obstacle(i).velocity_angle(end));
@@ -57,8 +60,8 @@ if(sqrt((obstacle(m).X(end) - x_int_obs(m))^2 + (obstacle(m).Y(end) - y_int_obs(
     % to go back to the center lane.
     elseif(detection(:,:)==zeros(1,N))
         constraintSlope(i) = 0;
-        constraintIntercept_y(i) = road.centre_y0-road.centre_ry*sin(car.angle_init+car.velocity_angle(end));
-        constraintIntercept_x(i) = road.centre_x0+road.centre_rx*cos(car.angle_init+car.velocity_angle(end));
+        constraintIntercept_y(i) = road.centre_y0+road.centre_ry*sin(car.velocity_angle(end)*Ts/35);
+        constraintIntercept_x(i) = road.centre_x0+road.centre_rx*cos(car.velocity_angle(end)*Ts/35);
    else
         constraintSlope(i) = 0;
         constraintIntercept(i) = obstacle(i).rlSafeY;

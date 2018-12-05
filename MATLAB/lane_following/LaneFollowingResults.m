@@ -3,7 +3,7 @@ function LaneFollowingResults(logsout)
 
 %% Get the data from simulation
 
-[e1_ampc,e2_ampc,delta_ampc,accel_ampc,vx_ampc] = getData(logsout);
+[e1_ampc,e2_ampc,delta_ampc,accel_ampc,vx_ampc,vy_ampc] = getData(logsout);
 
 %% Plot results. 
 figure; % lateral results
@@ -61,9 +61,10 @@ ylabel('Velocity [m/s]','Interpreter','latex');
 hold off;
 
 %% Local function: Get data from simulation
-function [e1,e2,delta,accel,vx] = getData(logsout)
+function [e1,e2,delta,accel,vx,vy,xp,yp] = getData(logsout)
 e1 = logsout.getElement('Lateral Deviation');    % lateral deviation
 e2 = logsout.getElement('Relative Yaw Angle');   % relative yaw angle
 delta = logsout.getElement('Steering');          % steering angle
 accel = logsout.getElement('Acceleration');      % acceleration of ego car
 vx = logsout.getElement('Longitudinal Velocity');% velocity of host car
+vy = logsout.getElement('Lateral Velocity');

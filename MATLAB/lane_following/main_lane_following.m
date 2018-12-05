@@ -24,7 +24,7 @@ v_set = 20; % Driver set velocity
 Ts = 0.1;
 
 % Obtain the lane curvature information seconds.
-Duration = 15;                              % Simulation duration
+Duration = 20;                              % Simulation duration
 t = 0:Ts:Duration;                          % Time vector
 rho = LaneFollowingGetCurvature(v_set,t);   % Signal containing curvature information
 
