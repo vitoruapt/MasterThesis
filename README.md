@@ -32,7 +32,7 @@ In these two weeks I tried to add curves by building a circular path. I found pr
 
 ---------------------------------------------------------------------------------------------------
 ### Week 8 - (27th November 2018 / 3rd December 2018)
-
+This week I designed a lane-following controller based on the Lane Keeping Assist system developed by MATLAB, in which  the vehicle measures the lateral deviation and the relative yaw angle between the center line of a lane and the car. Instead of directly using Lane Keeping Assist system provided by MATLAB, I implemented an algorithm based on the Adaptive Model Predictive Control. In the previous week we had noticed that in the case of curves it was necessary to take into account both the longitudinal and the lateral velocity. A lane-following system manipulates both the longitudinal acceleration and front steering angle of the vehicle to  keep the lateral deviation and relative yaw angle small but also keep the longitudinal velocity close to a driver set velocity. The idea now is to take the two controllers designed to create a system that allows path tracking with moving obstacle avoidance based on the Adaptive Model Predictive Control. Moreover in this week I started to write a paper in which I formalized the problem and the solutions adopted. 
 
 ---------------------------------------------------------------------------------------------------
 ### Week 9 - (4th December 2018 / 10th December 2018)
