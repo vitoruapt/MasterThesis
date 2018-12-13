@@ -90,10 +90,10 @@ end
 if(obstacle(m).Y(end)<=0)
    E = [0 0;0 0;0 0];
    F = [0 1 0 0;0 -1 0 0;constraintSlope(m) -1 0 0];
-   G = [laneWidth*lanes/2;laneWidth*lanes/2;-1*constraintIntercept(m)];
+   G = [laneWidth*lanes/2+rand;laneWidth*lanes/2+rand;-1*constraintIntercept(m)]
 else
     E = [0 0;0 0;0 0];
     F = [0 1 0 0;0 -1 0 0;-1*constraintSlope(m) 1 0 0];
-    G = [laneWidth*lanes/2;laneWidth*lanes/2;constraintIntercept(m)];
+    G = [laneWidth*lanes/2+rand;laneWidth*lanes/2+rand;constraintIntercept(m)]
 end
 end
