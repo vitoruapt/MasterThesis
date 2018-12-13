@@ -36,7 +36,7 @@ This week I designed a lane-following controller based on the Lane Keeping Assis
 
 ---------------------------------------------------------------------------------------------------
 ### Week 9 - (4th December 2018 / 10th December 2018)
-
+In this week I started writing a paper where I reported theoretically the models used for both methods.
 
 ---------------------------------------------------------------------------------------------------
 ### Week 10 - (11th December 2018 / 17th December 2018)
