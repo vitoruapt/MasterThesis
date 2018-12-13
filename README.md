@@ -38,6 +38,7 @@ This week I designed a lane-following controller based on the Lane Keeping Assis
 ### Week 9 - (4th December 2018 / 10th December 2018)
 In this week I started writing a paper where I reported theoretically the models used for both methods. In the problem of the lane following I put a disturbance on the dynamics of the sensors in order to verify the correct functioning of the adaptive MPC. I have also modified the constraints for the upper and lower bound of the street: I have simulated that at each step the constraints change slightly (error of the lateral measurement). The results found are consistent therefore the error in the case of the circular path is probably due to the initialization of the constraints.
 
+[Paper](https://github.com/AlbertoFranco/MasterThesis/blob/master/Thesis_Latex/Paper/Paper.pdf "Click here to open Paper.pdf")
 ---------------------------------------------------------------------------------------------------
 ### Week 10 - (11th December 2018 / 17th December 2018)
 
