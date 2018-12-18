@@ -32,7 +32,7 @@ dsys.OutputName = dsys.StateName;        % Output y
 road.lanes = 3;            % The road is straight and has 3 lanes.
 road.laneWidth = 4;        % Each lane is |4| meters wide.
 
-N =randi(6,1,1);          % Random number of obstacles (1,2,3,4,5,6)
+N = randi(6,1,1);          % Random number of obstacles (1,2,3,4,5,6)
 road.length = 150;         % length of the street
 car.minimum_dist=40;       % minimum distance between 2 cars
   
@@ -209,8 +209,8 @@ plot(ympc(:,1),ympc(:,2),'-b');
 
 for k = 1:length(saveSlope) 
     hold on 
-    grid on
-    grid minor
+%     grid on
+%     grid minor
     
     % ATLASCAR2 green rectangle
     p = patch([ympc(k,1)-car.length/2 ympc(k,1)-car.length/2 ympc(k,1)+car.length/2 ympc(k,1)+car.length/2], [ympc(k,2)-car.width/2, ympc(k,2)+car.width/2, ympc(k,2)+car.width/2, ympc(k,2)-car.width/2], [0 1 0]);
@@ -227,7 +227,7 @@ for k = 1:length(saveSlope)
     
 %     frame = getframe(gcf);
 %     writeVideo(writerObj, frame);
-    
+     %print('figure\overtaking_random_2','-dpdf','-r0')
     pause(80/car.V/length(T))
     delete(p)
     for i=1:N

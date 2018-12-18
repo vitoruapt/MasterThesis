@@ -48,8 +48,63 @@ fulfill several conditions to ensure safety and feasibility of the navigation. M
 The ATLACAR2 has a sensor, such as lidar, that measures the distance to an obstacle in front of the vehicle and in the same lane. The obstacle can be static, such as a large pothole, or moving, such as a slow-moving vehicle. The most common maneuver from the driver is to temporarily move to another lane, drive past the obstacle, and move back to the original lane afterward
 In this case, we want to design an obstacle avoidance system that moves the ATLASCAR2 around a moving obstacle in the lane using throttle and steering angle. This system uses an adaptive Model Predictive Controller that updates both the predictive model and the mixed input/output constraints at each control interval. Moreover this vehicle is also 
 equipped with a lane-keeping assist system: it has a sensor, such as camera, that measures the lateral deviation and relative yaw angle between the centerline of a lane and the ATLASCAR2. The sensor also measures the current lane curvature and curvature derivative. Depending on the curve length that the sensor can view, the curvature in front of the vehicle can be calculated from the current curvature and curvature derivative. This system keeps the autonomous car travelling along the centerline of the lanes on the road by adjusting the front steering angle. The goal for lane keeping control is to drive both lateral deviation and relative yaw angle close to zero.
+\subsection{Theoretical background - adaptive Model Predictive Control}
+Model Predictive Control is an advanced method that predicts future behavior using a linear-time-invariant (LTI) dynamic model. These predictions are never exact and a good strategy is
+to make MPC insensitive to prediction errors. If the plant is strongly nonlinear or its characteristics vary dramatically with time, MPC performance might become unacceptable because LTI prediction accuracy degrade. A method that can address this degradation by adapting the prediction model for changing operating conditions is called Adaptive MPC: this control strategy uses a fixed model structure, but allows the models parameters to evolve with time. Ideally, whenever the controller requires a prediction, it uses a model appropriate for the current conditions. At each control interval, the adaptive MPC controller updates the plant model and nominal conditions. Once updated, the model and conditions remain constant over the prediction horizon. The plant model used as the basis for the adaptive MPC must be an LTI discrete-time, state-space model with a structure as follows:
+\begin{equation*}
+\label{eqn:Adaptive_MPC_plant_discrete}
+\begin{aligned}
+x(k+1)&=Ax(k)+ B_u u(k)+B_v v(k)+B_d d(k)\\
+y(k)&=Cx(k) + D_v v(k)+ D_d d(k)
+\end{aligned}
+\end{equation*}
+where the matrices $A$, $B_u$, $B_v$, $B_d$, $C$, $D_v$ and $D_d$ can vary with time. The other parameters in the expression are:
+\begin{itemize}
+	\item $k$ is the time index / current control interval;
+	\item $x$ are the plant model states;
+	\item $u$ are the manipulated inputs that can be adjusted by the MPC controller;
+	\item $v$ are the measured disturbance inputs;
+	\item $d$ are the unmeasured disturbance inputs;
+	\item $y$ are the plant outputs, including both measured and unmeasured. Is it necessary at least one measured outuput.
+\end{itemize}
 
-TO DO THEORETICAL BACKGROUND ADAPTIVE MPC
+In the adaptive MPC control there are additional requirements for the plant model as the sample time that has to be constant and identical to the MPC control interval. This control strategy prohibits direct feed-through from any manipulated variable to any plant output. Thus, $D_u = 0$ in the above model. Finally the input and output signal configuration remains constant.
+A traditional MPC controller includes a nominal operating point at which the plant model applies, such as the condition at which you linearize a nonlinear model to obtain the LTI
+approximation. In adaptive MPC, as time evolves you should update the nominal operating point to be consistent with the updated plant model. It is possible to rewritten the plant model in terms of deviations from the nominal conditions:
+\begin{equation*}
+\label{eqn:Adaptive_MPC_nominal_condition}
+\begin{aligned}
+x(k+1)&=\overline{x}+A(x(k)-\overline{x})+ B(u_t(k)-\overline{u}_t)+\overline{\Delta x}\\
+y(k)&=\overline{y}+C(x(k)-\overline{x}) + D(u_t(k)-\overline{u}_t)
+\end{aligned}
+\end{equation*}
+where the matrices $A$, $B$, $C$ and $D$ that are uptaded. The other parameters in the expression are:
+\begin{itemize}
+	\item $u_t$ is the combined plant input variable, comprising $u$, $v$ and $d$ variables defined above;
+	\item $\overline{x}$ are the nominal states;
+	\item $\overline{\Delta x}$ are the nominal state increments;
+	\item $\overline{u}_t$ are the nominal inputs;
+	\item $\overline{y}$ are the nominal outputs.
+\end{itemize} 
+The adaptive MPC uses a Kalman filter to update its controller states and adjusts the two required gain matrices, $L$ and $M$, at each control interval to maintain consistency with the updated plat model. We are considering a linear-time-varying Kalman filter (LTVKF):
+\begin{equation*}
+\label{eqn:LTVKF}
+\begin{array}{lll}
+L_k=\big(A_kP_{k|k-1}C_{m,k}^{T}+N\big)\big(C_{m,k}P_{k|k-1}C_{m,k}^{T}+R\big)^{-1}\\
+M_k =P_{k|k-1}C_{m,k}^{T}\big(C_{m,k}P_{k|k-1}C_{m,k}^{T}+R\big)^{-1}\\
+P_{k+1|k}=A_kP_{k|k-1}A_k^{T}-\big(A_kP_{k|k-1}C_{m,k}^{T}+N\big)L_k^{T}+Q.
+\end{array}
+\end{equation*}
+where 
+\begin{itemize}
+ \item $Q$, $R$ and $N$ are constant covariance matrices defined as in MPC state estimation;
+ \item $A_k$ and $C_{m,k}$ are state-space parameter matrices for the entire controller state;
+ \item $P_{k|k-1}$ is the state estimate error covariance matrix at time $k$ based on the information available at time $k-1$;
+ \item $L_k$ and $M_k$ are the updated Kalmen filter gain matrices.
+\end{itemize}
+The gain and the state error covariance matrix depend upon the model parameters
+and the assumptions leading to the constant $Q$, $R$ and $N$ matrices.
+
 
 \section{Obstacle Avoidance}
 \subsection{Problem Formulation}
@@ -152,7 +207,7 @@ where $\textbf{u}$ and $\textbf{y}$ are respectively the manipulated variable ve
 \begin{itemize}
 	\item the first constraint is an upper bound on the $y$-coordinate (right boundary of the road);
 	\item the second constraint is a lower bound on the $y$-coordinate (left boundary of the road);
-	\item the third constraint is for the obstacle avoidance; even though no obstacle is detected at the nominal condition, we must add this fake constraint here because we cannot change the dimensions of the constraint matrices at run time (it has the same form as the second one).ù
+	\item the third constraint is for the obstacle avoidance; even though no obstacle is detected at the nominal condition, we must add this fake constraint here because we cannot change the dimensions of the constraint matrices at run time (it has the same form as the second one).
 \end{itemize}
 The matrices for the above inequality are the following:
 \[
@@ -177,10 +232,54 @@ W/2\\W/2\\-cI
 where $W$ is the width of the road and $cI$ and $cS$ are the required parameters such that the ATLASCAR2 must be above the line formed from the vehicle to safe zone corner for left/right passing.
 
 \subsection{Simulation Results}
-TO DO
+In this first simulation we assumed that the road is straight and has 3 lanes each of 4 meters wide. Moreover the ATLASCAR2 drives in the middle of the center lane when not passing and in this case the vehicle passes an obstacle only from the right lane (the same simulation can be launched so that the car goes over to the left fast lane).
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_start.pdf}
+	\label{fig:obstacleAvoidance_start}
+\end{figure}
+\vspace{-3em}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_middle.pdf}
+	\label{fig:obstacleAvoidance_middle}
+\end{figure}
+\vspace{-3em}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_middle_end.pdf}
+	\label{fig:obstacleAvoidance_middle_end}
+\end{figure}
+\vspace{-3em}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_end.pdf}
+	\label{fig:obstacleAvoidance_end}
+	\vspace{-1.2em}
+	\caption{Simulation of right overtaking with one moving obstacle}
+\end{figure}
 
+Subsequently, additional obstacles were added to make the scenario more complex. The vehicle is capable of overcoming the obstacles to the right or left depending on their position with respect to the road. We also hypothesized that the obstacles move at a different speed but that they are initially at a common distance. In case two obstacles are too close during the simulation and their distance is less than the detection range, the ATLASCAR2 perceives the objects as a single entity and adapts to the situation.
 
-
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/random_N_obstacles/figure/overtaking_random_2.pdf}
+	\label{fig:obstacleAvoidance_random_2}
+	\vspace{-1.3em}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/random_N_obstacles/figure/overtaking_random.pdf}
+	\label{fig:obstacleAvoidance_random}
+	\vspace{-1.3em}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/random_N_obstacles/figure/overtaking_random_1.pdf}
+	\label{fig:obstacleAvoidance_random_1}
+	\vspace{-1.2em}
+	\caption{Simulations of overtaking with $N = 2,3,4$ moving obstacles}
+\end{figure}
 
 
 
@@ -208,9 +307,7 @@ A lane-following system is a control system that keeps the vehicle traveling alo
 	\label{fig:laneFollowing}
 \end{figure}
 
-In a classic lane keeping assist, it is assumed that the longitudinal velocity is constant. This restriction is relaxed in this model because the longitudinal acceleration varies in this MIMO control system. This lane-following system manipulates both the longitudinal acceleration and the front steering angle of the vehicle to keep the lateral deviation and the relative yaw angle small and the longitudinal velocity close to a driver set velocity. If these two goals cannot be met at the same moment, the system tries to balance them.
-
-The model that we are considering, contains a lot of parameters. The first fundamental block describes the vehicle dynamics: we have applied the bicycle model of lateral vehicle dynamics and approximate the longitudinal dynamics using a time constant:
+In a classic lane keeping assist, it is assumed that the longitudinal velocity is constant. This restriction is relaxed in this model because the longitudinal acceleration varies in this MIMO control system. This lane-following system manipulates both the longitudinal acceleration and the front steering angle of the vehicle to keep the lateral deviation and the relative yaw angle small and the longitudinal velocity close to a driver set velocity. If these two goals cannot be met at the same moment, the system tries to balance them. The model that we are considering, contains a lot of parameters. The first fundamental block describes the vehicle dynamics: we have applied the bicycle model of lateral vehicle dynamics and approximate the longitudinal dynamics using a time constant:
 \subsubsection{Longitudinal dynamics}
 \begin{equation}
 	\label{eqn:longi_dynamics_simple_model}
@@ -360,16 +457,68 @@ where $T_s$ is the sampling interval for the discrete state-space model. The mat
 \subsection{Design of Adaptive Model Predictive Control}
 We created an Adaptive MPC controller with a prediction model that has six states, three outputs (longitudinal velocity, lateral deviation, relative yaw angle), and two inputs. The model has two manipulated signals: acceleration and steering. The product of the road curvature and the longitudinal velocity is modeled as a measured disturbance. We have set the constraints for manipulated variables and the scale factors. Moreover we have specified the weights in the standard MPC cost function. The third output, yaw angle, is allowed to float because there are only two manipulated variables to make it a square system. In this controller, there is no steady-state error in the yaw angle as long as the second output, lateral deviation, reaches 0 at steady state. Finally we have also penalized acceleration change more for smooth driving experience. This controller uses a linear model for the vehicle dynamics and updates the model online as the longitudinal velocity varies.
 
-
-
 \subsection{Simulation Results}
+The proposed adaptive MPC algorithm is designed in the MATLAB/Simulink and validated through simulation. The objective of this
+test is to evaluate the behavior of the proposed control strategy in critical situations. Fig.\ref{fig:reference_laneFollowing} and Fig.\ref{fig:curvature_laneFollowing} show the desired path that the car must follow and its curvature.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/lane_following/figure/Reference.pdf}
+	\caption{Desired path of the ATLASCAR2.}
+	\label{fig:reference_laneFollowing}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\columnwidth]{../../MATLAB/lane_following/figure/Curvature.pdf}
+	\caption{Desired curvature.}
+	\label{fig:curvature_laneFollowing}
+\end{figure}
 
-TO DO
+Moreover the following figures show the trend of the main parameters confirming that the control strategy used allows the vehicle to follow the path. In particular we simulated also a small error in the sensor dynamics in order to make the simulation more realistic:
+
+\begin{figure}[!h]
+	\centering
+	\hspace*{-0.5in}
+	\includegraphics[width=1.29\columnwidth]{../../MATLAB/lane_following/figure/AccelerationVsTime.pdf}
+	\caption{Acceleration $u_1$ with respect to time.}
+	\label{fig:acceleration_laneFollowing}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\hspace*{-0.5in}
+	\includegraphics[width=1.29\columnwidth]{../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf}
+	\caption{Steering angle $u_2$ with respect to time.}
+	\label{fig:steering_laneFollowing}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\hspace*{-0.5in}
+	\includegraphics[width=1.29\columnwidth]{../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf}
+	\caption{Relative yaw angle $e_2$ with respect to time.}
+	\label{fig:relative_yaw_angle_laneFollowing}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\hspace*{-0.5in}
+	\includegraphics[width=1.29\columnwidth]{../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf}
+	\caption{Lateral deviation $e_1$ with respect to time.}
+	\label{fig:lateral_deviation_laneFollowing}
+\end{figure}
+Fig.{\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the vehicle longitudinal velocity as well as the vehicle sideslip angle throughout the simulation. Although the generated speed limit profiles change rapidly with respect to time, yet the vehicle speed increases or decreases gradually but still follows the reference speed closely. At the start of the simulation, this velocity is equal to the initial condition for longitudinal velocity parameter. At run time, this velocity is equal to the Longitudinal velocity input signal.
+\begin{figure}[!h]
+	\centering
+	\hspace*{-0.5in}
+	\includegraphics[width=1.29\columnwidth]{../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf}
+	\caption{Longitudinal velocity $V_x$ with respect to time.}
+	\label{fig:longitudinal_velocity_laneFollowing}
+\end{figure}
 
 
-At the start of the simulation, this velocity is equal to the Initial condition for longitudinal velocity parameter. At run time, this velocity is equal to the Longitudinal velocity input signal.
-
-
+\begin{figure*}[!h]
+	\centering
+	\includegraphics[width=\textwidth]{./figure/lane_following_AMPC.pdf}
+	\caption{Overall procedure scheme lane following.}
+	\label{fig:scheme_lane_following}
+\end{figure*}
 
 
 \section{Conclusions and Future Work}
@@ -405,5 +554,6 @@ In this work we proposed two advanced methods for the ATLASCAR2 based on adaptiv
 		
 	\bibitem{theory}J. Rawlings, D. Mayne (2010), "Model Predictive Control: Theory and Design", Nob Hill Publishing.	
 \end{thebibliography}
+
 
 \end{document}

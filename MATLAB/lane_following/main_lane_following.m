@@ -21,7 +21,7 @@ v0 = 15;    % Initial velocity
 v_set = 20; % Driver set velocity
 
 % Set the controller sample time.
-Ts = 0.1;
+Ts = 0.02;
 
 % Obtain the lane curvature information seconds.
 Duration = 20;                              % Simulation duration
@@ -41,3 +41,5 @@ LaneFollowingGenerateAMPC;
 sim(mdl)
 logsout1 = logsout;
 LaneFollowingResults(logsout1)
+print -slane_following_AMPC -dpdf lane_following_AMPC.pdf
+movefile('lane_following_AMPC.pdf','figure')

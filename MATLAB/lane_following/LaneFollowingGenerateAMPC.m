@@ -30,7 +30,7 @@ sysd = c2d(sys,Ts);
 mpc1 = mpc(sysd,Ts);
 
 % Specify the prediction horizon.
-mpc1.PredictionHorizon = 10;
+mpc1.PredictionHorizon = 25;
 % Specify MV limits.
 mpc1.MV(1).Min = -3;
 mpc1.MV(1).Max = 3;
