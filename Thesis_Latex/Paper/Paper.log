@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  19 DEC 2018 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  19 DEC 2018 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,7 +1187,7 @@ LaTeX Warning: Text page 6 contains only floats.
 ing/figure/Curvature.pdf> <../../MATLAB/lane_following/figure/AccelerationVsTim
 e.pdf> <../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf> <../../MATL
 AB/lane_following/figure/RelativeYawAngleVsTime.pdf>]
-<./figure/lane_following_AMPC.pdf, id=572, 774.39772pt x 268.72177pt>
+<./figure/lane_following_AMPC.pdf, id=581, 774.39772pt x 268.72177pt>
 File: ./figure/lane_following_AMPC.pdf Graphic file (type pdf)
 
 <use ./figure/lane_following_AMPC.pdf>
@@ -1253,10 +1253,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Paper.pdf (8 pages, 785702 bytes).
+Output written on Paper.pdf (8 pages, 786027 bytes).
 PDF statistics:
- 896 PDF objects out of 1000 (max. 8388607)
- 736 compressed objects within 8 object streams
+ 910 PDF objects out of 1000 (max. 8388607)
+ 750 compressed objects within 8 object streams
  52 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
