@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  18 DEC 2018 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  19 DEC 2018 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -931,7 +931,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 ]
-Overfull \hbox (13.03932pt too wide) detected at line 97
+Overfull \hbox (13.03932pt too wide) detected at line 95
 [][]
  []
 
@@ -939,12 +939,12 @@ Overfull \hbox (13.03932pt too wide) detected at line 97
 File: ./figure/obstacleAvoidance.pdf Graphic file (type pdf)
 
 <use ./figure/obstacleAvoidance.pdf>
-Package pdftex.def Info: ./figure/obstacleAvoidance.pdf used on input line 114.
+Package pdftex.def Info: ./figure/obstacleAvoidance.pdf used on input line 112.
 
 (pdftex.def)             Requested size: 252.0pt x 78.9961pt.
  [2 <./figure/obstacleAvoidance.pdf>]
 [3]
-Overfull \hbox (6.44102pt too wide) detected at line 231
+Overfull \hbox (6.44102pt too wide) detected at line 229
 \OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 ;  F \OT1/cmr
 /m/n/10.95 = [] \OML/cmm/m/it/10.95 ;  G \OT1/cmr/m/n/10.95 = []
  []
@@ -958,7 +958,7 @@ king_start.pdf Graphic file (type pdf)
 <use ../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtak
 ing_start.pdf>
 Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/over
-taking_paper/overtaking_start.pdf used on input line 238.
+taking_paper/overtaking_start.pdf used on input line 236.
 (pdftex.def)             Requested size: 252.0pt x 48.16483pt.
 
 <../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_
@@ -969,7 +969,7 @@ king_middle.pdf Graphic file (type pdf)
 <use ../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtak
 ing_middle.pdf>
 Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/over
-taking_paper/overtaking_middle.pdf used on input line 244.
+taking_paper/overtaking_middle.pdf used on input line 242.
 (pdftex.def)             Requested size: 252.0pt x 38.78026pt.
 
 <../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_
@@ -980,7 +980,7 @@ king_middle_end.pdf Graphic file (type pdf)
 <use ../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtak
 ing_middle_end.pdf>
 Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/over
-taking_paper/overtaking_middle_end.pdf used on input line 250.
+taking_paper/overtaking_middle_end.pdf used on input line 248.
 (pdftex.def)             Requested size: 252.0pt x 38.94156pt.
 
 <../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtaking_
@@ -991,7 +991,7 @@ king_end.pdf Graphic file (type pdf)
 <use ../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtak
 ing_end.pdf>
 Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/over
-taking_paper/overtaking_end.pdf used on input line 256.
+taking_paper/overtaking_end.pdf used on input line 254.
 (pdftex.def)             Requested size: 252.0pt x 49.03506pt.
 
 <../../MATLAB/random_N_obstacles/figure/overtaking_random_2.pdf, id=108, 361.89
@@ -1001,7 +1001,7 @@ le (type pdf)
 
 <use ../../MATLAB/random_N_obstacles/figure/overtaking_random_2.pdf>
 Package pdftex.def Info: ../../MATLAB/random_N_obstacles/figure/overtaking_rand
-om_2.pdf used on input line 266.
+om_2.pdf used on input line 264.
 (pdftex.def)             Requested size: 252.0pt x 35.34138pt.
 
 
@@ -1015,7 +1015,7 @@ File: ../../MATLAB/random_N_obstacles/figure/overtaking_random.pdf Graphic file
 
 <use ../../MATLAB/random_N_obstacles/figure/overtaking_random.pdf>
 Package pdftex.def Info: ../../MATLAB/random_N_obstacles/figure/overtaking_rand
-om.pdf used on input line 272.
+om.pdf used on input line 270.
 (pdftex.def)             Requested size: 252.0pt x 30.2348pt.
 
 
@@ -1029,7 +1029,7 @@ le (type pdf)
 
 <use ../../MATLAB/random_N_obstacles/figure/overtaking_random_1.pdf>
 Package pdftex.def Info: ../../MATLAB/random_N_obstacles/figure/overtaking_rand
-om_1.pdf used on input line 278.
+om_1.pdf used on input line 276.
 (pdftex.def)             Requested size: 252.0pt x 37.96167pt.
 
 
@@ -1039,7 +1039,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: ./figure/laneFollowing.pdf Graphic file (type pdf)
 
 <use ./figure/laneFollowing.pdf>
-Package pdftex.def Info: ./figure/laneFollowing.pdf used on input line 305.
+Package pdftex.def Info: ./figure/laneFollowing.pdf used on input line 303.
 (pdftex.def)             Requested size: 252.0pt x 126.00148pt.
  [4 <../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_paper/overtak
 ing_start.pdf> <../../MATLAB/one_obstacle_right_overtaking/figure/overtaking_pa
@@ -1079,33 +1079,33 @@ overtaking_random_1.pdf): PDF inclusion: multiple pdfs with page group included
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/laneFollowing.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
->] [5]
-<../../MATLAB/lane_following/figure/Reference.pdf, id=302, 273.02pt x 190.7125p
+>]
+<../../MATLAB/lane_following/figure/Reference.pdf, id=292, 273.02pt x 190.7125p
 t>
 File: ../../MATLAB/lane_following/figure/Reference.pdf Graphic file (type pdf)
  <use ../../MATLAB/lane_following/figure/Reference.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/Reference.pdf used 
-on input line 465.
+on input line 463.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<../../MATLAB/lane_following/figure/Curvature.pdf, id=303, 273.02pt x 190.7125p
+<../../MATLAB/lane_following/figure/Curvature.pdf, id=293, 273.02pt x 190.7125p
 t>
 File: ../../MATLAB/lane_following/figure/Curvature.pdf Graphic file (type pdf)
  <use ../../MATLAB/lane_following/figure/Curvature.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/Curvature.pdf used 
-on input line 471.
+on input line 469.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
-
-<../../MATLAB/lane_following/figure/AccelerationVsTime.pdf, id=304, 341.275pt x
+ [5]
+<../../MATLAB/lane_following/figure/AccelerationVsTime.pdf, id=303, 341.275pt x
  190.7125pt>
 File: ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf Graphic file (t
 ype pdf)
  <use ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/AccelerationVsTime.
-pdf used on input line 481.
+pdf used on input line 479.
 (pdftex.def)             Requested size: 325.07831pt x 181.67345pt.
 
-Overfull \hbox (39.47327pt too wide) in paragraph at lines 480--482
+Overfull \hbox (39.47327pt too wide) in paragraph at lines 478--480
  []|  [] 
  []
 
@@ -1113,16 +1113,16 @@ Overfull \hbox (39.47327pt too wide) in paragraph at lines 480--482
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf, id=305, 341.275pt 
+<../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf, id=304, 341.275pt 
 x 190.7125pt>
 File: ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf Graphic file (
 type pdf)
  <use ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/SteeringAngleVsTime
-.pdf used on input line 488.
+.pdf used on input line 486.
 (pdftex.def)             Requested size: 325.07831pt x 181.67345pt.
 
-Overfull \hbox (39.47327pt too wide) in paragraph at lines 487--489
+Overfull \hbox (39.47327pt too wide) in paragraph at lines 485--487
  []|  [] 
  []
 
@@ -1130,17 +1130,17 @@ Overfull \hbox (39.47327pt too wide) in paragraph at lines 487--489
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf, id=306, 341.275
+<../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf, id=305, 341.275
 pt x 190.7125pt>
 File: ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf Graphic fil
 e (type pdf)
 
 <use ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/RelativeYawAngleVsT
-ime.pdf used on input line 495.
+ime.pdf used on input line 493.
 (pdftex.def)             Requested size: 325.07831pt x 181.67345pt.
 
-Overfull \hbox (39.47327pt too wide) in paragraph at lines 494--496
+Overfull \hbox (39.47327pt too wide) in paragraph at lines 492--494
  []|  [] 
  []
 
@@ -1148,17 +1148,17 @@ Overfull \hbox (39.47327pt too wide) in paragraph at lines 494--496
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf, id=307, 341.275
+<../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf, id=306, 341.275
 pt x 189.70876pt>
 File: ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf Graphic fil
 e (type pdf)
 
 <use ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/LateralDeviationVsT
-ime.pdf used on input line 502.
+ime.pdf used on input line 500.
 (pdftex.def)             Requested size: 325.07831pt x 180.71729pt.
 
-Overfull \hbox (39.47327pt too wide) in paragraph at lines 501--503
+Overfull \hbox (39.47327pt too wide) in paragraph at lines 499--501
  []|  [] 
  []
 
@@ -1166,17 +1166,17 @@ Overfull \hbox (39.47327pt too wide) in paragraph at lines 501--503
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf, id=309, 341
+<../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf, id=308, 341
 .275pt x 190.7125pt>
 File: ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf Graphic
  file (type pdf)
 
 <use ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/LongitudinalVelocit
-yVsTime.pdf used on input line 510.
+yVsTime.pdf used on input line 508.
 (pdftex.def)             Requested size: 325.07831pt x 181.67345pt.
 
-Overfull \hbox (39.47327pt too wide) in paragraph at lines 509--511
+Overfull \hbox (39.47327pt too wide) in paragraph at lines 507--509
  []|  [] 
  []
 
@@ -1192,7 +1192,7 @@ File: ./figure/lane_following_AMPC.pdf Graphic file (type pdf)
 
 <use ./figure/lane_following_AMPC.pdf>
 Package pdftex.def Info: ./figure/lane_following_AMPC.pdf used on input line 51
-8.
+6.
 (pdftex.def)             Requested size: 516.0pt x 179.05856pt.
 
 
@@ -1212,14 +1212,14 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 559.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 557.
 [7 <../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf> <../../MATLA
 B/lane_following/figure/LongitudinalVelocityVsTime.pdf>] [8 <./figure/lane_foll
 owing_AMPC.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 559.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 557.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 559.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 559.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 557.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 557.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: E6ED03C1DCFFE1F169734B5DF21819C1;1062.
 
@@ -1227,12 +1227,12 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.25pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 559.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 557.
  ) 
 Here is how much of TeX's memory you used:
- 19895 strings out of 493029
- 369606 string characters out of 6136233
- 525108 words of memory out of 5000000
+ 19894 strings out of 493029
+ 369594 string characters out of 6136233
+ 526117 words of memory out of 5000000
  23170 multiletter control sequences out of 15000+600000
  44761 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1253,10 +1253,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Paper.pdf (8 pages, 785616 bytes).
+Output written on Paper.pdf (8 pages, 785702 bytes).
 PDF statistics:
- 897 PDF objects out of 1000 (max. 8388607)
- 737 compressed objects within 8 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 736 compressed objects within 8 object streams
+ 52 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
