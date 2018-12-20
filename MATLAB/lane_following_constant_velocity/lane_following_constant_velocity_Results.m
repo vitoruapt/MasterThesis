@@ -10,7 +10,7 @@ h1 = figure ('Position',[100, 100, 340, 230], 'PaperPositionMode','auto');
 hold on;
 grid on;
 grid minor;
-plot(lateral_deviation.Values.time,lateral_deviation.Values.Data,'b')
+plot(lateral_deviation.Values.time,lateral_deviation.Values.Data)
 title('\textbf{Lateral Deviation (e$_1$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Lateral Deviation [m]','Interpreter','latex');
@@ -26,7 +26,7 @@ h2 = figure ('Position',[100, 100, 340, 230], 'PaperPositionMode','auto');
 hold on;
 grid on;
 grid minor;
-plot(relative_yaw_angle.Values.time,relative_yaw_angle.Values.Data,'b')
+plot(relative_yaw_angle.Values.time,relative_yaw_angle.Values.Data)
 title('\textbf{Relative Yaw Angle (e$_2$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Relative Yaw Angle [rad]','Interpreter','latex');
@@ -41,7 +41,7 @@ h3 = figure ('Position',[100, 100, 340, 230], 'PaperPositionMode','auto');
 hold on;
 grid on;
 grid minor;
-plot(steering_angle.Values.time,steering_angle.Values.Data,'b')
+plot(steering_angle.Values.time,steering_angle.Values.Data)
 title('\textbf{Steering Angle (u$_2$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Steering angle [rad]','Interpreter','latex');

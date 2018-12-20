@@ -52,4 +52,3 @@ pos = get(hcurv,'Position');
 set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3)*0.8, pos(4)-40])
 print(hcurv,'figure\Curvature','-dpdf','-r0')
 hold off
-hold off
