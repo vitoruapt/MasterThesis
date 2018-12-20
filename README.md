@@ -42,7 +42,9 @@ In this week I started writing a paper where I reported theoretically the models
 
 ---------------------------------------------------------------------------------------------------
 ### Week 10 - (11th December 2018 / 17th December 2018)
+During this week I have finished writing the first version of the paper. The following paragraphs have been added: theoretical background about the adaptive Model Predictive Control, Simulation Results for the Obstacle Avoidance and Simulation Results for the Lane Following. In addition, I adapted the Lane Following parameters to make them equal to those used in the Obstacle Avoidance algorithm. I have also tried to make simulations by considering different types of errors within the dynamics of the sensors, in particular on the longitudinal velocity, on the steering angle and finally on the yaw angle. Only one part of the results obtained have been reported in the paper. Finally I started to formalize the constraints related to obstacle avoidance in order to make them generic also for a circular path. During the Christmas holidays I will try to find a solution to this last problem.
 
+[Paper](https://github.com/AlbertoFranco/MasterThesis/blob/master/Thesis_Latex/Paper/Paper.pdf "Click here to open Paper.pdf")
 
 ---------------------------------------------------------------------------------------------------
 ### Week 11 - (18th December 2018 / 24th December 2018)
