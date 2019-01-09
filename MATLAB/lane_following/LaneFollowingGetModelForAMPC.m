@@ -26,6 +26,7 @@ function [A,B,C,D] = LaneFollowingGetModelForAMPC(Ts,Vx,Ag,Bg,Cg)
 %   specified, then the model Gf need to be discretized as well. 
 
 
+
 % Lateral model.
 [A2,B2] = getFullModel(Ag,Bg,Cg,Vx);
 n = size(Bg,1); % number of states for vehicle model                                              

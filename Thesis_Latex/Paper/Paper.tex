@@ -28,7 +28,7 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
-\title{Advanced Methods for Autonomous Driving based on Adaptive Model Predictive Control}
+\title{Advanced Methods for short-term Path Planning in Autonomous Driving based on Adaptive MPC}
 \author{\IEEEauthorblockN{Alberto Franco}\\
 \IEEEauthorblockA{Department of Information Engineering\\
 Università degli Studi di Padova\\ \href{mailto:alberto.franco.3@studenti.unipd.it}{alberto.franco.3@studenti.unipd.it}}}
@@ -36,7 +36,7 @@ Università degli Studi di Padova\\ \href{mailto:alberto.franco.3@studenti.unipd
 \begin{document}
 \maketitle
 \begin{abstract}
-	In this paper we present two different strategies for a self-driving car. The aim of this project is to study and implement a path tracking framework in order to prevent ATLASCAR2 collision with moving obstacle vehicles. The proposed algorithms, based on the Model Predictive Control paradigm, solve optimal problems formulated in terms of cost minimization under constraints.
+	In this paper we present two different strategies for a self-driving car short-term path planning. The aim of this project is to study and implement a path tracking framework in order to prevent ATLASCAR2 collision with moving obstacle vehicles. The proposed algorithms, based on the Model Predictive Control paradigm, solve optimal problems formulated in terms of cost minimization under constraints.
 \end{abstract}
 
 \section{Introduction}
@@ -45,12 +45,10 @@ We understand navigation as a process of planning a path of a mobile robot from 
 fulfill several conditions to ensure safety and feasibility of the navigation. Moreover, the paths can be also compared in terms of desirability for example short or smooth paths are usually more desirable than long and curved ones. Such paths should therefore be preferred in the navigation process. Beyond the path planning, the navigation problem also involves reacting to changes of the environment model. Robots are required to move towards target in a short time and avoid either static or dynamic obstacles observed by their sensors, which involves efficient path planning and valid obstacle avoidance. Though these two topics have been well researched, currently, there is no ideal solution to handling the navigation problem within cluttered dynamic environments.
 
 \section{Context of the Problem and \\  Proposed Solution}
-The ATLACAR2 has a sensor, such as lidar, that measures the distance to an obstacle in front of the vehicle and in the same lane. The obstacle can be static, such as a large pothole, or moving, such as a slow-moving vehicle. The most common maneuver from the driver is to temporarily move to another lane, drive past the obstacle, and move back to the original lane afterward.
-In this case, we want to design an obstacle avoidance system that moves the ATLASCAR2 around a moving obstacle in the lane using throttle and steering angle. This system uses an adaptive Model Predictive Controller that updates both the predictive model and the mixed input/output constraints at each control interval. Moreover this vehicle is also 
-equipped with a lane-keeping assist system: it has a sensor, such as camera, that measures the lateral deviation and relative yaw angle between the centerline of a lane and the ATLASCAR2. The sensor also measures the current lane curvature and curvature derivative. Depending on the curve length that the sensor can view, the curvature in front of the vehicle can be calculated from the current curvature and curvature derivative. This system keeps the autonomous car travelling along the centerline of the lanes on the road by adjusting the front steering angle. The goal for lane keeping control is to drive both lateral deviation and relative yaw angle close to zero.
+The ATLACAR2 has sensors, such as lidar, that measure the distance to obstacles in front and around the vehicle. The obstacles can be static, such as a large pothole, or moving, such as a slow-moving vehicle. The most common maneuver from the driver is to temporarily move to another lane, drive past the obstacle, and move back to the original lane afterward.
+In this case, we want to design an obstacle avoidance system that moves the ATLASCAR2 around a moving obstacle in the lane using throttle and steering angle. This system uses an adaptive Model Predictive Controller that updates both the predictive model and the mixed input/output constraints at each control interval. Moreover, this vehicle is also equipped with a lane-keeping assist system: it has a sensor, such as camera, that measures the lateral deviation and relative yaw angle between the centerline of a lane and the ATLASCAR2. The sensor also measures the current lane curvature and curvature derivative. Depending on the curve length that the sensor can view, the curvature in front of the vehicle can be calculated from the current curvature and curvature derivative. This system keeps the autonomous car travelling along the centerline of the lanes on the road by adjusting the front steering angle. The goal for lane keeping control is to drive both lateral deviation and relative yaw angle close to zero.
 \subsection{Theoretical background - adaptive Model Predictive Control}
-Model Predictive Control is an advanced method that predicts future behavior using a linear-time-invariant (LTI) dynamic model. These predictions are never exact and a good strategy is
-to make MPC insensitive to prediction errors. If the plant is strongly nonlinear or its characteristics vary dramatically with time, MPC performance might become unacceptable because LTI prediction accuracy degrade. A method that can address this degradation by adapting the prediction model for changing operating conditions is called Adaptive MPC: this control strategy uses a fixed model structure, but allows the models parameters to evolve with time. Ideally, whenever the controller requires a prediction, it uses a model appropriate for the current conditions. At each control interval, the adaptive MPC controller updates the plant model and nominal conditions. Once updated, the model and conditions remain constant over the prediction horizon. The plant model used as the basis for the adaptive MPC must be an LTI discrete-time, state-space model with a structure as follows:
+Model Predictive Control is an advanced method that predicts future behavior using a linear-time-invariant (LTI) dynamic model. These predictions are never exact and a good strategy is to make MPC insensitive to prediction errors. If the plant is strongly nonlinear or its characteristics vary dramatically with time, MPC performance might become unacceptable because LTI prediction accuracy degrade. A method that can address this degradation by adapting the prediction model for changing operating conditions is called Adaptive MPC: this control strategy uses a fixed model structure, but allows the model parameters to evolve with time. Ideally, whenever the controller requires a prediction, it uses a model appropriate for the current conditions. At each control interval, the adaptive MPC controller updates the plant model and nominal conditions. Once updated, the model and conditions remain constant over the prediction horizon. The plant model used as the basis for the adaptive MPC must be an LTI discrete-time, state-space model with a structure as follows:
 \begin{equation*}
 \label{eqn:Adaptive_MPC_plant_discrete}
 \begin{aligned}
@@ -109,7 +107,7 @@ and the assumptions leading to the constant $Q$, $R$ and $N$ matrices.
 The collision avoidance problem is very dependent on the vehicle modeling since it is a requirement for  adaptive MPC law design. 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\columnwidth]{./figure/obstacleAvoidance.pdf}
+	\includegraphics[width=1\columnwidth]{./figure/obstacleAvoidance/obstacleAvoidance.pdf}
 	\caption{Problem description of collision avoidance on road.}
 	\label{fig:obstacleAvoidance}
 \end{figure}
@@ -127,7 +125,7 @@ T&\delta
 \]
 where $(x,y)$ are the global coordinates of the center point of the car, $\theta$ is the heading angle of the car body with respect to the $x$-axis and $v$ is the speed of the car (positive). The manipulated variables are $T$ the throttle (positive when accelerating/negative when decelerating) and $\delta$ the steering angle ($0$ when aligned with car, counterclockwise positive).
 
-The simple non-linear model to describe the dynamics of the ATLASCAR2 is the following
+The simple non-linear model to describe the dynamics of the ATLASCAR2 is derived combining the equations in [2] and [3]:
 \begin{equation*}
 	\label{eqn:dynamics_model_obstacle_avoidance}
 	\left \{ \begin{array}{llll}
@@ -191,11 +189,11 @@ where $A_d$ and $B d$ are the state and control matrices for the discrete state-
 \[
 A_d = e^{A_cT_s},\qquad B_d = \int_{kT_s}^{(k+1)T_s} e^{A_c[(k+1)T_s-\eta]}B_c d\eta
 \]
-where $T_s$ is the sampling interval for the discrete state-space model. The matrices $C_d$ and $D_d$ are equivalent to those in the continuous case. For simplicity, we assume that all the states are measurable and the ATLASCAR2 drives east with a constant speed at the nominal operating point. In the scenario we are going to consider, the road is straight and our vehicle stays in the middle of the center lane when not passing. Without losing generality, the ATLASCAR2 passes an obstacle both to the right and to the left lane depending on where it is placed on the road. We create also a safe zone around the obstacles so that the vehicle does not get too close the osbtacle when passing it.
+where $T_s$ is the sampling interval for the discrete state-space model. The matrices $C_d$ and $D_d$ are equivalent to those in the continuous case. For simplicity, we assume that all the states are measurable and the ATLASCAR2 drives east with a constant speed at the nominal operating point. In the scenario that we are going to consider, the road is straight and our vehicle stays in the middle of the center lane when not passing. Without losing generality, the ATLASCAR2 passes an obstacle both to the right and to the left lane depending on where it is placed on the road. We create also a safe zone around the obstacles so that the vehicle does not get too close to the osbtacle when passing it.
 
 \subsection{Design of Adaptive Model Predictive Control}
 
-We designed a model predictive controller that can make the ATLASCAR2 mantain a desired velocity and stay in the middle of center lane. We used an Adaptive MPC controller because it handles the nonlinear vehicle dynamics more effectively than a traditional MPC controller in fact the latter uses a constant plant model, however, the former allows us to provide a new plant model at each control interval. Because the new model describes the plant dynamics more accurately at the new operating condition, an adaptive MPC controller performs better than a traditional MPC controller. In practice at each control interval, the adaptive MPC controller updates the plant model and the nominal conditions. Once updated, the model and the conditions remain constant over the prediction horizon. At the beginning, we specified the constraints for the manipulated variables: to prevent the ATLASCAR2 from accelerating or decelerating too quickly, we added an hard constraint on the throttle rate of change and another one on the steering angle rate of change. We used an approach that takes advantage of the ability of MPC to handle constraint explicitly. When an obstacle is detected, it defines an area on the road (in terms of constraints) that the ATLASCAR2 must not enter during the prediction horizon. At the next control interval the area is redefined based on the new positions of the vehicle and the obstacle until passing is completed.
+We designed a model predictive controller that can make the ATLASCAR2 mantain a desired velocity and stay in the middle of center lane. We used an Adaptive MPC controller because it handles the nonlinear vehicle dynamics more effectively than a traditional MPC controller; in fact, the latter uses a constant plant model but the former allows us to provide a new plant model at each control interval. Because the new model describes the plant dynamics more accurately at the new operating condition, an adaptive MPC controller performs better than a traditional MPC controller. In practice at each control interval, the adaptive MPC controller updates the plant model and the nominal conditions. Once updated, the model and the conditions remain constant over the prediction horizon. At the beginning, we specified the constraints for the manipulated variables: to prevent the ATLASCAR2 from accelerating or decelerating too quickly, we added an hard constraint on the throttle rate of change and another one on the steering angle rate of change. We used an approach that takes advantage of the ability of MPC to handle constraint explicitly. When an obstacle is detected, it defines an area on the road (in terms of constraints) that the ATLASCAR2 must not enter during the prediction horizon. At the next control interval the area is redefined based on the new positions of the vehicle and the obstacle until passing is completed.
 To define the area to avoid, we used the following mixed Input/Output constraints:
 \begin{equation*}
 	\label{eqn:mixed_IO_constraints}
@@ -300,20 +298,50 @@ Subsequently, additional obstacles were added to make the scenario more complex.
 A lane-following system is a control system that keeps the vehicle traveling along the centerline of a highway lane, while maintaining a user-set velocity. The lane-following scenario is depicted in the following figure:
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\columnwidth]{./figure/laneFollowing.pdf}
+	\includegraphics[width=0.75\columnwidth]{./figure/laneFollowing/laneFollowing.pdf}
 	\caption{Problem description of a lane following system.}
 	\label{fig:laneFollowing}
 \end{figure}
 
 In a classic lane keeping assist, it is assumed that the longitudinal velocity is constant. This restriction is relaxed in this model because the longitudinal acceleration varies in this MIMO control system. This lane-following system manipulates both the longitudinal acceleration and the front steering angle of the vehicle to keep the lateral deviation and the relative yaw angle small and the longitudinal velocity close to a driver set velocity. If these two goals cannot be met at the same moment, the system tries to balance them. The model that we are considering, contains a lot of parameters. The first fundamental block describes the vehicle dynamics: we have applied the bicycle model of lateral vehicle dynamics and approximate the longitudinal dynamics using a time constant:
 \subsubsection{Longitudinal dynamics}
+We can use the following state space to describe the longitudinal model:
 \begin{equation}
-	\label{eqn:longi_dynamics_simple_model}
-	G(s)=\frac{1}{\tau s^2+s} \quad \text{where $\tau$ is a time constant}
+\label{eqn:longi_dynamics_simple_model_ss}
+\begin{array}{ll}
+\dot{\textbf{x}}_{\text{lon}} =A_m \textbf{x}_{\text{lon}}+ B_m\textbf{u}_{\text{lon}}\\
+\textbf{y}_{\text{lon}} =C_m \textbf{x}_{\text{lon}} + D_m \textbf{u}_{\text{lon}}
+\end{array}
 \end{equation}
-
+where the input is the acceleration and the states are the longitudinal velocity and the actual acceleration which is also the only output of this system.
+\begin{equation*}
+\textbf{x}_{\text{lon}} = \begin{bmatrix}
+\dot{V}_x&V_x
+\end{bmatrix}^T,
+\qquad
+\textbf{u}_{\text{lon}} = a
+\end{equation*}
+and
+\[ 
+A_g=\begin{bmatrix}
+-\frac{1}{\tau}&0\\1&0
+\end{bmatrix},
+\quad
+B_g=\begin{bmatrix}
+\frac{1}{\tau}\\
+0
+\end{bmatrix},
+\]
+\[
+C_g=\begin{bmatrix}
+1&0
+\end{bmatrix}, 
+\quad
+D_g=0.
+\]
+where $\tau$ is a time constant; in practice we are considering a second order transfer function like in [5].
 \subsubsection{Lateral dynamics}
-Local function: we have a continuous vehicle lateral model from parameters
+Local function: we have a continuous vehicle lateral model from parameters obtained by simplifying the one in [7]: 
 \begin{equation}
 \label{eqn:lateral_dynamics_simple_model}
 \begin{array}{ll}
@@ -397,7 +425,7 @@ C_a=\begin{bmatrix}
 D_a=
 \textbf{0}_{2\times2}. 
 \]
-Combining (\ref{eqn:longi_dynamics_simple_model}) with (\ref{eqn:lateral_dynamics_augmented_model}) yields the state-space model that characterizes the model predictive controller:
+Combining (\ref{eqn:longi_dynamics_simple_model_ss}) with (\ref{eqn:lateral_dynamics_augmented_model}) yields the state-space model that characterizes the model predictive controller:
 \begin{equation}
 \label{eqn:full_dynamics_model}
 \begin{array}{ll}
@@ -408,7 +436,7 @@ Combining (\ref{eqn:longi_dynamics_simple_model}) with (\ref{eqn:lateral_dynamic
 where
 \begin{equation*}
 \textbf{x}_{\text{tot}} = \begin{bmatrix}
-V_x\\\dot{V}_x\\V_y\\\dot{\psi}\\e_1\\e_2
+\dot{V}_x\\V_x\\V_y\\\dot{\psi}\\e_1\\e_2
 \end{bmatrix},
 \qquad
 \textbf{u}_{\text{tot}} = 
@@ -421,17 +449,18 @@ and
 
 \[ 
 A_f=\begin{bmatrix}
-\begin{matrix}-2&0\\1&0\end{matrix}&\textbf{0}_{2\times4}\\
+A_m&\textbf{0}_{2\times4}\\
 \textbf{0}_{4\times2}&A_a
 \end{bmatrix},
 \quad
-B_f=\begin{bmatrix}\begin{matrix}2\\0\end{matrix}&\textbf{0}_{2\times2}\\
+B_f=\begin{bmatrix}
+B_m&\textbf{0}_{2\times2}\\
 \textbf{0}_{4\times1}&B_a
 \end{bmatrix},
 \]
 \[
 C_f=\begin{bmatrix}
-\begin{matrix}0&1\end{matrix}&\textbf{0}_{1\times4}\\
+C_m&\textbf{0}_{1\times4}\\
 \textbf{0}_{2\times2}&C_a
 \end{bmatrix}, 
 \quad
@@ -538,9 +567,13 @@ In this work we proposed two advanced methods for the ATLASCAR2 based on adaptiv
 	
 	\bibitem{autoMPC}J. V. Frasch et al., "An auto-generated nonlinear MPC algorithm for real-time obstacle avoidance of ground vehicles," 2013 European Control Conference (ECC), Zurich, 2013, pp. 4136-4141.
 	
+	\bibitem{long_tf}Y. Wang, Y. Bin and K. Li, "Longitudinal acceleration tracking control of low speed heavy-duty vehicles," in Tsinghua Science and Technology, vol. 13, no. 5, pp. 636-643, Oct. 2008.
+	
 	\bibitem{safety}T. Xu and H. Yuan, "Autonomous vehicle active safety system based on path planning and predictive control," 2016 35th Chinese Control Conference (CCC), Chengdu, 2016, pp. 8889-8895.
 	
 	\bibitem{matsumoto}N. Wada and T. Matsumoto, "Driver assistance for collision avoidance by constrained MPC," 2017 56th Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Kanazawa, 2017, pp. 90-93.
+	
+	\bibitem{rathai}Murali Madhavan Rathai, Karthik \& Amirthalingam, Jegan \& Jayaraman, Balaji. (2017). Robust tube-MPC based lane keeping system for autonomous driving vehicles. 1-6.
 	
 	\bibitem{fuzzyMPC}Y. Nishio, K. Nonaka and K. Sekiguchi, "Moving obstacle avoidance control by fuzzy potential method and model predictive control," 2017 11th Asian Control Conference (ASCC), Gold Coast, QLD, 2017, pp. 1298-1303.
 	

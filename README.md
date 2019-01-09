@@ -27,7 +27,7 @@ During these weeks I started to implement the basic idea of ​​my project in 
 In this week I continued to work in MATLAB adding some fundamental constraints in the MPC: in the Mixed I/O Constraints I specified an upper and a lower bound for the street limits, and also I have added a "fake" constraint if though no obstacle is detected at the nominal operating condition because it's not possible to change the dimensions of the constraint matrices at run time. In order to complicate the simulation with N obstacles I have made changes to the CustomConstraints so that the ATLASCAR2 can avoid the obstacle by overtaking it to the right: first with only one moving car and later I generalized the algorithm for N random (with respect to the number and the position) obstacles. In the animation, ATLASCAR2 can avoid obstacles by overcoming them on the right and on the left, deciding which is the best way to go.
 
 ---------------------------------------------------------------------------------------------------
-### Week 6&7 - (13th November 2018 / 26th November 2018)
+### Weeks 6&7 - (13th November 2018 / 26th November 2018)
 In these two weeks I tried to add curves by building a circular path. I found problems in tracking the reference. Probably the model I am using is not suitable for this purpose. So I started making a Simulink scheme to follow a curved line. Also in this case I have adopted an Adaptive MPC but the model considered is different (taking into account both the longitudinal and the lateral velocity).
 
 ---------------------------------------------------------------------------------------------------
@@ -47,19 +47,22 @@ During this week I have finished writing the first version of the paper. The fol
 [Paper](https://github.com/AlbertoFranco/MasterThesis/blob/master/Thesis_Latex/Paper/Paper.pdf "Click here to open Paper.pdf")
 
 ---------------------------------------------------------------------------------------------------
-### Week 11 - (18th December 2018 / 24th December 2018)
+### Weeks 11&12&13 - (18th December 2018 / 7th January 2019)
+In these weeks, during the Christmas holidays, I fixed the wrong parts of the paper and I added the correct references for the models that I used. Moreover, I started doing further simulations for the Lane Following using various types of paths and assuming that the sensors are affected by different errors: the simulated curves are those for car overtaking and a circular path. The results obtained validate the relative Simulink model.
+
+---------------------------------------------------------------------------------------------------
+### Week 14 - (8th January 2019 / 14th January 2019)
 
 
 ---------------------------------------------------------------------------------------------------
-### Week 12 - (25th December 2018 / 31th December 2018)
+### Week 15 - (15th January 2019 / 21th January 2019)
 
 
 ---------------------------------------------------------------------------------------------------
-### Week 13 - (1st January 2019 / 7th January 2019)
+### Week 16 - (22nd January 2019 / 28th January 2019)
 
 
----------------------------------------------------------------------------------------------------
-
+--------------------------------------------------------------------------------------------------
 
 
 
