@@ -180,7 +180,7 @@ for k = 1:length(T)
     umpc(k,:) = u';
     
     % Update the plant state for the next iteration |k+1|.
-    x = Ad * x + Bd * u;
+    x = Ad * x + Bd * u
 end
 
 mpcverbosity(status);
