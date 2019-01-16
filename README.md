@@ -52,8 +52,9 @@ In these weeks, during the Christmas holidays, I fixed the wrong parts of the pa
 
 ---------------------------------------------------------------------------------------------------
 ### Week 14 - (8th January 2019 / 14th January 2019)
+During this week I modified the constraints so that when the car meets 3 obstacles and can not overcome them because the road is busy. The constraints were imposed both on the maximum and minimum speed that the ATLASCAR2 can have and on the deceleration to be imposed that depends on the distance and velocity of the obstacles. In the MATLAB files is it possible to find a first simulation about this scenario.
 
-
+[Simulation](https://github.com/AlbertoFranco/MasterThesis/blob/master/MATLAB/three_obstacles_no_overtaking/animation.avi "Click here to open animation.avi")
 ---------------------------------------------------------------------------------------------------
 ### Week 15 - (15th January 2019 / 21th January 2019)
 
