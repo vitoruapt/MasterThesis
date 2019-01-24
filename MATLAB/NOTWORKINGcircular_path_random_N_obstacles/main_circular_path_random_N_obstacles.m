@@ -107,7 +107,7 @@ mpcobj.ManipulatedVariables(2).ScaleFactor = 0.2;
  
 % Choose the Y position and velocity by setting the weights of the other 
 % two outputs (X and theta) to zero
-mpcobj.Weights.OutputVariables = [1 1 0 1];
+mpcobj.Weights.OutputVariables = [0 1 0 1];
 
 % Update the controller with the nominal operating condition
 mpcobj.Model.Nominal = struct('U',U,'Y',Y,'X',X,'DX',DX);

@@ -148,7 +148,7 @@ for k = 1:length(T)
     
     % Create Obstacle Dynamics
     for i=1:N 
-        obstacle(i).X(k+1) = obstacle(i).X(k)+0.15*i;
+        obstacle(i).X(k+1) = obstacle(i).X(k)-0.15*i;
         % Safe zones for the plot
         flSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
         frSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
@@ -180,7 +180,8 @@ for k = 1:length(T)
     umpc(k,:) = u';
     
     % Update the plant state for the next iteration |k+1|.
-    x = Ad * x + Bd * u
+    x = Ad * x + Bd * u;
+    x_safe(k,:)=x;
 end
 
 mpcverbosity(status);
@@ -233,3 +234,7 @@ end
 % hold off
 % close(writerObj); % Saves the movie.
 close(f);
+
+%% Results
+N_obstaclesResults;
+

@@ -1,0 +1,201 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{DTGtesi}[04/09/2009 Redifinizione del comando maketitle per tesi dell'Universit� degli Studi di Padova. Scritto da Luca Peretti, modificando il pacchetto uniudtesi.sty di Gianluca Gorni]
+\RequirePackage{ifthen}
+\RequirePackage{makeidx}
+\RequirePackage{tocbibind}
+\RequirePackage{graphicx}
+\RequirePackage[hyperindex,colorlinks=true,linkcolor=blue,citecolor=magenta,urlcolor=red]{hyperref}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,bindingoffset=1cm]{geometry}
+\RequirePackage[absolute]{textpos}
+
+% Impostazioni base per hyperref
+\hypersetup{pdfpagelayout=SinglePage,
+pdfpagemode=UseOutlines,
+bookmarksopen,
+bookmarksopenlevel=2,
+pdftitle=Tesi di Laurea,
+pdfauthor=Tesista,
+pdfsubject=Tesi di Laurea,
+pdfkeywords=tesi laurea LaTeX}
+
+% Ridefinizione del comando \chapter
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+\titleformat{\chapter}[display]
+{\bfseries \LARGE}
+{\filleft\huge\chaptertitlename\ \thechapter}
+{1.5ex}
+{\vspace{1ex}%
+\filright}
+[\vspace{1ex}%
+\titlerule]
+
+% Ridefiniamo la riga di testa delle pagine:
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+% Attivazione dell'indice analitico (non obbligatorio)
+\makeindex
+
+% Nuovi comandi per la formattazione della prima pagina della tesi
+\newcommand{\@school}{Engineering}
+\newcommand{\@department}{Information Engineering}
+\newcommand{\@corsodilaurea}{?}
+\newcommand{\@corsodilaureatriennale}{?}
+\newcommand{\@corsodilaureamagistrale}{?}
+\newcommand{\@triennaleOmagistrale}{?}
+\newcommand{\@titolo}{Senza Titolo}
+\newcommand{\@annoaccademico}{?}
+\newcommand{\@supervisor}{?}
+\newcommand{\@cosupervisor}{?}
+\newcommand{\@mastercandidate}{?}
+\newcommand{\@laureanda}{?}
+\newcommand{\@laureandoOlaureanda}{?}
+\newcommand{\@autore}{}
+\newcommand{\@matricola}{?}
+\newcommand{\@dedica}{?}
+
+\newcommand{\school}[1]{%
+	\renewcommand{\@school}{\uppercase{#1}}}
+
+\newcommand{\department}[1]{%
+  \renewcommand{\@department}{\uppercase{#1}}}
+
+\newcommand{\corsodilaurea}[1]{%
+  \renewcommand{\@corsodilaurea}{\uppercase{#1}}%
+  \renewcommand{\@triennaleOmagistrale}{\ignorespaces}}
+
+\newcommand{\corsodilaureatriennale}[1]{%
+  \renewcommand{\@corsodilaurea}{\uppercase{#1}}%
+  \renewcommand{\@triennaleOmagistrale}{\ignorespaces}}
+
+\newcommand{\corsodilaureamagistrale}[1]{%
+  \renewcommand{\@corsodilaurea}{\uppercase{#1}}%
+  \renewcommand{\@triennaleOmagistrale}{MAGISTRALE}}
+
+\newcommand{\titolo}[1]{%
+  \renewcommand{\@titolo}{\uppercase{#1}}}
+
+\newcommand{\annoaccademico}[1]{%
+  \renewcommand{\@annoaccademico}{#1}}
+
+\newcommand{\supervisor}[2][Prof.]{%
+  \renewcommand{\@supervisor}{#1 \uppercase{#2}}}
+
+\newcommand{\cosupervisor}[2][Prof.]{%
+  \renewcommand{\@cosupervisor}{#1 \uppercase{#2}}}
+
+\newcommand{\mastercandidate}[1]{%
+  \renewcommand{\@mastercandidate}{\uppercase{#1}}%
+  \renewcommand{\@autore}{\uppercase{#1}}%
+  \renewcommand{\@laureandoOlaureanda}{Laureando}}
+
+\newcommand{\laureanda}[1]{%
+  \renewcommand{\@laureanda}{\uppercase{#1}}%
+  \renewcommand{\@autore}{\uppercase{#1}}%
+  \renewcommand{\@laureandoOlaureanda}{Laureanda}}
+
+\newcommand{\matricola}[1]{%
+\renewcommand{\@matricola}{\uppercase{#1}}}
+
+\newcommand{\dedica}[1]{%
+  \renewcommand{\@dedica}{#1}}
+
+\newcommand{\data}[1]{\date{#1}}
+
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty} \cleardoublepage}}
+
+%  Formattazione della prima pagina della tesi
+\renewcommand\maketitle{
+\begin{titlepage}
+
+\begin{rmfamily}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,50mm)
+\centering
+\vbox to0pt{\vbox to\textheight{\vfill \includegraphics[width=13.5cm]{unipd-light} \vfill}\vss}
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,32mm)
+\centering
+\includegraphics[height=2.5cm]{unipd-bn}
+%\includegraphics[height=2.1cm]{LogoUniPD}
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,56.5mm)
+\centering
+\Large \textbf{UNIVERSIT\`A DEGLI STUDI DI PADOVA}
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,67mm)
+\centering
+\large SCHOOL OF \@school
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,74mm)
+\centering
+\large  DEPARTMENT OF \@department
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,81mm)
+\centering
+\large  SECOND CYCLE DEGREE IN AUTOMATION ENGINEERING
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,91mm)
+\centering
+\rule{2.1cm}{.4pt}
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,100mm)
+\centering
+\Large \textit{\textbf{MASTER THESIS}}
+%\Large \textit{\textbf{TESI DI LAUREA TRIENNALE}}
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,148mm)
+\centering
+\begin{Huge}
+{\renewcommand{\\}{\cr}
+\halign{\hbox to\textwidth{\strut\hfil##\hfil}\cr
+\@titolo\cr}}
+\end{Huge}
+\end{textblock*}
+% --- RELATORE E CANDIDATO ---
+\begin{textblock*}{187mm}[0,0,5](23mm,187mm)
+\noindent \large \textit{Supervisor:} \@supervisor
+\end{textblock*}
+\ifthenelse{\equal{\@cosupervisor}{?}}{}{
+\begin{textblock*}{187mm}[0,0,5](23mm,196mm)
+\noindent \large \textit{Co-Supervisor:} \@cosupervisor
+\end{textblock*}}
+\begin{textblock*}{187mm}[1,0,5](187mm,220mm)
+\begin{flushright}
+\large \textit{Master Candidate:} \@mastercandidate
+\end{flushright}
+\end{textblock*}
+\begin{textblock*}{187mm}[1,0,5](187mm,229mm)
+\begin{flushright}
+\large  Registration Number \@matricola
+\end{flushright}
+\end{textblock*}
+\begin{textblock*}{210mm}[0.5,0,5](105mm,263mm)
+\centering
+\large \@date \\
+\large ACADEMIC YEAR \@annoaccademico
+\end{textblock*}
+\end{rmfamily}
+\null
+\clearemptydoublepage
+\ifthenelse{\equal{\@dedica}{?}}{}{%
+\pagestyle{empty}
+\null\vfil
+\begin{Large}
+\begin{flushright}
+\@dedica
+\end{flushright}
+\end{Large}
+\vfil\vfil\clearemptydoublepage}
+\end{titlepage}
+}
+\endinput

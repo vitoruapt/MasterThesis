@@ -38,12 +38,15 @@ for i=1:N
     obstacle(i).length = 5;    % The obstacles in this example are moving cars 
     obstacle(i).width = 2;     % with the same size and shape of the ATLASCAR2
 
-    obstacle(i).X = 39+3*i;      % Initial positions of the N obstacles   
-    obstacle(i).Y = -10+5*i; % (in this example the obstacles are DYNAMIC)    
-
+    obstacle(i).X = 33+3*i;      % Initial positions of the N obstacles   
+    obstacle(i).Y =-10+5*i; % (in this example the obstacles are DYNAMIC)    
+    
     obstacle(i).safeDistanceX = obstacle(i).length;    % Length equal to two car lengths
     obstacle(i).safeDistanceY = road.laneWidth;        % Width equal to two lane widths
-
+    
+    obstacle(i).space = 0.16;                
+    obstacle(i).velocity = obstacle(i).space/Ts;      % Velocity of the obstacle 8 m/s (0.16/Ts)         
+    
     % Assume that the LIDAR sensor can detect an obstacle 30
     % meters in front of the ATLASCAR2.
     obstacle(i).DetectionDistance = 30;
@@ -76,9 +79,9 @@ mpcobj.ControlHorizon = 5;
 
 % To prevent the ATLASCAR2 from accelerating or decelerating too quickly, 
 % add a hard constraint of 0.2 (m^2/sec) on the throttle rate of change.
-mpcobj.ManipulatedVariables(1).RateMin = -0.2; 
-mpcobj.ManipulatedVariables(1).RateMax = 0.2;
-
+mpcobj.ManipulatedVariables(1).RateMin = -2.5;  
+mpcobj.ManipulatedVariables(1).RateMax = 2.5;
+ 
 % add a hard constraint of 6 degrees per sec on the steering angle rate of change.
 mpcobj.ManipulatedVariables(2).RateMin = -pi/30;
 mpcobj.ManipulatedVariables(2).RateMax = pi/30;
@@ -119,34 +122,28 @@ E3 = [0 0];
 F3 = [0 -1 0 0]; 
 G3 = road.laneWidth*road.lanes/2;
 
-E4 = [1 0];
-F4 = [0 0 0 0];
-G4 = 0;
-
-E5 = [-1 0];
-F5 = [0 0 0 0];
-G5 = 0;
-
+% Constraint on x
 E6 = [0 0];
-F6 = [0 0 0 1];
-G6 = 20;
+F6 = [1 0 0 0];
+G6 = obstacle(1).X;
 
 E7 = [0 0];
-F7 = [0 0 0 -1];
-G7 = -8;
+F7 = [-1 0 0 0];
+G7 = 0;
+
 % Specify the mixed input/output constraints in the controller using the
 % |setconstraint| function.
-setconstraint(mpcobj,[E1;E2;E3;E4;E5;E6;E7],[F1;F2;F3;F4;F5;F6;F7],[G1;G2;G3;G4;G5;G6;G7]);
+setconstraint(mpcobj,[E1;E2;E3;E6;E7],[F1;F2;F3;F6;F7],[G1;G2;G3;G6;G7]);
 
 %% Simulation
 
-ref = [0 0 0 0];               % Constant reference signal 
+ref = [0 0 0 car.V];               % Constant reference signal 
 
 x = car.x0;                        % State initialization
 u = car.u0;                        % Input initialization             
 egoStates = mpcstate(mpcobj);      % Controller states inizialization
 
-T = 0:Ts:20;                        % Simulation time
+T = 0:Ts:10;                        % Simulation time
 
 % Log simulation data for plotting
 saveSlope = zeros(length(T),N);         
@@ -163,7 +160,8 @@ for k = 1:length(T)
     
     % Create Obstacle Dynamics
     for i=1:N 
-        obstacle(i).X(k+1) = obstacle(i).X(k)+0.16;
+        obstacle(i).X(k+1) = obstacle(i).X(k)+obstacle(i).space;
+        obstacle(1).X(k+1) = obstacle(1).X(k)+0.28;
         % Safe zones for the plot
         flSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
         frSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
@@ -195,7 +193,7 @@ for k = 1:length(T)
     umpc(k,:) = u';
     
     % Update the plant state for the next iteration |k+1|.
-    x = Ad * x + Bd * u
+    x = Ad * x + Bd * u;
     x_save(k,:)=x;
 end
 
@@ -214,7 +212,7 @@ figure(f)
 plot(ympc(:,1),ympc(:,2),'-b');
 
 %% Animation
-% writerObj = VideoWriter('animation.avi'); % Name it.
+% writerObj = VideoWriter('animation3.avi'); % Name it.
 % writerObj.FrameRate = 1/Ts; % How many frames per second.
 % open(writerObj);
 
@@ -236,8 +234,8 @@ for k = 1:length(saveSlope)
         safe(i).LineStyle='--';
     end
     
-%     frame = getframe(gcf);
-%     writeVideo(writerObj, frame);
+   %  frame = getframe(gcf);
+   %  writeVideo(writerObj, frame);
     
     pause(80/car.V/length(T))
     delete(p)
@@ -246,6 +244,6 @@ for k = 1:length(saveSlope)
         delete(safe(i))
     end
 end
-% hold off
-% close(writerObj); % Saves the movie.
+%hold off
+%close(writerObj); % Saves the movie.
 close(f);
