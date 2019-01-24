@@ -57,8 +57,12 @@ During this week I modified the constraints so that when the car meets 3 obstacl
 [Simulation](https://github.com/AlbertoFranco/MasterThesis/blob/master/MATLAB/three_obstacles_no_overtaking/animation.avi "Click here to open animation.avi")
 
 ---------------------------------------------------------------------------------------------------
-### Week 15 - (15th January 2019 / 21th January 2019)
+### Week 15 - (15th January 2019 / 21st January 2019)
+This week I have modified the code related to the constraints in order to choose correctly the matrices E, F and G according to the scenario. In the case  there are three vehicles that prevent overtaking, the car with velocity equal to 20 m/s, slows down and adapts its speed to the one of the obstacles (supposed to be 8 m/s) remaining always behind. If, on the other hand, one of the obstacles increases its speed, the ATLASCAR2 that had previously slowed down, waits for the necessary space between the obstacles to perform the overtaking maneuver. During the overrun, the vehicle resumes the reference speed of 20 m/s and returns in the middle of the road. To allow both of these maneuvers it was necessary to insert new constraints relative to the position with respect to the x-axis. We have inserted an upper and lower bound which depend on the position of the ATLASCAR2 and the position of the slower obstacle. By inserting this constraint the vehicle modifies its velocity respecting the restrictions on its coordinates in x and y. Finally I made the graphs for the most important components of the simulation (speed, throttle, heading and steering angles, and the lateral position).
 
+[Simulation_1](https://github.com/AlbertoFranco/MasterThesis/blob/master/MATLAB/three_obstacles_no_overtaking/animation1.avi "Click here to open animation1.avi")
+
+[Simulation_2](https://github.com/AlbertoFranco/MasterThesis/blob/master/MATLAB/three_obstacles_no_overtaking/animation3.avi "Click here to open animation3.avi")
 
 ---------------------------------------------------------------------------------------------------
 ### Week 16 - (22nd January 2019 / 28th January 2019)
