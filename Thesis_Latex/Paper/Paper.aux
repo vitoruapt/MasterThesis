@@ -18,69 +18,107 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Context of the Problem and \\ Proposed Solution}{1}{section.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Theoretical background - adaptive Model Predictive Control}{1}{subsection.2.1}}
-\newlabel{eqn:Adaptive_MPC_plant_discrete}{{\unhbox \voidb@x \hbox {II-A}}{2}{Theoretical background - adaptive Model Predictive Control}{subsection.2.1}{}}
-\newlabel{eqn:Adaptive_MPC_nominal_condition}{{\unhbox \voidb@x \hbox {II-A}}{2}{Theoretical background - adaptive Model Predictive Control}{subsection.2.1}{}}
-\newlabel{eqn:LTVKF}{{\unhbox \voidb@x \hbox {II-A}}{2}{Theoretical background - adaptive Model Predictive Control}{subsection.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Theoretical background - Adaptive MPC}{1}{subsection.2.1}}
+\newlabel{eqn:Adaptive_MPC_plant_discrete}{{\unhbox \voidb@x \hbox {II-A}}{2}{Theoretical background - Adaptive MPC}{subsection.2.1}{}}
+\newlabel{eqn:Adaptive_MPC_nominal_condition}{{\unhbox \voidb@x \hbox {II-A}}{2}{Theoretical background - Adaptive MPC}{subsection.2.1}{}}
+\newlabel{eqn:LTVKF}{{\unhbox \voidb@x \hbox {II-A}}{2}{Theoretical background - Adaptive MPC}{subsection.2.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Obstacle Avoidance}{2}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Problem Formulation}{2}{subsection.3.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Problem description of collision avoidance on road.}}{2}{figure.1}}
 \newlabel{fig:obstacleAvoidance}{{1}{2}{Problem description of collision avoidance on road}{figure.1}{}}
-\newlabel{eqn:dynamics_model_obstacle_avoidance}{{\unhbox \voidb@x \hbox {III-A}}{3}{Problem Formulation}{figure.1}{}}
-\newlabel{eqn:dynamics_ss_obstacle_avoidance_con}{{1}{3}{Problem Formulation}{equation.3.1}{}}
-\newlabel{eqn:dynamics_ss_obstacle_avoidance_dis}{{2}{3}{Problem Formulation}{equation.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Bicycle model of a car.}}{3}{figure.2}}
+\newlabel{fig:car_model}{{2}{3}{Bicycle model of a car}{figure.2}{}}
+\newlabel{eqn:dynamics_model_obstacle_avoidance}{{\unhbox \voidb@x \hbox {III-A}}{3}{Problem Formulation}{figure.2}{}}
+\newlabel{eqn:dynamics_model_non_linear}{{1}{3}{Problem Formulation}{equation.3.1}{}}
+\newlabel{eqn:dynamics_model_obstacle_avoidance_linearized}{{\unhbox \voidb@x \hbox {III-A}}{3}{Problem Formulation}{equation.3.1}{}}
+\newlabel{eqn:dynamics_ss_obstacle_avoidance_dis}{{\unhbox \voidb@x \hbox {III-A}}{3}{Problem Formulation}{equation.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Design of Adaptive Model Predictive Control}{3}{subsection.3.2}}
-\newlabel{eqn:mixed_IO_constraints}{{\unhbox \voidb@x \hbox {III-B}}{3}{Design of Adaptive Model Predictive Control}{subsection.3.2}{}}
+\newlabel{eqn:mixed_IO_constraints}{{\unhbox \voidb@x \hbox {III-B}}{4}{Design of Adaptive Model Predictive Control}{subsection.3.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Simulation Results}{4}{subsection.3.3}}
-\newlabel{fig:obstacleAvoidance_start}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{subsection.3.3}{}}
-\newlabel{fig:obstacleAvoidance_middle}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{subsection.3.3}{}}
-\newlabel{fig:obstacleAvoidance_middle_end}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{subsection.3.3}{}}
-\newlabel{fig:obstacleAvoidance_end}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{subsection.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Simulation of right overtaking with one moving obstacle}}{4}{figure.2}}
-\newlabel{fig:obstacleAvoidance_random_2}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{figure.2}{}}
-\newlabel{fig:obstacleAvoidance_random}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{figure.2}{}}
-\newlabel{fig:obstacleAvoidance_random_1}{{\unhbox \voidb@x \hbox {III-C}}{4}{Simulation Results}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Simulations of overtaking with $N = 2,3,4$ moving obstacles}}{4}{figure.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Lane Following}{4}{section.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Problem Formulation}{4}{subsection.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Problem description of a lane following system.}}{4}{figure.4}}
-\newlabel{fig:laneFollowing}{{4}{4}{Problem description of a lane following system}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Longitudinal dynamics}{5}{subsubsection.4.1.1}}
-\newlabel{eqn:longi_dynamics_simple_model_ss}{{3}{5}{Longitudinal dynamics}{equation.4.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}Lateral dynamics}{5}{subsubsection.4.1.2}}
-\newlabel{eqn:lateral_dynamics_simple_model}{{4}{5}{Lateral dynamics}{equation.4.4}{}}
-\newlabel{eqn:lateral_dynamics_augmented_model}{{5}{5}{Lateral dynamics}{equation.4.5}{}}
-\newlabel{eqn:full_dynamics_model}{{6}{5}{Lateral dynamics}{equation.4.6}{}}
-\newlabel{eqn:full_dynamics_model_disc}{{\unhbox \voidb@x \hbox {IV-A}2}{5}{Lateral dynamics}{equation.4.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Design of Adaptive Model Predictive Control}{6}{subsection.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Simulation Results}{6}{subsection.4.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Desired path of the ATLASCAR2.}}{6}{figure.5}}
-\newlabel{fig:reference_laneFollowing}{{5}{6}{Desired path of the ATLASCAR2}{figure.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Desired curvature.}}{6}{figure.6}}
-\newlabel{fig:curvature_laneFollowing}{{6}{6}{Desired curvature}{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Acceleration $u_1$ with respect to time.}}{6}{figure.7}}
-\newlabel{fig:acceleration_laneFollowing}{{7}{6}{Acceleration $u_1$ with respect to time}{figure.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusions and Future Work}{6}{section.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}1}One Moving Obstacle - Right Overtaking}{4}{subsubsection.3.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}2}Multiple Moving Obstacles}{4}{subsubsection.3.3.2}}
+\newlabel{fig:obstacleAvoidance_start}{{\unhbox \voidb@x \hbox {III-C}1}{5}{One Moving Obstacle - Right Overtaking}{subsubsection.3.3.1}{}}
+\newlabel{fig:obstacleAvoidance_middle}{{\unhbox \voidb@x \hbox {III-C}1}{5}{One Moving Obstacle - Right Overtaking}{subsubsection.3.3.1}{}}
+\newlabel{fig:obstacleAvoidance_middle_end}{{\unhbox \voidb@x \hbox {III-C}1}{5}{One Moving Obstacle - Right Overtaking}{subsubsection.3.3.1}{}}
+\newlabel{fig:obstacleAvoidance_end}{{\unhbox \voidb@x \hbox {III-C}1}{5}{One Moving Obstacle - Right Overtaking}{subsubsection.3.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Simulation of right overtaking with one moving obstacle}}{5}{figure.3}}
+\newlabel{fig:obstacleAvoidance_random_2}{{\unhbox \voidb@x \hbox {III-C}2}{5}{Multiple Moving Obstacles}{subsubsection.3.3.2}{}}
+\newlabel{fig:obstacleAvoidance_random}{{\unhbox \voidb@x \hbox {III-C}2}{5}{Multiple Moving Obstacles}{subsubsection.3.3.2}{}}
+\newlabel{fig:obstacleAvoidance_random_1}{{\unhbox \voidb@x \hbox {III-C}2}{5}{Multiple Moving Obstacles}{subsubsection.3.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Simulations of overtaking with $N = 2,3,4$ moving obstacles}}{5}{figure.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}3}Vehicle Braking and Obstacles Overtaking}{5}{subsubsection.3.3.3}}
+\newlabel{fig:braking_0}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\newlabel{fig:braking_1}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\newlabel{fig:braking_2}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\newlabel{fig:braking_3}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\newlabel{fig:braking_4}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\newlabel{fig:braking_5}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\newlabel{fig:braking_6}{{\unhbox \voidb@x \hbox {III-C}3}{5}{Vehicle Braking and Obstacles Overtaking}{subsubsection.3.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Simulation of braking and overtaking obstacles.}}{5}{figure.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Lane Following}{5}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Problem Formulation}{5}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Velocity $v$ with respect to time.}}{6}{figure.6}}
+\newlabel{fig:velocity_braking}{{6}{6}{Velocity $v$ with respect to time}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Throttle $T$ with respect to time.}}{6}{figure.7}}
+\newlabel{fig:throttle_braking}{{7}{6}{Throttle $T$ with respect to time}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Steering angle $\delta $ with respect to time.}}{6}{figure.8}}
+\newlabel{fig:delta_braking}{{8}{6}{Steering angle $\delta $ with respect to time}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Heading angle $\theta $ with respect to time.}}{6}{figure.9}}
+\newlabel{fig:theta_braking}{{9}{6}{Heading angle $\theta $ with respect to time}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Lateral position $y$ with respect to time.}}{6}{figure.10}}
+\newlabel{fig:lateral_braking}{{10}{6}{Lateral position $y$ with respect to time}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Problem description of a lane following system.}}{6}{figure.11}}
+\newlabel{fig:laneFollowing}{{11}{6}{Problem description of a lane following system}{figure.11}{}}
+\citation{long_tf}
+\citation{rathai}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Longitudinal dynamics}{7}{subsubsection.4.1.1}}
+\newlabel{eqn:longi_dynamics_simple_model_ss}{{2}{7}{Longitudinal dynamics}{equation.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}Lateral dynamics}{7}{subsubsection.4.1.2}}
+\newlabel{eqn:lateral_dynamics_simple_model}{{3}{7}{Lateral dynamics}{equation.4.3}{}}
+\newlabel{eqn:lateral_dynamics_augmented_model}{{4}{7}{Lateral dynamics}{equation.4.4}{}}
+\newlabel{eqn:full_dynamics_model}{{5}{7}{Lateral dynamics}{equation.4.5}{}}
+\newlabel{eqn:full_dynamics_model_disc}{{\unhbox \voidb@x \hbox {IV-A}2}{7}{Lateral dynamics}{equation.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Design of Adaptive Model Predictive Control}{8}{subsection.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Simulation Results}{8}{subsection.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Desired path of the ATLASCAR2.}}{8}{figure.12}}
+\newlabel{fig:reference_laneFollowing}{{12}{8}{Desired path of the ATLASCAR2}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Desired curvature.}}{8}{figure.13}}
+\newlabel{fig:curvature_laneFollowing}{{13}{8}{Desired curvature}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Acceleration $u_1$ with respect to time.}}{8}{figure.14}}
+\newlabel{fig:acceleration_laneFollowing}{{14}{8}{Acceleration $u_1$ with respect to time}{figure.14}{}}
 \bibcite{MMPC}{1}
 \bibcite{onlineMPC}{2}
 \bibcite{swarms}{3}
 \bibcite{autoMPC}{4}
 \bibcite{long_tf}{5}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Steering angle $u_2$ with respect to time.}}{9}{figure.15}}
+\newlabel{fig:steering_laneFollowing}{{15}{9}{Steering angle $u_2$ with respect to time}{figure.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Relative yaw angle $e_2$ with respect to time.}}{9}{figure.16}}
+\newlabel{fig:relative_yaw_angle_laneFollowing}{{16}{9}{Relative yaw angle $e_2$ with respect to time}{figure.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Lateral deviation $e_1$ with respect to time.}}{9}{figure.17}}
+\newlabel{fig:lateral_deviation_laneFollowing}{{17}{9}{Lateral deviation $e_1$ with respect to time}{figure.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Longitudinal velocity $V_x$ with respect to time.}}{9}{figure.18}}
+\newlabel{fig:longitudinal_velocity_laneFollowing}{{18}{9}{Longitudinal velocity $V_x$ with respect to time}{figure.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusions and Future Work}{9}{section.5}}
+\@writefile{toc}{\contentsline {section}{References}{9}{section*.1}}
 \bibcite{safety}{6}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Steering angle $u_2$ with respect to time.}}{7}{figure.8}}
-\newlabel{fig:steering_laneFollowing}{{8}{7}{Steering angle $u_2$ with respect to time}{figure.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Relative yaw angle $e_2$ with respect to time.}}{7}{figure.9}}
-\newlabel{fig:relative_yaw_angle_laneFollowing}{{9}{7}{Relative yaw angle $e_2$ with respect to time}{figure.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Lateral deviation $e_1$ with respect to time.}}{7}{figure.10}}
-\newlabel{fig:lateral_deviation_laneFollowing}{{10}{7}{Lateral deviation $e_1$ with respect to time}{figure.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Longitudinal velocity $V_x$ with respect to time.}}{7}{figure.11}}
-\newlabel{fig:longitudinal_velocity_laneFollowing}{{11}{7}{Longitudinal velocity $V_x$ with respect to time}{figure.11}{}}
-\@writefile{toc}{\contentsline {section}{References}{7}{section*.1}}
 \bibcite{matsumoto}{7}
 \bibcite{rathai}{8}
 \bibcite{fuzzyMPC}{9}
 \bibcite{NONMPC}{10}
 \bibcite{matPDF}{11}
 \bibcite{theory}{12}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Overall procedure scheme lane following.}}{8}{figure.12}}
-\newlabel{fig:scheme_lane_following}{{12}{8}{Overall procedure scheme lane following}{figure.12}{}}
+\bibcite{backward}{13}
+\bibcite{archi}{14}
+\bibcite{zhou}{15}
+\bibcite{yu}{16}
+\bibcite{ricky}{17}
+\bibcite{mikumo}{18}
+\bibcite{qian}{19}
+\bibcite{berger}{20}
+\bibcite{kth_thilen}{21}
+\bibcite{kth_nordell}{22}
+\bibcite{shen}{23}
+\bibcite{borelli}{24}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Overall procedure scheme lane following.}}{10}{figure.19}}
+\newlabel{fig:scheme_lane_following}{{19}{10}{Overall procedure scheme lane following}{figure.19}{}}

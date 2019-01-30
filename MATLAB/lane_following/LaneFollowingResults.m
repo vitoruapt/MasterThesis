@@ -15,8 +15,8 @@ plot(delta_ampc.Values.time,delta_ampc.Values.Data);
 title('\textbf{Steering Angle (u$_2$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Steering angle [rad]','Interpreter','latex');
-pos = get(h1,'Position');
-set(h1,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
+pos1 = get(h1,'Position');
+set(h1,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos1(3), pos1(4)-40])
 print(h1,'figure\SteeringAngleVsTime','-dpdf','-r0')
 hold off
 pause(2)
@@ -30,8 +30,8 @@ plot(e1_ampc.Values.time,e1_ampc.Values.Data);
 title('\textbf{Lateral Deviation (e$_1$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Lateral Deviation [m]','Interpreter','latex');
-pos = get(h2,'Position');
-set(h2,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-41])
+pos2 = get(h2,'Position');
+set(h2,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos2(3), pos2(4)-40])
 print(h2,'figure\LateralDeviationVsTime','-dpdf','-r0')
 hold off
 pause(2)
@@ -45,8 +45,8 @@ plot(e2_ampc.Values.Time,e2_ampc.Values.Data);
 title('\textbf{Relative Yaw Angle (e$_2$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Relative Yaw Angle [rad]','Interpreter','latex');
-pos = get(h3,'Position');
-set(h3,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
+pos3 = get(h3,'Position');
+set(h3,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos3(3), pos3(4)-40])
 print(h3,'figure\RelativeYawAngleVsTime','-dpdf','-r0')
 hold off
 pause(2)
@@ -60,8 +60,8 @@ plot(accel_ampc.Values.time,accel_ampc.Values.Data);
 title('\textbf{Acceleration (u$_1$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Acceleration [m/s$^2$]','Interpreter','latex');
-pos = get(h4,'Position');
-set(h4,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
+pos4 = get(h4,'Position');
+set(h4,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos4(3), pos4(4)-40])
 print(h4,'figure\AccelerationVsTime','-dpdf','-r0')
 hold off
 pause(2)
@@ -75,8 +75,8 @@ plot(vx_ampc.Values.Time,vx_ampc.Values.Data);
 title('\textbf{Velocity (V$_x$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Velocity [m/s]','Interpreter','latex');
-pos = get(h5,'Position');
-set(h5,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
+pos5 = get(h5,'Position');
+set(h5,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos5(3), pos5(4)-40])
 print(h5,'figure\LongitudinalVelocityVsTime','-dpdf','-r0')
 hold off
 %% Local function: Get data from simulation

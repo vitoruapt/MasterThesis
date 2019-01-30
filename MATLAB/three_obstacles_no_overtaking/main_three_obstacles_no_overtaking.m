@@ -38,7 +38,7 @@ for i=1:N
     obstacle(i).length = 5;    % The obstacles in this example are moving cars 
     obstacle(i).width = 2;     % with the same size and shape of the ATLASCAR2
 
-    obstacle(i).X = 33+3*i;      % Initial positions of the N obstacles   
+    obstacle(i).X = 33+3;      % Initial positions of the N obstacles   
     obstacle(i).Y =-10+5*i; % (in this example the obstacles are DYNAMIC)    
     
     obstacle(i).safeDistanceX = obstacle(i).length;    % Length equal to two car lengths
@@ -161,7 +161,7 @@ for k = 1:length(T)
     % Create Obstacle Dynamics
     for i=1:N 
         obstacle(i).X(k+1) = obstacle(i).X(k)+obstacle(i).space;
-        obstacle(1).X(k+1) = obstacle(1).X(k)+0.28;
+        obstacle(3).X(k+1) = obstacle(3).X(k)+0.3;
         % Safe zones for the plot
         flSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
         frSafeX(k,i) = obstacle(i).X(k)+obstacle(i).safeDistanceX;
@@ -219,7 +219,7 @@ plot(ympc(:,1),ympc(:,2),'-b');
 for k = 1:length(saveSlope) 
     hold on 
     grid on
-    grid minor
+    %grid minor
     
     % ATLASCAR2 green rectangle
     p = patch([ympc(k,1)-car.length/2 ympc(k,1)-car.length/2 ympc(k,1)+car.length/2 ympc(k,1)+car.length/2], [ympc(k,2)-car.width/2, ympc(k,2)+car.width/2, ympc(k,2)+car.width/2, ympc(k,2)-car.width/2], [0 1 0]);
@@ -236,7 +236,7 @@ for k = 1:length(saveSlope)
     
    %  frame = getframe(gcf);
    %  writeVideo(writerObj, frame);
-    
+      % print('figure\braking_4','-dpdf','-r0')
     pause(80/car.V/length(T))
     delete(p)
     for i=1:N

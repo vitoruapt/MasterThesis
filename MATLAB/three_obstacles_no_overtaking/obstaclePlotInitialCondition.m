@@ -10,7 +10,7 @@ Y0 = car.x0(2);
 plot(X0,Y0,'gx');
 hold on 
 grid on
-grid minor
+%grid minor
 axis equal
 
 % ATLASCAR2 initialization

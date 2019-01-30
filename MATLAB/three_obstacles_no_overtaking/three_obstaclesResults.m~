@@ -10,7 +10,7 @@ title('\textbf{Velocity ($v$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Velocity [m/s]','Interpreter','latex');
 pos1 = get(h1,'Position');
-set(h1,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos1(3), pos1(4)-40])
+set(h1,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos1(3), pos1(4)-45])
 print(h1,'figure\VelocityVsTime','-dpdf','-r0')
 hold off
 
@@ -24,7 +24,7 @@ title('\textbf{Lateral Position ($y$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Lateral Position [m]','Interpreter','latex');
 pos2 = get(h2,'Position');
-set(h2,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos2(3), pos2(4)-40])
+set(h2,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos2(3), pos2(4)-45])
 print(h2,'figure\LateralPositionVsTime','-dpdf','-r0')
 hold off
 
@@ -38,7 +38,7 @@ title('\textbf{Heading Angle ($\theta$) vs Time}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Heading Angle [rad]','Interpreter','latex');
 pos3 = get(h3,'Position');
-set(h3,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos3(3), pos3(4)-40])
+set(h3,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos3(3), pos3(4)-45])
 print(h3,'figure\HeadingAngleVsTime','-dpdf','-r0')
 hold off
 

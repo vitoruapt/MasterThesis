@@ -28,12 +28,11 @@ plot(Xref,Yref)
 hold on
 grid on
 grid minor
-axis equal
 title('\textbf{Desired Path}','Interpreter','latex');
 xlabel('X-coordinate [m]','Interpreter','latex');
 ylabel('Y-coordinate [m]','Interpreter','latex');
 pos = get(h,'Position');
-set(h,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3)*0.8, pos(4)-40])
+set(h,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
 print(h,'figure\Reference','-dpdf','-r0')
 hold off
 
@@ -56,6 +55,6 @@ title('\textbf{Curvature}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
 ylabel('Curvature [m]','Interpreter','latex');
 pos = get(hcurv,'Position');
-set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3)*0.8, pos(4)-40])
+set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
 print(hcurv,'figure\Curvature','-dpdf','-r0')
 hold off
