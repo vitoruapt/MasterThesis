@@ -39,9 +39,10 @@ Università degli Studi di Padova\\ \href{mailto:alberto.franco.3@studenti.unipd
 	In this paper we present two different strategies for a self-driving car short-term path planning. The aim of this project is to study and implement a path tracking framework in order to prevent ATLASCAR2 collision with moving obstacle vehicles. The proposed algorithms, based on the Model Predictive Control paradigm, solve optimal problems formulated in terms of cost minimization under constraints.
 \end{abstract}
 \section{Introduction}
-In robotic research, the problem of navigation is among the most important. Basically all autonomous mobile robots need some kind of navigation to fulfill the mobile term.
-We understand navigation as a process of planning a path of a mobile robot from its current position to a desired goal location, following the planned path, and avoiding any discovered obstacles along the way. The desired paths have to
-fulfill several conditions to ensure safety and feasibility of the navigation. Moreover, the paths can be also compared in terms of desirability for example short or smooth paths are usually more desirable than long and curved ones. Such paths should therefore be preferred in the navigation process. Beyond the path planning, the navigation problem also involves reacting to changes of the environment model. Robots are required to move towards target in a short time and avoid either static or dynamic obstacles observed by their sensors, which involves efficient path planning and valid obstacle avoidance. Though these two topics have been well researched, currently, there is no ideal solution to handling the navigation problem within cluttered dynamic environments.
+In robotic research, the problem of navigation is among the most important. Basically all autonomous mobile robots need some kind of navigation to fulfill the mobile term \cite{skoda}.
+We understand navigation as a process of planning a path of a mobile robot from its current position to a desired goal location, following the planned path, and avoiding any discovered obstacles along the way \cite{fuzzyMPC}, \cite{NONMPC}. The desired paths have to
+fulfill several conditions to ensure safety and feasibility of the navigation \cite{safety}. Moreover, the paths can be also compared in terms of desirability for example short or smooth paths are usually more desirable than long and curved ones. Such paths should therefore be preferred in the navigation process \cite{archi}. Beyond the path planning, the navigation problem also involves reacting to changes of the environment model. Robots are required to move towards target in a short time and avoid either static or dynamic obstacles observed by their sensors, which involves efficient path planning and valid obstacle avoidance \cite{MMPC}, \cite{autoMPC}, \cite{borelli}. Though these two topics have been well researched, currently, there is no ideal solution to handling the navigation problem within cluttered dynamic environments. The proposed algorithms were studied for the ATLASCAR project in which the group for Robotics and Automation at the University of Aveiro, has setup and adapted a common commercial vehicle to provide a versatile  framework  to  develop  studies  and  research
+\cite{atlas}, \cite{atlascar1}, \cite{atlascar2}.
 \section{Context of the Problem and \\  Proposed Solution}
 The ATLACAR2 has sensors, such as lidar, that measure the distance to obstacles in front and around the vehicle. The obstacles can be static, such as a large pothole, or moving, such as a slow-moving vehicle. The most common maneuver from the driver is to temporarily move to another lane, drive past the obstacle, and move back to the original lane afterward. In this case, we want to design an obstacle avoidance system that moves the ATLASCAR2 around a moving obstacle in the lane using throttle and steering angle. This system uses an adaptive Model Predictive Controller that updates both the predictive model and the mixed input/output constraints at each control interval. Moreover, this vehicle is also equipped with a lane-keeping assist system: it has a sensor, such as camera or laser, that measures the lateral deviation and relative yaw angle between the centerline of a lane and the ATLASCAR2; it also measures the current lane curvature and its derivative. Depending on the curve length that the sensor can view, the curvature in front of the vehicle can be calculated from the current curvature and its derivative. This system keeps the autonomous car travelling along the centerline of the lanes on the road by adjusting the front steering angle. The goal for lane keeping control is to drive both lateral deviation and relative yaw angle close to zero.
 \subsection{Theoretical background - Adaptive MPC}
@@ -624,25 +625,44 @@ Fig.{\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the v
 \section{Conclusions and Future Work}
 In this work we proposed two advanced methods for the ATLASCAR2 based on adaptive Model Predictive Control. In the first case we analyzed an obstacle avoidance system that moves the vehicle around different moving obstacles in the lane using throttle and steering angle. This system updates both the predictive model and the mixed input/output constraints at each control interval. The vehicle is also able to brake in order to prevent collisions against closest obstacles. Instead, in the second scenario  we have developed a lane following system that keeps the ATLASCAR2 traveling along the centerline of the lanes on the road by adjusting the front steering angle of the car. The flexibility of the concepts used in these methods allows a multitude of refinements and extensions to this project. For example the next possible work could be to combine the two previous control strategies in a way that they can operate simultaneously. Moreover the final method could be tested in a real autonomous driving scenario.
 \begin{thebibliography}{00}
+	
+	\bibitem{skoda}J. Škoda, ‘3D Navigation for Mobile Robots’, Dissertation, 2017.
+	
+	\bibitem{fuzzyMPC}Y. Nishio, K. Nonaka and K. Sekiguchi, "Moving obstacle avoidance control by fuzzy potential method and model predictive control," 2017 11th Asian Control Conference (ASCC), Gold Coast, QLD, 2017, pp. 1298-1303.
+	
+	\bibitem{NONMPC}Yu, S., Li, X., Chen, H. and Allgöwer, F. (2015), "Nonlinear model predictive control for path following problems". Int. J. Robust Nonlinear Control, 25: 1168–1182. 
+	
+	\bibitem{safety}T. Xu and H. Yuan, "Autonomous vehicle active safety system based on path planning and predictive control," 2016 35th Chinese Control Conference (CCC), Chengdu, 2016, pp. 8889-8895.
+	
+	\bibitem{archi}M. Nolte, M. Rose, T. Stolte and M. Maurer, "Model predictive control based trajectory generation for autonomous vehicles — An architectural approach," 2017 IEEE Intelligent Vehicles Symposium (IV), Los Angeles, CA, 2017, pp. 798-805.
+	
 	\bibitem{MMPC}J. Ji, A. Khajepour, W. W. Melek and Y. Huang, "Path Planning and Tracking for Vehicle Collision Avoidance Based on Model Predictive Control With Multiconstraints," in IEEE Transactions on Vehicular Technology, vol. 66, no. 2, pp. 952-964, Feb. 2017.
+	
+	\bibitem{autoMPC}J. V. Frasch et al., "An auto-generated nonlinear MPC algorithm for real-time obstacle avoidance of ground vehicles," 2013 European Control Conference (ECC), Zurich, 2013, pp. 4136-4141.
+	
+	\bibitem{borelli}V. Turri, A. Carvalho, H. E. Tseng, K. H. Johansson and F. Borrelli, "Linear model predictive control for lane keeping and obstacle avoidance on low curvature roads," 16th International IEEE Conference on Intelligent Transportation Systems (ITSC 2013), The Hague, 2013, pp. 378-383.	
+	
+	\bibitem{atlas}ATLAS  Project,  Aveiro  University, Portugal, \url{http://atlas.web.ua.pt/}, last visited July 2010.
+		
+	\bibitem{atlascar1}V. Santos et al., "ATLASCAR - technologies for a computer assisted driving system on board a common automobile", 13th International IEEE Conference on Intelligent Transportation Systems, Funchal, 2010, pp. 1421-1427.
+		
+	\bibitem{atlascar2}V. Santos, "ATLASCAR: A Sample of the Quests and Concerns for Autonomous Cars", 14th International Conference, ICINCO 2017 Madrid, 2017.
+		
+	
 	
 	\bibitem{onlineMPC}M. Werling and D. Liccardo, "Automatic collision avoidance using model-predictive online optimization," 2012 IEEE 51st IEEE Conference on Decision and Control (CDC), Maui, HI, 2012, pp. 6309-6314.
 	
 	\bibitem{swarms}Wei Xi and J. S. Baras, "MPC based motion control of car-like vehicle swarms," 2007 Mediterranean Conference on Control \& Automation, Athens, 2007, pp. 1-6.
 	
-	\bibitem{autoMPC}J. V. Frasch et al., "An auto-generated nonlinear MPC algorithm for real-time obstacle avoidance of ground vehicles," 2013 European Control Conference (ECC), Zurich, 2013, pp. 4136-4141.
 	
 	\bibitem{long_tf}Y. Wang, Y. Bin and K. Li, "Longitudinal acceleration tracking control of low speed heavy-duty vehicles," in Tsinghua Science and Technology, vol. 13, no. 5, pp. 636-643, Oct. 2008.
 	
-	\bibitem{safety}T. Xu and H. Yuan, "Autonomous vehicle active safety system based on path planning and predictive control," 2016 35th Chinese Control Conference (CCC), Chengdu, 2016, pp. 8889-8895.
 	
-	\bibitem{matsumoto}N. Wada and T. Matsumoto, "Driver assistance for collision avoidance by constrained MPC," 2017 56th Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Kanazawa, 2017, pp. 90-93.
+
 	
-	\bibitem{rathai}Murali Madhavan Rathai, Karthik \& Amirthalingam, Jegan \& Jayaraman, Balaji. (2017). Robust tube-MPC based lane keeping system for autonomous driving vehicles. 1-6.
+
 	
-	\bibitem{fuzzyMPC}Y. Nishio, K. Nonaka and K. Sekiguchi, "Moving obstacle avoidance control by fuzzy potential method and model predictive control," 2017 11th Asian Control Conference (ASCC), Gold Coast, QLD, 2017, pp. 1298-1303.
 	
-	\bibitem{NONMPC}Yu, S., Li, X., Chen, H. and Allgöwer, F. (2015), "Nonlinear model predictive control for path following problems". Int. J. Robust Nonlinear Control, 25: 1168–1182. 
 	
 	\bibitem{matPDF}A. Bemporad, M. Morafi, and N. Ricker, Model Predictive Control Toolbox User’s Guide, The MathWorks, Inc.,
 	
@@ -652,7 +672,6 @@ In this work we proposed two advanced methods for the ATLASCAR2 based on adaptiv
 	
 	\bibitem{backward}C. Son and C. Ahn, "Vehicle backward driving control with obstacle avoidance," 2015 15th International Conference on Control, Automation and Systems (ICCAS), Busan, 2015, pp. 1771-1774.
 	
-	\bibitem{archi}M. Nolte, M. Rose, T. Stolte and M. Maurer, "Model predictive control based trajectory generation for autonomous vehicles — An architectural approach," 2017 IEEE Intelligent Vehicles Symposium (IV), Los Angeles, CA, 2017, pp. 798-805.
 	
 	\bibitem{zhou}H. Zhou, L. Güvenç and Z. Liu, "Design and evaluation of path following controller based on MPC for autonomous vehicle," 2017 36th Chinese Control Conference (CCC), Dalian, 2017, pp. 9934-9939.
 	
@@ -669,11 +688,16 @@ In this work we proposed two advanced methods for the ATLASCAR2 based on adaptiv
 	
 	\bibitem{kth_thilen}E. Thilén, ‘Robust Model Predictive Control for Autonomous Driving’, Dissertation, 2017.
 	
+	\bibitem{rathai}Murali Madhavan Rathai, Karthik \& Amirthalingam, Jegan \& Jayaraman, Balaji. (2017). Robust tube-MPC based lane keeping system for autonomous driving vehicles. 1-6.
+	
+	
 	\bibitem{kth_nordell}B. Nordell, ‘Trajectory Planning for Autonomous Vehicles and Cooperative Driving’, Dissertation, 2016.
 	
 	\bibitem{shen}C. Shen, H. Guo, F. Liu and H. Chen, "MPC-based path tracking controller design for autonomous ground vehicles," 2017 36th Chinese Control Conference (CCC), Dalian, 2017, pp. 9584-9589.
 	
-	\bibitem{borelli}V. Turri, A. Carvalho, H. E. Tseng, K. H. Johansson and F. Borrelli, "Linear model predictive control for lane keeping and obstacle avoidance on low curvature roads," 16th International IEEE Conference on Intelligent Transportation Systems (ITSC 2013), The Hague, 2013, pp. 378-383.
+	
+		\bibitem{matsumoto}N. Wada and T. Matsumoto, "Driver assistance for collision avoidance by constrained MPC," 2017 56th Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Kanazawa, 2017, pp. 90-93.
+		
 \end{thebibliography}
 
 

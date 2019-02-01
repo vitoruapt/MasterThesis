@@ -24,9 +24,9 @@ v_set = 20; % Driver set velocity
 Ts = 0.02;
 
 % Obtain the lane curvature information seconds.
-Duration = 20;                              % Simulation duration
+Duration = 10;                              % Simulation duration
 t = 0:Ts:Duration;                          % Time vector
-rho = LaneFollowingGetCurvature(v_set,t);   % Signal containing curvature information
+[rho,Yref] = LaneFollowingGetCurvature(v_set,t);   % Signal containing curvature information
 
 %% Design Adaptive Model Predictive Controller 
 % This controller uses a linear model for the vehicle dynamics and updates
@@ -40,6 +40,6 @@ LaneFollowingGenerateAMPC;
 % function |LaneFollowingResults|
 sim(mdl)
 logsout1 = logsout;
-LaneFollowingResults(logsout1)
+LaneFollowingResults(logsout1,Yref)
 print -slane_following_AMPC -dpdf lane_following_AMPC.pdf
 movefile('lane_following_AMPC.pdf','figure')

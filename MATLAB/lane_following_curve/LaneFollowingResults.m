@@ -1,4 +1,4 @@
-function LaneFollowingResults(logsout)
+function LaneFollowingResults(logsout,Yref)
 % Plot results for adaptive MPC. 
 
 %% Get the data from simulation
@@ -79,8 +79,9 @@ pos = get(h5,'Position');
 set(h5,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)-40])
 print(h5,'figure\LongitudinalVelocityVsTime_curve','-dpdf','-r0')
 hold off
+
 %% Local function: Get data from simulation
-function [e1,e2,delta,accel,vx,vy,xp,yp] = getData(logsout)
+function [e1,e2,delta,accel,vx,vy] = getData(logsout)
 e1 = logsout.getElement('Lateral Deviation');    % lateral deviation
 e2 = logsout.getElement('Relative Yaw Angle');   % relative yaw angle
 delta = logsout.getElement('Steering');          % steering angle
