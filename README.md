@@ -65,20 +65,14 @@ This week I have modified the code related to the constraints in order to choose
 [Simulation_2](https://github.com/AlbertoFranco/MasterThesis/blob/master/MATLAB/three_obstacles_no_overtaking/animation3.avi "Click here to open animation3.avi")
 
 ---------------------------------------------------------------------------------------------------
-### Week 16 - (22nd January 2019 / 28th January 2019)
+### Weeks 16/17/18 – (22nd January 2019 / 14th February)
+In these weeks I finished and submitted a Paper concerning short-term path planning with multiple moving obstacle avoidance based on adaptive MPC. I implemented also model predictive control with softening constraints for trajectory tracking. In order to improve real-time robustness of the ATLASCAR2, a linearized tracking error model is used to predict system behaviours. The code is based on the following paper adapted to our scenario (adaptive MPC, real car model): 
 
+[Trajectory tracking for wheeled mobile robots via model predictive control with softening constraints](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8259415 "Click here to open").
 
----------------------------------------------------------------------------------------------------
-### Week 17 - (29th January 2019 / 4th February 2019)
+Moreover I wrote a short Report on the work done here in Aveiro during this 5 months.
 
-
----------------------------------------------------------------------------------------------------
-### Week 18 - (5th February 2019 / 11th February 2019)
-
-
----------------------------------------------------------------------------------------------------
-### Week 19 - (12th February 2019 / 18th February 2019)
-
+[Final Report](https://github.com/AlbertoFranco/MasterThesis/blob/master/Thesis_Latex/FinalReport/FinalReport.pdf "Click here to open the final report")
 
 ---------------------------------------------------------------------------------------------------
 
