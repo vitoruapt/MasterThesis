@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Context and Proposed Solution}{}% 2
+\BOOKMARK [1][-]{section.3}{Theoretical background Adaptive Model Predictive Control}{}% 3
+\BOOKMARK [1][-]{section.4}{Moving Obstacle Avoidance}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Problem Formulation}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Design of Adaptive Model Predictive Control}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Simulation Results}{section.4}% 7
+\BOOKMARK [3][-]{subsubsection.4.3.1}{One Moving Obstacle - Right Overtaking}{subsection.4.3}% 8
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Multiple Moving Obstacles}{subsection.4.3}% 9
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Vehicle Braking and Obstacles Overtaking}{subsection.4.3}% 10
+\BOOKMARK [1][-]{section.5}{Lane Following System}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Problem Formulation}{section.5}% 12
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Longitudinal dynamics}{subsection.5.1}% 13
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Lateral dynamics}{subsection.5.1}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Design of Adaptive Model Predictive Control}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Simulation Results}{section.5}% 16
+\BOOKMARK [1][-]{section.6}{Conclusions and Future Work}{}% 17
+\BOOKMARK [1][-]{section*.15}{References}{}% 18

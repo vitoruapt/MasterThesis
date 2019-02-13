@@ -1,0 +1,59 @@
+\documentclass[preview,float]{standalone}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\begin{document}
+	\pagestyle{empty}
+	
+	
+	% Define block styles
+	\tikzstyle{decision} = [diamond, draw, fill=blue!10, 
+	text width=4.5em, text centered, node distance=3cm, inner sep=0pt]
+	\tikzstyle{block} = [rectangle, draw, fill=green!10, 
+	text width=5em, text centered, rounded corners, minimum height=4em]
+	\tikzstyle{line} = [draw, -latex']
+	\tikzstyle{cloud} = [draw, ellipse,fill=red!10, node distance=3cm,
+	minimum height=2em]
+	
+	\begin{tikzpicture}[font={\small\sffamily}, node distance = 3cm, auto, scale=0.75,every node/.style={transform shape}]
+	% Place nodes
+	\node [decision] (detection) {Obstacle 
+		detected?}; 
+	\node [cloud,left of=detection] (start) {Start};
+	\node [decision,below of=detection] (multiObstacles) {Multiple Obstacles detected?};
+	\node [block,right of=detection] (reference) {Follow Path: stick to the lane};
+	\node [block,left of=multiObstacles] (distance) {Obtain distance to closest obstacle};
+	\node [block,right of=multiObstacles] (distances) {Obtain distance between the obstacles};
+	\node [decision,below of=distances](space) {Free Space for Overtaking?};
+	\node [block,right of=space,node distance=3.3cm](braking){Braking/ Ostacle Velocity};
+	\node [block,below of=space](free){Overtaking on free lane};
+	\node [decision,below of=distance,node distance=2.5cm] (decisionOvertaking) {Left w.r.t vehicle?};
+	\node [block, below of=decisionOvertaking,node distance=2.5cm] (rightOver) {Right Overtaking};     
+	\node [block, right of=decisionOvertaking] (leftOver) {Left Overtaking}; 
+	
+	%  \node [block] (init) {initialize model};
+	% \node [cloud, left of=init] (expert) {expert};
+	% \node [cloud, right of=init] (system) {system};
+	% \node [block, below of=init] (identify) {identify candidate models};
+	%    \node [block, below of=identify] (evaluate) {evaluate candidate models};
+	%   \node [block, left of=evaluate, node distance=3cm] (update) {update model};
+	%  \node [decision, below of=evaluate] (decide) {is best candidate better?};
+	% \node [block, below of=decide, node distance=3cm] (stop) {stop};
+	% Draw edges
+	\path [line] (start) -- (detection);
+	\path [line] (detection) -- node {yes} (multiObstacles);
+	\path [line] (detection) -- node {no} (reference);
+	\path [line] (multiObstacles) -- node {no} (distance);
+	\path [line] (multiObstacles) -- node {yes} (distances);
+	\path [line] (distances)--(space);
+	\path [line] (space) -- node{no}(braking);
+	\path [line] (space) -- node{yes} (free);
+	\path [line] (braking) |- (distances);
+	\path [line] (distance) -- (decisionOvertaking);
+	\path[line] (decisionOvertaking) -- node {no}(leftOver);
+	\path[line] (decisionOvertaking) -- node{yes} (rightOver);
+	\end{tikzpicture}
+	
+	
+\end{document}
