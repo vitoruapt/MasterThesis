@@ -1,0 +1,185 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Rob\^os para competi\c c\~ao de condu\c c\~ao aut\'onoma do projeto ATLAS\relax }}{2}{figure.caption.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Atlas 2000}}}{2}{subfigure.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Atlas MV}}}{2}{subfigure.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Troca de rodas para uso do Atlas 2000 em \textit {outdoors}\relax }}{2}{figure.caption.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rodas para pista de velocidade}}}{2}{subfigure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Rodas com pneu pneum\'atico}}}{2}{subfigure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Recetor GPS e sistema auxiliar do Atlas 2000\relax }}{3}{figure.caption.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recetor GPS e sua posi\c c\~ao no carro}}}{3}{subfigure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Placa de monitoriza\c c\~ao e alimenta\c c\~ao do recetor GPS}}}{3}{subfigure.3.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Exemplo de reconstru\c c\~ao com uma \textit {Kinect}~\autocite {joel}\relax }}{7}{figure.caption.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Mapas de eleva\c c\~ao e limita\c c\~oes inerentes.\relax }}{8}{figure.caption.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Nuvem de pontos de uma ponte}}}{8}{subfigure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mapa de eleva\c c\~ao da ponte}}}{8}{subfigure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces a) Exemplo de v\'arias c\'elulas num mapa MLS. A c\'elula \textit {A} mostra que podem existir mais que um grupo de valores de media e varia\c c\~ao. A c\'elula \textit {B} mostra que todas elas podem ter profundidade. A c\'elula \textit {C} representa uma que n\~ao tem profundidade; b) Mapa MLS que representa correctamente as eleva\c c\~oes\relax }}{9}{figure.caption.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{9}{subfigure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{9}{subfigure.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Mapa MLS. A amarelo s\~ao as zonas naveg\'aveis, a azul as zonas n\~ao naveg\'aveis e a vermelho as superf\IeC {\'\i }cies verticais\relax }}{9}{figure.caption.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Nuvem de pontos ap\'os a aplica\c c\~ao do filtro que limita altura e comprimento\relax }}{9}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Determina\c c\~ao das normais de uma nuvem de pontos\relax }}{9}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {C\'alculo das normais utilizando R=0.1 m}}}{9}{subfigure.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {C\'alculo das normais utilizando R=0.4 m}}}{9}{subfigure.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Mapa resultante dos produtos das acessibilidades\relax }}{11}{figure.caption.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Representa\c c\~ao generalizada de uma octree\relax }}{11}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Exemplo de armazenamento de espa\c co livre, a branco, e espa\c co ocupado, a preto, de uma octree}}}{11}{subfigure.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Representa\c c\~ao em \'arvore de uma octree}}}{11}{subfigure.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Resultado da limita\c c\~ao de profundidade das c\'elulas nas octree. Diferentes resolu\c c\~oes, da esquerda para a direita, para profundidade de 0.08m, 0.64m e 1.28m, respetivamente.\relax }}{12}{figure.caption.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Poss\IeC {\'\i }veis resultados do processamento de nuvens de pontos 3D de dados laser\relax }}{12}{figure.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Nuvem de pontos de um laser sem qualquer tipo de tratamento}}}{12}{subfigure.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mapa de eleva\c c\~ao dessa mesma nuvem de pontos}}}{12}{subfigure.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Mapa MLS (Multi-level surface map)}}}{12}{subfigure.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Mapa resultante usando a filosofia de Octrees falada}}}{12}{subfigure.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces GPS - Constela\c c\~ao de sat\'elites~\autocite {citsci}\relax }}{13}{figure.caption.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Mapa Google resultante da aplica\c c\~ao de uma camada em KML\relax }}{13}{figure.caption.19}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sistema de referenciais adotados para o Atlas 2000\relax }}{15}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo de movimento utilizado para o Atlas 2000\relax }}{15}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Diagrama do modelo mec\^anico simplificado de Ackerman}}}{15}{subfigure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Representa\c c\~ao do modelo bicicleta do Atlas 2000}}}{15}{subfigure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \'Arvore de transforma\c c\~oes do laser horizontal (laser1) e do laser inclinado (laser2)\relax }}{16}{figure.caption.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema de funcionamento das grelhas de ocupa\c c\~ao do pacote do Hector SLAM\relax }}{17}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Esquema para a interpola\c c\~ao bilinear da grelha de ocupa\c c\~ao sendo o ponto $P_m$ a ser interpolado}}}{17}{subfigure.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Grelha de Ocupa\c c\~ao e suas derivadas}}}{17}{subfigure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \'Arvore de transforma\c c\~oes do laser horizontal (laser1) e do laser inclinado (laser2)\relax }}{18}{figure.caption.24}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Aspeto inicial dos cabos nas placas de controlo do ve\IeC {\'\i }culo.\relax }}{19}{figure.caption.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Aspeto do circuito el\'etrico ap\'os altera\c c\~oes.\relax }}{20}{figure.caption.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Organiza\c c\~ao do circuito el\'etrico ap\'os interven\c c\~ao.}}}{20}{subfigure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Etiqueta\c c\~ao dos cabos terra e com tens\~ao.}}}{20}{subfigure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Lasers usados no trabalho relatado na disserta\c c\~ao\relax }}{20}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Hokuyo URG-04LX-UG01}}}{20}{subfigure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Hokuyo UTM-30LX}}}{20}{subfigure.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Lasers usados no trabalho relatado na disserta\c c\~ao\relax }}{22}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Suporte para os \textit {lasers} em acrilico}}}{22}{subfigure.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Suporte para os \textit {lasers} em alum\IeC {\'\i }nio}}}{22}{subfigure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Refor\c co de apoios para a zona de acomoda\c c\~ao do computador de bordo\relax }}{22}{figure.caption.29}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Esquema de processamento de uma nuvem de pontos 3D para a sua representa\c c\~ao no referencial global\relax }}{23}{figure.caption.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Resultados da aplica\c c\~ao de algoritmos \textit {ConcaveHull} e \textit {ConvexHull}. a)As linhas vermelhas representam o resultado da utiliza\c c\~ao do algoritmo \textit {ConcaveHull} a um conjunto de pontos; b)As linhas verdes representam o resultado da utiliza\c c\~ao do algoritmo \textit {ConvexHull} a um conjunto de pontos~\autocite {journalsjiseParkO12}\relax }}{24}{figure.caption.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{subfigure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{subfigure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Exemplo da aplica\c c\~ao da estrutura KML no ~\nameref {sec:anexoA} num mapa da Google.\relax }}{24}{figure.caption.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Ambiente exterior usado para realizar os testes iniciais de utiliza\c c\~ao do m\'etodo proposto\relax }}{24}{figure.caption.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Reconstru\c c\~ao 3D do ambiente exterior apresentado na figura \ref {fig:figura39.2}\relax }}{25}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Nuvem de pontos 3D com as zonas onde se encontram os obst\'aculos\relax }}{25}{figure.caption.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Nuvem de pontos projetada das zonas onde se encontram os obst\'aculos\relax }}{25}{figure.caption.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Estado inicial e final da aplica\c c\~ao do algoritmo \textit {concave hull} a um obst\'aculo\relax }}{26}{figure.caption.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Obst\'aculo projetado}}}{26}{subfigure.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado do algoritmo de \textit {concave hull} aplicado a obst\'aculo projectado aplicado}}}{26}{subfigure.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Obst\'aculos delimitados pelas extremidades com a aplica\c c\~ao do algoritmo \textit {ConvexHull} que s\~ao os pilares da figura \ref {fig:figura39.2}\relax }}{26}{figure.caption.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Representa\c c\~ao da nuvem de pontos 2D num mapa da Google\relax }}{27}{figure.caption.41}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Primeira zona de testes para realizar reconstru\c c\~ao 3D\relax }}{30}{figure.caption.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Resultado do p\'os-processamento realizado \`a primeira zona com pessoas a passar. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis.\relax }}{30}{figure.caption.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultado do p\'os-processamento realizado \`a sem movimenta\c c\~ao de pessoas. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis.\relax }}{30}{figure.caption.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Segunda zona de testes para realizar reconstru\c c\~ao 3D\relax }}{30}{figure.caption.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Resultado do p\'os-processamento realizado \`a segunda zona com a influencia da passagem de pessoas. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis.\relax }}{30}{figure.caption.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Resultado do p\'os-processamento realizado \`a segunda zona sem movimenta\c c\~ao de pessoas. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis.\relax }}{30}{figure.caption.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Terceira zona de testes para realizar reconstru\c c\~ao 3D\relax }}{30}{figure.caption.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Resultado do p\'os-processamento realizado \`a terceira zona. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis.\relax }}{31}{figure.caption.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Mapa de navegabilidade para a primeira zona com pessoas a passar. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis\relax }}{32}{figure.caption.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Mapa de navegabilidade para a primeira zona sem movimenta\c c\~ao de pessoas. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis\relax }}{33}{figure.caption.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Mapa de navegabilidade para a segunda zona com a influencia da passagem de pessoas. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis\relax }}{33}{figure.caption.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Mapa de navegabilidade para a segunda zona. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis\relax }}{33}{figure.caption.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Mapa de navegabilidade para a terceira zona. A cor verde representa as zonas naveg\'aveis e a vermelho as zonas n\~ao naveg\'aveis\relax }}{33}{figure.caption.54}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }

@@ -81,8 +81,8 @@ mpcobj.Model.Nominal = struct('U',U,'Y',Y,'X',X,'DX',DX);
 %% Simulation
 Duration = 50;
 T = 0:Ts:Duration; 
-x_ref = 30*sin(T/4);
-y_ref = 15*sin(T/8);
+x_ref = 300*sin(T/4);
+y_ref = 150*sin(T/8);
 x_dot = gradient(x_ref,Ts);
 y_dot = gradient(y_ref,Ts);
 theta_ref = atan2(x_dot,y_dot);

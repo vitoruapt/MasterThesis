@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  28 JAN 2019 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  14 FEB 2019 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -43,6 +43,23 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{4651075}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.2 \cite{4651075}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `4651075' on page  undefined on input line 2.
+
+Missing character: There is no ] in font nullfont!
 )
 ! Emergency stop.
 <*> Chapter2.tex
@@ -51,11 +68,11 @@ Missing character: There is no w in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 5 strings out of 493029
- 138 string characters out of 6136233
+ 9 strings out of 493029
+ 172 string characters out of 6136233
  53069 words of memory out of 5000000
- 3641 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 3644 multiletter control sequences out of 15000+600000
+ 3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 5i,0n,4p,42b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20i,2n,26p,45b,93s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

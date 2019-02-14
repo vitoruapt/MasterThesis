@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{4651075}
+Y.~{Kuwata}, G.~A. {Fiore}, J.~{Teo}, E.~{Frazzoli}, and J.~P. {How}, ``Motion
+  planning for urban driving using rrt,'' in {\em 2008 IEEE/RSJ International
+  Conference on Intelligent Robots and Systems}, pp.~1681--1686, Sep. 2008.
+
+\bibitem{vsantos2010}
+V.~Santos, J.~Almeida, E.~Avila, D.~Gameiro, M.~Oliveira, R.~Pascoal,
+  R.~Sabino, and P.~Stein, ``{ATLASCAR} - technologies for a computer assisted
+  driving system on board a common automobile,'' in {\em 13th International
+  {IEEE} Conference on Intelligent Transportation Systems, Funchal, Madeira,
+  Portugal, 19-22 September 2010}, pp.~1421--1427, 2010.
+
+\bibitem{borelli}
+Y.~Gao, T.~Lin, F.~Borrelli, E.~Tseng, and D.~Hrovat, ``Predictive control of
+  autonomous ground vehicles with obstacle avoidance on slippery roads,'' 01
+  2010.
+
+\bibitem{Skoda:Thesis:2016}
+J.~Skoda, ``{3D Navigation for Mobile Robots},'' Master's thesis, Charles
+  University, Prague, 2016.
+
+\end{thebibliography}

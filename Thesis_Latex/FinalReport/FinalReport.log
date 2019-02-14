@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  13 FEB 2019 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  14 FEB 2019 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1307,23 +1307,53 @@ Package: balance 1999/02/23 4.3 (PWD)
 )
 \c@thm=\count290
 
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count291
+\calc@Bcount=\count292
+\calc@Adimen=\dimen340
+\calc@Bdimen=\dimen341
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count293
+\calc@Cskip=\skip71
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+)
+\AM@pagewidth=\dimen342
+\AM@pageheight=\dimen343
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box118
+\AM@toc@title=\toks47
+\c@AM@survey=\count294
+\AM@templatesizebox=\box119
+)
 (./FinalReport.aux)
 \openout1 = `FinalReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 -- Lines per column: 50 (exact).
 
@@ -1334,21 +1364,21 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
-\c@lstlisting=\count291
+\c@lstlisting=\count295
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
-\scratchdimen=\dimen340
-\scratchbox=\box118
-\nofMPsegments=\count293
-\nofMParguments=\count294
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen341
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count296
+\scratchdimen=\dimen344
+\scratchbox=\box120
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen345
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -1370,8 +1400,8 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box119
-Package hyperref Info: Link coloring ON on input line 48.
+\AtBeginShipoutBox=\box121
+Package hyperref Info: Link coloring ON on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1379,69 +1409,190 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count298
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 
 (./FinalReport.out) (./FinalReport.out)
 \@outlinefile=\write4
 \openout4 = `FinalReport.out'.
 
  ABD: EveryShipout initializing macros
-\c__siunitx_mathsf_int=\count299
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 48.
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+\c__siunitx_mathsf_int=\count303
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 47.
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count300
+\c__siunitx_mathtt_int=\count304
 
+
+Package pdfpages Warning: Option `page' is unknow to \includepdf.
+(pdfpages)                Did you mean `pages'? (Note the `s'!)
+(pdfpages)                OK, I'll proceed as if it were `pages'.
+
+<./coverpage/coverpage.pdf, id=79, 597.50829pt x 845.0471pt>
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf>
+Package pdftex.def Info: ./coverpage/coverpage.pdf used on input line 48.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+ <use ./coverpage/coverpage.pdf>
+Package pdftex.def Info: ./coverpage/coverpage.pdf used on input line 48.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+<./coverpage/coverpage.pdf, id=82, page=1, 597.50829pt x 845.0471pt>
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 1>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page1 used on input line 48
+.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 1>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page1 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 1>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page1 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 1>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page1 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 1>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page1 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+ [1
+
+ <./coverpage/coverpage.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>
+]
+<./coverpage/coverpage.pdf, id=107, page=2, 597.50829pt x 845.0471pt>
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 2>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page2 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 2>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page2 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 2>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page2 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+ [2 <./coverpage/coverpage.pdf>]
+<./coverpage/coverpage.pdf, id=112, page=3, 597.50829pt x 845.0471pt>
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 3>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page3 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 3>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page3 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 3>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page3 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+ [3 <./coverpage/coverpage.pdf>]
+<./coverpage/coverpage.pdf, id=122, page=4, 597.50829pt x 845.0471pt>
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 4>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page4 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 4>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page4 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+
+Overfull \vbox (13.3846pt too high) has occurred while \output is active []
+
+File: ./coverpage/coverpage.pdf Graphic file (type pdf)
+
+<use ./coverpage/coverpage.pdf, page 4>
+Package pdftex.def Info: ./coverpage/coverpage.pdf, page4 used on input line 48
+.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+ [4 <./coverpage/coverpage.pdf>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./figure/atlascar2.jpg, id=101, 2463.2025pt x 1321.93875pt>
+<./figure/atlascar2.jpg, id=149, 2463.2025pt x 1321.93875pt>
 File: ./figure/atlascar2.jpg Graphic file (type jpg)
 
 <use ./figure/atlascar2.jpg>
-Package pdftex.def Info: ./figure/atlascar2.jpg used on input line 67.
+Package pdftex.def Info: ./figure/atlascar2.jpg used on input line 66.
 (pdftex.def)             Requested size: 151.20154pt x 81.1283pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
+ [5
 
  <./figure/atlascar2.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 74.
+(hyperref)                removing `\\' on input line 73.
 
 
-<./figure/obstacleAvoidance/obstacleAvoidance.pdf, id=134, 142.66399pt x 26.761
+<./figure/obstacleAvoidance/obstacleAvoidance.pdf, id=181, 142.66399pt x 26.761
 98pt>
 File: ./figure/obstacleAvoidance/obstacleAvoidance.pdf Graphic file (type pdf)
  <use ./figure/obstacleAvoidance/obstacleAvoidance.pdf>
 Package pdftex.def Info: ./figure/obstacleAvoidance/obstacleAvoidance.pdf used 
-on input line 116.
+on input line 115.
 (pdftex.def)             Requested size: 252.0pt x 47.27434pt.
- [2]
-<./figure/car_model.pdf, id=146, 157.78084pt x 117.82713pt>
+ [6]
+<./figure/car_model.pdf, id=193, 157.78084pt x 117.82713pt>
 File: ./figure/car_model.pdf Graphic file (type pdf)
 
 <use ./figure/car_model.pdf>
-Package pdftex.def Info: ./figure/car_model.pdf used on input line 136.
+Package pdftex.def Info: ./figure/car_model.pdf used on input line 135.
 (pdftex.def)             Requested size: 201.60077pt x 150.56468pt.
 
-Overfull \hbox (7.85004pt too wide) detected at line 204
+Overfull \hbox (7.85004pt too wide) detected at line 203
 [] \OMS/cmsy/m/n/10.95 ) [][]
  []
 
-[3 <./figure/obstacleAvoidance/obstacleAvoidance.pdf> <./figure/car_model.pdf
+[7 <./figure/obstacleAvoidance/obstacleAvoidance.pdf> <./figure/car_model.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/car_model.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
@@ -1456,87 +1607,87 @@ Underfull \vbox (badness 3039) has occurred while \output is active []
 
 Underfull \vbox (badness 3039) has occurred while \output is active []
 
- [4]
-<./figure/constraint/constraint.pdf, id=188, 142.66399pt x 38.85918pt>
+ [8]
+<./figure/constraint/constraint.pdf, id=237, 142.66399pt x 38.85918pt>
 File: ./figure/constraint/constraint.pdf Graphic file (type pdf)
 
 <use ./figure/constraint/constraint.pdf>
 Package pdftex.def Info: ./figure/constraint/constraint.pdf used on input line 
-262.
+261.
 (pdftex.def)             Requested size: 252.0pt x 68.64374pt.
 
-<./figure/one_obstacle_right_overtaking/overtaking_start.pdf, id=192, 360.02866
+<./figure/one_obstacle_right_overtaking/overtaking_start.pdf, id=241, 360.02866
 pt x 55.63362pt>
 File: ./figure/one_obstacle_right_overtaking/overtaking_start.pdf Graphic file 
 (type pdf)
 
 <use ./figure/one_obstacle_right_overtaking/overtaking_start.pdf>
 Package pdftex.def Info: ./figure/one_obstacle_right_overtaking/overtaking_star
-t.pdf used on input line 273.
+t.pdf used on input line 272.
 (pdftex.def)             Requested size: 252.0pt x 38.94156pt.
 
-<./figure/one_obstacle_right_overtaking/overtaking_middle.pdf, id=193, 366.0511
+<./figure/one_obstacle_right_overtaking/overtaking_middle.pdf, id=242, 366.0511
 6pt x 56.33154pt>
 File: ./figure/one_obstacle_right_overtaking/overtaking_middle.pdf Graphic file
  (type pdf)
 
 <use ./figure/one_obstacle_right_overtaking/overtaking_middle.pdf>
 Package pdftex.def Info: ./figure/one_obstacle_right_overtaking/overtaking_midd
-le.pdf used on input line 276.
+le.pdf used on input line 275.
 (pdftex.def)             Requested size: 252.0pt x 38.78026pt.
 
-<./figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf, id=194, 360.
+<./figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf, id=243, 360.
 02866pt x 55.63362pt>
 File: ./figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf Graphic 
 file (type pdf)
 
 <use ./figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf>
 Package pdftex.def Info: ./figure/one_obstacle_right_overtaking/overtaking_midd
-le_end.pdf used on input line 279.
+le_end.pdf used on input line 278.
 (pdftex.def)             Requested size: 252.0pt x 38.94156pt.
 
-<./figure/one_obstacle_right_overtaking/overtaking_end.pdf, id=195, 359.89572pt
+<./figure/one_obstacle_right_overtaking/overtaking_end.pdf, id=244, 359.89572pt
  x 70.02922pt>
 File: ./figure/one_obstacle_right_overtaking/overtaking_end.pdf Graphic file (t
 ype pdf)
  <use ./figure/one_obstacle_right_overtaking/overtaking_end.pdf>
 Package pdftex.def Info: ./figure/one_obstacle_right_overtaking/overtaking_end.
-pdf used on input line 282.
+pdf used on input line 281.
 (pdftex.def)             Requested size: 252.0pt x 49.03506pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 289.
+put line 288.
 
-<./figure/random_N_obstacles/overtaking_random_2.pdf, id=199, 361.89786pt x 50.
+<./figure/random_N_obstacles/overtaking_random_2.pdf, id=248, 361.89786pt x 50.
 75359pt>
 File: ./figure/random_N_obstacles/overtaking_random_2.pdf Graphic file (type pd
 f)
  <use ./figure/random_N_obstacles/overtaking_random_2.pdf>
 Package pdftex.def Info: ./figure/random_N_obstacles/overtaking_random_2.pdf us
-ed on input line 356.
+ed on input line 355.
 (pdftex.def)             Requested size: 252.0pt x 35.34138pt.
 
-<./figure/random_N_obstacles/overtaking_random.pdf, id=200, 361.89893pt x 43.42
+<./figure/random_N_obstacles/overtaking_random.pdf, id=249, 361.89893pt x 43.42
 003pt>
 File: ./figure/random_N_obstacles/overtaking_random.pdf Graphic file (type pdf)
 
  <use ./figure/random_N_obstacles/overtaking_random.pdf>
 Package pdftex.def Info: ./figure/random_N_obstacles/overtaking_random.pdf used
- on input line 359.
+ on input line 358.
 (pdftex.def)             Requested size: 252.0pt x 30.2348pt.
 
-<./figure/random_N_obstacles/overtaking_random_1.pdf, id=201, 361.89789pt x 54.
+<./figure/random_N_obstacles/overtaking_random_1.pdf, id=250, 361.89789pt x 54.
 51657pt>
 File: ./figure/random_N_obstacles/overtaking_random_1.pdf Graphic file (type pd
 f)
  <use ./figure/random_N_obstacles/overtaking_random_1.pdf>
 Package pdftex.def Info: ./figure/random_N_obstacles/overtaking_random_1.pdf us
-ed on input line 362.
+ed on input line 361.
 (pdftex.def)             Requested size: 252.0pt x 37.96167pt.
- [5 <./figure/constraint/constraint.pdf> <./figure/one_obstacle_right_overtakin
+ [9 <./figure/constraint/constraint.pdf> <./figure/one_obstacle_right_overtakin
 g/overtaking_start.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/one_obstacle_right_overtaking/
@@ -1558,120 +1709,120 @@ pdfTeX warning: /usr/bin/pdflatex (file ./figure/one_obstacle_right_overtaking/
 overtaking_end.pdf): PDF inclusion: multiple pdfs with page group included in a
  single page
 >]
-<./figure/three_obstacles_no_overtaking/braking_0.pdf, id=334, 355.59767pt x 44
+<./figure/three_obstacles_no_overtaking/braking_0.pdf, id=383, 355.59767pt x 44
 .15201pt>
 File: ./figure/three_obstacles_no_overtaking/braking_0.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_0.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_0.pdf u
-sed on input line 382.
+sed on input line 381.
 (pdftex.def)             Requested size: 252.0pt x 31.28885pt.
 
-<./figure/three_obstacles_no_overtaking/braking_1.pdf, id=335, 355.59767pt x 44
+<./figure/three_obstacles_no_overtaking/braking_1.pdf, id=384, 355.59767pt x 44
 .15201pt>
 File: ./figure/three_obstacles_no_overtaking/braking_1.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_1.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_1.pdf u
-sed on input line 385.
+sed on input line 384.
 (pdftex.def)             Requested size: 252.0pt x 31.28885pt.
 
-<./figure/three_obstacles_no_overtaking/braking_2.pdf, id=336, 355.5977pt x 44.
+<./figure/three_obstacles_no_overtaking/braking_2.pdf, id=385, 355.5977pt x 44.
 15201pt>
 File: ./figure/three_obstacles_no_overtaking/braking_2.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_2.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_2.pdf u
-sed on input line 388.
+sed on input line 387.
 (pdftex.def)             Requested size: 252.0pt x 31.28885pt.
 
-<./figure/three_obstacles_no_overtaking/braking_3.pdf, id=337, 355.5977pt x 44.
+<./figure/three_obstacles_no_overtaking/braking_3.pdf, id=386, 355.5977pt x 44.
 15201pt>
 File: ./figure/three_obstacles_no_overtaking/braking_3.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_3.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_3.pdf u
-sed on input line 391.
+sed on input line 390.
 (pdftex.def)             Requested size: 252.0pt x 31.28885pt.
 
-<./figure/three_obstacles_no_overtaking/braking_4.pdf, id=338, 355.59964pt x 44
+<./figure/three_obstacles_no_overtaking/braking_4.pdf, id=387, 355.59964pt x 44
 .15201pt>
 File: ./figure/three_obstacles_no_overtaking/braking_4.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_4.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_4.pdf u
-sed on input line 394.
+sed on input line 393.
 (pdftex.def)             Requested size: 252.0pt x 31.28885pt.
 
-<./figure/three_obstacles_no_overtaking/braking_5.pdf, id=339, 361.62021pt x 44
+<./figure/three_obstacles_no_overtaking/braking_5.pdf, id=388, 361.62021pt x 44
 .64273pt>
 File: ./figure/three_obstacles_no_overtaking/braking_5.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_5.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_5.pdf u
-sed on input line 397.
+sed on input line 396.
 (pdftex.def)             Requested size: 252.0pt x 31.11072pt.
 
-<./figure/three_obstacles_no_overtaking/braking_6.pdf, id=340, 361.62021pt x 59
+<./figure/three_obstacles_no_overtaking/braking_6.pdf, id=389, 361.62021pt x 59
 .04655pt>
 File: ./figure/three_obstacles_no_overtaking/braking_6.pdf Graphic file (type p
 df)
  <use ./figure/three_obstacles_no_overtaking/braking_6.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_6.pdf u
-sed on input line 400.
+sed on input line 399.
 (pdftex.def)             Requested size: 252.0pt x 41.1485pt.
 
-<./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf, id=345, 273.02pt x 
+<./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf, id=394, 273.02pt x 
 190.7125pt>
 File: ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf Graphic file (t
 ype pdf)
  <use ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/VelocityVsTime.
-pdf used on input line 409.
+pdf used on input line 408.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf, id=346, 273.02pt x 
+<./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf, id=395, 273.02pt x 
 190.7125pt>
 File: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf Graphic file (t
 ype pdf)
  <use ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.
-pdf used on input line 414.
+pdf used on input line 413.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf, id=347, 273.02
+<./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf, id=396, 273.02
 pt x 190.7125pt>
 File: ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf Graphic fi
 le (type pdf)
 
 <use ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/SteeringAngleVs
-Time.pdf used on input line 419.
+Time.pdf used on input line 418.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf, id=348, 273.02p
+<./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf, id=397, 273.02p
 t x 190.7125pt>
 File: ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf Graphic fil
 e (type pdf)
 
 <use ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf>
 Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/HeadingAngleVsT
-ime.pdf used on input line 424.
+ime.pdf used on input line 423.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--428
+Underfull \hbox (badness 10000) in paragraph at lines 407--427
 [][] []
  []
 
-<./figure/laneFollowing/laneFollowing.pdf, id=352, 210.9501pt x 162.5804pt>
+<./figure/laneFollowing/laneFollowing.pdf, id=401, 210.9501pt x 162.5804pt>
 File: ./figure/laneFollowing/laneFollowing.pdf Graphic file (type pdf)
 
 <use ./figure/laneFollowing/laneFollowing.pdf>
 Package pdftex.def Info: ./figure/laneFollowing/laneFollowing.pdf used on input
- line 437.
+ line 436.
 (pdftex.def)             Requested size: 189.0pt x 145.67102pt.
- [6 <./figure/random_N_obstacles/overtaking_random_2.pdf> <./figure/random_N_ob
-stacles/overtaking_random.pdf
+ [10 <./figure/random_N_obstacles/overtaking_random_2.pdf> <./figure/random_N_o
+bstacles/overtaking_random.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/random_N_obstacles/overtaking_
 random.pdf): PDF inclusion: multiple pdfs with page group included in a single 
@@ -1720,70 +1871,70 @@ le page
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf> <./figure/three_
-obstacles_no_overtaking/ThrottleVsTime.pdf> <./figure/three_obstacles_no_overta
-king/SteeringAngleVsTime.pdf> <./figure/three_obstacles_no_overtaking/HeadingAn
-gleVsTime.pdf> <./figure/laneFollowing/laneFollowing.pdf>] [8]
-<../../MATLAB/lane_following/figure/Reference.pdf, id=708, 273.02pt x 190.7125p
+[11 <./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf> <./figure/three
+_obstacles_no_overtaking/ThrottleVsTime.pdf> <./figure/three_obstacles_no_overt
+aking/SteeringAngleVsTime.pdf> <./figure/three_obstacles_no_overtaking/HeadingA
+ngleVsTime.pdf> <./figure/laneFollowing/laneFollowing.pdf>] [12]
+<../../MATLAB/lane_following/figure/Reference.pdf, id=755, 273.02pt x 190.7125p
 t>
 File: ../../MATLAB/lane_following/figure/Reference.pdf Graphic file (type pdf)
  <use ../../MATLAB/lane_following/figure/Reference.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/Reference.pdf used 
-on input line 652.
+on input line 651.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<../../MATLAB/lane_following/figure/Curvature.pdf, id=709, 273.02pt x 190.7125p
+<../../MATLAB/lane_following/figure/Curvature.pdf, id=756, 273.02pt x 190.7125p
 t>
 File: ../../MATLAB/lane_following/figure/Curvature.pdf Graphic file (type pdf)
  <use ../../MATLAB/lane_following/figure/Curvature.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/Curvature.pdf used 
-on input line 658.
+on input line 657.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf, id=714, 273
+<../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf, id=761, 273
 .02pt x 190.7125pt>
 File: ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf Graphic
  file (type pdf)
 
 <use ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/LongitudinalVelocit
-yVsTime.pdf used on input line 673.
+yVsTime.pdf used on input line 672.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<../../MATLAB/lane_following/figure/AccelerationVsTime.pdf, id=715, 273.02pt x 
+<../../MATLAB/lane_following/figure/AccelerationVsTime.pdf, id=762, 273.02pt x 
 190.7125pt>
 File: ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf Graphic file (t
 ype pdf)
  <use ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/AccelerationVsTime.
-pdf used on input line 678.
+pdf used on input line 677.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf, id=716, 273.02pt x
+<../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf, id=763, 273.02pt x
  190.7125pt>
 File: ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf Graphic file (
 type pdf)
  <use ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/SteeringAngleVsTime
-.pdf used on input line 683.
+.pdf used on input line 682.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf, id=717, 273.02p
+<../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf, id=764, 273.02p
 t x 190.7125pt>
 File: ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf Graphic fil
 e (type pdf)
 
 <use ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following/figure/LateralDeviationVsT
-ime.pdf used on input line 693.
+ime.pdf used on input line 692.
 (pdftex.def)             Requested size: 252.0pt x 176.03088pt.
 
-<./figure/lane_following_AMPC.pdf, id=718, 774.39772pt x 268.72177pt>
+<./figure/lane_following_AMPC.pdf, id=765, 774.39772pt x 268.72177pt>
 File: ./figure/lane_following_AMPC.pdf Graphic file (type pdf)
 
 <use ./figure/lane_following_AMPC.pdf>
 Package pdftex.def Info: ./figure/lane_following_AMPC.pdf used on input line 70
-3.
+2.
 (pdftex.def)             Requested size: 516.0pt x 179.05856pt.
 
 Underfull \vbox (badness 1303) has occurred while \output is active []
@@ -1791,25 +1942,25 @@ Underfull \vbox (badness 1303) has occurred while \output is active []
 
 Underfull \vbox (badness 1303) has occurred while \output is active []
 
- [9 <../../MATLAB/lane_following/figure/Reference.pdf> <../../MATLAB/lane_follo
-wing/figure/Curvature.pdf>]
+ [13 <../../MATLAB/lane_following/figure/Reference.pdf> <../../MATLAB/lane_foll
+owing/figure/Curvature.pdf>]
 
-LaTeX Warning: Text page 10 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Text page 10 contains only floats.
+LaTeX Warning: Text page 14 contains only floats.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+LaTeX Warning: Text page 14 contains only floats.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf> <../..
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf> <../..
 /MATLAB/lane_following/figure/AccelerationVsTime.pdf> <../../MATLAB/lane_follow
 ing/figure/SteeringAngleVsTime.pdf> <../../MATLAB/lane_following/figure/Lateral
 DeviationVsTime.pdf> <./figure/lane_following_AMPC.pdf>]
@@ -1819,12 +1970,12 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
-Underfull \hbox (badness 3199) in paragraph at lines 741--743
+Underfull \hbox (badness 3199) in paragraph at lines 740--742
 []\OT1/ptm/m/n/9 Monimoy Bu-jar-baruah, Xi-ao-jing Zhang, H. Eric Tseng,
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 749--750
+Underfull \hbox (badness 5274) in paragraph at lines 748--749
 \OT1/ptm/m/n/9 Aut[]onoma e As-sist[]encia ao Con-du-tor", Disserta[][]ao de
  []
 
@@ -1839,12 +1990,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 791.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 791.
+
+Overfull \vbox (17.13791pt too high) has occurred while \output is active []
+
+
+[15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 792.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 792.
  (./FinalReport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 791.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 791.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 792.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 792.
 Package rerunfilecheck Info: File `FinalReport.out' has not changed.
 (rerunfilecheck)             Checksum: 208EEAAF597E161A4FA68C3E6C4998F6;1325.
 
@@ -1852,16 +2007,16 @@ Package rerunfilecheck Info: File `FinalReport.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.25pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 791.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 792.
  ) 
 Here is how much of TeX's memory you used:
- 35198 strings out of 493029
- 701171 string characters out of 6136233
- 854580 words of memory out of 5000000
- 38061 multiletter control sequences out of 15000+600000
+ 35889 strings out of 493029
+ 712557 string characters out of 6136233
+ 870653 words of memory out of 5000000
+ 38723 multiletter control sequences out of 15000+600000
  62895 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,20n,77p,10383b,816s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,20n,77p,10383b,872s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-di
@@ -1881,14 +2036,17 @@ public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FinalReport.pdf (11 pages, 2586385 bytes).
+e/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx
+1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FinalReport.pdf (15 pages, 2649879 bytes).
 PDF statistics:
- 1253 PDF objects out of 1440 (max. 8388607)
- 1050 compressed objects within 11 object streams
- 80 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1308 PDF objects out of 1440 (max. 8388607)
+ 1089 compressed objects within 11 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 342 words of extra memory for PDF output out of 10000 (max. 10000000)
 

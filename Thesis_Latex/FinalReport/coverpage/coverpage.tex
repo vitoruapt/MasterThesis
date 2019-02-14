@@ -1,0 +1,101 @@
+%pdflatex -synctex=1 -interaction=nonstopmode %.tex
+% uaThesis example (for a thesis written in Portuguese)
+%
+% the complete list of options and commands can be found in uaThesis.sty 
+%
+
+\documentclass[11pt,twoside,a4paper]{report}
+\usepackage[DEM,newLogo]{uaThesis}
+%encoding
+%--------------------------------------
+\usepackage[latin1]{inputenc} 
+%%%%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%--------------------------------------
+ 
+%Portuguese-specific commands
+%--------------------------------------
+\usepackage[portuguese]{babel}
+%--------------------------------------
+
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+\hyphenation{mate-mática recu-perar}
+%--------------
+
+%Sections Numbering rule
+%--------------------------------------
+%\setcounter{secnumdepth}{4}
+%--------------------------------------
+
+%Svg Stuff
+%--------------------------------------
+\usepackage{svg}                   %to include directly svg graphics.
+\setsvg{inkscape=inkscape -z -D}   %Options to invoke inkscape (assuming inkspace is in the PATH)
+\setsvg{svgpath=Imagens/}           %Or any other path where SVG images are
+%--------------------------------------
+
+%\usepackage[backend=bibtex]{biblatex}
+  \usepackage[
+    backend=bibtex,
+    style=ieee,
+  ]{biblatex}
+
+\addbibresource{bibliografie.bib}
+%--------------------------------------
+
+
+
+\def\ThesisYear{2019}
+
+
+
+
+% custom macros
+\def\I{\mathtt{i}}
+\def\Exp#1{e^{2\pi\I #1}} % argument inside braces, i.e., "{}"
+\def\EXP#1.{e^{2\pi\I #1}} % argument finishes when a full stop is encountered, i.e., "."
+
+% optional: visual delimiters for floats (figures and tables)
+\def\topfigrule{\kern 7.8pt \hrule width\textwidth\kern -8.2pt\relax}
+\def\dblfigrule{\kern 7.8pt \hrule width\textwidth\kern -8.2pt\relax}
+\def\botfigrule{\kern -7.8pt \hrule width\textwidth\kern 8.2pt\relax}
+
+
+\begin{document}
+
+%
+% Cover page (use only one of the first two \TitlePage)
+%
+
+% First alternative, with a figure
+\TitlePage
+  %\GRID  % for debugging ONLY
+  \HEADER{\BAR\FIG{\includegraphics[height=60mm]{uaLogoNew}}} % the \FIG{} is optional
+         {\ThesisYear}
+  \TITLE{Alberto Franco \newline 92137}
+        {Local Path Planning with Moving Obstacle Avoidance based on adaptive MPC in ATLASCAR2}
+       
+\EndTitlePage
+\titlepage\ \endtitlepage % empty page
+
+%
+% First thesis pages
+%
+
+\TitlePage
+  \HEADER{}{\ThesisYear}
+  \TITLE{14$^{\text{th}}$ February 2019}
+        {Projeto de Dissertação - 49992 }
+  \vspace*{15mm}
+  \TEXT{}
+       {Project Report presented at the University of Aveiro for fulfilling the necessary requirements to write a dissertation and obtain the Master Degree in Automation Engineering, carried out with the scientific supervision of Vítor Manuel Ferreira dos Santos, Associate Professor in the Department of Mechanical Engineering at the University of Aveiro.
+       \newline\\
+       The research work for this project  was developed at the Laboratory for Automation and Robotics (LAR) during a period of 5 months as an exchange student. Inserted in the ATLASCAR2 project this work aims to develop a short-term path planning algorithm
+       for driver assistance in dynamic environments. In order to achieve this objective, it was made a preliminary study of the existing local path planning methods and the projects that have already been developed in this field. It was possible to identify a different solution based on a mathematical optimization approach (Model Predictive Control) that was simulated in a MATLAB/Simulink enviroment. At the beginning of this work all the ROS tutorials were carried out in order to understand if the proposed solution was feasible for this project. The first method developted, is an obstacle avoidance system that moves the vehicle around different moving obstacles while the second algorithm is a lane following system that keeps the ATLASCAR2 traveling along the centerline of the lanes on the road.  Simulation results demonstrate and verify the feasibility and the usefulness of methods considering different scenarios, opening space for real scenario implementation with Gazebo and ROS.
+       All my work has been documented through a blog and the related code is stored on the Github platform.
+       Moreover this research has allowed the submission of a paper for the 19th IEEE International Conference on Autonomous Robot Systems and Competitions (ICARSC' 2019).}
+\EndTitlePage
+\titlepage\ \endtitlepage % empty page
+\end{document}
