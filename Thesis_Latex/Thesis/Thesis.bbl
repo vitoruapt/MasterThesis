@@ -1,9 +1,13 @@
 \begin{thebibliography}{1}
 
-\bibitem{4651075}
-Y.~{Kuwata}, G.~A. {Fiore}, J.~{Teo}, E.~{Frazzoli}, and J.~P. {How}, ``Motion
-  planning for urban driving using rrt,'' in {\em 2008 IEEE/RSJ International
-  Conference on Intelligent Robots and Systems}, pp.~1681--1686, Sep. 2008.
+\bibitem{Pereira2012}
+J.~F. Pereira, ``{Estacionamento aut{\'{o}}nomo usando perce{\c{c}}{\~{a}}o 3D
+  Autonomous parking using 3D perception},'' disserta\c{c}\~ao de mestrado,
+  Departamento de Engenharia Mec\^anica, Universidade de Aveiro, 2012.
+
+\bibitem{Ricardo:Thesis:2018}
+R.~Silva, ``{ATLASCAR2 Local Navigation for Autonomous Driving and Driver
+  Assistance},'' Master's thesis, Universidade de Aveiro, Aveiro, 2018.
 
 \bibitem{vsantos2010}
 V.~Santos, J.~Almeida, E.~Avila, D.~Gameiro, M.~Oliveira, R.~Pascoal,
@@ -11,6 +15,11 @@ V.~Santos, J.~Almeida, E.~Avila, D.~Gameiro, M.~Oliveira, R.~Pascoal,
   driving system on board a common automobile,'' in {\em 13th International
   {IEEE} Conference on Intelligent Transportation Systems, Funchal, Madeira,
   Portugal, 19-22 September 2010}, pp.~1421--1427, 2010.
+
+\bibitem{4651075}
+Y.~{Kuwata}, G.~A. {Fiore}, J.~{Teo}, E.~{Frazzoli}, and J.~P. {How}, ``Motion
+  planning for urban driving using rrt,'' in {\em 2008 IEEE/RSJ International
+  Conference on Intelligent Robots and Systems}, pp.~1681--1686, Sep. 2008.
 
 \bibitem{borelli}
 Y.~Gao, T.~Lin, F.~Borrelli, E.~Tseng, and D.~Hrovat, ``Predictive control of

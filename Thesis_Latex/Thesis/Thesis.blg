@@ -13,36 +13,36 @@ A level-1 auxiliary file: ./Conclusions/Conclusions.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
 Warning--empty booktitle in borelli
-You've used 4 entries,
+You've used 6 entries,
             1876 wiz_defined-function locations,
-            511 strings with 4581 characters,
-and the built_in function-call counts, 1223 in all, are:
-= -- 103
-> -- 64
+            525 strings with 4974 characters,
+and the built_in function-call counts, 1460 in all, are:
+= -- 129
+> -- 72
 < -- 0
-+ -- 23
-- -- 19
-* -- 92
-:= -- 182
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 4
++ -- 27
+- -- 21
+* -- 105
+:= -- 229
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 64
-empty$ -- 114
-format.name$ -- 19
-if$ -- 286
+cite$ -- 7
+duplicate$ -- 76
+empty$ -- 136
+format.name$ -- 21
+if$ -- 338
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 6
 missing$ -- 3
-newline$ -- 15
-num.names$ -- 4
-pop$ -- 24
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 28
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 39
+skip$ -- 42
 stack$ -- 0
 substring$ -- 76
 swap$ -- 22
@@ -51,7 +51,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 9
-width$ -- 5
-write$ -- 37
+while$ -- 11
+width$ -- 7
+write$ -- 56
 (There was 1 warning)
