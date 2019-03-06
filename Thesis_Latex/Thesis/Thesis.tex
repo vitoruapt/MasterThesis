@@ -2,6 +2,7 @@
 \usepackage[]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
+\usepackage{siunitx}
 %\usepackage[italian]{babel}
 \usepackage{DTGtesi}
 %\usepackage{latexsym}
@@ -20,6 +21,8 @@
 \newcommand{\R}{\numberset{R}}
 %\usepackage{subfigure}
 \usepackage{caption,subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
 \addto\captionsitalian{
 	\renewcommand{\contentsname}
@@ -57,17 +60,19 @@
 % Dati per la prima pagina della tesi %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\definecolor{SchoolColor}{rgb}{0.71, 0, 0.106} % UNIPD red
+
 \school{Engineering}
 \department{Information Engineering}
 \corsodilaureamagistrale{Ingegneria dell'Automazione}
-\titolo{Local Path Planning with \\ Moving Obstacle Avoidance\\based on adaptive MPC in ATLASCAR2}
+\titolo{\textcolor{SchoolColor}{\bfseries Local Path Planning with Moving}\\\textcolor{SchoolColor}{\bfseries Obstacle Avoidance based on}\\\textcolor{SchoolColor}{\bfseries  Adaptive MPC in ATLASCAR2}}
 \supervisor[Prof.]{Angelo Cenedese}
 \cosupervisor[Prof.]{Vitor Santos}
 \mastercandidate{Alberto Franco}
 \matricola{1156523}
 \date{15$^{\text{th}}$ April 2019}
 \annoaccademico{2018/2019}
-\dedica{Eventuale dedica}
+\dedica{Povera mente,\\io ti uccido ogni giorno con le mie idee.\\Povero cuore,\\io ti metto alla prova ma povero me.}
 
 %%%%%%%%%%%%%%%%%%%%
 % Inizio documento %
@@ -134,7 +139,6 @@
 
 \bibliographystyle{ieeetr}
 \bibliography{biblio}
-
 
 \clearemptydoublepage
 

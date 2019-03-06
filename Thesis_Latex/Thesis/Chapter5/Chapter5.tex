@@ -1,4 +1,86 @@
 \chapter{Lane Following}
 \section{Problem Formulation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{../figure/laneFollowing/laneFollowing.pdf}
+	\caption{Problem description of a lane following system.}
+	\label{fig:laneFollowing}
+\end{figure}
 \section{Design of Adaptive MPC}
 \section{Simulation Results}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Parameters          & Values      \\
+		\hline
+		$m$          & \SI{1575}{kg}              \\
+		$I_z$         & \SI{2875}{kgm^2}               \\
+		$l_F$           & \SI{1.2}{m}               \\
+		$l_R$         & \SI{1.6}{m}               \\
+		$C_F$          & \SI{19000}{\newton/rad}      \\
+		$C_R$           & \SI{33000}{\newton/rad}  \\
+		$\tau$             & 0.2                \\
+		$V_0$           & \SI{15}{m/s}       \\
+		$V_{\text{set}}$          & \SI{20}{m/s}   \\
+		$T_s$         & \SI{0.02}{s}          \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+	\centering
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/Reference.pdf}
+		\vspace{-17pt}
+		\subcaption{}
+		\label{fig:reference_laneFollowing}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/Curvature.pdf}
+		\vspace{-17pt}
+		\subcaption{}
+		\label{fig:curvature_laneFollowing}
+	\end{minipage}
+	\caption{Desired path and curvature of the ATLASCAR2 in a simulation of \SI{20}{s}}
+	\label{fig:laneFollowing_desired}
+	\vspace{-30pt}
+\end{figure}
+
+\begin{figure}[!t]
+	\centering
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf}
+		\subcaption{Longitudinal velocity $V_x$ with respect to time.}
+		\label{fig:longitudinal_velocity_laneFollowing}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/AccelerationVsTime.pdf}
+		\subcaption{Acceleration $u_1$ with respect to time.}
+		\label{fig:acceleration_laneFollowing}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf}
+		\subcaption{Steering angle $u_2$ with respect to time.}
+		\label{fig:steering_laneFollowing}
+	\end{minipage}
+	%\begin{minipage}[t]{\columnwidth}
+	%	\includegraphics[width=\columnwidth]{../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf}
+	%	\subcaption{Relative yaw angle $e_2$ with respect to time.}
+	%	\label{fig:relative_yaw_angle_laneFollowing}
+	%\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf}
+		\subcaption{Lateral deviation $e_1$ with respect to time.}
+		\label{fig:lateral_deviation_laneFollowing}
+	\end{minipage}
+	\caption{Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.}
+	\label{fig:laneFollowing_signals}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{../figure/lane_following_AMPC.pdf}
+	\caption{Overall procedure scheme lane following.}
+	\label{fig:scheme_lane_following}
+\end{figure}

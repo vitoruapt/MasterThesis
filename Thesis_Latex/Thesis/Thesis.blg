@@ -12,46 +12,54 @@ A level-1 auxiliary file: ./Chapter6/Chapter6.aux
 A level-1 auxiliary file: ./Conclusions/Conclusions.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
+Repeated entry---line 849 of file biblio.bib
+ : @mastersthesis{Pereira2012
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "waymoh" isn't style-file defined
+--line 951 of file biblio.bib
+Warning--entry type for "waymot" isn't style-file defined
+--line 960 of file biblio.bib
 Warning--empty booktitle in borelli
-You've used 6 entries,
+You've used 15 entries,
             1876 wiz_defined-function locations,
-            525 strings with 4974 characters,
-and the built_in function-call counts, 1460 in all, are:
-= -- 129
-> -- 72
+            571 strings with 6472 characters,
+and the built_in function-call counts, 3388 in all, are:
+= -- 316
+> -- 153
 < -- 0
-+ -- 27
-- -- 21
-* -- 105
-:= -- 229
-add.period$ -- 6
-call.type$ -- 6
-change.case$ -- 7
++ -- 59
+- -- 44
+* -- 230
+:= -- 517
+add.period$ -- 16
+call.type$ -- 15
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 76
-empty$ -- 136
-format.name$ -- 21
-if$ -- 338
+cite$ -- 16
+duplicate$ -- 168
+empty$ -- 325
+format.name$ -- 44
+if$ -- 802
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 3
-newline$ -- 21
-num.names$ -- 6
-pop$ -- 28
+int.to.str$ -- 15
+missing$ -- 8
+newline$ -- 49
+num.names$ -- 15
+pop$ -- 66
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 42
+skip$ -- 99
 stack$ -- 0
-substring$ -- 76
-swap$ -- 22
+substring$ -- 176
+swap$ -- 52
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 11
-width$ -- 7
-write$ -- 56
-(There was 1 warning)
+while$ -- 28
+width$ -- 17
+write$ -- 137
+(There was 1 error message)

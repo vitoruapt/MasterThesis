@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Pereira2012}
 J.~F. Pereira, ``{Estacionamento aut{\'{o}}nomo usando perce{\c{c}}{\~{a}}o 3D
@@ -9,12 +9,57 @@ J.~F. Pereira, ``{Estacionamento aut{\'{o}}nomo usando perce{\c{c}}{\~{a}}o 3D
 R.~Silva, ``{ATLASCAR2 Local Navigation for Autonomous Driving and Driver
   Assistance},'' Master's thesis, Universidade de Aveiro, Aveiro, 2018.
 
+\bibitem{Broggi2013}
+A.~Broggi, M.~Buzzoni, S.~Debattisti, P.~Grisleri, M.~C. Laghi, P.~Medici, and
+  P.~Versari, ``{Extensive tests of autonomous driving technologies},'' {\em
+  IEEE Transactions on Intelligent Transportation Systems}, vol.~14, no.~3,
+  pp.~1403--1415, 2013.
+
+\bibitem{siciliano}
+B.~Siciliano, L.~Sciavicco, L.~Villani, and G.~Oriolo, {\em Robotics:
+  Modelling, Planning and Control}.
+\newblock Springer Publishing Company, Incorporated, 1st~ed., 2008.
+
 \bibitem{vsantos2010}
 V.~Santos, J.~Almeida, E.~Avila, D.~Gameiro, M.~Oliveira, R.~Pascoal,
   R.~Sabino, and P.~Stein, ``{ATLASCAR} - technologies for a computer assisted
   driving system on board a common automobile,'' in {\em 13th International
   {IEEE} Conference on Intelligent Transportation Systems, Funchal, Madeira,
   Portugal, 19-22 September 2010}, pp.~1421--1427, 2010.
+
+\bibitem{Azevedo2014}
+R.~F. Cabral~de Azevedo, ``{Sensor Fusion of LASER and Vision in Active
+  Pedestrian Detection},'' disserta\c{c}\~ao de mestrado, Departamento de
+  Engenharia Mec\^anica, Universidade de Aveiro, 2014.
+
+\bibitem{Silva2016}
+D.~T. Vieira~da Silva, ``{Calibra\c{c}\~ao Multissensorial e Fus\~ao de Dados
+  Utilizando LIDAR e Vis\~ao},'' disserta\c{c}\~ao de mestrado, Departamento de
+  Engenharia Mec\^anica, Universidade de Aveiro, 2016.
+
+\bibitem{Madureira2017}
+J.~D. {Madureira Correia}, ``{Unidade de Perce\c{c}\~ao Visual e de
+  Profundidade Para o Atlascar2},'' disserta\c{c}\~ao de mestrado, Departamento
+  de Engenharia Mec\^anica, Universidade de Aveiro, 2017.
+
+\bibitem{Bimbraw2015}
+K.~Bimbraw, ``{Autonomous Cars: Past, Present and Future - A Review of the
+  Developments in the Last Century, the Present Scenario and the Expected
+  Future of Autonomous Vehicle Technology},'' {\em Proceedings of the 12th
+  International Conference on Informatics in Control, Automation and Robotics},
+  no.~August, pp.~191--198, 2015.
+
+\bibitem{waymoh}
+Waymo, ``Waymo - journey,'' 2018.
+
+\bibitem{waymot}
+Waymo, ``Waymo - technology,'' 2018.
+
+\bibitem{Broggi2010}
+A.~{Broggi}, P.~{Medici}, E.~{Cardarelli}, P.~{Cerri}, A.~{Giacomazzo}, and
+  N.~{Finardi}, ``Development of the control system for the vislab
+  intercontinental autonomous challenge,'' in {\em 13th International IEEE
+  Conference on Intelligent Transportation Systems}, pp.~635--640, Sep. 2010.
 
 \bibitem{4651075}
 Y.~{Kuwata}, G.~A. {Fiore}, J.~{Teo}, E.~{Frazzoli}, and J.~P. {How}, ``Motion

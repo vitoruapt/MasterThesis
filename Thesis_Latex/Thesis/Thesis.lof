@@ -1,9 +1,24 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Some of the ATLAS project small scale platforms (adapted from \cite {Pereira2012}).\relax }}{2}{figure.caption.6}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces The car used in ATLASCAR, based on Ford Escort Station Wagon of 1998 (adapted from \cite {Pereira2012}).\relax }}{2}{figure.caption.7}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces The vehicle used in ATLASCAR2, based on an electric car, a Mitsubishi iMiEV of 2015 (adapted from \cite {Ricardo:Thesis:2018}).\relax }}{3}{figure.caption.8}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Some of the ATLAS project small scale platforms (adapted from \cite {Pereira2012}).\relax }}{2}{figure.caption.7}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The car used in ATLASCAR, based on Ford Escort Station Wagon of 1998 (adapted from \cite {Pereira2012}).\relax }}{2}{figure.caption.8}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The vehicle used in ATLASCAR2, based on an electric car, a Mitsubishi iMiEV of 2015 (adapted from \cite {Ricardo:Thesis:2018}).\relax }}{3}{figure.caption.9}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Some of the Waymo/Google prototypes tested across multiple locations in the Unided States in recent years.\relax }}{4}{figure.caption.10}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces BRAiVE prototype developted by VisLab, based on a Hyundai Sonata (adapted from \cite {Broggi2013}).\relax }}{5}{figure.caption.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Problem description of collision avoidance on a road with only two lanes.\relax }}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Bicycle model of a car, (adapted from \cite {siciliano}).\relax }}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Behaviour planning conditional flowchart.\relax }}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Constraints in the case of left overtaking.\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulation of right overtaking with one moving obstacle that moves in the same direction as the vehicle.\relax }}{13}{figure.caption.16}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Overall procedure scheme moving obstacle avoidance.\relax }}{14}{figure.caption.17}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Simulations of overtaking with $N = 2,3,4$ moving obstacles that drive in the opposite direction with respect to the ATLASCAR2.\relax }}{14}{figure.caption.18}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulation of braking and overtaking obstacles.\relax }}{15}{figure.caption.19}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Fig. \ref {fig:braking}.\relax }}{16}{figure.caption.20}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Problem description of a lane following system.\relax }}{17}{figure.caption.21}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Desired path and curvature of the ATLASCAR2 in a simulation of \SI {20}{s}\relax }}{18}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.\relax }}{18}{figure.caption.24}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Overall procedure scheme lane following.\relax }}{19}{figure.caption.25}

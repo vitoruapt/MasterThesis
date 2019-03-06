@@ -46,13 +46,13 @@ pdfkeywords=tesi laurea LaTeX}
 % Ridefiniamo la riga di testa delle pagine:
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
 \fancyhf{}
-\fancyhead[LE,RO]{\bfseries\thepage}
-\fancyhead[LO]{\bfseries\leftmark\chaptermark}
-\fancyhead[RE]{\bfseries\leftmark\chaptermark}
-\fancyfoot[L]{\bfseries Alberto Franco}
-\fancyfoot[R]{\bfseries Master Thesis}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\leftmark}
+\fancyfoot[L]{\itshape Alberto Franco 1156523}
+\fancyfoot[R]{\itshape Master Thesis}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
 \setlength{\headheight}{13.6pt}
@@ -96,7 +96,7 @@ pdfkeywords=tesi laurea LaTeX}
   \renewcommand{\@triennaleOmagistrale}{MAGISTRALE}}
 
 \newcommand{\titolo}[1]{%
-  \renewcommand{\@titolo}{\uppercase{#1}}}
+  \renewcommand{\@titolo}{#1}}
 
 \newcommand{\annoaccademico}[1]{%
   \renewcommand{\@annoaccademico}{#1}}
@@ -203,11 +203,11 @@ pdfkeywords=tesi laurea LaTeX}
 \ifthenelse{\equal{\@dedica}{?}}{}{%
 \pagestyle{empty}
 \null\vfil
-\begin{Large}
-\begin{flushright}
+\begin{large}
+\begin{flushleft}
 \@dedica
-\end{flushright}
-\end{Large}
+\end{flushleft}
+\end{large}
 \vfil\vfil\clearemptydoublepage}
 \end{titlepage}
 }
