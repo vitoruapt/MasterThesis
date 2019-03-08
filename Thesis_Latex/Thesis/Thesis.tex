@@ -15,6 +15,8 @@
 %\lstset{language=Matlab}
 % Pacchetto per l'inserimento delle formule matematiche
 %\usepackage{amsmath}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
 \usepackage{amsmath,amssymb}
 \newcommand{\numberset}{\mathbb}
 \newcommand{\C}{\numberset{C}}
@@ -30,6 +32,8 @@
 }
 
 \graphicspath{{./figure/}}
+
+\renewcommand{\vec}[1]{\ensuremath{\boldsymbol{\mathit{#1}}}}
 
 \hypersetup{
   % pdfpagelayout=SinglePage, % default
