@@ -19,11 +19,17 @@
 \contentsline {section}{\numberline {3.2}Adaptive Model Predictive Control}{14}{section.3.2}
 \contentsline {chapter}{\numberline {4}Moving Obstacle Avoidance}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Problem Formulation}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Design of Adaptive MPC}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Simulation Results}{17}{section.4.3}
-\contentsline {chapter}{\numberline {5}Lane Following}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Problem Formulation}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Design of Adaptive MPC}{23}{section.5.2}
-\contentsline {section}{\numberline {5.3}Simulation Results}{23}{section.5.3}
-\contentsline {chapter}{Conclusions and Future Work}{27}{chapter*.28}
-\contentsline {chapter}{Bibliography}{29}{chapter*.29}
+\contentsline {section}{\numberline {4.2}Design of Adaptive Model Predictive Control}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Simulation Results}{21}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}One Moving Obstacle - Right Overtaking}{21}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Multiple Moving Obstacles}{22}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Vehicle Braking and Obstacles Overtaking}{23}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Lane Following}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lane Following System}{27}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Problem Formulation}{27}{subsection.5.1.1}
+\contentsline {subsubsection}{Longitudinal dynamics}{28}{figure.caption.23}
+\contentsline {subsubsection}{Lateral dynamics}{28}{equation.5.1.3}
+\contentsline {subsection}{\numberline {5.1.2}Design of Adaptive Model Predictive Control}{30}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Simulation Results}{30}{subsection.5.1.3}
+\contentsline {chapter}{Conclusions and Future Work}{33}{chapter*.28}
+\contentsline {chapter}{Bibliography}{35}{chapter*.29}

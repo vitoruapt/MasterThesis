@@ -44,7 +44,7 @@ where $\vec{x}(k)\in\mathbb{R}^n$, $\vec{u}(k)\in\mathbb{R}^m$ are the state and
 & & & \vec{x}_{k+N}\in \mathbb{X}_f;\quad\vec{x}_k = \vec{x}(k).
 \end{aligned}
 \end{equation}
-where $\textbf{u}=(\vec{u}_k,\dots,\vec{u}_{k+N-1})$ is a sequence of control inputs, $\vec{x}_{k+i}$ is the state at time $k+i$ as predicted at time $k$, and $N$ is the prediction horizon. The sets $\mathbb{X}\in\mathbb{R}^n$ and $\mathbb{U}\in\mathbb{R}^m$ define the constraints on the state and the input, respectively. Finally, the set $\mathbb{X}_f\subseteq\mathbb{X}$ defines the terminal constraint on the state. If we consider a regulation problem, the system \ref{eqn:MPC_plant_discrete} should be steered to the origin and the cost function $J(\vec{x}(k), \textbf{u})$ could be in a quadratic form as follows:
+where $\textbf{u}=(\vec{u}_k,\dots,\vec{u}_{k+N-1})$ is a sequence of control inputs, $\vec{x}_{k+i}$ is the state at time $k+i$ as predicted at time $k$, and $N$ is the prediction horizon. The sets $\mathbb{X}\in\mathbb{R}^n$ and $\mathbb{U}\in\mathbb{R}^m$ define the constraints on the state and the input, respectively. Finally, the set $\mathbb{X}_f\subseteq\mathbb{X}$ defines the terminal constraint on the state. If we consider a regulation problem, the system (\ref{eqn:MPC_plant_discrete}) should be steered to the origin and the cost function $J(\vec{x}(k), \textbf{u})$ could be in a quadratic form as follows:
 \begin{equation}
 \label{eqn:MPC_cost_function_regulation}
 	J(\vec{x}(k), \textbf{u}) = \vec{x}^\intercal_{k+N}\vec{P}_f\vec{x}_{k+N}+\sum_{i=1}^{N}\vec{x}^\intercal_{k+i}\vec{Q}\vec{x}_{k+i}+\vec{u}_{k+i}^\intercal\vec{R}\vec{u}_{k+i}
@@ -69,7 +69,7 @@ where $\vec{x}^\text{ref}_{k+i}$, $\vec{x}^\text{ref}_{k+N}$ describe the refere
 		\State Apply the first control of the optimal control sequence;
 		\State Wait one sampling time and repeat steps 1-3;
 	\end{algorithmic}
-	\label{alg:rightOvertaking}
+	\label{alg:MPCloop}
 \end{algorithm}
 
 An MPC has many strengths. Given that the model is discrete and linear it handles multivariable problems very well. Also mathematical convexity is an important part of the resulting problem formulation of an MPC. In fact there exists efficient solvers for convex optimization problems but it is therefore desirable that the MPC problem \ref{eqn:MPC_optimization} is convex which is ensured if:

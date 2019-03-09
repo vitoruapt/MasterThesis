@@ -11,16 +11,16 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces A discrete Model Predictive Control scheme adapted from \cite {mpctoolbox}.\relax }}{12}{figure.caption.13}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Problem description of collision avoidance on a road with only two lanes.\relax }}{17}{figure.caption.14}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Bicycle model of a car, (adapted from \cite {siciliano}).\relax }}{17}{figure.caption.15}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Behaviour planning conditional flowchart.\relax }}{18}{figure.caption.16}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Constraints in the case of left overtaking.\relax }}{18}{figure.caption.17}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulation of right overtaking with one moving obstacle that moves in the same direction as the vehicle.\relax }}{19}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Overall procedure scheme moving obstacle avoidance.\relax }}{20}{figure.caption.19}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Simulations of overtaking with $N = 2,3,4$ moving obstacles that drive in the opposite direction with respect to the ATLASCAR2.\relax }}{20}{figure.caption.20}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulation of braking and overtaking obstacles.\relax }}{21}{figure.caption.21}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Fig. \ref {fig:braking}.\relax }}{22}{figure.caption.22}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Bicycle model of a car, (adapted from \cite {siciliano}).\relax }}{18}{figure.caption.15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Behaviour planning conditional flowchart.\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Constraints in the case of left overtaking.\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulation of right overtaking with one moving obstacle that moves in the same direction as the vehicle.\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Overall procedure scheme moving obstacle avoidance.\relax }}{22}{figure.caption.19}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Simulations of overtaking with $N = 2,3,4$ moving obstacles that drive in the opposite direction with respect to the ATLASCAR2.\relax }}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulation of braking and overtaking obstacles.\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Fig. \ref {fig:braking}.\relax }}{25}{figure.caption.22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Problem description of a lane following system.\relax }}{23}{figure.caption.23}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Desired path and curvature of the ATLASCAR2 in a simulation of \SI {20}{s}\relax }}{24}{figure.caption.25}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.\relax }}{24}{figure.caption.26}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Overall procedure scheme lane following.\relax }}{25}{figure.caption.27}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Problem description of a lane following system.\relax }}{27}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Desired path and curvature of the ATLASCAR2 in a simulation of \SI {20}{s}\relax }}{31}{figure.caption.25}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.\relax }}{32}{figure.caption.26}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Overall procedure scheme lane following.\relax }}{32}{figure.caption.27}

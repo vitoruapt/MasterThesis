@@ -112,4 +112,28 @@ Y.~Gao, T.~Lin, F.~Borrelli, E.~Tseng, and D.~Hrovat, ``Predictive control of
   autonomous ground vehicles with obstacle avoidance on slippery roads,'' 01
   2010.
 
+\bibitem{swarms}
+W.~Xi and J.~S. {Baras}, ``Mpc based motion control of car-like vehicle
+  swarms,'' in {\em 2007 Mediterranean Conference on Control Automation},
+  pp.~1--6, June 2007.
+
+\bibitem{long_tf}
+Y.~{Wang}, Y.~{Bin}, and K.~{Li}, ``Longitudinal acceleration tracking control
+  of low speed heavy-duty vehicles,'' {\em Tsinghua Science and Technology},
+  vol.~13, pp.~636--643, Oct 2008.
+
+\bibitem{longitudinal}
+J.~Filip, {\em Trajectory Tracking for Autonomous Vehicles}.
+\newblock PhD thesis, 05 2018.
+
+\bibitem{rathai}
+K.~Murali Madhavan~Rathai, J.~Amirthalingam, and B.~Jayaraman, ``Robust
+  tube-mpc based lane keeping system for autonomous driving vehicles,''
+  pp.~1--6, 06 2017.
+
+\bibitem{curvature}
+and, ``Trajectory planning for a four-wheel-steering vehicle,'' in {\em
+  Proceedings 2001 ICRA. IEEE International Conference on Robotics and
+  Automation (Cat. No.01CH37164)}, vol.~4, pp.~3320--3325 vol.4, May 2001.
+
 \end{thebibliography}

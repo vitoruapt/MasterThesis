@@ -1,6 +1,7 @@
 \chapter{Moving Obstacle Avoidance}
 
 \section{Problem Formulation}
+The collision avoidance problem is very dependent on the vehicle modeling since it is a requirement for  adaptive MPC law design. Figure \ref{fig:obstacleAvoidance} illustrates a typical scenario of overtaking of a moving obstacle.
 % COLLISION AVOIDANCE FIGURE
 \begin{figure}[!h]
 	\centering
@@ -8,6 +9,19 @@
 	\caption{Problem description of collision avoidance on a road with only two lanes.}
 	\label{fig:obstacleAvoidance}
 \end{figure}
+
+The model used in this report should take into account the kinematic and dynamic aspects of the vehicle. Here, we present a non linear mathematical model of a vehicle used for the development of a collision avoidance system.
+The model has four states and two inputs:
+\begin{equation*} 
+\vec{x}=\begin{bmatrix}
+x&y&\theta&v 
+\end{bmatrix}^\intercal
+,\qquad 
+\vec{u}=\begin{bmatrix}
+T&\delta 
+\end{bmatrix}^\intercal
+\end{equation*}
+where $(x,y)$ are the global coordinates of the contact point between the rear wheel and the ground, $\theta$ is the heading angle of the car body with respect to the $x$-axis and $v$ is the linear speed of the car (positive). The manipulated variables are $T$ the throttle (positive when accelerating/negative when braking) and $\delta$ the steering angle of the front wheel with respect to the vehicle ($0$ when aligned with car, counterclockwise positive). Figure \ref{fig:car_model} illustrates the applied nonlinear bicycle model and the related parameters.
 % BICYCLE MODEL
 \begin{figure}[!h]
 	\centering
@@ -15,7 +29,82 @@
 	\caption{Bicycle model of a car, (adapted from \cite{siciliano}).}
 	\label{fig:car_model}
 \end{figure}
-\section{Design of Adaptive MPC}
+
+The ATLASCAR2 can be modeled using the non-linear kinematic bicycle model described by the following equations of motion \cite{safety} \cite{swarms}:
+\begin{equation*}
+\label{eqn:dynamics_model_obstacle_avoidance}
+\left \{ \begin{array}{llll}
+\dot{x} = v\cos(\theta)\\
+\dot{y} = v\sin(\theta)\\
+\dot{\theta} =\dfrac{v}{C_L}\tan(\delta)\\
+\dot{v} =0.5 \cdot T
+\end{array} 
+\right .
+\Longrightarrow 
+\begin{array}{llll}
+\dot{\vec{x}} = \vec{f}(\vec{x},\vec{u})\\
+\vec{y} = \vec{g}(\vec{x},\vec{u})
+\end{array}
+\end{equation*}
+where $C_L$ is the car length. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this paper it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In order to use MPC, the state space model needs to be linearized with a first order approximation and also re-written in a more compact form:
+\begin{equation}
+\label{eqn:dynamics_model_non_linear}
+\begin{array}{llll}
+\dot{\vec{x}} = \vec{f}(\vec{x},\vec{u})\\
+\vec{y} = \vec{g}(\vec{x},\vec{u})
+\end{array} \Longrightarrow
+\begin{array}{ll}
+\dot{\vec{x}} =\vec{A}_c \vec{x}+ \vec{B}_c \vec{u}\\
+\vec{y} =\vec{C}_c \vec{x} + \vec{D}_c \vec{u}
+\end{array}
+\end{equation}
+where the matrices $\vec{A}_c$, $\vec{B}_c$, $\vec{C}_c$ and $\vec{D}_c$ are obtained as follows:
+\[ 
+\vec{A}_c=\frac{\partial \vec{f}(\vec{x},\vec{u})}{\partial \vec{x}}=\begin{bmatrix}
+0&0&-v\sin(\theta)&\cos(\theta)\\
+0&0&v\cos(\theta)&\sin(\theta)\\
+0&0&0&\tan(\delta)/C_L\\
+0&0&0&0
+\end{bmatrix},
+\]
+\[
+\vec{B}_c=\frac{\partial \vec{f}(\vec{x},\vec{u})}{\partial \vec{u}}=\begin{bmatrix}
+0&0\\
+0&0\\
+0&\dfrac{v}{C_L}\big(\tan(\delta)^2+1\big)\\
+0.5&0
+\end{bmatrix},
+\]
+\[
+\vec{C}_c=\frac{\partial \vec{g}(\vec{x},\vec{u})}{\partial \vec{u}} = \mathbf{I}_4, 
+\qquad
+\vec{D}_c=\frac{\partial \vec{g}(\vec{x},\vec{u})}{\partial \vec{u}}=\mathbf{0}_{4\times2}. 
+\]
+The simple linearized approximation of the system to describe the dynamics of the ATLASCAR2 will be evaluated at the operating conditions. Note also that the system we are considering is a linear state-space model whose dynamics vary as a function of certain time-varying parameters. The system to be controlled is usually modeled by a discrete state-space model in the MPC literature. Therefore, (\ref{eqn:dynamics_model_non_linear})
+is transformed into a discrete state-space model to be used by the Model Predictive Controller:
+\begin{equation*}
+\label{eqn:dynamics_ss_obstacle_avoidance_dis}
+\begin{array}{ll}
+\dot{\vec{x}} =\vec{A}_c \vec{x}+ \vec{B}_c \vec{u}\\
+\vec{y} =\vec{C}_c \vec{x} + \vec{D}_c \vec{u}
+\end{array}
+\Rightarrow
+\begin{array}{rr}
+{\vec{x}}(k+1) =\vec{A}_d \vec{x}(k)+ \vec{B}_d \vec{u}(k)\\
+\vec{y}(k) =\vec{C}_d \vec{x}(k) + \vec{D}_d \vec{u}(k)
+\end{array}
+\end{equation*}
+
+where $\vec{A}_d$ and $\vec{B}_d$ are the state and control matrices for the discrete state-space equation, respectively, which can be calculated with the Euler method as
+\begin{equation*}
+\vec{A}_d = e^{\vec{A}_cT_s},\qquad \vec{B}_d = \int_{kT_s}^{(k+1)T_s} e^{\vec{A}_c[(k+1)T_s-\eta]}\vec{B}_c d\eta
+\end{equation*}
+
+where $T_s$ is the sampling interval for the discrete state-space model. The matrices $\vec{C}_d$ and $\vec{D}_d$ are equivalent to those in the continuous case. For simplicity, we assume that all the states are measurable and the ATLASCAR2 drives east with a constant speed at the nominal operating point. In the scenario that we are going to consider, the road is straight and our vehicle stays in the middle of the center lane when not passing. Without losing generality, the ATLASCAR2 passes an obstacle both to the right and to the left lane depending on where it is placed on the road. We create also a safe zone around the obstacles so that the vehicle does not get too close to the obstacle when passing it.
+
+\section{Design of Adaptive Model Predictive Control}
+We designed a Model Predictive Controller that can make the ATLASCAR2 maintain a desired velocity and stay in the middle of center lane. We used an Adaptive MPC controller because it handles the nonlinear vehicle dynamics more effectively than a traditional MPC controller; in fact, the latter uses a constant plant model but the former allows us to provide a new plant model at each control interval. Because the new model describes the plant dynamics more accurately at the new operating condition, an adaptive MPC controller performs better than a traditional MPC controller. In practice, at each control interval, the adaptive MPC controller updates the plant model and the nominal conditions. Once updated, the model and the conditions remain constant over the prediction horizon. In motion planning that uses adaptive MPC, it is common to formulate the constrained control problem as a real-time optimization problem subject to hard constraints on plant variables and soft constraints on outputs; at the beginning, we specified the constraints for the manipulated variables: to prevent the ATLASCAR2 from accelerating or decelerating too quickly, we added an hard constraint on the throttle rate of change and another one on the steering angle rate of change. We used an approach that takes advantage of the ability of MPC to handle constraint explicitly. Figure \ref{fig:flowchart} shows a conditional state machine designed for higher-level behavior planning.
+
 % FLOWCHART
 \begin{figure}[!h]
 	\centering
@@ -23,6 +112,46 @@
 	\caption{Behaviour planning conditional flowchart.}
 	\label{fig:flowchart}
 \end{figure}
+
+
+When an obstacle is detected, it defines an area on the road (in terms of constraints) that the ATLASCAR2 must not enter during the prediction horizon. At the next control interval the area is redefined based on the new positions of the vehicle and the obstacle until passing is completed.
+To define the area to avoid, we used the following mixed Input/Output constraints:
+\begin{equation*}
+\label{eqn:mixed_IO_constraints}
+\vec{E}\vec{u}+\vec{F}\vec{y}\leq \vec{G}
+\end{equation*}
+where $\vec{u}$ and $\vec{y}$ are respectively the manipulated variable vector and the output variable vector, while $\vec{E},\vec{F},\vec{G}$ are the constraint matrices that can be updated when the controller is running. Five constraints were defined:
+\begin{enumerate}
+	\item upper bound on the $y$-coordinate (left boundary of the road);
+	\item lower bound on the $y$-coordinate (right boundary of the road);
+	\item constraint for obstacle avoidance; although no obstacle is considered in the nominal condition, we must add this virtual constraint here because we cannot change the dimensions of the constraint matrices at run time;
+	\item upper bound on the $x$-coordinate (position of the closest obstacle);
+	\item lower bound on the $x$-coordinate (position of the ATLASCAR2).
+\end{enumerate}
+The matrices for the above inequality are the following:
+\[
+\vec{E}= 
+\begin{bmatrix}
+0&0\\
+0&0\\
+0&0\\
+0&0\\
+0&0
+\end{bmatrix},
+\;
+\vec{F}=\begin{bmatrix}
+0&1&0&0\\
+0&-1&0&0\\
+cS&-1&0&0\\
+1&0&0&0\\
+-1&0&0&0\\
+\end{bmatrix},\;
+\vec{G}=
+\begin{bmatrix}
+W/2\\W/2\\-cI\\x_{\max}\\x_{\min}
+\end{bmatrix}
+\]
+where $W$ is the width of the road, $cI$ and $cS$ are the required parameters such that the ATLASCAR2 must be above the line formed from the vehicle to safe zone corner for left/right passing and finally $x_{\max}$ represents the position of the closest obstacle in the case there is not free space for the overtaking (otherwise $x_{\max}=+\infty$) while $x_{\min}$ depicts the location of our vehicle. Figure \ref{fig:constraint} illustrates the constraints that are computed at each $T_s$ in the case of a left overtaking.
 % FIGURE CONSTRAINT
 \begin{figure}[!h]
 	\centering
@@ -31,8 +160,15 @@
 	\label{fig:constraint}
 \end{figure}
 
-
 \section{Simulation Results}
+The performances of the proposed adaptive MPC based vehicle control method are demonstrated in three simulation examples. We tried to choose parameters that were as close as possible to a real situation: the sampling time used in the discretization of the system is $T_s=\SI{0.02}{s}$ while the values of the prediction and the control horizon are respectively $p_H=25$ and $c_H=5$. In all simulations, the distance between the front and rear axles is $C_L=\SI{5}{m}$ and the width of the vehicle is $C_W=\SI{2}{m}$. The saturation ranges of the control inputs are: the steering angle lies in $\big[-\frac{\pi}{30}, +\frac{\pi}{30}\big]$ rad/s while in order to prevent the ATLASCAR2 from accelerating or decelerating too quickly, we impose an hard constraint of \SI{2.5}{m/s^2} on the throttle rate of change. Moreover we are using a constant reference signal for the velocity of $v=\SI{20}{m/s}$ ($\approx\SI{72}{km/h}$).
+Blue paths in Figures \ref{fig:obstacleAvoidance_one_obstacle}, \ref{fig:obstacleAvoidance_random}, \ref{fig:braking} are known only at the end of the simulations.
+
+\subsection{One Moving Obstacle - Right Overtaking}
+In this first simulation
+(Fig. \ref{fig:obstacleAvoidance_one_obstacle}) the ATLASCAR2 drives in the middle of the center lane while the road is completely free and when there is an obstacle, the vehicle passes it only using the right lane (the same simulation can be launched so that the car goes over to the left fast lane). In other words if the ATLASCAR2 is already in the adjacent lane, it uses the safety zone as the constraint, otherwise the vehicle must be above the line formed from the ATLASCAR2 to safe zone corner for right passing. If the vehicle is parallel to the obstacle, it  uses the safety zone as the constraint and finally if it has passed the obstacle, it uses the inactive constraint to go back to the center lane.
+Algorithm \ref{alg:rightOvertaking} summarizes the main steps to compute custom constraints for the obstacle; when the vehicle detects the obstacle, the constraints are computed. In this simulation only the first three constraints are necessary because there is space for the overtaking without braking (the fourth and fifth constraints don't change).
+
 % ONE MOVING OBSTACLE
 \begin{figure}[h!]
 	\centering
@@ -51,6 +187,7 @@
 	\caption{Simulation of right overtaking with one moving obstacle that moves in the same direction as the vehicle.}
 	\label{fig:obstacleAvoidance_one_obstacle}
 \end{figure}
+
 % ALGORITHM FOR RIGHT OVERTAKING OF ONE MOVING OBSTACLE
 \begin{algorithm}%[b]
 	\caption{Right Overtaking if an obstacle is detected}
@@ -79,6 +216,7 @@
 	\end{algorithmic}
 	\label{alg:rightOvertaking}
 \end{algorithm}
+
 % OVERALL SCHEME ONE MOVING OBSTACLE
 \begin{figure}[!h]
 	\centering
@@ -86,6 +224,9 @@
 	\caption{Overall procedure scheme moving obstacle avoidance.}
 	\label{fig:MovingObstacleAvoidance}
 \end{figure}
+%
+\subsection{Multiple Moving Obstacles}
+For a second test, additional obstacles were added to make the scenario more complex (Fig. \ref{fig:obstacleAvoidance_random}).
 % MULTIPLE MOVING OBSTACLE
 \begin{figure}[!h]
 	\centering
@@ -101,6 +242,18 @@
 	\caption{Simulations of overtaking with $N = 2,3,4$ moving obstacles that drive in the opposite direction with respect to the ATLASCAR2.}
 	\label{fig:obstacleAvoidance_random}
 \end{figure}
+
+The vehicle is capable of overtaking the obstacles on the right or left depending on their positions with respect to the road. If the $y$-coordinate of the closest obstacle is greater than 0, then the vehicle overtakes to the right, otherwise the overtaking takes place on the left lane. We also hypothesized that the obstacles move at different speeds but that they are initially at a common distance; they can have a uniform motion or a uniformely accelerated motion. In case two obstacles are too close during the simulation and their distance is less than the detection range, which is \SI{30}{m}, the ATLASCAR2 perceives the objects as a single entity and adapts to the situation. The same test can be done with the obstacles that drive in the same direction as the vehicle but to better assess and demonstrate results we decided to show a very unusual scenario.
+
+\subsection{Vehicle Braking and Obstacles Overtaking}
+Finally we have improved the code related to the mixed Input/Output constraints so that in the case there are 3 obstacles that block the road and drive at a lower speed than the ATLASCAR2, the velocity of the vehicle decreases in order to prevent the collision. Figure \ref{fig:braking} depicts a simulation in which there are 3 obstacles at the same $x$-coordinate. Two obstacles have a constant speed of \SI{8}{m/s} while the one on the left lane of \SI{15}{m/s}.
+In this particular case it is essential to consider the fourth and the fifth restriction in order to allow the ATLASCAR2 to slow down without colliding with the cars in front. The fifth constraint is simply the position of the ATLASCAR2 that updates at each interval, while the fourth constraint, until there is a free lane, is the position of the closest obstacle (both the positions are with respect to the global reference frame). In the calculation of the fourth constraint is necessary  to consider the speed at which the vehicle and the obstacle are moving in order to keep a safe distance. In particular three parameters have been identified as the key
+factors computing the safe distance between cars:
+\begin{itemize}
+	\item detection range of the ATLASCAR2;
+	\item velocities of the vehicle and the obstacle;
+	\item distance between the cars.
+\end{itemize}
 
 % BRAKING THREE OBSTACLE
 \begin{figure}[!h]
@@ -129,26 +282,25 @@
 	\caption{Simulation of braking and overtaking obstacles.}
 	\label{fig:braking}
 \end{figure}
+
+At the beginning, the vehicle moves with the reference velocity of $v=\SI{20}{m/s}$. When the ATLASCAR2 detects all the other cars on the road, checks if there is a free lane. In the first part of the simulation, the ATLASCAR2 brakes because there is not enough space for overtaking the cars as shown in Fig. \ref{fig:velocity_braking}. A collision would happen if the vehicle continues to follow the initially planned path with the reference velocity. It is possible to notice that the speed decreases because the applied throttle is negative, so a consistent deceleration is set after $\approx\SI{1.5}{s}$ as depicted in Fig. \ref{fig:throttle_braking}. The velocity of the ATLASCAR2 for $\approx\SI{2}{s}$ adapts to that of the closest obstacle. After a few seconds the fastest car moves and makes available the left lane for overtaking. Dramatic changes of steering angle in early stage are observed in Fig. \ref{fig:delta_braking} and consequently also on the heading angle in Fig. \ref{fig:theta_braking}. Then, the ATLASCAR2 returns to the reference velocity during the overtaking of the two obstacles (the applied throttle after $\approx\SI{5}{s}$ is positive). It is seen that the ATLASCAR2 avoids the obstacles and returns to the road center line with a low overshoot.
+
 % RESULTS BRAKING THREE OBSTACLES
 \begin{figure}[!t] %vs changes to t instead of b
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf}
-		\vspace{-17pt}
 		\subcaption{}\label{fig:velocity_braking}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf}
-		\vspace{-17pt}
 		\subcaption{}\label{fig:throttle_braking}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf}
-		\vspace{-17pt}
 		\subcaption{}\label{fig:delta_braking}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf}
-		\vspace{-17pt}
 		\subcaption{}\label{fig:theta_braking}
 	\end{minipage}
 	\caption{Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Fig. \ref{fig:braking}.}
