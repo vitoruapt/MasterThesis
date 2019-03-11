@@ -79,7 +79,21 @@ pos5 = get(h5,'Position');
 set(h5,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos5(3)*0.8, pos5(4)-40])
 print(h5,'figure\LongitudinalVelocityVsTime_curve','-dpdf','-r0')
 hold off
+pause(2)
+%% Lateral Velocity
 
+h6 = figure ('Position',[100, 100, 340, 230], 'PaperPositionMode','auto');
+plot(vy_ampc.Values.Time,vy_ampc.Values.Data);
+hold on;
+grid on;
+grid minor;
+%title('\textbf{Velocity (V$_x$) vs Time}','Interpreter','latex');
+xlabel('Time [s]','Interpreter','latex');
+ylabel('Velocity [m/s]','Interpreter','latex');
+pos6 = get(h6,'Position');
+set(h6,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos6(3)*0.8, pos6(4)-40])
+print(h6,'figure\LateralVelocityVsTime_curve','-dpdf','-r0')
+hold off
 %% Local function: Get data from simulation
 function [e1,e2,delta,accel,vx,vy] = getData(logsout)
 e1 = logsout.getElement('Lateral Deviation');    % lateral deviation

@@ -40,7 +40,7 @@ LaneFollowingGenerateAMPC;
 % function |LaneFollowingResults|
 sim(mdl)
 logsout1 = logsout;
-LaneFollowingResults(logsout1,Yref)
+closLaneFollowingResults(logsout1,Yref)
 print -slane_following_AMPC -dpdf lane_following_AMPC.pdf
 movefile('lane_following_AMPC.pdf','figure')
 

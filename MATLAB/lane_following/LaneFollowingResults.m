@@ -79,8 +79,24 @@ pos5 = get(h5,'Position');
 set(h5,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos5(3)*0.8, pos5(4)-40])
 print(h5,'figure\LongitudinalVelocityVsTime','-dpdf','-r0')
 hold off
+
+
+%% Lateral Velocity
+
+hpp = figure ('Position',[100, 100, 340, 230], 'PaperPositionMode','auto');
+plot(vy_ampc.Values.Time,vy_ampc.Values.Data);
+hold on;
+grid on;
+grid minor;
+%title('\textbf{Velocity (V$_x$) vs Time}','Interpreter','latex');
+xlabel('Time [s]','Interpreter','latex');
+ylabel('Velocity [m/s]','Interpreter','latex');
+pospp = get(hpp,'Position');
+set(hpp,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pospp(3)*0.8, pospp(4)-40])
+print(hpp,'figure\LateralVelocityVsTime','-dpdf','-r0')
+hold off
 %% Local function: Get data from simulation
-function [e1,e2,delta,accel,vx,vy,xp,yp] = getData(logsout)
+function [e1,e2,delta,accel,vx,vy] = getData(logsout)
 e1 = logsout.getElement('Lateral Deviation');    % lateral deviation
 e2 = logsout.getElement('Relative Yaw Angle');   % relative yaw angle
 delta = logsout.getElement('Steering');          % steering angle

@@ -47,7 +47,7 @@ where $\vec{x}(k)\in\mathbb{R}^n$, $\vec{u}(k)\in\mathbb{R}^m$ are the state and
 where $\textbf{u}=(\vec{u}_k,\dots,\vec{u}_{k+N-1})$ is a sequence of control inputs, $\vec{x}_{k+i}$ is the state at time $k+i$ as predicted at time $k$, and $N$ is the prediction horizon. The sets $\mathbb{X}\in\mathbb{R}^n$ and $\mathbb{U}\in\mathbb{R}^m$ define the constraints on the state and the input, respectively. Finally, the set $\mathbb{X}_f\subseteq\mathbb{X}$ defines the terminal constraint on the state. If we consider a regulation problem, the system (\ref{eqn:MPC_plant_discrete}) should be steered to the origin and the cost function $J(\vec{x}(k), \textbf{u})$ could be in a quadratic form as follows:
 \begin{equation}
 \label{eqn:MPC_cost_function_regulation}
-	J(\vec{x}(k), \textbf{u}) = \vec{x}^\intercal_{k+N}\vec{P}_f\vec{x}_{k+N}+\sum_{i=1}^{N}\vec{x}^\intercal_{k+i}\vec{Q}\vec{x}_{k+i}+\vec{u}_{k+i}^\intercal\vec{R}\vec{u}_{k+i}
+	J(\vec{x}(k), \textbf{u}) = \vec{x}^\intercal_{k+N}\vec{P}_f\vec{x}_{k+N}+\sum_{i=1}^{N}\Big(\vec{x}^\intercal_{k+i}\vec{Q}\vec{x}_{k+i}+\vec{u}_{k+i}^\intercal\vec{R}\vec{u}_{k+i}\Big)
 \end{equation}
 where $\vec{P}_f,\vec{Q}\geq0$ (positive semi-definite) and $\vec{R}>0$ (positive definite) are weighting matrices.
 
@@ -56,7 +56,7 @@ Instead if we consider a servo problem, like tracking of a reference signal, the
 \label{eqn:MPC_cost_function_servo}
 \begin{aligned}
 J(\vec{x}(k), \textbf{u})=& (\vec{x}_{k+N}-\vec{x}^\text{ref}_{k+N})^\intercal\vec{P}_f(\vec{x}_{k+N}-\vec{x}^\text{ref}_{k+N})\\
-&+\sum_{i=1}^{N}(\vec{x}_{k+i}-\vec{x}^\text{ref}_{k+i})^\intercal\vec{Q}(\vec{x}_{k+i}-\vec{x}^\text{ref}_{k+i})+\vec{u}_{k+i}^\intercal\vec{R}\vec{u}_{k+i}
+&+\sum_{i=1}^{N}\Big((\vec{x}_{k+i}-\vec{x}^\text{ref}_{k+i})^\intercal\vec{Q}(\vec{x}_{k+i}-\vec{x}^\text{ref}_{k+i})+\vec{u}_{k+i}^\intercal\vec{R}\vec{u}_{k+i}\Big)
 \end{aligned}
 \end{equation}
 where $\vec{x}^\text{ref}_{k+i}$, $\vec{x}^\text{ref}_{k+N}$ describe the reference trajectory. The standard MPC algorithm can be summarized by the following steps:

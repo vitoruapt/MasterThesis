@@ -1,7 +1,8 @@
 \chapter{Moving Obstacle Avoidance}
+In this chapter we present an Obstacle Avoidance alghorithm based on Adaptive Model Predictive Control. First we introduced the case-study model, then we designed the controller and the method of decision-making. Finally we verified the proposed strategy in different scenarios.
 
 \section{Problem Formulation}
-The collision avoidance problem is very dependent on the vehicle modeling since it is a requirement for  adaptive MPC law design. Figure \ref{fig:obstacleAvoidance} illustrates a typical scenario of overtaking of a moving obstacle.
+The collision avoidance problem is very dependent on the vehicle modeling since it is a requirement for  adaptive MPC law design. Figure \ref{fig:obstacleAvoidance} illustrates a typical scenario of overtaking of a moving obstacle. The maneuver from the driver is to temporarily move to another lane, drive past the obstacle, and move back to the original lane afterward. 
 % COLLISION AVOIDANCE FIGURE
 \begin{figure}[!h]
 	\centering
@@ -10,7 +11,11 @@ The collision avoidance problem is very dependent on the vehicle modeling since 
 	\label{fig:obstacleAvoidance}
 \end{figure}
 
-The model used in this report should take into account the kinematic and dynamic aspects of the vehicle. Here, we present a non linear mathematical model of a vehicle used for the development of a collision avoidance system.
+This is possible if and only if there is a free lane or  sufficient space for overtaking the obstacle. In the case the road is busy with vehicles, the ATLASCAR2 must slow down and adapts its speed to that of the closest obstacle until the scenario changes.
+
+\subsection{Car-like Model}
+The model used in this part of the thesis should take into account the kinematic and dynamic aspects of the vehicle. Here, we present a non linear mathematical model of a vehicle used for the development of a collision avoidance system.
+
 The model has four states and two inputs:
 \begin{equation}
 \begin{array}{cc}
@@ -47,7 +52,18 @@ The ATLASCAR2 can be modeled using the non-linear kinematic bicycle model descri
 \vec{y} = \vec{g}(\vec{x},\vec{u})
 \end{array}
 \end{equation}
-where $C_L$ is the car length. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this paper it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In order to use MPC, the state space model needs to be linearized with a first order approximation and also re-written in a more compact form:
+
+where $C_L$ is the car length. When the velocity is zero then the rate of change of heading angle is zero, that is, it is not possible to change the vehicle's orientation
+when it is not moving. If the front wheel is orthogonal to the back wheel, i.e. the steering angle is $\frac{\pi}{2}$, the ATLASCAR2 cannot move forward and the model enters an undefined region. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this paper it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In particular the rate of change of heading angle is referred to as turn rate which can be evaluated with a gyroscope. This yaw rate can also be deduced from the angular velocity of the wheels on the left- and right-hand sides of the vehicle which therefore rotate at different speeds because follow arcs of different radius. We can write the non-holonomic constraint which is an expression for velocity in the vehicle's $y$-direction in the world coordinate frame as follows:
+\begin{equation}
+	\dot{y}\cos\theta-\dot{x}\cos\theta=0
+\end{equation}
+This equation cannot be integrated to form a
+relationship between $x,y$ and $\theta$.
+
+
+
+In order to use an MPC controller, the state space model needs to be linearized with a first order approximation and also re-written in a more compact form:
 \begin{equation}
 \label{eqn:dynamics_model_non_linear}
 \begin{array}{llll}

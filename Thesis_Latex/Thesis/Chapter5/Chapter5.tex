@@ -253,7 +253,7 @@ X_\text{ref}=V_x\cdot t, \quad Y_\text{ref}=5\sin(X_\text{ref}/20)\quad \text{wi
 \end{figure}
 
 Moreover the following figures show the trend of the main parameters confirming that the control strategy used allows the vehicle to follow the path. In particular we simulated also a small error in the sensor dynamics in order to make the simulation more realistic: we added a 3 percent error to the longitudinal velocity and this is evident from the small noise in the graphs of the steering angle (Figure \ref{fig:steering_laneFollowing}) and the lateral deviation (Figure \ref{fig:lateral_deviation_laneFollowing}).
-Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the vehicle longitudinal velocity. At the start of the simulation, this velocity is equal to the initial condition for longitudinal velocity parameter $V_0$. At run time, we can note that $V_x$ reaches the predefined value of \SI{20}{m/s} meters for second and then it stabilizes near the cruising speed because it continues to vary the steering angle to adapt to the path to be followed. Finally we presents the overall scheme for the lane following developted in Simulink depicted in Figure \ref{fig:scheme_lane_following}.
+Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the vehicle longitudinal velocity. At the start of the simulation, this velocity is equal to the initial condition for longitudinal velocity parameter $V_0$. At run time, we can note that $V_x$ reaches the predefined value of \SI{20}{m/s} and then it stabilizes near the cruising speed because it continues to vary the steering angle to adapt to the path to be followed. Finally we presents the overall scheme for the lane following developted in Simulink depicted in Figure \ref{fig:scheme_lane_following}.
 %LANE FOLLOWING SINUSOIDAL PATH - SIGNALS
 \begin{figure}[!h]
 	\centering
@@ -272,15 +272,20 @@ Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of th
 		\subcaption{Steering angle $u_2$ w.r.t. time.}
 		\label{fig:steering_laneFollowing}
 	\end{minipage}
-	%\begin{minipage}[t]{\columnwidth}
-	%	\includegraphics[width=\columnwidth]{../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf}
-	%	\subcaption{Relative yaw angle $e_2$ w.r.t. time.}
-	%	\label{fig:relative_yaw_angle_laneFollowing}
-	%\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf}
+		\subcaption{Relative yaw angle $e_2$ w.r.t. time.}
+		\label{fig:relative_yaw_angle_laneFollowing}
+	\end{minipage}
 	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf}
 		\subcaption{Lateral deviation $e_1$ w.r.t. time.}
 		\label{fig:lateral_deviation_laneFollowing}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf}
+		\subcaption{Lateral velocity $V_y$ w.r.t. time.}
+		\label{fig:lateral_velocity_laneFollowing}
 	\end{minipage}
 	\caption{Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.}
 	\label{fig:laneFollowing_signals}
@@ -341,15 +346,20 @@ Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of th
 		\subcaption{Steering angle $u_2$ w.r.t. time.}
 		\label{fig:steering_laneFollowing_curve}
 	\end{minipage}
-	%\begin{minipage}[t]{\columnwidth}
-	%	\includegraphics[width=\columnwidth]{../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf}
-	%	\subcaption{Relative yaw angle $e_2$ w.r.t. time.}
-	%	\label{fig:relative_yaw_angle_laneFollowing_curve}
-	%\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf}
+	\subcaption{Relative yaw angle $e_2$ w.r.t. time.}
+		\label{fig:relative_yaw_angle_laneFollowing_curve}
+	\end{minipage}
 	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf}
 		\subcaption{Lateral deviation $e_1$ w.r.t. time.}
 		\label{fig:lateral_deviation_laneFollowing_curve}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf}
+		\subcaption{Lateral velocity $V_y$ w.r.t. time.}
+		\label{fig:lateral_velocity_laneFollowing_curve}
 	\end{minipage}
 	\caption{Time signals of the ATLASCAR2 in the simulation with a curve path.}
 	\label{fig:laneFollowing_signals_curve}
