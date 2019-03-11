@@ -43,3 +43,6 @@ logsout1 = logsout;
 LaneFollowingResults(logsout1,Yref)
 print -slane_following_AMPC -dpdf lane_following_AMPC.pdf
 movefile('lane_following_AMPC.pdf','figure')
+
+print -slane_following_AMPC/Sensor_Dynamics -dpdf lane_following_AMPC_sensor_dynamics.pdf
+movefile('lane_following_AMPC_sensor_dynamics.pdf','figure')

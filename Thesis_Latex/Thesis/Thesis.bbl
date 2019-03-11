@@ -112,10 +112,19 @@ Y.~Gao, T.~Lin, F.~Borrelli, E.~Tseng, and D.~Hrovat, ``Predictive control of
   autonomous ground vehicles with obstacle avoidance on slippery roads,'' 01
   2010.
 
+\bibitem{safety}
+T.~{Xu} and H.~{Yuan}, ``Autonomous vehicle active safety system based on path
+  planning and predictive control,'' in {\em 2016 35th Chinese Control
+  Conference (CCC)}, pp.~8889--8895, July 2016.
+
 \bibitem{swarms}
 W.~Xi and J.~S. {Baras}, ``Mpc based motion control of car-like vehicle
   swarms,'' in {\em 2007 Mediterranean Conference on Control Automation},
   pp.~1--6, June 2007.
+
+\bibitem{Adaptive_Mpc_Lane_keeping_borelli}
+M.~Bujarbaruah, X.~Zhang, H.~E. Tseng, and F.~Borrelli, ``Adaptive {MPC} for
+  autonomous lane keeping,'' {\em CoRR}, vol.~abs/1806.04335, 2018.
 
 \bibitem{long_tf}
 Y.~{Wang}, Y.~{Bin}, and K.~{Li}, ``Longitudinal acceleration tracking control
@@ -135,5 +144,11 @@ K.~Murali Madhavan~Rathai, J.~Amirthalingam, and B.~Jayaraman, ``Robust
 and, ``Trajectory planning for a four-wheel-steering vehicle,'' in {\em
   Proceedings 2001 ICRA. IEEE International Conference on Robotics and
   Automation (Cat. No.01CH37164)}, vol.~4, pp.~3320--3325 vol.4, May 2001.
+
+\bibitem{error_model}
+H.~{Yang}, M.~{Guo}, Y.~{Xia}, and L.~{Cheng}, ``Trajectory tracking for
+  wheeled mobile robots via model predictive control with softening
+  constraints,'' {\em IET Control Theory Applications}, vol.~12, no.~2,
+  pp.~206--214, 2018.
 
 \end{thebibliography}

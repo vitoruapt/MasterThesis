@@ -12,26 +12,27 @@ The collision avoidance problem is very dependent on the vehicle modeling since 
 
 The model used in this report should take into account the kinematic and dynamic aspects of the vehicle. Here, we present a non linear mathematical model of a vehicle used for the development of a collision avoidance system.
 The model has four states and two inputs:
-\begin{equation*} 
+\begin{equation}
+\begin{array}{cc}
 \vec{x}=\begin{bmatrix}
-x&y&\theta&v 
-\end{bmatrix}^\intercal
-,\qquad 
+x\\y\\\theta\\v 
+\end{bmatrix},\qquad 
 \vec{u}=\begin{bmatrix}
-T&\delta 
-\end{bmatrix}^\intercal
-\end{equation*}
+T\\\delta 
+\end{bmatrix}
+\end{array} 
+\end{equation}
 where $(x,y)$ are the global coordinates of the contact point between the rear wheel and the ground, $\theta$ is the heading angle of the car body with respect to the $x$-axis and $v$ is the linear speed of the car (positive). The manipulated variables are $T$ the throttle (positive when accelerating/negative when braking) and $\delta$ the steering angle of the front wheel with respect to the vehicle ($0$ when aligned with car, counterclockwise positive). Figure \ref{fig:car_model} illustrates the applied nonlinear bicycle model and the related parameters.
 % BICYCLE MODEL
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.80\textwidth]{../figure/car_model.pdf}
-	\caption{Bicycle model of a car, (adapted from \cite{siciliano}).}
+	\caption{Bicycle model of a car (adapted from \cite{siciliano}).}
 	\label{fig:car_model}
 \end{figure}
 
 The ATLASCAR2 can be modeled using the non-linear kinematic bicycle model described by the following equations of motion \cite{safety} \cite{swarms}:
-\begin{equation*}
+\begin{equation}
 \label{eqn:dynamics_model_obstacle_avoidance}
 \left \{ \begin{array}{llll}
 \dot{x} = v\cos(\theta)\\
@@ -45,7 +46,7 @@ The ATLASCAR2 can be modeled using the non-linear kinematic bicycle model descri
 \dot{\vec{x}} = \vec{f}(\vec{x},\vec{u})\\
 \vec{y} = \vec{g}(\vec{x},\vec{u})
 \end{array}
-\end{equation*}
+\end{equation}
 where $C_L$ is the car length. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this paper it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In order to use MPC, the state space model needs to be linearized with a first order approximation and also re-written in a more compact form:
 \begin{equation}
 \label{eqn:dynamics_model_non_linear}
@@ -59,46 +60,46 @@ where $C_L$ is the car length. In order to simplify the model, it is assumed tha
 \end{array}
 \end{equation}
 where the matrices $\vec{A}_c$, $\vec{B}_c$, $\vec{C}_c$ and $\vec{D}_c$ are obtained as follows:
-\[ 
-\vec{A}_c=\frac{\partial \vec{f}(\vec{x},\vec{u})}{\partial \vec{x}}=\begin{bmatrix}
+\begin{equation}
+\begin{array}{ccc}
+\vec{A}_c=\displaystyle\frac{\partial \vec{f}(\vec{x},\vec{u})}{\partial \vec{x}}=\begin{bmatrix}
 0&0&-v\sin(\theta)&\cos(\theta)\\
 0&0&v\cos(\theta)&\sin(\theta)\\
 0&0&0&\tan(\delta)/C_L\\
 0&0&0&0
 \end{bmatrix},
-\]
-\[
-\vec{B}_c=\frac{\partial \vec{f}(\vec{x},\vec{u})}{\partial \vec{u}}=\begin{bmatrix}
+\\\\
+\vec{B}_c=\displaystyle\frac{\partial \vec{f}(\vec{x},\vec{u})}{\partial \vec{u}}=\begin{bmatrix}
 0&0\\
 0&0\\
 0&\dfrac{v}{C_L}\big(\tan(\delta)^2+1\big)\\
 0.5&0
 \end{bmatrix},
-\]
-\[
-\vec{C}_c=\frac{\partial \vec{g}(\vec{x},\vec{u})}{\partial \vec{u}} = \mathbf{I}_4, 
+\\\\
+\vec{C}_c=\displaystyle\frac{\partial \vec{g}(\vec{x},\vec{u})}{\partial \vec{u}} = \mathbf{I}_4, 
 \qquad
-\vec{D}_c=\frac{\partial \vec{g}(\vec{x},\vec{u})}{\partial \vec{u}}=\mathbf{0}_{4\times2}. 
-\]
+\vec{D}_c=\frac{\partial \vec{g}(\vec{x},\vec{u})}{\partial \vec{u}}=\mathbf{0}_{4\times2}.
+\end{array}
+\end{equation} 
 The simple linearized approximation of the system to describe the dynamics of the ATLASCAR2 will be evaluated at the operating conditions. Note also that the system we are considering is a linear state-space model whose dynamics vary as a function of certain time-varying parameters. The system to be controlled is usually modeled by a discrete state-space model in the MPC literature. Therefore, (\ref{eqn:dynamics_model_non_linear})
 is transformed into a discrete state-space model to be used by the Model Predictive Controller:
-\begin{equation*}
+\begin{equation}
 \label{eqn:dynamics_ss_obstacle_avoidance_dis}
 \begin{array}{ll}
 \dot{\vec{x}} =\vec{A}_c \vec{x}+ \vec{B}_c \vec{u}\\
 \vec{y} =\vec{C}_c \vec{x} + \vec{D}_c \vec{u}
 \end{array}
-\Rightarrow
+\Longrightarrow
 \begin{array}{rr}
 {\vec{x}}(k+1) =\vec{A}_d \vec{x}(k)+ \vec{B}_d \vec{u}(k)\\
 \vec{y}(k) =\vec{C}_d \vec{x}(k) + \vec{D}_d \vec{u}(k)
 \end{array}
-\end{equation*}
+\end{equation}
 
 where $\vec{A}_d$ and $\vec{B}_d$ are the state and control matrices for the discrete state-space equation, respectively, which can be calculated with the Euler method as
-\begin{equation*}
+\begin{equation}
 \vec{A}_d = e^{\vec{A}_cT_s},\qquad \vec{B}_d = \int_{kT_s}^{(k+1)T_s} e^{\vec{A}_c[(k+1)T_s-\eta]}\vec{B}_c d\eta
-\end{equation*}
+\end{equation}
 
 where $T_s$ is the sampling interval for the discrete state-space model. The matrices $\vec{C}_d$ and $\vec{D}_d$ are equivalent to those in the continuous case. For simplicity, we assume that all the states are measurable and the ATLASCAR2 drives east with a constant speed at the nominal operating point. In the scenario that we are going to consider, the road is straight and our vehicle stays in the middle of the center lane when not passing. Without losing generality, the ATLASCAR2 passes an obstacle both to the right and to the left lane depending on where it is placed on the road. We create also a safe zone around the obstacles so that the vehicle does not get too close to the obstacle when passing it.
 
@@ -116,10 +117,10 @@ We designed a Model Predictive Controller that can make the ATLASCAR2 maintain a
 
 When an obstacle is detected, it defines an area on the road (in terms of constraints) that the ATLASCAR2 must not enter during the prediction horizon. At the next control interval the area is redefined based on the new positions of the vehicle and the obstacle until passing is completed.
 To define the area to avoid, we used the following mixed Input/Output constraints:
-\begin{equation*}
+\begin{equation}
 \label{eqn:mixed_IO_constraints}
 \vec{E}\vec{u}+\vec{F}\vec{y}\leq \vec{G}
-\end{equation*}
+\end{equation}
 where $\vec{u}$ and $\vec{y}$ are respectively the manipulated variable vector and the output variable vector, while $\vec{E},\vec{F},\vec{G}$ are the constraint matrices that can be updated when the controller is running. Five constraints were defined:
 \begin{enumerate}
 	\item upper bound on the $y$-coordinate (left boundary of the road);
@@ -129,7 +130,7 @@ where $\vec{u}$ and $\vec{y}$ are respectively the manipulated variable vector a
 	\item lower bound on the $x$-coordinate (position of the ATLASCAR2).
 \end{enumerate}
 The matrices for the above inequality are the following:
-\[
+\begin{equation}
 \vec{E}= 
 \begin{bmatrix}
 0&0\\
@@ -138,19 +139,21 @@ The matrices for the above inequality are the following:
 0&0\\
 0&0
 \end{bmatrix},
-\;
+\qquad
 \vec{F}=\begin{bmatrix}
 0&1&0&0\\
 0&-1&0&0\\
 cS&-1&0&0\\
 1&0&0&0\\
 -1&0&0&0\\
-\end{bmatrix},\;
+\end{bmatrix},
+\qquad
 \vec{G}=
 \begin{bmatrix}
 W/2\\W/2\\-cI\\x_{\max}\\x_{\min}
 \end{bmatrix}
-\]
+\end{equation}
+
 where $W$ is the width of the road, $cI$ and $cS$ are the required parameters such that the ATLASCAR2 must be above the line formed from the vehicle to safe zone corner for left/right passing and finally $x_{\max}$ represents the position of the closest obstacle in the case there is not free space for the overtaking (otherwise $x_{\max}=+\infty$) while $x_{\min}$ depicts the location of our vehicle. Figure \ref{fig:constraint} illustrates the constraints that are computed at each $T_s$ in the case of a left overtaking.
 % FIGURE CONSTRAINT
 \begin{figure}[!h]
@@ -166,7 +169,7 @@ Blue paths in Figures \ref{fig:obstacleAvoidance_one_obstacle}, \ref{fig:obstacl
 
 \subsection{One Moving Obstacle - Right Overtaking}
 In this first simulation
-(Fig. \ref{fig:obstacleAvoidance_one_obstacle}) the ATLASCAR2 drives in the middle of the center lane while the road is completely free and when there is an obstacle, the vehicle passes it only using the right lane (the same simulation can be launched so that the car goes over to the left fast lane). In other words if the ATLASCAR2 is already in the adjacent lane, it uses the safety zone as the constraint, otherwise the vehicle must be above the line formed from the ATLASCAR2 to safe zone corner for right passing. If the vehicle is parallel to the obstacle, it  uses the safety zone as the constraint and finally if it has passed the obstacle, it uses the inactive constraint to go back to the center lane.
+(Figure \ref{fig:obstacleAvoidance_one_obstacle}) the ATLASCAR2 drives in the middle of the center lane while the road is completely free and when there is an obstacle, the vehicle passes it only using the right lane (the same simulation can be launched so that the car goes over to the left fast lane). In other words if the ATLASCAR2 is already in the adjacent lane, it uses the safety zone as the constraint, otherwise the vehicle must be above the line formed from the ATLASCAR2 to safe zone corner for right passing. If the vehicle is parallel to the obstacle, it  uses the safety zone as the constraint and finally if it has passed the obstacle, it uses the inactive constraint to go back to the center lane.
 Algorithm \ref{alg:rightOvertaking} summarizes the main steps to compute custom constraints for the obstacle; when the vehicle detects the obstacle, the constraints are computed. In this simulation only the first three constraints are necessary because there is space for the overtaking without braking (the fourth and fifth constraints don't change).
 
 % ONE MOVING OBSTACLE
@@ -226,7 +229,7 @@ Algorithm \ref{alg:rightOvertaking} summarizes the main steps to compute custom 
 \end{figure}
 %
 \subsection{Multiple Moving Obstacles}
-For a second test, additional obstacles were added to make the scenario more complex (Fig. \ref{fig:obstacleAvoidance_random}).
+For a second test, additional obstacles were added to make the scenario more complex (Figure \ref{fig:obstacleAvoidance_random}).
 % MULTIPLE MOVING OBSTACLE
 \begin{figure}[!h]
 	\centering
@@ -303,6 +306,6 @@ At the beginning, the vehicle moves with the reference velocity of $v=\SI{20}{m/
 		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf}
 		\subcaption{}\label{fig:theta_braking}
 	\end{minipage}
-	\caption{Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Fig. \ref{fig:braking}.}
+	\caption{Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Figure \ref{fig:braking}.}
 	\label{fig:components}
 \end{figure}

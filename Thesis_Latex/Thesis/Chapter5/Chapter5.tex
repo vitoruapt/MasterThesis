@@ -1,6 +1,5 @@
 \chapter{Lane Following}
-\section{Lane Following System}
-\subsection{Problem Formulation}
+\section{Problem Formulation}
 A lane-following system is a control system that keeps the vehicle traveling along the centerline of a highway lane, while maintaining a user-set velocity. Figure \ref{fig:laneFollowing} illustrates a typical lane following scenario.
 \begin{figure}[!h]
 	\centering
@@ -8,8 +7,9 @@ A lane-following system is a control system that keeps the vehicle traveling alo
 	\caption{Problem description of a lane following system.}
 	\label{fig:laneFollowing}
 \end{figure}
-In a classic lane keeping assist, it is assumed that the longitudinal velocity is constant \cite{borelli3}. This restriction is relaxed in this model because the longitudinal acceleration varies in this MIMO control system. This lane-following system manipulates both the longitudinal acceleration and the front steering angle of the vehicle to keep the lateral deviation and the relative yaw angle small and the longitudinal velocity close to a driver set velocity. If these two goals cannot be met at the same moment, the system tries to balance them. The model that we are considering contains many parameters. The first fundamental block describes the vehicle dynamics: we have applied the bicycle model of lateral vehicle dynamics and approximate the longitudinal dynamics using a time constant obtaining  a linear model.
-\subsubsection{Longitudinal dynamics}
+
+In a classic lane keeping assist, it is assumed that the longitudinal velocity is constant \cite{Adaptive_Mpc_Lane_keeping_borelli}. This restriction is relaxed in this model because the longitudinal acceleration varies in this MIMO control system. This lane-following system manipulates both the longitudinal acceleration and the front steering angle of the vehicle to keep the lateral deviation and the relative yaw angle small and the longitudinal velocity close to a driver set velocity. If these two goals cannot be met at the same moment, the system tries to balance them. The model that we are considering contains many parameters. The first fundamental block describes the vehicle dynamics: we have applied the bicycle model of lateral vehicle dynamics and approximate the longitudinal dynamics using a time constant obtaining  a linear model.
+\subsection{Longitudinal Dynamics}
 We can use the following state space to describe the longitudinal model:
 \begin{equation}
 \label{eqn:longi_dynamics_simple_model_ss}
@@ -45,7 +45,7 @@ and
 \end{array}
 \end{equation}
 where $\tau$ is a time constant \cite{long_tf}; in practice we are considering a second order transfer function like in \cite{longitudinal}.
-\subsubsection{Lateral dynamics}
+\subsection{Lateral Dynamics}
 Local function: we have a continuous vehicle lateral model from parameters obtained by simplifying the one in \cite{rathai}: 
 \begin{equation}
 \label{eqn:lateral_dynamics_simple_model}
@@ -94,6 +94,7 @@ The parameters in the previous matrices are:
 	\item $l_F$ and $l_R$ are the longitudinal distances from center of gravity to front and rear tires parameters;
 	\item $C_F$ and $C_R$ are the cornering stiffnesses of front and rear tires parameters.
 \end{itemize}
+\subsection{Augmented Model for Lateral Dynamics}
 The goal for the driver steering model is to keep the vehicle in its lane and follow the curved road by controlling the front steering angle . This goal is achieved by driving the yaw angle error $e_2 = \psi -\psi_{\text{des}}$ and lateral displacement error $e_1$ to zero ($\dot{e}_1 = V_xe_2+V_y$). We can incorporate these two paramenters in the augmented model:
 \begin{equation}
 \label{eqn:lateral_dynamics_augmented_model}
@@ -139,6 +140,7 @@ and
 \end{array}
 \end{equation}
 
+\subsection{Overall Model Dynamics}
 Combining (\ref{eqn:longi_dynamics_simple_model_ss}) with (\ref{eqn:lateral_dynamics_augmented_model}) yields the state-space model that characterizes the Model Predictive Controller:
 \begin{equation}
 \label{eqn:full_dynamics_model}
@@ -198,15 +200,15 @@ where $\vec{A}$ and $\vec{B}$ are the state and control matrices for the discret
 \]
 where $T_s$ is the sampling interval for the discrete state-space model. The matrices $\vec{C}$ and $\vec{D}$ are equivalent to those in the continuous case.
 
-\subsection{Design of Adaptive Model Predictive Control}
+\section{Design of Adaptive Model Predictive Control}
 We created an Adaptive MPC controller with a prediction model that has six states, three outputs (longitudinal velocity, lateral deviation, relative yaw angle), and two manipulated signals (acceleration and steering). 
 The objective of the trajectory planning along specified path can be described as follows: given a path which the vehicle is expected to follow design a trajectory of a car-vehicle configuration.
 In order to do this, according with \cite{curvature} it is possible to derive the road curvature and its derivative.
 The product of the road curvature and the longitudinal velocity is modeled as a measured disturbance. We have set the constraints for manipulated variables and the scale factors. Moreover we have specified the weights in the standard MPC cost function. The third output, yaw angle, is allowed to float because there are only two manipulated variables to make it a square system. In this controller, there is no steady-state error in the yaw angle as long as the second output, lateral deviation, reaches 0 at steady state. Finally we have also penalized acceleration change more for smooth driving experience. This controller uses a linear model for the vehicle dynamics and updates the model online as the longitudinal velocity varies.
 
-\subsection{Simulation Results}
-The proposed adaptive MPC algorithm is designed in the MATLAB/Simulink and validated through simulation. The objective of this test is to evaluate the behavior of the proposed control strategy in critical situations.
-Table 3 shows the parameters used in the lane following simulation.
+\section{Simulation Results}
+The proposed adaptive MPC algorithm is designed in the MATLAB/Simulink and validated through different simulations. The objective of these test is to evaluate the behavior of the proposed control strategy in critical situations.
+Table 3 shows the parameters used in the lane following simulations.
 \begin{table}[!h]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -227,10 +229,13 @@ Table 3 shows the parameters used in the lane following simulation.
 	\end{tabular}
 \end{table}
 
+\subsection{Sinusoidal Path}
+
 Figures \ref{fig:reference_laneFollowing} and \ref{fig:curvature_laneFollowing} show the desired path that the car must follow and its curvature, where the former is described in terms of the lateral position $Y_{\text{ref}}$ as function of the longitudinal position $X_{\text{ref}}$ and the latter is derived according with \cite{curvature}. The ATLASCAR2 is controlled to follow a sinusoidal trajectory which is given as follows:
-\begin{equation*}
+\begin{equation}
 X_\text{ref}=V_x\cdot t, \quad Y_\text{ref}=5\sin(X_\text{ref}/20)\quad \text{with}\quad t\in[0,20]\SI{}{s}
-\end{equation*}
+\end{equation}
+%LANE FOLLOWING SINUSOIDAL PATH - PATH/CURVATURE
 \begin{figure}[!t]
 	\centering
 	\begin{minipage}[t]{0.49\textwidth}
@@ -238,54 +243,121 @@ X_\text{ref}=V_x\cdot t, \quad Y_\text{ref}=5\sin(X_\text{ref}/20)\quad \text{wi
 		\subcaption{}
 		\label{fig:reference_laneFollowing}
 	\end{minipage}
-	\begin{minipage}[t]{0.5\textwidth}
+	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/Curvature.pdf}
 		\subcaption{}
 		\label{fig:curvature_laneFollowing}
 	\end{minipage}
-	\caption{Desired path and curvature of the ATLASCAR2 in a simulation of \SI{20}{s}}
+	\caption{Desired path and curvature of the ATLASCAR2 in a simulation of \SI{20}{s}.}
 	\label{fig:laneFollowing_desired}
 \end{figure}
 
-Moreover the following figures show the trend of the main parameters confirming that the control strategy used allows the vehicle to follow the path. In particular we simulated also a small error in the sensor dynamics in order to make the simulation more realistic: we added a 3 percent error to the longitudinal velocity and this is evident from the small noise in the graphs of the steering angle (Fig.\ref{fig:steering_laneFollowing}) and the lateral deviation (Fig.\ref{fig:lateral_deviation_laneFollowing}).
+Moreover the following figures show the trend of the main parameters confirming that the control strategy used allows the vehicle to follow the path. In particular we simulated also a small error in the sensor dynamics in order to make the simulation more realistic: we added a 3 percent error to the longitudinal velocity and this is evident from the small noise in the graphs of the steering angle (Figure \ref{fig:steering_laneFollowing}) and the lateral deviation (Figure \ref{fig:lateral_deviation_laneFollowing}).
 Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the vehicle longitudinal velocity. At the start of the simulation, this velocity is equal to the initial condition for longitudinal velocity parameter $V_0$. At run time, we can note that $V_x$ reaches the predefined value of \SI{20}{m/s} meters for second and then it stabilizes near the cruising speed because it continues to vary the steering angle to adapt to the path to be followed. Finally we presents the overall scheme for the lane following developted in Simulink depicted in Figure \ref{fig:scheme_lane_following}.
+%LANE FOLLOWING SINUSOIDAL PATH - SIGNALS
 \begin{figure}[!h]
 	\centering
 	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf}
-		\subcaption{Longitudinal velocity $V_x$ with respect to time.}
+		\subcaption{Longitudinal velocity $V_x$ w.r.t. time.}
 		\label{fig:longitudinal_velocity_laneFollowing}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/AccelerationVsTime.pdf}
-		\subcaption{Acceleration $u_1$ with respect to time.}
+		\subcaption{Acceleration $u_1$ w.r.t. time.}
 		\label{fig:acceleration_laneFollowing}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf}
-		\subcaption{Steering angle $u_2$ with respect to time.}
+		\subcaption{Steering angle $u_2$ w.r.t. time.}
 		\label{fig:steering_laneFollowing}
 	\end{minipage}
 	%\begin{minipage}[t]{\columnwidth}
 	%	\includegraphics[width=\columnwidth]{../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf}
-	%	\subcaption{Relative yaw angle $e_2$ with respect to time.}
+	%	\subcaption{Relative yaw angle $e_2$ w.r.t. time.}
 	%	\label{fig:relative_yaw_angle_laneFollowing}
 	%\end{minipage}
 	\begin{minipage}[t]{0.49\textwidth}
 		\includegraphics[width=\textwidth]{../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf}
-		\subcaption{Lateral deviation $e_1$ with respect to time.}
+		\subcaption{Lateral deviation $e_1$ w.r.t. time.}
 		\label{fig:lateral_deviation_laneFollowing}
 	\end{minipage}
 	\caption{Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.}
 	\label{fig:laneFollowing_signals}
 \end{figure}
 
+%OVERALL SCHEME LANE FOLLOWING
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=\textwidth]{../figure/lane_following_AMPC.pdf}
 	\caption{Overall procedure scheme lane following.}
 	\label{fig:scheme_lane_following}
 \end{figure}
+
+%SENSOR DYNAMICS
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\textwidth]{../figure/lane_following_AMPC_sensor_dynamics.pdf}
+	\caption{Sensor Dynamics of the overall scheme lane following.}
+	\label{fig:scheme_lane_following_sensor_dynamics}
+\end{figure}
+
+
+\subsection{Simple Curve Path}
+
+
+%LANE FOLLOWING SIMPLE CURVE - PATH/CURVATURE
+\begin{figure}[!t]
+	\centering
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/Reference_curve.pdf}
+		\subcaption{}
+		\label{fig:reference_laneFollowing_curve}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf}
+		\subcaption{}
+		\label{fig:curvature_laneFollowing_curve}
+	\end{minipage}
+	\caption{Desired path and curvature of the ATLASCAR2 in a simulation of \SI{10}{s}.}
+	\label{fig:laneFollowing_desired_curve}
+\end{figure}
+
+%LANE FOLLOWING SIMPLE CURVE - PATH/CURVATURE
+\begin{figure}[!h]
+	\centering
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curve.pdf}
+		\subcaption{Longitudinal velocity $V_x$ w.r.t. time.}
+		\label{fig:longitudinal_velocity_laneFollowing_curve}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf}
+		\subcaption{Acceleration $u_1$ w.r.t. time.}
+		\label{fig:acceleration_laneFollowing_curve}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf}
+		\subcaption{Steering angle $u_2$ w.r.t. time.}
+		\label{fig:steering_laneFollowing_curve}
+	\end{minipage}
+	%\begin{minipage}[t]{\columnwidth}
+	%	\includegraphics[width=\columnwidth]{../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf}
+	%	\subcaption{Relative yaw angle $e_2$ w.r.t. time.}
+	%	\label{fig:relative_yaw_angle_laneFollowing_curve}
+	%\end{minipage}
+	\begin{minipage}[t]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf}
+		\subcaption{Lateral deviation $e_1$ w.r.t. time.}
+		\label{fig:lateral_deviation_laneFollowing_curve}
+	\end{minipage}
+	\caption{Time signals of the ATLASCAR2 in the simulation with a curve path.}
+	\label{fig:laneFollowing_signals_curve}
+\end{figure}
+
+
+
+
 
 %%%CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 

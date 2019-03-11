@@ -12,59 +12,56 @@ A level-1 auxiliary file: ./Chapter6/Chapter6.aux
 A level-1 auxiliary file: ./Conclusions/Conclusions.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
-Repeated entry---line 923 of file biblio.bib
+Repeated entry---line 937 of file biblio.bib
  : @mastersthesis{Pereira2012
  :                           ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "waymoh" isn't style-file defined
---line 1025 of file biblio.bib
+--line 1039 of file biblio.bib
 Warning--entry type for "waymot" isn't style-file defined
---line 1034 of file biblio.bib
-Warning--I didn't find a database entry for "safety"
-Warning--I didn't find a database entry for "borelli3"
-Warning--I didn't find a database entry for "error_model"
+--line 1048 of file biblio.bib
 Warning--empty booktitle in borelli
 Warning--empty school in longitudinal
 Warning--empty booktitle in rathai
-You've used 27 entries,
+You've used 30 entries,
             1876 wiz_defined-function locations,
-            645 strings with 8744 characters,
-and the built_in function-call counts, 6477 in all, are:
-= -- 613
-> -- 267
+            659 strings with 9289 characters,
+and the built_in function-call counts, 7381 in all, are:
+= -- 699
+> -- 303
 < -- 0
-+ -- 102
-- -- 75
-* -- 447
-:= -- 949
-add.period$ -- 29
-call.type$ -- 27
-change.case$ -- 29
++ -- 115
+- -- 85
+* -- 513
+:= -- 1072
+add.period$ -- 32
+call.type$ -- 30
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 328
-empty$ -- 636
-format.name$ -- 75
-if$ -- 1563
+cite$ -- 33
+duplicate$ -- 377
+empty$ -- 723
+format.name$ -- 85
+if$ -- 1788
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 18
-newline$ -- 87
-num.names$ -- 29
-pop$ -- 110
+int.to.str$ -- 30
+missing$ -- 21
+newline$ -- 96
+num.names$ -- 32
+pop$ -- 121
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 211
+skip$ -- 245
 stack$ -- 0
-substring$ -- 374
-swap$ -- 111
+substring$ -- 438
+swap$ -- 132
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 57
-width$ -- 29
-write$ -- 250
+while$ -- 64
+width$ -- 32
+write$ -- 279
 (There was 1 error message)
