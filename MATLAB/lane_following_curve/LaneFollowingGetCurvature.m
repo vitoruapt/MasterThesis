@@ -26,6 +26,7 @@ pos0 = get(h0,'Position');
 set(h0,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos0(3)*0.8, pos0(4)-40])
 print(h0,'figure\Reference_curve','-dpdf','-r0')
 hold off
+pause(2)
 
 % Desired curvature
 DX = gradient(Xref,0.1);
@@ -49,3 +50,4 @@ poscurv = get(hcurv,'Position');
 set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[poscurv(3)*0.8, poscurv(4)-40])
 print(hcurv,'figure\Curvature_curve','-dpdf','-r0')
 hold off
+pause(2)

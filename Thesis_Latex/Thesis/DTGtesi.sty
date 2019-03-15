@@ -9,7 +9,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,bindingoffset=1cm]{geometry}
 \RequirePackage[absolute]{textpos}
-
+\usepackage{xcolor}
 % Impostazioni base per hyperref
 \hypersetup{pdfpagelayout=SinglePage,
 pdfpagemode=UseOutlines,
@@ -24,7 +24,7 @@ pdfkeywords=tesi laurea LaTeX}
 \titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 \titleformat{\chapter}[display]
 {\bfseries \LARGE}
-{\filleft\huge\chaptertitlename\ \thechapter}
+{\color{SchoolColor}\itshape\filleft\huge\chaptertitlename\ \thechapter}
 {1.5ex}
 {\vspace{1ex}%
 \filright}
@@ -43,6 +43,7 @@ pdfkeywords=tesi laurea LaTeX}
 {1em}
 {}
 
+\definecolor{SchoolColor}{rgb}{0.71, 0, 0.106} % UNIPD red
 % Ridefiniamo la riga di testa delle pagine:
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -51,8 +52,8 @@ pdfkeywords=tesi laurea LaTeX}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[LO]{\leftmark}
 \fancyhead[RE]{\leftmark}
-\fancyfoot[LO]{\bfseries Alberto Franco 1156523}
-\fancyfoot[RE]{\bfseries Master Thesis}
+\fancyfoot[L]{Alberto Franco}
+\fancyfoot[R]{\it Master Thesis}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
 \setlength{\headheight}{13.6pt}

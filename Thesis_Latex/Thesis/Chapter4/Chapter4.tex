@@ -54,10 +54,11 @@ The ATLASCAR2 can be modeled using the non-linear kinematic bicycle model descri
 \end{equation}
 
 where $C_L$ is the car length. When the velocity is zero then the rate of change of heading angle is zero, that is, it is not possible to change the vehicle's orientation
-when it is not moving. If the front wheel is orthogonal to the back wheel, i.e. the steering angle is $\frac{\pi}{2}$, the ATLASCAR2 cannot move forward and the model enters an undefined region. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this paper it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In particular the rate of change of heading angle is referred to as turn rate which can be evaluated with a gyroscope. This yaw rate can also be deduced from the angular velocity of the wheels on the left- and right-hand sides of the vehicle which therefore rotate at different speeds because follow arcs of different radius. We can write the non-holonomic constraint which is an expression for velocity in the vehicle's $y$-direction in the world coordinate frame as follows:
+when it is not moving. If the front wheel is orthogonal to the back wheel, i.e. the steering angle is $\frac{\pi}{2}$, the ATLASCAR2 cannot move forward and the model enters an undefined region. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this chapter it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In particular the rate of change of heading angle is referred to as turn rate which can be evaluated with a gyroscope. This yaw rate can also be deduced from the angular velocity of the wheels on the left- and right-hand sides of the vehicle which therefore rotate at different speeds because follow arcs of different radius. We can write the non-holonomic constraint which is an expression for velocity in the vehicle's $y$-direction in the world coordinate frame as follows:
 \begin{equation}
-	\dot{y}\cos\theta-\dot{x}\cos\theta=0
+	\dot{y}\cos\theta-\dot{x}\cos\theta=0.
 \end{equation}
+
 This equation cannot be integrated to form a
 relationship between $x,y$ and $\theta$.
 
@@ -207,6 +208,36 @@ Algorithm \ref{alg:rightOvertaking} summarizes the main steps to compute custom 
 	\label{fig:obstacleAvoidance_one_obstacle}
 \end{figure}
 
+% RESULTS ONE MOVING OBSTACLE
+\begin{figure}[!t] %vs changes to t instead of b
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVsTime.pdf}
+		\subcaption{}\label{fig:longitudinal_one_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTime.pdf}
+		\subcaption{}\label{fig:lateral_one_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf}
+		\subcaption{}\label{fig:velocity_one_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf}
+		\subcaption{}\label{fig:throttle_one_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pdf}
+		\subcaption{}\label{fig:delta_one_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf}
+		\subcaption{}\label{fig:theta_one_moving}
+	\end{minipage}
+	\caption{Time signals of the ATLASCAR2 in the simulation of right overtaking of one moving obstacle illustrated in Figure \ref{fig:obstacleAvoidance_one_obstacle}.}
+	\label{fig:components_one_moving_obstacle}
+\end{figure}
+
 % ALGORITHM FOR RIGHT OVERTAKING OF ONE MOVING OBSTACLE
 \begin{algorithm}%[b]
 	\caption{Right Overtaking if an obstacle is detected}
@@ -264,6 +295,114 @@ For a second test, additional obstacles were added to make the scenario more com
 
 The vehicle is capable of overtaking the obstacles on the right or left depending on their positions with respect to the road. If the $y$-coordinate of the closest obstacle is greater than 0, then the vehicle overtakes to the right, otherwise the overtaking takes place on the left lane. We also hypothesized that the obstacles move at different speeds but that they are initially at a common distance; they can have a uniform motion or a uniformely accelerated motion. In case two obstacles are too close during the simulation and their distance is less than the detection range, which is \SI{30}{m}, the ATLASCAR2 perceives the objects as a single entity and adapts to the situation. The same test can be done with the obstacles that drive in the same direction as the vehicle but to better assess and demonstrate results we decided to show a very unusual scenario.
 
+% SIX MOVING OBSTACLES
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/6_obstacles/6_obstacles_1.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/6_obstacles/6_obstacles_2.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/6_obstacles/6_obstacles_3.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/6_obstacles/6_obstacles_4.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/6_obstacles/6_obstacles_5.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/6_obstacles/6_obstacles_6.pdf}
+	\end{minipage}
+	\caption{Simulation of overtaking with six moving obstacles that moves in the opposite direction with respect the vehicle.}
+	\label{fig:obstacleAvoidance_six_obstacles}
+\end{figure}
+
+% RESULTS SIX MOVING OBSTACLES
+\begin{figure}[!t] %vs changes to t instead of b
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf}
+		\subcaption{}\label{fig:longitudinal_six_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf}
+		\subcaption{}\label{fig:lateral_six_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf}
+		\subcaption{}\label{fig:velocity_six_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf}
+		\subcaption{}\label{fig:throttle_six_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf}
+		\subcaption{}\label{fig:delta_six_moving}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf}
+		\subcaption{}\label{fig:theta_six_moving}
+	\end{minipage}
+	\caption{Time signals of the ATLASCAR2 in the simulation of overtaking with six moving obstacles illustrated in Figure \ref{fig:obstacleAvoidance_six_obstacles}.}
+	\label{fig:components_six_moving_obstacles}
+\end{figure}
+
+\subsection{No Overtaking}
+%NO OVERTAKING
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/no_overtaking/no_overtaking_1.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/no_overtaking/no_overtaking_1_5.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/no_overtaking/no_overtaking_2.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/no_overtaking/no_overtaking_3.pdf}
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=\textwidth]{../figure/no_overtaking/no_overtaking_4.pdf}
+	\end{minipage}
+	\caption{Simulation of no overtaking with three moving obstacles that move in the same direction as the vehicle.}
+	\label{fig:obstacleAvoidance_no_overtaking}
+\end{figure}
+
+% RESULTS NO OVERTAKING
+\begin{figure}[!t] %vs changes to t instead of b
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf}
+		\subcaption{}\label{fig:longitudinal_no_overtaking}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf}
+		\subcaption{}\label{fig:lateral_no_overtaking}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf}
+		\subcaption{}\label{fig:velocity_no_overtaking}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf}
+		\subcaption{}\label{fig:throttle_no_overtaking}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf}
+		\subcaption{}\label{fig:delta_no_overtaking}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.pdf}
+		\subcaption{}\label{fig:theta_no_overtaking}
+	\end{minipage}
+	\caption{Time signals of the ATLASCAR2 in the simulation of no overtaking with three moving obstacles illustrated in Figure \ref{fig:obstacleAvoidance_no_overtaking}.}
+	\label{fig:components_no_overtaking}
+\end{figure}
+
 \subsection{Vehicle Braking and Obstacles Overtaking}
 Finally we have improved the code related to the mixed Input/Output constraints so that in the case there are 3 obstacles that block the road and drive at a lower speed than the ATLASCAR2, the velocity of the vehicle decreases in order to prevent the collision. Figure \ref{fig:braking} depicts a simulation in which there are 3 obstacles at the same $x$-coordinate. Two obstacles have a constant speed of \SI{8}{m/s} while the one on the left lane of \SI{15}{m/s}.
 In this particular case it is essential to consider the fourth and the fifth restriction in order to allow the ATLASCAR2 to slow down without colliding with the cars in front. The fifth constraint is simply the position of the ATLASCAR2 that updates at each interval, while the fourth constraint, until there is a free lane, is the position of the closest obstacle (both the positions are with respect to the global reference frame). In the calculation of the fourth constraint is necessary  to consider the speed at which the vehicle and the obstacle are moving in order to keep a safe distance. In particular three parameters have been identified as the key
@@ -306,6 +445,14 @@ At the beginning, the vehicle moves with the reference velocity of $v=\SI{20}{m/
 
 % RESULTS BRAKING THREE OBSTACLES
 \begin{figure}[!t] %vs changes to t instead of b
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf}
+		\subcaption{}\label{fig:longitudinal_braking}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf}
+		\subcaption{}\label{fig:lateral_braking}
+	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf}
 		\subcaption{}\label{fig:velocity_braking}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  11 MAR 2019 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  15 MAR 2019 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,9 +588,26 @@ Grid set 16 x 16 = 37.34424pt x 52.81541pt
 \TP@tbargs=\toks21
 \TP@prevdepth=\dimen176
 TextBlockOrigin set to 0pt x 0pt
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 21.
- (/usr/share/texlive/texmf-dist/tex/latex/titlesec/block.tss
+
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/block.tss
 File: block.tss 2016/03/15
 )
 \@indexfile=\write3
@@ -621,23 +638,6 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 -- Package: `mcode' 2.5 <2014/03/06> --
 Package: mcode 2014/03/06 2.5
  - settings optimized for display (colour formating)
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count152
 \lst@gtempboxa=\box51
@@ -1017,7 +1017,7 @@ onverted-to.pdf ./figure/unipd-light.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figure/unipd-light-eps-converted-to.pdf, id=152, 452.69125pt x 455.7025pt>
+<./figure/unipd-light-eps-converted-to.pdf, id=160, 452.69125pt x 455.7025pt>
 File: ./figure/unipd-light-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figure/unipd-light-eps-converted-to.pdf>
@@ -1025,7 +1025,7 @@ Package pdftex.def Info: ./figure/unipd-light-eps-converted-to.pdf used on inpu
 t line 88.
 (pdftex.def)             Requested size: 384.1122pt x 386.6675pt.
 
-<./figure/unipd-bn.png, id=153, 943.525pt x 949.5475pt>
+<./figure/unipd-bn.png, id=161, 943.525pt x 949.5475pt>
 File: ./figure/unipd-bn.png Graphic file (type png)
 
 <use ./figure/unipd-bn.png>
@@ -1044,7 +1044,7 @@ Package pdftex.def Info: ./figure/unipd-bn.png used on input line 88.
 \openout2 = `./Acknowledgements/Acknowledgements.aux'.
 
  (./Acknowledgements/Acknowledgements.tex
-<./figure/../figure/logo_ua.png, id=181, 462.2871pt x 173.448pt>
+<./figure/../figure/logo_ua.png, id=189, 462.2871pt x 173.448pt>
 File: ./figure/../figure/logo_ua.png Graphic file (type png)
 
 <use ./figure/../figure/logo_ua.png>
@@ -1066,49 +1066,53 @@ Package pdftex.def Info: ./figure/../figure/logo_ua.png used on input line 8.
 ] [8
 
 
-] (./Thesis.toc)
+] (./Thesis.tocpdfTeX warning (ext4): destination with the same identifier (nam
+e{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 ...e {chapter}{Bibliography}{49}{chapter*.38}
+                                                   [1
+
+])
 \tf@toc=\write5
 \openout5 = `Thesis.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
-been already used, duplicate ignored
+
+
+Package Fancyhdr Warning: \headheight is too small (13.6pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 \clearemptydoublepage
-                            [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.102 \clearemptydoublepage
-                            [2
-
-] (./Thesis.lof
+                            [2] (./Thesis.lof
 Overfull \hbox (0.2559pt too wide) in paragraph at lines 7--7
  [][] [][][]\T1/cmr/m/n/12 BRAiVE pro-to-type de-vel-opted by Vis-Lab, based on
  a Hyundai Sonata 
  []
 
-)
-\tf@lof=\write6
-\openout6 = `Thesis.lof'.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \clearemptydoublepage
-                            [3
+l.36 ...I {10}{s}.\relax }}{44}{figure.caption.36}
+                                                   [3
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) ha
-s been already used, duplicate ignored
+
+])
+\tf@lof=\write6
+\openout6 = `Thesis.lof'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.106 \clearemptydoublepage
-                            [4
-
-]
+                            [4]
 \openout2 = `./Introduction/Introduction.aux'.
 
  (./Introduction/Introduction.tex
@@ -1117,7 +1121,8 @@ Chapter 1.
 
 
 
-] <./figure/../figure/modelosatlas1.pdf, id=353, 513.92pt x 385.44pt>
+
+] <./figure/../figure/modelosatlas1.pdf, id=390, 513.92pt x 385.44pt>
 File: ./figure/../figure/modelosatlas1.pdf Graphic file (type pdf)
 
 <use ./figure/../figure/modelosatlas1.pdf>
@@ -1125,7 +1130,7 @@ Package pdftex.def Info: ./figure/../figure/modelosatlas1.pdf used on input lin
 e 24.
 (pdftex.def)             Requested size: 136.57635pt x 102.42929pt.
 
-<./figure/../figure/modelosatlas2.pdf, id=354, 907.39pt x 914.41624pt>
+<./figure/../figure/modelosatlas2.pdf, id=391, 907.39pt x 914.41624pt>
 File: ./figure/../figure/modelosatlas2.pdf Graphic file (type pdf)
 
 <use ./figure/../figure/modelosatlas2.pdf>
@@ -1133,7 +1138,7 @@ Package pdftex.def Info: ./figure/../figure/modelosatlas2.pdf used on input lin
 e 29.
 (pdftex.def)             Requested size: 136.57635pt x 137.6309pt.
 
-<./figure/../figure/modelosatlas3.pdf, id=355, 906.38625pt x 918.43124pt>
+<./figure/../figure/modelosatlas3.pdf, id=392, 906.38625pt x 918.43124pt>
 File: ./figure/../figure/modelosatlas3.pdf Graphic file (type pdf)
 
 <use ./figure/../figure/modelosatlas3.pdf>
@@ -1141,23 +1146,16 @@ Package pdftex.def Info: ./figure/../figure/modelosatlas3.pdf used on input lin
 e 34.
 (pdftex.def)             Requested size: 136.57635pt x 138.38937pt.
 
-<./figure/../figure/atlascar1.jpg, id=361, 699.61375pt x 396.48125pt>
+<./figure/../figure/atlascar1.jpg, id=398, 699.61375pt x 396.48125pt>
 File: ./figure/../figure/atlascar1.jpg Graphic file (type jpg)
 
 <use ./figure/../figure/atlascar1.jpg>
 Package pdftex.def Info: ./figure/../figure/atlascar1.jpg used on input line 46
 .
 (pdftex.def)             Requested size: 426.79137pt x 241.87135pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (13.6pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2 <./figure/../figure/modelosatlas1.pdf> <./figure/../figure/modelosatlas2.pdf
-> <./figure/../figure/modelosatlas3.pdf>]
-<./figure/../figure/atlascar2.jpg, id=383, 2463.2025pt x 1321.93875pt>
+ [2 <./figure/../figure/modelosatlas1.pdf> <./figure/../figure/modelosatlas2.pd
+f> <./figure/../figure/modelosatlas3.pdf>] <./figure/../figure/atlascar2.jpg, i
+d=420, 2463.2025pt x 1321.93875pt>
 File: ./figure/../figure/atlascar2.jpg Graphic file (type jpg)
 
 <use ./figure/../figure/atlascar2.jpg>
@@ -1165,7 +1163,7 @@ Package pdftex.def Info: ./figure/../figure/atlascar2.jpg used on input line 56
 .
 (pdftex.def)             Requested size: 426.79137pt x 229.04324pt.
  [3 <./figure/../figure/atlascar1.jpg>]
-<./figure/../figure/veiculos0.png, id=393, 401.5pt x 315.1775pt>
+<./figure/../figure/veiculos0.png, id=430, 401.5pt x 315.1775pt>
 File: ./figure/../figure/veiculos0.png Graphic file (type png)
 
 <use ./figure/../figure/veiculos0.png>
@@ -1173,7 +1171,7 @@ Package pdftex.def Info: ./figure/../figure/veiculos0.png used on input line 71
 .
 (pdftex.def)             Requested size: 277.41177pt x 217.78049pt.
 
-<./figure/../figure/veiculos1.png, id=396, 1164.35pt x 556.0775pt>
+<./figure/../figure/veiculos1.png, id=433, 1164.35pt x 556.0775pt>
 File: ./figure/../figure/veiculos1.png Graphic file (type png)
 
 <use ./figure/../figure/veiculos1.png>
@@ -1181,7 +1179,7 @@ Package pdftex.def Info: ./figure/../figure/veiculos1.png used on input line 76
 .
 (pdftex.def)             Requested size: 277.41177pt x 132.48553pt.
  [4 <./figure/../figure/atlascar2.jpg>]
-<./figure/../figure/veiculos4.png, id=411, 670.505pt x 352.31625pt>
+<./figure/../figure/veiculos4.png, id=447, 670.505pt x 352.31625pt>
 File: ./figure/../figure/veiculos4.png Graphic file (type png)
 
 <use ./figure/../figure/veiculos4.png>
@@ -1190,7 +1188,7 @@ Package pdftex.def Info: ./figure/../figure/veiculos4.png used on input line 89
 (pdftex.def)             Requested size: 277.41177pt x 145.76231pt.
  [5 <./figure/../figure/veiculos0.png> <./figure/../figure/veiculos1.png (PNG c
 opy)>]
-<./figure/../figure/veiculos5.png, id=422, 712.6625pt x 610.28pt>
+<./figure/../figure/veiculos5.png, id=458, 712.6625pt x 610.28pt>
 File: ./figure/../figure/veiculos5.png Graphic file (type png)
 
 <use ./figure/../figure/veiculos5.png>
@@ -1222,7 +1220,7 @@ Chapter 2.
 
  (./Chapter3/Chapter3.tex
 Chapter 3.
-<./figure/../figure/mpc_theory.png, id=457, 2007.5pt x 1115.16624pt>
+<./figure/../figure/mpc_theory.png, id=494, 2007.5pt x 1115.16624pt>
 File: ./figure/../figure/mpc_theory.png Graphic file (type png)
 
 <use ./figure/../figure/mpc_theory.png>
@@ -1249,7 +1247,7 @@ put line 64.
 (./Chapter4/Chapter4.tex
 Chapter 4.
 
-<./figure/../figure/obstacleAvoidance/obstacleAvoidance.pdf, id=519, 142.66399p
+<./figure/../figure/obstacleAvoidance/obstacleAvoidance.pdf, id=555, 142.66399p
 t x 26.76198pt>
 File: ./figure/../figure/obstacleAvoidance/obstacleAvoidance.pdf Graphic file (
 type pdf)
@@ -1259,7 +1257,7 @@ Package pdftex.def Info: ./figure/../figure/obstacleAvoidance/obstacleAvoidance
 .pdf used on input line 9.
 (pdftex.def)             Requested size: 426.79137pt x 80.06477pt.
 
-<./figure/../figure/car_model.pdf, id=521, 157.78084pt x 117.82713pt>
+<./figure/../figure/car_model.pdf, id=557, 157.78084pt x 117.82713pt>
 File: ./figure/../figure/car_model.pdf Graphic file (type pdf)
 
 <use ./figure/../figure/car_model.pdf>
@@ -1271,110 +1269,496 @@ Package pdftex.def Info: ./figure/../figure/car_model.pdf used on input line 34
 
  <./figure/../figure/obstacleAvoidance/obstacleAvoidance.pdf>] [18 <./figure/..
 /figure/car_model.pdf>] [19]
-<./figure/../figure/flowchart/flowchart.pdf, id=562, 243.39531pt x 230.74506pt>
+<./figure/../figure/flowchart/flowchart.pdf, id=598, 243.39531pt x 230.74506pt>
 File: ./figure/../figure/flowchart/flowchart.pdf Graphic file (type pdf)
 <use ./figure/../figure/flowchart/flowchart.pdf>
 Package pdftex.def Info: ./figure/../figure/flowchart/flowchart.pdf used on inp
-ut line 128.
+ut line 129.
 (pdftex.def)             Requested size: 426.79137pt x 404.6408pt.
  [20 <./figure/../figure/flowchart/flowchart.pdf>]
-<./figure/../figure/constraint/constraint.pdf, id=574, 142.66399pt x 38.85918pt
+<./figure/../figure/constraint/constraint.pdf, id=610, 142.66399pt x 38.85918pt
 >
 File: ./figure/../figure/constraint/constraint.pdf Graphic file (type pdf)
  <use ./figure/../figure/constraint/constraint.pdf>
 Package pdftex.def Info: ./figure/../figure/constraint/constraint.pdf used on i
-nput line 177.
+nput line 178.
 (pdftex.def)             Requested size: 426.79137pt x 116.25642pt.
  [21 <./figure/../figure/constraint/constraint.pdf>]
-<./figure/../figure/one_obstacle_right_overtaking/overtaking_start.pdf, id=627,
+<./figure/../figure/one_obstacle_right_overtaking/overtaking_start.pdf, id=663,
  360.02866pt x 55.63362pt>
 File: ./figure/../figure/one_obstacle_right_overtaking/overtaking_start.pdf Gra
 phic file (type pdf)
 
 <use ./figure/../figure/one_obstacle_right_overtaking/overtaking_start.pdf>
 Package pdftex.def Info: ./figure/../figure/one_obstacle_right_overtaking/overt
-aking_start.pdf used on input line 195.
+aking_start.pdf used on input line 196.
 (pdftex.def)             Requested size: 426.79137pt x 65.95438pt.
 
-<./figure/../figure/one_obstacle_right_overtaking/overtaking_middle.pdf, id=628
+<./figure/../figure/one_obstacle_right_overtaking/overtaking_middle.pdf, id=664
 , 366.05116pt x 56.33154pt>
 File: ./figure/../figure/one_obstacle_right_overtaking/overtaking_middle.pdf Gr
 aphic file (type pdf)
 
 <use ./figure/../figure/one_obstacle_right_overtaking/overtaking_middle.pdf>
 Package pdftex.def Info: ./figure/../figure/one_obstacle_right_overtaking/overt
-aking_middle.pdf used on input line 198.
+aking_middle.pdf used on input line 199.
 (pdftex.def)             Requested size: 426.79137pt x 65.68155pt.
 
 <./figure/../figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf, id
-=629, 360.02866pt x 55.63362pt>
+=665, 360.02866pt x 55.63362pt>
 File: ./figure/../figure/one_obstacle_right_overtaking/overtaking_middle_end.pd
 f Graphic file (type pdf)
 
 <use ./figure/../figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf
 >
 Package pdftex.def Info: ./figure/../figure/one_obstacle_right_overtaking/overt
-aking_middle_end.pdf used on input line 201.
+aking_middle_end.pdf used on input line 202.
 (pdftex.def)             Requested size: 426.79137pt x 65.95438pt.
 
-<./figure/../figure/one_obstacle_right_overtaking/overtaking_end.pdf, id=630, 3
+<./figure/../figure/one_obstacle_right_overtaking/overtaking_end.pdf, id=666, 3
 59.89572pt x 70.02922pt>
 File: ./figure/../figure/one_obstacle_right_overtaking/overtaking_end.pdf Graph
 ic file (type pdf)
 
 <use ./figure/../figure/one_obstacle_right_overtaking/overtaking_end.pdf>
 Package pdftex.def Info: ./figure/../figure/one_obstacle_right_overtaking/overt
-aking_end.pdf used on input line 204.
+aking_end.pdf used on input line 205.
 (pdftex.def)             Requested size: 426.79137pt x 83.04941pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figure/../figure/MovingObstacleAvoidance.pdf, id=631, 770.94273pt x 289.3764
+<../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVsTime.p
+df, id=667, 273.02pt x 190.7125pt>
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVsT
+ime.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVsTi
+me.pdf>
+Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/Long
+itudinalPositionVsTime.pdf used on input line 214.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTime.pdf, i
+d=668, 273.02pt x 190.7125pt>
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTime.p
+df Graphic file (type pdf)
+
+<use ../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTime.pd
+f>
+Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/Late
+ralPositionVsTime.pdf used on input line 218.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf, id=669, 
+273.02pt x 190.7125pt>
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf Grap
+hic file (type pdf)
+
+<use ../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/Velo
+cityVsTime.pdf used on input line 222.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf, id=670, 
+273.02pt x 190.7125pt>
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf Grap
+hic file (type pdf)
+
+<use ../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/Thro
+ttleVsTime.pdf used on input line 226.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pdf, id=
+671, 273.02pt x 190.7125pt>
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pdf
+ Graphic file (type pdf)
+
+<use ../../MATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/Stee
+ringAngleVsTime.pdf used on input line 230.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf, id=6
+72, 273.02pt x 190.7125pt>
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf 
+Graphic file (type pdf)
+
+<use ../../MATLAB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/one_obstacle_right_overtaking/figure/Head
+ingAngleVsTime.pdf used on input line 234.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 213--237
+[][] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 213--237
+[] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 213--237
+[] [] 
+ []
+
+
+<./figure/../figure/MovingObstacleAvoidance.pdf, id=675, 770.94273pt x 289.3764
 2pt>
 File: ./figure/../figure/MovingObstacleAvoidance.pdf Graphic file (type pdf)
  <use ./figure/../figure/MovingObstacleAvoidance.pdf>
 Package pdftex.def Info: ./figure/../figure/MovingObstacleAvoidance.pdf used on
- input line 242.
+ input line 273.
 (pdftex.def)             Requested size: 426.79137pt x 160.19516pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figure/random_N_obstacles/overtaking_random_2.pdf, id=633, 361.89786pt x 50.
+<./figure/random_N_obstacles/overtaking_random_2.pdf, id=677, 361.89786pt x 50.
 75359pt>
 File: ./figure/random_N_obstacles/overtaking_random_2.pdf Graphic file (type pd
 f)
  <use ./figure/random_N_obstacles/overtaking_random_2.pdf>
 Package pdftex.def Info: ./figure/random_N_obstacles/overtaking_random_2.pdf us
-ed on input line 253.
+ed on input line 284.
 (pdftex.def)             Requested size: 426.79137pt x 59.85771pt.
 
-<./figure/random_N_obstacles/overtaking_random.pdf, id=634, 361.89893pt x 43.42
+<./figure/random_N_obstacles/overtaking_random.pdf, id=678, 361.89893pt x 43.42
 003pt>
 File: ./figure/random_N_obstacles/overtaking_random.pdf Graphic file (type pdf)
 
  <use ./figure/random_N_obstacles/overtaking_random.pdf>
 Package pdftex.def Info: ./figure/random_N_obstacles/overtaking_random.pdf used
- on input line 256.
+ on input line 287.
 (pdftex.def)             Requested size: 426.79137pt x 51.20868pt.
 
-<./figure/random_N_obstacles/overtaking_random_1.pdf, id=635, 361.89789pt x 54.
+<./figure/random_N_obstacles/overtaking_random_1.pdf, id=679, 361.89789pt x 54.
 51657pt>
 File: ./figure/random_N_obstacles/overtaking_random_1.pdf Graphic file (type pd
 f)
  <use ./figure/random_N_obstacles/overtaking_random_1.pdf>
 Package pdftex.def Info: ./figure/random_N_obstacles/overtaking_random_1.pdf us
-ed on input line 259.
+ed on input line 290.
 (pdftex.def)             Requested size: 426.79137pt x 64.2957pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22] [23 <./figure/../figure/one_obstacle_right_overtaking/overtaking_start.pdf
-> <./figure/../figure/one_obstacle_right_overtaking/overtaking_middle.pdf
+
+<./figure/../figure/6_obstacles/6_obstacles_1.pdf, id=680, 368.24551pt x 47.082
+28pt>
+File: ./figure/../figure/6_obstacles/6_obstacles_1.pdf Graphic file (type pdf)
+ <use ./figure/../figure/6_obstacles/6_obstacles_1.pdf>
+Package pdftex.def Info: ./figure/../figure/6_obstacles/6_obstacles_1.pdf used 
+on input line 302.
+(pdftex.def)             Requested size: 426.79137pt x 54.5709pt.
+
+<./figure/../figure/6_obstacles/6_obstacles_2.pdf, id=681, 368.24551pt x 47.082
+28pt>
+File: ./figure/../figure/6_obstacles/6_obstacles_2.pdf Graphic file (type pdf)
+ <use ./figure/../figure/6_obstacles/6_obstacles_2.pdf>
+Package pdftex.def Info: ./figure/../figure/6_obstacles/6_obstacles_2.pdf used 
+on input line 305.
+(pdftex.def)             Requested size: 426.79137pt x 54.5709pt.
+
+<./figure/../figure/6_obstacles/6_obstacles_3.pdf, id=682, 368.24551pt x 47.082
+28pt>
+File: ./figure/../figure/6_obstacles/6_obstacles_3.pdf Graphic file (type pdf)
+ <use ./figure/../figure/6_obstacles/6_obstacles_3.pdf>
+Package pdftex.def Info: ./figure/../figure/6_obstacles/6_obstacles_3.pdf used 
+on input line 308.
+(pdftex.def)             Requested size: 426.79137pt x 54.5709pt.
+
+<./figure/../figure/6_obstacles/6_obstacles_4.pdf, id=683, 368.24551pt x 47.082
+28pt>
+File: ./figure/../figure/6_obstacles/6_obstacles_4.pdf Graphic file (type pdf)
+ <use ./figure/../figure/6_obstacles/6_obstacles_4.pdf>
+Package pdftex.def Info: ./figure/../figure/6_obstacles/6_obstacles_4.pdf used 
+on input line 311.
+(pdftex.def)             Requested size: 426.79137pt x 54.5709pt.
+
+<./figure/../figure/6_obstacles/6_obstacles_5.pdf, id=684, 362.223pt x 46.5523p
+t>
+File: ./figure/../figure/6_obstacles/6_obstacles_5.pdf Graphic file (type pdf)
+ <use ./figure/../figure/6_obstacles/6_obstacles_5.pdf>
+Package pdftex.def Info: ./figure/../figure/6_obstacles/6_obstacles_5.pdf used 
+on input line 314.
+(pdftex.def)             Requested size: 426.79137pt x 54.85094pt.
+
+<./figure/../figure/6_obstacles/6_obstacles_6.pdf, id=685, 368.24551pt x 47.082
+28pt>
+File: ./figure/../figure/6_obstacles/6_obstacles_6.pdf Graphic file (type pdf)
+ <use ./figure/../figure/6_obstacles/6_obstacles_6.pdf>
+Package pdftex.def Info: ./figure/../figure/6_obstacles/6_obstacles_6.pdf used 
+on input line 317.
+(pdftex.def)             Requested size: 426.79137pt x 54.5709pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf, id=686, 273.02
+pt x 190.7125pt>
+File: ../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf Graphic fi
+le (type pdf)
+
+<use ../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/6_obstacles/figure/LongitudinalPositionVs
+Time.pdf used on input line 326.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf, id=687, 273.02pt x 
+190.7125pt>
+File: ../../MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf Graphic file (t
+ype pdf)
+ <use ../../MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/6_obstacles/figure/LateralPositionVsTime.
+pdf used on input line 330.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf, id=688, 273.02pt x 190.712
+5pt>
+File: ../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf Graphic file (type pdf
+)
+ <use ../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf use
+d on input line 334.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf, id=689, 273.02pt x 190.712
+5pt>
+File: ../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf Graphic file (type pdf
+)
+ <use ../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf use
+d on input line 338.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf, id=690, 273.02pt x 19
+0.7125pt>
+File: ../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf Graphic file (typ
+e pdf)
+ <use ../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pd
+f used on input line 342.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf, id=691, 273.02pt x 190
+.7125pt>
+File: ../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf Graphic file (type
+ pdf)
+ <use ../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf
+ used on input line 346.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 325--349
+[][] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 325--349
+[] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 325--349
+[] [] 
+ []
+
+
+<./figure/../figure/no_overtaking/no_overtaking_1.pdf, id=694, 362.223pt x 52.0
+2876pt>
+File: ./figure/../figure/no_overtaking/no_overtaking_1.pdf Graphic file (type p
+df)
+ <use ./figure/../figure/no_overtaking/no_overtaking_1.pdf>
+Package pdftex.def Info: ./figure/../figure/no_overtaking/no_overtaking_1.pdf u
+sed on input line 358.
+(pdftex.def)             Requested size: 426.79137pt x 61.30367pt.
+
+<./figure/../figure/no_overtaking/no_overtaking_1_5.pdf, id=695, 368.24551pt x 
+52.65968pt>
+File: ./figure/../figure/no_overtaking/no_overtaking_1_5.pdf Graphic file (type
+ pdf)
+ <use ./figure/../figure/no_overtaking/no_overtaking_1_5.pdf>
+Package pdftex.def Info: ./figure/../figure/no_overtaking/no_overtaking_1_5.pdf
+ used on input line 361.
+(pdftex.def)             Requested size: 426.79137pt x 61.03545pt.
+
+<./figure/../figure/no_overtaking/no_overtaking_2.pdf, id=696, 362.223pt x 52.0
+2876pt>
+File: ./figure/../figure/no_overtaking/no_overtaking_2.pdf Graphic file (type p
+df)
+ <use ./figure/../figure/no_overtaking/no_overtaking_2.pdf>
+Package pdftex.def Info: ./figure/../figure/no_overtaking/no_overtaking_2.pdf u
+sed on input line 364.
+(pdftex.def)             Requested size: 426.79137pt x 61.30367pt.
+
+<./figure/../figure/no_overtaking/no_overtaking_3.pdf, id=697, 362.223pt x 52.0
+2876pt>
+File: ./figure/../figure/no_overtaking/no_overtaking_3.pdf Graphic file (type p
+df)
+ <use ./figure/../figure/no_overtaking/no_overtaking_3.pdf>
+Package pdftex.def Info: ./figure/../figure/no_overtaking/no_overtaking_3.pdf u
+sed on input line 367.
+(pdftex.def)             Requested size: 426.79137pt x 61.30367pt.
+
+<./figure/../figure/no_overtaking/no_overtaking_4.pdf, id=698, 362.223pt x 66.4
+263pt>
+File: ./figure/../figure/no_overtaking/no_overtaking_4.pdf Graphic file (type p
+df)
+ <use ./figure/../figure/no_overtaking/no_overtaking_4.pdf>
+Package pdftex.def Info: ./figure/../figure/no_overtaking/no_overtaking_4.pdf u
+sed on input line 370.
+(pdftex.def)             Requested size: 426.79137pt x 78.26779pt.
+ [22]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf, id=704, 273.
+02pt x 190.7125pt>
+File: ../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf Graphic 
+file (type pdf)
+
+<use ../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/no_overtaking/figure/LongitudinalPosition
+VsTime.pdf used on input line 379.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf, id=705, 273.02pt 
+x 190.7125pt>
+File: ../../MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf Graphic file 
+(type pdf)
+
+<use ../../MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/no_overtaking/figure/LateralPositionVsTim
+e.pdf used on input line 383.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf, id=706, 273.02pt x 190.7
+125pt>
+File: ../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf Graphic file (type p
+df)
+ <use ../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf u
+sed on input line 387.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf, id=707, 273.02pt x 190.7
+125pt>
+File: ../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf Graphic file (type p
+df)
+ <use ../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf u
+sed on input line 391.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf, id=708, 273.02pt x 
+190.7125pt>
+File: ../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf Graphic file (t
+ype pdf)
+ <use ../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.
+pdf used on input line 395.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.pdf, id=709, 273.02pt x 1
+90.7125pt>
+File: ../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.pdf Graphic file (ty
+pe pdf)
+ <use ../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.p
+df used on input line 399.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 378--402
+[][] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 378--402
+[] []
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 378--402
+[] [] 
+ []
+
+
+<./figure/three_obstacles_no_overtaking/braking_0.pdf, id=713, 355.59767pt x 44
+.15201pt>
+File: ./figure/three_obstacles_no_overtaking/braking_0.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_0.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_0.pdf u
+sed on input line 420.
+(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+
+<./figure/three_obstacles_no_overtaking/braking_1.pdf, id=714, 355.59767pt x 44
+.15201pt>
+File: ./figure/three_obstacles_no_overtaking/braking_1.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_1.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_1.pdf u
+sed on input line 423.
+(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+
+<./figure/three_obstacles_no_overtaking/braking_2.pdf, id=715, 355.5977pt x 44.
+15201pt>
+File: ./figure/three_obstacles_no_overtaking/braking_2.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_2.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_2.pdf u
+sed on input line 426.
+(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+
+<./figure/three_obstacles_no_overtaking/braking_3.pdf, id=716, 355.5977pt x 44.
+15201pt>
+File: ./figure/three_obstacles_no_overtaking/braking_3.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_3.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_3.pdf u
+sed on input line 429.
+(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+
+<./figure/three_obstacles_no_overtaking/braking_4.pdf, id=717, 355.59964pt x 44
+.15201pt>
+File: ./figure/three_obstacles_no_overtaking/braking_4.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_4.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_4.pdf u
+sed on input line 432.
+(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+
+<./figure/three_obstacles_no_overtaking/braking_5.pdf, id=718, 361.62021pt x 44
+.64273pt>
+File: ./figure/three_obstacles_no_overtaking/braking_5.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_5.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_5.pdf u
+sed on input line 435.
+(pdftex.def)             Requested size: 426.79137pt x 52.69157pt.
+
+<./figure/three_obstacles_no_overtaking/braking_6.pdf, id=719, 361.62021pt x 59
+.04655pt>
+File: ./figure/three_obstacles_no_overtaking/braking_6.pdf Graphic file (type p
+df)
+ <use ./figure/three_obstacles_no_overtaking/braking_6.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_6.pdf u
+sed on input line 438.
+(pdftex.def)             Requested size: 426.79137pt x 69.69234pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23 <./figure/../figure/one_obstacle_right_overtaking/overtaking_start.pdf> <./
+figure/../figure/one_obstacle_right_overtaking/overtaking_middle.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/one_obstacle_right_o
 vertaking/overtaking_middle.pdf): PDF inclusion: multiple pdfs with page group 
@@ -1389,80 +1773,90 @@ oup included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/one_obstacle_right_o
 vertaking/overtaking_end.pdf): PDF inclusion: multiple pdfs with page group inc
 luded in a single page
-> <./figure/../figure/MovingObstacleAvoidance.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/MovingObstacleAvoida
-nce.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
-e
 >]
-<./figure/three_obstacles_no_overtaking/braking_0.pdf, id=1218, 355.59767pt x 4
-4.15201pt>
-File: ./figure/three_obstacles_no_overtaking/braking_0.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_0.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_0.pdf u
-sed on input line 281.
-(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./figure/three_obstacles_no_overtaking/braking_1.pdf, id=1219, 355.59767pt x 4
-4.15201pt>
-File: ./figure/three_obstacles_no_overtaking/braking_1.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_1.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_1.pdf u
-sed on input line 284.
-(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+ [24 <../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVsT
+ime.pdf> <../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTi
+me.pdf> <../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf> 
+<../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf> <../../M
+ATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pdf> <../../MATL
+AB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf>]
+<./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf, id=1142
+, 273.02pt x 190.7125pt>
+File: ./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf Gra
+phic file (type pdf)
 
-<./figure/three_obstacles_no_overtaking/braking_2.pdf, id=1220, 355.5977pt x 44
-.15201pt>
-File: ./figure/three_obstacles_no_overtaking/braking_2.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_2.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_2.pdf u
-sed on input line 287.
-(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+<use ./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/LongitudinalPos
+itionVsTime.pdf used on input line 449.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
 
-<./figure/three_obstacles_no_overtaking/braking_3.pdf, id=1221, 355.5977pt x 44
-.15201pt>
-File: ./figure/three_obstacles_no_overtaking/braking_3.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_3.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_3.pdf u
-sed on input line 290.
-(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+<./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf, id=1143, 273
+.02pt x 190.7125pt>
+File: ./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf Graphic 
+file (type pdf)
 
-<./figure/three_obstacles_no_overtaking/braking_4.pdf, id=1222, 355.59964pt x 4
-4.15201pt>
-File: ./figure/three_obstacles_no_overtaking/braking_4.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_4.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_4.pdf u
-sed on input line 293.
-(pdftex.def)             Requested size: 426.79137pt x 52.99155pt.
+<use ./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/LateralPosition
+VsTime.pdf used on input line 453.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
 
-<./figure/three_obstacles_no_overtaking/braking_5.pdf, id=1223, 361.62021pt x 4
-4.64273pt>
-File: ./figure/three_obstacles_no_overtaking/braking_5.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_5.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_5.pdf u
-sed on input line 296.
-(pdftex.def)             Requested size: 426.79137pt x 52.69157pt.
+<./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf, id=1144, 273.02pt x
+ 190.7125pt>
+File: ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf Graphic file (t
+ype pdf)
+ <use ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/VelocityVsTime.
+pdf used on input line 457.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
 
-<./figure/three_obstacles_no_overtaking/braking_6.pdf, id=1224, 361.62021pt x 5
-9.04655pt>
-File: ./figure/three_obstacles_no_overtaking/braking_6.pdf Graphic file (type p
-df)
- <use ./figure/three_obstacles_no_overtaking/braking_6.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/braking_6.pdf u
-sed on input line 299.
-(pdftex.def)             Requested size: 426.79137pt x 69.69234pt.
+<./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf, id=1145, 273.02pt x
+ 190.7125pt>
+File: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf Graphic file (t
+ype pdf)
+ <use ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.
+pdf used on input line 461.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf, id=1146, 273.0
+2pt x 190.7125pt>
+File: ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf Graphic fi
+le (type pdf)
+
+<use ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/SteeringAngleVs
+Time.pdf used on input line 465.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+<./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf, id=1147, 273.02
+pt x 190.7125pt>
+File: ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf Graphic fil
+e (type pdf)
+
+<use ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf>
+Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/HeadingAngleVsT
+ime.pdf used on input line 469.
+(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 448--472
+[][] []
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 448--472
+[] []
+ []
 
-[24 <./figure/random_N_obstacles/overtaking_random_2.pdf> <./figure/random_N_ob
-stacles/overtaking_random.pdf
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 448--472
+[] [] 
+ []
+
+) [25 <./figure/../figure/MovingObstacleAvoidance.pdf>] [26 <./figure/random_N_
+obstacles/overtaking_random_2.pdf> <./figure/random_N_obstacles/overtaking_rand
+om.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/random_N_obstacles/overtaking_
 random.pdf): PDF inclusion: multiple pdfs with page group included in a single 
@@ -1472,56 +1866,68 @@ page
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/random_N_obstacles/overtaking_
 random_1.pdf): PDF inclusion: multiple pdfs with page group included in a singl
 e page
->]
-<./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf, id=1311, 273.02pt x
- 190.7125pt>
-File: ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf Graphic file (t
-ype pdf)
- <use ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/VelocityVsTime.
-pdf used on input line 310.
-(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+> <./figure/../figure/6_obstacles/6_obstacles_1.pdf
 
-<./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf, id=1312, 273.02pt x
- 190.7125pt>
-File: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf Graphic file (t
-ype pdf)
- <use ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.
-pdf used on input line 314.
-(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/6_obstacles/6_obstac
+les_1.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+> <./figure/../figure/6_obstacles/6_obstacles_2.pdf
 
-<./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf, id=1313, 273.0
-2pt x 190.7125pt>
-File: ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf Graphic fi
-le (type pdf)
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/6_obstacles/6_obstac
+les_2.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+> <./figure/../figure/6_obstacles/6_obstacles_3.pdf
 
-<use ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/SteeringAngleVs
-Time.pdf used on input line 318.
-(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/6_obstacles/6_obstac
+les_3.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+> <./figure/../figure/6_obstacles/6_obstacles_4.pdf
 
-<./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf, id=1314, 273.02
-pt x 190.7125pt>
-File: ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf Graphic fil
-e (type pdf)
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/6_obstacles/6_obstac
+les_4.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+> <./figure/../figure/6_obstacles/6_obstacles_5.pdf
 
-<use ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf>
-Package pdftex.def Info: ./figure/three_obstacles_no_overtaking/HeadingAngleVsT
-ime.pdf used on input line 322.
-(pdftex.def)             Requested size: 213.39568pt x 149.0636pt.
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/6_obstacles/6_obstac
+les_5.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+> <./figure/../figure/6_obstacles/6_obstacles_6.pdf
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 309--325
-[][] []
- []
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/6_obstacles/6_obstac
+les_6.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>] [27 <../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf> <../../
+MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf> <../../MATLAB/6_obstacles/
+figure/VelocityVsTime.pdf> <../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf>
+ <../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf> <../../MATLAB/6_obst
+acles/figure/HeadingAngleVsTime.pdf>] [28 <./figure/../figure/no_overtaking/no_
+overtaking_1.pdf> <./figure/../figure/no_overtaking/no_overtaking_1_5.pdf
 
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/no_overtaking/no_ove
+rtaking_1_5.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+> <./figure/../figure/no_overtaking/no_overtaking_2.pdf
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 309--325
-[] [] 
- []
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/no_overtaking/no_ove
+rtaking_2.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./figure/../figure/no_overtaking/no_overtaking_3.pdf
 
-) [25 <./figure/three_obstacles_no_overtaking/braking_0.pdf> <./figure/three_ob
-stacles_no_overtaking/braking_1.pdf
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/no_overtaking/no_ove
+rtaking_3.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./figure/../figure/no_overtaking/no_overtaking_4.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/no_overtaking/no_ove
+rtaking_4.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>] [29 <../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf> <../.
+./MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf> <../../MATLAB/no_overt
+aking/figure/VelocityVsTime.pdf> <../../MATLAB/no_overtaking/figure/ThrottleVsT
+ime.pdf> <../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf> <../../MAT
+LAB/no_overtaking/figure/HeadingAngleVsTime.pdf>] [30 <./figure/three_obstacles
+_no_overtaking/braking_0.pdf> <./figure/three_obstacles_no_overtaking/braking_1
+.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/three_obstacles_no_overtaking/
 braking_1.pdf): PDF inclusion: multiple pdfs with page group included in a sing
@@ -1551,16 +1957,21 @@ le page
 pdfTeX warning: /usr/bin/pdflatex (file ./figure/three_obstacles_no_overtaking/
 braking_6.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
->] [26 <./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf> <./figure/th
-ree_obstacles_no_overtaking/ThrottleVsTime.pdf> <./figure/three_obstacles_no_ov
-ertaking/SteeringAngleVsTime.pdf> <./figure/three_obstacles_no_overtaking/Headi
-ngAngleVsTime.pdf>]
+>] [31 <./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf> 
+<./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf> <./figure/th
+ree_obstacles_no_overtaking/VelocityVsTime.pdf> <./figure/three_obstacles_no_ov
+ertaking/ThrottleVsTime.pdf> <./figure/three_obstacles_no_overtaking/SteeringAn
+gleVsTime.pdf> <./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf>]
+[32
+
+
+]
 \openout2 = `./Chapter5/Chapter5.aux'.
 
  (./Chapter5/Chapter5.tex
 Chapter 5.
 
-<./figure/../figure/laneFollowing/laneFollowing.pdf, id=1556, 210.9501pt x 162.
+<./figure/../figure/laneFollowing/laneFollowing.pdf, id=2625, 210.9501pt x 162.
 5804pt>
 File: ./figure/../figure/laneFollowing/laneFollowing.pdf Graphic file (type pdf
 )
@@ -1568,264 +1979,359 @@ File: ./figure/../figure/laneFollowing/laneFollowing.pdf Graphic file (type pdf
 Package pdftex.def Info: ./figure/../figure/laneFollowing/laneFollowing.pdf use
 d on input line 6.
 (pdftex.def)             Requested size: 320.09352pt x 246.71046pt.
- [27
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33
 
 
-
-
- <./figure/../figure/laneFollowing/laneFollowing.pdf>] [28] [29] [30]
-<../../MATLAB/lane_following/figure/Reference.pdf, id=1618, 273.02pt x 190.7125
-pt>
-File: ../../MATLAB/lane_following/figure/Reference.pdf Graphic file (type pdf)
- <use ../../MATLAB/lane_following/figure/Reference.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/Reference.pdf used 
-on input line 242.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/Curvature.pdf, id=1619, 273.02pt x 190.7125
-pt>
-File: ../../MATLAB/lane_following/figure/Curvature.pdf Graphic file (type pdf)
- <use ../../MATLAB/lane_following/figure/Curvature.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/Curvature.pdf used 
-on input line 247.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf, id=1624, 27
-3.02pt x 190.7125pt>
-File: ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf Graphic
- file (type pdf)
-
-<use ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/LongitudinalVelocit
-yVsTime.pdf used on input line 261.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/AccelerationVsTime.pdf, id=1625, 273.02pt x
- 190.7125pt>
-File: ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf Graphic file (t
-ype pdf)
- <use ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/AccelerationVsTime.
-pdf used on input line 266.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf, id=1626, 273.02pt 
-x 190.7125pt>
-File: ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf Graphic file (
-type pdf)
- <use ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/SteeringAngleVsTime
-.pdf used on input line 271.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf, id=1627, 273.02
-pt x 190.7125pt>
-File: ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf Graphic fil
-e (type pdf)
-
-<use ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/RelativeYawAngleVsT
-ime.pdf used on input line 276.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf, id=1628, 273.02
-pt x 190.7125pt>
-File: ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf Graphic fil
-e (type pdf)
-
-<use ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/LateralDeviationVsT
-ime.pdf used on input line 281.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-<../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf, id=1629, 273.02p
-t x 190.7125pt>
-File: ../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf Graphic file
- (type pdf)
-
-<use ../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following/figure/LateralVelocityVsTi
-me.pdf used on input line 286.
-(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<./figure/../figure/lane_following_AMPC.pdf, id=1630, 774.39772pt x 268.72177pt
+ <./figure/../figure/laneFollowing/laneFollowing.pdf>] [34] [35] [36]
+<./figure/../figure/lane_following_AMPC.pdf, id=2690, 774.39772pt x 268.72177pt
 >
 File: ./figure/../figure/lane_following_AMPC.pdf Graphic file (type pdf)
  <use ./figure/../figure/lane_following_AMPC.pdf>
 Package pdftex.def Info: ./figure/../figure/lane_following_AMPC.pdf used on inp
-ut line 297.
+ut line 260.
 (pdftex.def)             Requested size: 426.79137pt x 148.10085pt.
+ [37 <./figure/../figure/lane_following_AMPC.pdf>]
+<./figure/../figure/lane_following_AMPC_vehicle_dynamics.pdf, id=2830, 715.5874
+3pt x 465.76385pt>
+File: ./figure/../figure/lane_following_AMPC_vehicle_dynamics.pdf Graphic file 
+(type pdf)
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<./figure/../figure/lane_following_AMPC_sensor_dynamics.pdf, id=1631, 767.86482
-pt x 303.66258pt>
+<use ./figure/../figure/lane_following_AMPC_vehicle_dynamics.pdf>
+Package pdftex.def Info: ./figure/../figure/lane_following_AMPC_vehicle_dynamic
+s.pdf used on input line 279.
+(pdftex.def)             Requested size: 426.79137pt x 277.79742pt.
+ [38 <./figure/../figure/lane_following_AMPC_vehicle_dynamics.pdf>]
+<./figure/../figure/lane_following_AMPC_sensor_dynamics.pdf, id=2839, 672.57518
+pt x 286.61017pt>
 File: ./figure/../figure/lane_following_AMPC_sensor_dynamics.pdf Graphic file (
 type pdf)
 
 <use ./figure/../figure/lane_following_AMPC_sensor_dynamics.pdf>
 Package pdftex.def Info: ./figure/../figure/lane_following_AMPC_sensor_dynamics
 .pdf used on input line 305.
-(pdftex.def)             Requested size: 426.79137pt x 168.78029pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<../../MATLAB/lane_following_curve/figure/Reference_curve.pdf, id=1632, 273.02p
+(pdftex.def)             Requested size: 426.79137pt x 181.87297pt.
+ [39 <./figure/../figure/lane_following_AMPC_sensor_dynamics.pdf>]
+<../../MATLAB/lane_following_curve/figure/Reference_curve.pdf, id=2864, 273.02p
 t x 190.7125pt>
 File: ../../MATLAB/lane_following_curve/figure/Reference_curve.pdf Graphic file
  (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/Reference_curve.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/Reference_cur
-ve.pdf used on input line 318.
+ve.pdf used on input line 362.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
-<../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf, id=1633, 273.02p
+<../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf, id=2865, 273.02p
 t x 190.7125pt>
 File: ../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf Graphic file
  (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/Curvature_cur
-ve.pdf used on input line 323.
+ve.pdf used on input line 367.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
 <../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curve.pdf,
- id=1634, 273.02pt x 190.7125pt>
+ id=2870, 273.02pt x 190.7125pt>
 File: ../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curve
 .pdf Graphic file (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curve.
 pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/LongitudinalV
-elocityVsTime_curve.pdf used on input line 335.
+elocityVsTime_curve.pdf used on input line 379.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
-<../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf, id=1635
+<../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf, id=2
+871, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf 
+Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/LateralVeloci
+tyVsTime_curve.pdf used on input line 384.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf, id=2872
 , 273.02pt x 190.7125pt>
 File: ../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf Gra
 phic file (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/AccelerationV
-sTime_curve.pdf used on input line 340.
+sTime_curve.pdf used on input line 389.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
-<../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf, id=163
-6, 273.02pt x 190.7125pt>
+<../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf, id=287
+3, 273.02pt x 190.7125pt>
 File: ../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf Gr
 aphic file (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/SteeringAngle
-VsTime_curve.pdf used on input line 345.
+VsTime_curve.pdf used on input line 394.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
 <../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf, id=
-1637, 273.02pt x 190.7125pt>
+2874, 273.02pt x 190.7125pt>
 File: ../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf
  Graphic file (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/RelativeYawAn
-gleVsTime_curve.pdf used on input line 350.
+gleVsTime_curve.pdf used on input line 399.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
 <../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf, id=
-1638, 273.02pt x 189.70876pt>
+2875, 273.02pt x 189.70876pt>
 File: ../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf
  Graphic file (type pdf)
 
 <use ../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf>
 Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/LateralDeviat
-ionVsTime_curve.pdf used on input line 355.
+ionVsTime_curve.pdf used on input line 404.
 (pdftex.def)             Requested size: 209.13011pt x 145.31487pt.
 
-<../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf, id=1
-639, 273.02pt x 190.7125pt>
-File: ../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf 
-Graphic file (type pdf)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<use ../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf>
-Package pdftex.def Info: ../../MATLAB/lane_following_curve/figure/LateralVeloci
-tyVsTime_curve.pdf used on input line 360.
+[40 <../../MATLAB/lane_following_curve/figure/Reference_curve.pdf> <../../MATLA
+B/lane_following_curve/figure/Curvature_curve.pdf>]
+<../../MATLAB/lane_following/figure/Reference.pdf, id=2999, 273.02pt x 190.7125
+pt>
+File: ../../MATLAB/lane_following/figure/Reference.pdf Graphic file (type pdf)
+ <use ../../MATLAB/lane_following/figure/Reference.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/Reference.pdf used 
+on input line 421.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following/figure/Curvature.pdf, id=3000, 273.02pt x 190.7125
+pt>
+File: ../../MATLAB/lane_following/figure/Curvature.pdf Graphic file (type pdf)
+ <use ../../MATLAB/lane_following/figure/Curvature.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/Curvature.pdf used 
+on input line 426.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+ [41 <../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curve
+.pdf> <../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf
+> <../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf> <../.
+./MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf> <../../MATL
+AB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf> <../../MATLAB/
+lane_following_curve/figure/LateralDeviationVsTime_curve.pdf>]
+<../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf, id=3307, 27
+3.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf Graphic
+ file (type pdf)
+
+<use ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/LongitudinalVelocit
+yVsTime.pdf used on input line 440.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf, id=3308, 273.02p
+t x 190.7125pt>
+File: ../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf Graphic file
+ (type pdf)
+
+<use ../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/LateralVelocityVsTi
+me.pdf used on input line 445.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following/figure/AccelerationVsTime.pdf, id=3309, 273.02pt x
+ 190.7125pt>
+File: ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf Graphic file (t
+ype pdf)
+ <use ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/AccelerationVsTime.
+pdf used on input line 450.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf, id=3310, 273.02pt 
+x 190.7125pt>
+File: ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf Graphic file (
+type pdf)
+ <use ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/SteeringAngleVsTime
+.pdf used on input line 455.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf, id=3311, 273.02
+pt x 190.7125pt>
+File: ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf Graphic fil
+e (type pdf)
+
+<use ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/RelativeYawAngleVsT
+ime.pdf used on input line 460.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf, id=3312, 273.02
+pt x 190.7125pt>
+File: ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf Graphic fil
+e (type pdf)
+
+<use ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following/figure/LateralDeviationVsT
+ime.pdf used on input line 465.
 (pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [31 <../../MATLAB/lane_following/figure/Reference.pdf> <../../MATLAB/lane_fol
-lowing/figure/Curvature.pdf>] [32 <../../MATLAB/lane_following/figure/Longitudi
-nalVelocityVsTime.pdf> <../../MATLAB/lane_following/figure/AccelerationVsTime.p
-df> <../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf> <../../MATLAB/
-lane_following/figure/RelativeYawAngleVsTime.pdf> <../../MATLAB/lane_following/
-figure/LateralDeviationVsTime.pdf> <../../MATLAB/lane_following/figure/LateralV
-elocityVsTime.pdf>] [33 <./figure/../figure/lane_following_AMPC.pdf> <./figure/
-../figure/lane_following_AMPC_sensor_dynamics.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./figure/../figure/lane_following_AMPC_
-sensor_dynamics.pdf): PDF inclusion: multiple pdfs with page group included in 
-a single page
-> <../../MATLAB/lane_following_curve/figure/Reference_curve.pdf> <../../MATLAB/
-lane_following_curve/figure/Curvature_curve.pdf>] [34 <../../MATLAB/lane_follow
-ing_curve/figure/LongitudinalVelocityVsTime_curve.pdf> <../../MATLAB/lane_follo
-wing_curve/figure/AccelerationVsTime_curve.pdf> <../../MATLAB/lane_following_cu
-rve/figure/SteeringAngleVsTime_curve.pdf> <../../MATLAB/lane_following_curve/fi
-gure/RelativeYawAngleVsTime_curve.pdf> <../../MATLAB/lane_following_curve/figur
-e/LateralDeviationVsTime_curve.pdf> <../../MATLAB/lane_following_curve/figure/L
-ateralVelocityVsTime_curve.pdf>]
+<../../MATLAB/lane_following_circular_path/figure/Reference_circular.pdf, id=33
+13, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/Reference_circular.pdf G
+raphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/Reference_circular.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Refer
+ence_circular.pdf used on input line 480.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/Curvature_circular.pdf, id=33
+14, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/Curvature_circular.pdf G
+raphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/Curvature_circular.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Curva
+ture_circular.pdf used on input line 485.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/LongitudinalVelocityVsTime_ci
+rcular.pdf, id=3315, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/LongitudinalVelocityVsTi
+me_circular.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/LongitudinalVelocityVsTim
+e_circular.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Longi
+tudinalVelocityVsTime_circular.pdf used on input line 497.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/LateralVelocityVsTime_circula
+r.pdf, id=3316, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/LateralVelocityVsTime_ci
+rcular.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/LateralVelocityVsTime_cir
+cular.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Later
+alVelocityVsTime_circular.pdf used on input line 502.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/AccelerationVsTime_circular.p
+df, id=3317, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/AccelerationVsTime_circu
+lar.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/AccelerationVsTime_circul
+ar.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Accel
+erationVsTime_circular.pdf used on input line 507.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/SteeringAngleVsTime_circular.
+pdf, id=3318, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/SteeringAngleVsTime_circ
+ular.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/SteeringAngleVsTime_circu
+lar.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Steer
+ingAngleVsTime_circular.pdf used on input line 512.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/RelativeYawAngleVsTime_circul
+ar.pdf, id=3319, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/RelativeYawAngleVsTime_c
+ircular.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/RelativeYawAngleVsTime_ci
+rcular.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Relat
+iveYawAngleVsTime_circular.pdf used on input line 517.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+<../../MATLAB/lane_following_circular_path/figure/LateralDeviationVsTime_circul
+ar.pdf, id=3320, 273.02pt x 190.7125pt>
+File: ../../MATLAB/lane_following_circular_path/figure/LateralDeviationVsTime_c
+ircular.pdf Graphic file (type pdf)
+
+<use ../../MATLAB/lane_following_circular_path/figure/LateralDeviationVsTime_ci
+rcular.pdf>
+Package pdftex.def Info: ../../MATLAB/lane_following_circular_path/figure/Later
+alDeviationVsTime_circular.pdf used on input line 522.
+(pdftex.def)             Requested size: 209.13011pt x 146.08372pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [42 <../../MATLAB/lane_following/figure/Reference.pdf> <../../MATLAB/lane_fol
+lowing/figure/Curvature.pdf>] [43 <../../MATLAB/lane_following/figure/Longitudi
+nalVelocityVsTime.pdf> <../../MATLAB/lane_following/figure/LateralVelocityVsTim
+e.pdf> <../../MATLAB/lane_following/figure/AccelerationVsTime.pdf> <../../MATLA
+B/lane_following/figure/SteeringAngleVsTime.pdf> <../../MATLAB/lane_following/f
+igure/RelativeYawAngleVsTime.pdf> <../../MATLAB/lane_following/figure/LateralDe
+viationVsTime.pdf>] [44 <../../MATLAB/lane_following_circular_path/figure/Refer
+ence_circular.pdf> <../../MATLAB/lane_following_circular_path/figure/Curvature_
+circular.pdf>] [45 <../../MATLAB/lane_following_circular_path/figure/Longitudin
+alVelocityVsTime_circular.pdf> <../../MATLAB/lane_following_circular_path/figur
+e/LateralVelocityVsTime_circular.pdf> <../../MATLAB/lane_following_circular_pat
+h/figure/AccelerationVsTime_circular.pdf> <../../MATLAB/lane_following_circular
+_path/figure/SteeringAngleVsTime_circular.pdf> <../../MATLAB/lane_following_cir
+cular_path/figure/RelativeYawAngleVsTime_circular.pdf> <../../MATLAB/lane_follo
+wing_circular_path/figure/LateralDeviationVsTime_circular.pdf>] [46
+
+
+]
 \openout2 = `./Chapter6/Chapter6.aux'.
 
 
 No file ./Chapter6/Chapter6.tex.
 \openout2 = `./Conclusions/Conclusions.aux'.
 
-(./Conclusions/Conclusions.tex) [35
+(./Conclusions/Conclusions.tex
+Chapter 6.
+) [47
 
 
 
 
 
+] [48
 
 
-] [36
+] (./Thesis.bbl [49
 
-
-] (./Thesis.bbl [37
-
-] [38]) [39]
-[40
+] [50]) [51] [52
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
- (./Thesis.aux (./Acknowledgements/Acknowledgements.aux)
-(./Abstract/Abstract.aux) (./Introduction/Introduction.aux)
-(./Chapter2/Chapter2.aux) (./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux)
-(./Chapter5/Chapter5.aux) (./Chapter6/Chapter6.aux)
-(./Conclusions/Conclusions.aux))
+ (./Thesis.aux
+(./Acknowledgements/Acknowledgements.aux) (./Abstract/Abstract.aux)
+(./Introduction/Introduction.aux) (./Chapter2/Chapter2.aux)
+(./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux) (./Chapter5/Chapter5.aux)
+(./Chapter6/Chapter6.aux) (./Conclusions/Conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 672D68105D5A5E0F061AC85D9F21C50C;2531.
+(rerunfilecheck)             Checksum: C51C7FB9060CF7CD4BC81524AA8670CC;2678.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 22055 strings out of 493029
- 405014 string characters out of 6136233
- 465696 words of memory out of 5000000
- 24985 multiletter control sequences out of 15000+600000
- 39864 words of font info for 109 fonts, out of 8000000 for 9000
+ 22363 strings out of 493029
+ 419548 string characters out of 6136233
+ 477976 words of memory out of 5000000
+ 25226 multiletter control sequences out of 15000+600000
+ 41267 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,19n,52p,10377b,880s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,19n,52p,10377b,884s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -1839,31 +2345,33 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfbi1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfbx0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-fbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type
-1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
-rm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
-m1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfti1440.pfb>
-Output written on Thesis.pdf (52 pages, 5447632 bytes).
+/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
+e/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfbi1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2488
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0800.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb
+>
+Output written on Thesis.pdf (64 pages, 6223451 bytes).
 PDF statistics:
- 2755 PDF objects out of 2984 (max. 8388607)
- 2410 compressed objects within 25 object streams
- 182 named destinations out of 1000 (max. 500000)
- 572 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4317 PDF objects out of 5155 (max. 8388607)
+ 3900 compressed objects within 39 object streams
+ 217 named destinations out of 1000 (max. 500000)
+ 788 words of extra memory for PDF output out of 10000 (max. 10000000)
 

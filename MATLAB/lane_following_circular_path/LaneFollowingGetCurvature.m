@@ -7,9 +7,9 @@ function rho = LaneFollowingGetCurvature(Vx,time)
 %
 % Outputs:
 %   rho: previewed curvature
-
-Xref=200*cos(Vx*time/60);
-Yref=200*sin(Vx*time/60);
+Ts = 0.02;
+Xref=15*cos(Vx*time/60);
+Yref=30*sin(Vx*time/60);
 % Xref = Vx*time;
 % 
 % % Desired Y position
@@ -22,19 +22,21 @@ hold on
 grid on
 grid minor
 axis equal
-title('\textbf{Desired Path}','Interpreter','latex');
+%title('\textbf{Desired Path}','Interpreter','latex');
 xlabel('X-coordinate [m]','Interpreter','latex');
 ylabel('Y-coordinate [m]','Interpreter','latex');
 pos = get(h,'Position');
 set(h,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3)*0.8, pos(4)-40])
 print(h,'figure\Reference_circular','-dpdf','-r0')
 hold off
+pause(2)
 
 % Desired curvature
-DX = gradient(Xref,0.1);
-DY = gradient(Yref,0.1);
-D2Y = gradient(DY,0.1);
-curvature = DX.*D2Y./(DX.^2+DY.^2).^(3/2);
+DX = gradient(Xref,Ts);
+DY = gradient(Yref,Ts);
+D2X = gradient(DX,Ts);
+D2Y = gradient(DY,Ts);
+curvature = (DX.*D2Y-D2X.*DY)./(DX.^2+DY.^2).^(3/2);
 
 % Stored curvature (as input for LKA)
 rho.time = time;
@@ -45,10 +47,11 @@ plot(rho.time,rho.signals.values)
 hold on
 grid on
 grid minor
-title('\textbf{Curvature}','Interpreter','latex');
+%title('\textbf{Curvature}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
-ylabel('Curvature [m]','Interpreter','latex');
-pos = get(hcurv,'Position');
-set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3)*0.8, pos(4)-40])
+ylabel('Curvature','Interpreter','latex');
+poscurv = get(hcurv,'Position');
+set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[poscurv(3)*0.8, poscurv(4)-40])
 print(hcurv,'figure\Curvature_circular','-dpdf','-r0')
 hold off
+pause(2)

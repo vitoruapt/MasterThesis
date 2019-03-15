@@ -40,9 +40,12 @@ LaneFollowingGenerateAMPC;
 % function |LaneFollowingResults|
 sim(mdl)
 logsout1 = logsout;
-closLaneFollowingResults(logsout1,Yref)
+LaneFollowingResults(logsout1,Yref)
 print -slane_following_AMPC -dpdf lane_following_AMPC.pdf
 movefile('lane_following_AMPC.pdf','figure')
 
 print -slane_following_AMPC/Sensor_Dynamics -dpdf lane_following_AMPC_sensor_dynamics.pdf
 movefile('lane_following_AMPC_sensor_dynamics.pdf','figure')
+
+print -slane_following_AMPC/Vehicle_Dynamics -dpdf lane_following_AMPC_vehicle_dynamics.pdf
+movefile('lane_following_AMPC_vehicle_dynamics.pdf','figure')

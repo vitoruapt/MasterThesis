@@ -126,24 +126,42 @@ W.~Xi and J.~S. {Baras}, ``Mpc based motion control of car-like vehicle
 M.~Bujarbaruah, X.~Zhang, H.~E. Tseng, and F.~Borrelli, ``Adaptive {MPC} for
   autonomous lane keeping,'' {\em CoRR}, vol.~abs/1806.04335, 2018.
 
-\bibitem{long_tf}
-Y.~{Wang}, Y.~{Bin}, and K.~{Li}, ``Longitudinal acceleration tracking control
-  of low speed heavy-duty vehicles,'' {\em Tsinghua Science and Technology},
-  vol.~13, pp.~636--643, Oct 2008.
+\bibitem{longitudinal_paper}
+S.~{Li}, K.~{Li}, R.~{Rajamani}, and J.~{Wang}, ``Model predictive
+  multi-objective vehicular adaptive cruise control,'' {\em IEEE Transactions
+  on Control Systems Technology}, vol.~19, pp.~556--566, May 2011.
+
+\bibitem{longitudinal_paper2}
+V.~L. {Bageshwar}, W.~L. {Garrard}, and R.~{Rajamani}, ``Model predictive
+  control of transitional maneuvers for adaptive cruise control vehicles,''
+  {\em IEEE Transactions on Vehicular Technology}, vol.~53, pp.~1573--1585,
+  Sep. 2004.
 
 \bibitem{longitudinal}
 J.~Filip, {\em Trajectory Tracking for Autonomous Vehicles}.
-\newblock PhD thesis, 05 2018.
+\newblock PhD thesis, 2018.
 
-\bibitem{rathai}
-K.~Murali Madhavan~Rathai, J.~Amirthalingam, and B.~Jayaraman, ``Robust
-  tube-mpc based lane keeping system for autonomous driving vehicles,''
-  pp.~1--6, 06 2017.
+\bibitem{Falcone2007a}
+P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, H.~E. {Tseng}, and D.~{Hrovat}, ``A
+  model predictive control approach for combined braking and steering in
+  autonomous vehicles,'' in {\em 2007 Mediterranean Conference on Control
+  Automation}, pp.~1--6, June 2007.
+
+\bibitem{Falcone2007b}
+P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, H.~E. {Tseng}, and D.~{Hrovat},
+  ``Predictive active steering control for autonomous vehicle systems,'' {\em
+  IEEE Transactions on Control Systems Technology}, vol.~15, pp.~566--580, May
+  2007.
+
+\bibitem{Falcone2006}
+T.~{Keviczky}, P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, and D.~{Hrovat},
+  ``Predictive control approach to autonomous vehicle steering,'' in {\em 2006
+  American Control Conference}, pp.~6 pp.--, June 2006.
 
 \bibitem{curvature}
-and, ``Trajectory planning for a four-wheel-steering vehicle,'' in {\em
-  Proceedings 2001 ICRA. IEEE International Conference on Robotics and
-  Automation (Cat. No.01CH37164)}, vol.~4, pp.~3320--3325 vol.4, May 2001.
+D.~Wang and F.~Qi, ``Trajectory planning for a four-wheel-steering vehicle,''
+  in {\em Proceedings 2001 ICRA. IEEE International Conference on Robotics and
+  Automation (Cat. No.01CH37164)}, vol.~4, pp.~3320--3325, May 2001.
 
 \bibitem{error_model}
 H.~{Yang}, M.~{Guo}, Y.~{Xia}, and L.~{Cheng}, ``Trajectory tracking for

@@ -94,6 +94,7 @@ pos6 = get(h6,'Position');
 set(h6,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos6(3)*0.8, pos6(4)-40])
 print(h6,'figure\LateralVelocityVsTime_curve','-dpdf','-r0')
 hold off
+pause(2)
 %% Local function: Get data from simulation
 function [e1,e2,delta,accel,vx,vy] = getData(logsout)
 e1 = logsout.getElement('Lateral Deviation');    % lateral deviation

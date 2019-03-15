@@ -35,6 +35,7 @@ pos1 = get(h1,'Position');
 set(h1,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos1(3)*0.8, pos1(4)-40])
 print(h1,'figure\Reference','-dpdf','-r0')
 hold off
+pause(2)
 
 % Desired curvature
 DX = gradient(Xref,0.1);
@@ -53,8 +54,9 @@ grid on
 grid minor
 %title('\textbf{Curvature}','Interpreter','latex');
 xlabel('Time [s]','Interpreter','latex');
-ylabel('Curvature [m]','Interpreter','latex');
-pos2 = get(hcurv,'Position');
-set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos2(3)*0.8, pos2(4)-40])
+ylabel('Curvature','Interpreter','latex');
+poscurv = get(hcurv,'Position');
+set(hcurv,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[poscurv(3)*0.8, poscurv(4)-40])
 print(hcurv,'figure\Curvature','-dpdf','-r0')
 hold off
+pause(2)
