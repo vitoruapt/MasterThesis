@@ -212,15 +212,14 @@ figure(f)
 plot(ympc(:,1),ympc(:,2),'-b');
 
 %% Animation
-% writerObj = VideoWriter('animation3.avi'); % Name it.
-% writerObj.FrameRate = 1/Ts; % How many frames per second.
-% open(writerObj);
+ %writerObj = VideoWriter('animation_nowhite.avi'); % Name it.
+ %writerObj.FrameRate = 1/Ts; % How many frames per second.
+ %open(writerObj);
 
 for k = 1:length(saveSlope) 
     hold on 
-    grid on
+    %grid on
     %grid minor
-    
     % ATLASCAR2 green rectangle
     p = patch([ympc(k,1)-car.length/2 ympc(k,1)-car.length/2 ympc(k,1)+car.length/2 ympc(k,1)+car.length/2], [ympc(k,2)-car.width/2, ympc(k,2)+car.width/2, ympc(k,2)+car.width/2, ympc(k,2)-car.width/2], [0 1 0]);
     rotate(p, [0 0 1], rad2deg(asin(ympc(k,3))), [ympc(k,1)-car.length/2 ympc(k,2)-car.width/2 0]);
@@ -234,8 +233,8 @@ for k = 1:length(saveSlope)
         safe(i).LineStyle='--';
     end
     
-   %  frame = getframe(gcf);
-   %  writeVideo(writerObj, frame);
+     %frame = getframe(gcf);
+     %writeVideo(writerObj, frame);
       % print('figure\braking_4','-dpdf','-r0')
     pause(80/car.V/length(T))
     delete(p)

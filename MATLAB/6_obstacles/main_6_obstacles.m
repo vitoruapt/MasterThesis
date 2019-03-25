@@ -217,9 +217,9 @@ figure(f)
 plot(ympc(:,1),ympc(:,2),'-b');
 
 %% Animation
-% writerObj = VideoWriter('animation.avi'); % Name it.
-% writerObj.FrameRate = 1/Ts; % How many frames per second.
-% open(writerObj);
+ %writerObj = VideoWriter('animation.avi'); % Name it.
+ %writerObj.FrameRate = 1/Ts; % How many frames per second.
+ %open(writerObj);
 
 for k = 1:length(saveSlope) 
     hold on 
@@ -239,8 +239,8 @@ for k = 1:length(saveSlope)
         safe(i).LineStyle='--';
     end
     
-%     frame = getframe(gcf);
-%     writeVideo(writerObj, frame);
+  %   frame = getframe(gcf);
+ %    writeVideo(writerObj, frame);
 %     print('figure\6_obstacles_2','-dpdf','-r0')
     pause(80/car.V/length(T))
     delete(p)

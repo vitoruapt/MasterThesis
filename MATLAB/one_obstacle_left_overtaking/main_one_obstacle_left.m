@@ -181,24 +181,22 @@ mpcverbosity(status);
 % Plot the trajectory of the ATLASCAR2 (blue line) and the third mixed
 % I/O constraints (dashed green lines) during the obstacle avoidance
 % maneuver.
-% figure(f)
+figure(f)
 % for k = 1:length(saveSlope)
 %     X = [0;50;100];
 %     Y = saveSlope(k)*X + saveIntercept(k);
 %     line(X,Y,'LineStyle','--','Color','g' )
 % end    
-% plot(ympc(:,1),ympc(:,2),'-b');
+plot(ympc(:,1),ympc(:,2),'-b');
 % axis([0 ympc(end,1) -road.laneWidth*road.lanes/2 road.laneWidth*road.lanes/2]) % reset axis
 
 %% Animation
-% writerObj = VideoWriter('animation.avi');
-% writerObj.FrameRate = 1/Ts; 
-% open(writerObj);
+ %writerObj = VideoWriter('animation.avi');
+ %writerObj.FrameRate = 1/Ts; 
+ %open(writerObj);
 
 for k = 1:length(saveSlope) 
     hold on 
-    grid on
-    grid minor
     
     % ATLASCAR2 green rectangle
     p = patch([ympc(k,1)-car.length/2 ympc(k,1)-car.length/2 ympc(k,1)+car.length/2 ympc(k,1)+car.length/2], [ympc(k,2)-car.width/2, ympc(k,2)+car.width/2, ympc(k,2)+car.width/2, ympc(k,2)-car.width/2], [0 1 0]);
@@ -211,8 +209,8 @@ for k = 1:length(saveSlope)
     safe.EdgeColor='[1 0 0]';
     safe.LineStyle='--';
 
-%     frame = getframe(gcf); 
-%     writeVideo(writerObj, frame);
+  %   frame = getframe(gcf); 
+ %    writeVideo(writerObj, frame);
     
     pause(80/car.V/length(T))
     delete(p)

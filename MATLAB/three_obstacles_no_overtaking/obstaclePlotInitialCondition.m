@@ -2,7 +2,7 @@ function f = obstaclePlotInitialCondition(car,obstacle,road,N)
 
 % Create figure
 
-f = figure;
+f = figure ('Position',[100, 100, 800, 110], 'PaperPositionMode','auto');
 
 % Starting position of the ATLASCAR2 ('green cross')
 X0 = car.x0(1);
@@ -10,9 +10,8 @@ Y0 = car.x0(2);
 plot(X0,Y0,'gx');
 hold on 
 grid on
-%grid minor
+grid minor
 axis equal
-
 % ATLASCAR2 initialization
 p = patch([X0-car.length/2 X0-car.length/2 X0+car.length/2 X0+car.length/2], [Y0-car.width/2, Y0+car.width/2, Y0+car.width/2, Y0-car.width/2], [0 1 0]); 
 
@@ -44,6 +43,13 @@ line(X,Y,'LineStyle','--','Color','k');
 axis([X0-car.length road.length -road.laneWidth*road.lanes/2 road.laneWidth*road.lanes/2]);
 xlabel('X');
 ylabel('Y');
-title('ATLASCAR2 Moving Obstacle Avoidance');
-
-
+ax = gca;
+outerpos = ax.OuterPosition;
+ti = ax.TightInset; 
+left = outerpos(1) + ti(1);
+bottom = outerpos(2) + ti(2);
+ax_width = outerpos(3) - ti(1) - ti(3);
+ax_height = outerpos(4) - ti(2) - ti(4);
+ax.Position = [left bottom ax_width ax_height];
+pos = get(f,'Position');
+set(f,'PaperPositionMode','Auto','PaperUnits','Points','PaperSize',[pos(3), pos(4)])
