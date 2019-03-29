@@ -1,4 +1,17 @@
 \chapter{Literature Review}
+In this chapter we introduce the literature survey of the various algorithms used for robot navigation. The navigation methods are divided into two kinds of control: global path planning and local motion control. First we analyze these two types of strategies and then we describe the current situation of Model Prediction which is the control method that we have adopted.
+\section{Global Path Searching Method}
+Global path planning uses information about a priori model or a map of the enviroment to evaluate the shortest path that allows the motion from a starting point to the goal position.
+There are a lot of path planning algorithms, like cell decomposition, road map or potential field, where the calculation of a complete trajectory from a start position to one or more goal positions can be computed off-line. However they produce a reliable path if and only if the map of the enviroment is already available. So, this prior knowledge of the space where the robot can move, must be accessible.
+The most famous method developed for global navigation is the Dijkstra algorithm \cite{Dijkstra:1959}. In recent years, an evolution of this method called A* is one of the most used \cite{Hart:1968}: this algorithm gives a complete and optimal global path in static enviroments. However, it was upgraded in D* \cite{Stentz93optimaland} for efficient online searching of a dynamic enviroment, which gives sequences of path points in the known or partially known space. The basic idea of these two methods is the following: minimizing their cost functions, these strategies have the capability of a quickly  redesign when the condistions of the space change, to guarantee an optimal solution of the trajectory from the starting point to the goal location.  
+\subsection{The A* Algorithm}
+\subsection{The D* Algorithm}
+\section{Local Motion Control}
+Local Motion Control is related to the real-time motion of the robot inside in unknown enviroment, where monitoring with the sensors, it can detect where are the obstacles and generate a motion to avoid the collision with them.
+\subsection{Potential Field Method}
+\subsection{Dynamic Window Approach}
+\subsection{VFF Approach for Obstacle Avoidance}
+\section{MPC in Autonomous Driving}
 \cite{4651075}
 \cite{vsantos2010}
 \cite{borelli}

@@ -9,31 +9,39 @@
 \BOOKMARK [1][]{section.1.3}{Context of the Problem and Proposed Approach}{chapter.1}% 9
 \BOOKMARK [1][]{section.1.4}{Thesis Outline}{chapter.1}% 10
 \BOOKMARK [0][]{chapter.2}{Literature Review}{}% 11
-\BOOKMARK [0][]{chapter.3}{Model Predictive Control}{}% 12
-\BOOKMARK [1][]{section.3.1}{Generic Model Predictive Control problem}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.1.1}{Tuning Parameters}{section.3.1}% 14
-\BOOKMARK [2][-]{subsection.3.1.2}{Stability of MPC controller}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.3}{Robustness}{section.3.1}% 16
-\BOOKMARK [1][]{section.3.2}{Adaptive Model Predictive Control}{chapter.3}% 17
-\BOOKMARK [0][]{chapter.4}{Moving Obstacle Avoidance}{}% 18
-\BOOKMARK [1][]{section.4.1}{Problem Formulation}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.1.1}{Car-like Model}{section.4.1}% 20
-\BOOKMARK [1][]{section.4.2}{Design of Adaptive Model Predictive Control}{chapter.4}% 21
-\BOOKMARK [1][]{section.4.3}{Simulation Results}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.3.1}{One Moving Obstacle - Right Overtaking}{section.4.3}% 23
-\BOOKMARK [2][-]{subsection.4.3.2}{Multiple Moving Obstacles}{section.4.3}% 24
-\BOOKMARK [2][-]{subsection.4.3.3}{No Overtaking}{section.4.3}% 25
-\BOOKMARK [2][-]{subsection.4.3.4}{Vehicle Braking and Obstacles Overtaking}{section.4.3}% 26
-\BOOKMARK [0][]{chapter.5}{Lane Following}{}% 27
-\BOOKMARK [1][]{section.5.1}{Problem Formulation}{chapter.5}% 28
-\BOOKMARK [2][-]{subsection.5.1.1}{Longitudinal Dynamics}{section.5.1}% 29
-\BOOKMARK [2][-]{subsection.5.1.2}{Lateral Dynamics}{section.5.1}% 30
-\BOOKMARK [2][-]{subsection.5.1.3}{Augmented Model for Lateral Dynamics}{section.5.1}% 31
-\BOOKMARK [2][-]{subsection.5.1.4}{Overall Model Dynamics}{section.5.1}% 32
-\BOOKMARK [1][]{section.5.2}{Design of Adaptive Model Predictive Control}{chapter.5}% 33
-\BOOKMARK [1][]{section.5.3}{Simulation Results}{chapter.5}% 34
-\BOOKMARK [2][-]{subsection.5.3.1}{Double Lane Change Path}{section.5.3}% 35
-\BOOKMARK [2][-]{subsection.5.3.2}{Sinusoidal Path}{section.5.3}% 36
-\BOOKMARK [2][-]{subsection.5.3.3}{Circular/Elliptic Path}{section.5.3}% 37
-\BOOKMARK [0][]{chapter.6}{Conclusions and Future Work}{}% 38
-\BOOKMARK [0][]{chapter*.38}{Bibliography}{}% 39
+\BOOKMARK [1][]{section.2.1}{Global Path Searching Method}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{The A* Algorithm}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{The D* Algorithm}{section.2.1}% 14
+\BOOKMARK [1][]{section.2.2}{Local Motion Control}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Potential Field Method}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Dynamic Window Approach}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.3}{VFF Approach for Obstacle Avoidance}{section.2.2}% 18
+\BOOKMARK [1][]{section.2.3}{MPC in Autonomous Driving}{chapter.2}% 19
+\BOOKMARK [0][]{chapter.3}{Model Predictive Control}{}% 20
+\BOOKMARK [1][]{section.3.1}{Generic Model Predictive Control problem}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.1.1}{Tuning Parameters}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.2}{Stability of MPC controller}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.3}{Robustness}{section.3.1}% 24
+\BOOKMARK [1][]{section.3.2}{Adaptive Model Predictive Control}{chapter.3}% 25
+\BOOKMARK [0][]{chapter.4}{Moving Obstacle Avoidance}{}% 26
+\BOOKMARK [1][]{section.4.1}{Problem Formulation}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.1.1}{Car-like Model}{section.4.1}% 28
+\BOOKMARK [1][]{section.4.2}{Design of Adaptive Model Predictive Control}{chapter.4}% 29
+\BOOKMARK [1][]{section.4.3}{Simulation Results}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.3.1}{One Moving Obstacle - Right Overtaking}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.2}{Multiple Moving Obstacles}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.3}{No Overtaking}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.4}{Vehicle Braking and Obstacles Overtaking}{section.4.3}% 34
+\BOOKMARK [0][]{chapter.5}{Lane Following}{}% 35
+\BOOKMARK [1][]{section.5.1}{Problem Formulation}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.1.1}{Longitudinal Dynamics}{section.5.1}% 37
+\BOOKMARK [2][-]{subsection.5.1.2}{Lateral Dynamics}{section.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.1.3}{Augmented Model for Lateral Dynamics}{section.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.1.4}{Overall Model Dynamics}{section.5.1}% 40
+\BOOKMARK [1][]{section.5.2}{Design of Adaptive Model Predictive Control}{chapter.5}% 41
+\BOOKMARK [1][]{section.5.3}{Simulation Results}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.3.1}{Double Lane Change Path}{section.5.3}% 43
+\BOOKMARK [2][-]{subsection.5.3.2}{Sinusoidal Path}{section.5.3}% 44
+\BOOKMARK [2][-]{subsection.5.3.3}{Circular/Elliptic Path}{section.5.3}% 45
+\BOOKMARK [0][]{chapter.6}{Conclusions and Future Work}{}% 46
+\BOOKMARK [0][]{chapter*.38}{Bibliography}{}% 47

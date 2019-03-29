@@ -111,7 +111,11 @@ In this section, we outline the thesis organization:
 
 Chapter 1 is used to introduce the thesis focus areas of autonomous vehicle technology. In particular the ATLAS project and examples of autonomous navigation projects are presented. Moreover the context of the problem and the objectives to be achieved are carried out.
 
-Chapter 2 
+Chapter 2 focuses on some of the more theoretical aspects of this dissertation with a brief introduction to path planning, a literature review related to local navigation algorithms with a special section centred on MPC control strategy for obstacle avoidance and tracking.
 
+In Chapter 3, the theory of Model Predictive Control is discussed in detail to highlight working principle and its characteristics (tuning parameters, stability and robustness). In particular for this work we used an advanced control strategy based on this paradigm called Adaptive MPC that uses a fixed model structure, but allows the model parameters to evolve with the time.
 
+Chapter 4 is used to present the Obstacle Avoidance method that we have developted. First we introduced the case-study model, then we designed the decision making alghorithm and the controller. Finally we verified the control strategy in different scenarios.
 
+Chapter 5 focuses on the Lane Following alghoritm based on Adaptive Model Predictive Control. We considered a different model in which we have applied the bicycle model of lateral vehicle dynamics and approximated the longitudinal dynamics using a first order transfer function.
+Then we developed the overall control scheme considering different paths to follow.

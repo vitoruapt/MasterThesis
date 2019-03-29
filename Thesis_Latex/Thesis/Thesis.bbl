@@ -102,6 +102,20 @@ V.~Santos, ``{ATLASCAR}: A sample of the quests and concerns for autonomous
   Selected Papers} (O.~Gusikhin and K.~Madani, eds.), Lecture Notes in
   Electrical Engineering, Springer International Publishing, 2019.
 
+\bibitem{Dijkstra:1959}
+E.~W. Dijkstra, ``A note on two problems in connexion with graphs,'' {\em
+  Numer. Math.}, vol.~1, pp.~269--271, Dec. 1959.
+
+\bibitem{Hart:1968}
+P.~E. {Hart}, N.~J. {Nilsson}, and B.~{Raphael}, ``A formal basis for the
+  heuristic determination of minimum cost paths,'' {\em IEEE Transactions on
+  Systems Science and Cybernetics}, vol.~4, pp.~100--107, July 1968.
+
+\bibitem{Stentz93optimaland}
+A.~Stentz and I.~C. Mellon, ``Optimal and efficient path planning for unknown
+  and dynamic environments,'' {\em International Journal of Robotics and
+  Automation}, vol.~10, pp.~89--100, 1993.
+
 \bibitem{4651075}
 Y.~{Kuwata}, G.~A. {Fiore}, J.~{Teo}, E.~{Frazzoli}, and J.~P. {How}, ``Motion
   planning for urban driving using rrt,'' in {\em 2008 IEEE/RSJ International
