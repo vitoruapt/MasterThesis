@@ -1,0 +1,82 @@
+\chapter{Literature Review}
+In this chapter we introduce the literature survey of the various algorithms used for robot navigation. The navigation methods are divided into two kinds of control: global path planning and local motion control. First we analyze these two types of strategies and then we describe the current situation of Model Prediction which is the control method that we have adopted.
+\section{Global Path Searching Method}
+Global path planning uses information about a priori model or a map of the enviroment to evaluate the shortest path that allows the motion from a starting point to the goal position.
+There are a lot of path planning algorithms, like cell decomposition, road map or potential field, where the calculation of a complete trajectory from a start position to one or more goal positions can be computed off-line. However they produce a reliable path if and only if the map of the enviroment is already available. So, this prior knowledge of the space where the robot can move, must be accessible.
+The most famous method developed for global navigation is the Dijkstra algorithm \cite{Dijkstra:1959}. In recent years, an evolution of this method called A* is one of the most used \cite{Hart:1968}: this algorithm gives a complete and optimal global path in static enviroments. However, it was upgraded in D* \cite{Stentz93optimaland} for efficient online searching of a dynamic enviroment, which gives sequences of path points in the known or partially known space. The basic idea of these two methods is the following: minimizing their cost functions, these strategies have the capability of a quickly  redesign when the conditions of the space change, to guarantee an optimal solution of the trajectory from the starting point to the goal location. Moreover it has been shown that the D* algorithm is much more efficent than the A* method. Now we will analyze the general structure of these two algorithms and the practical operation based on a representation of an environment grid around the vehicle. However these methods are not sufficient to create a complete robot system navigation. We will see later that if the information of the map is not yet available, the system has to use onboard sensors to define a path and avoid obstacles.
+
+\subsection{The A* Algorithm}
+The algorithm A*, based on a graph representation, examines, step by step, the nodes that have the best score. A* uses the following data structures to keep track of the execution status: the first one is a list of nodes already visited while the second one is a priority queue containing the nodes to be visited. During execution, each node is associated with multiple values: gScore, hScore, fScore. In mathematical terms, given the current node $n$, the starting node $p$ and the solution node $s$, we define the values:
+\begin{itemize}
+	\item $gScore = g(p,n)$ that evaluates the actual cost of the path that separates the $p$ (start) and $n$ (current) nodes.
+	\item $hScore = h(s,n)$ that calculates an estimate of the cost of the path between the $s$ (solution) and $n$ (current) nodes; this is also called Euristic function because it is associated to an Euristic algorithm that allows A* to find rapidly a solution.
+	\item $fScore = gScore + hScore$ which is the total cost. 
+\end{itemize}
+
+The structure of the A* method can be summarized in 8 steps as follows:
+\begin{enumerate}
+	\item Insertion in the queue of the starting node with priority equal to the fScore;
+	\item If the queue is empty, the algorithm returns that the solution cannot be found;
+	\item Extraction of the best node to visit (priority with lower value);
+	\item If the extracted node has zero $hScore$, the algorithm terminates: solution found;
+	\item Creation of child nodes;
+	\item Deletion of child nodes already visited and suboptimal;
+	\item Inserting the remaining nodes in the queue with priority equal to the fScore;
+	\item Return to step 2.
+\end{enumerate}
+Finally it is possible to state that the major limitation of this algorithm is in the absence of constraints on the search depth.
+\subsection{The D* Algorithm}
+Before describing how the D* algorithm works, we have to introduce how the nodes are marked (infact also this method mantains a list of nodes):
+\begin{itemize}
+	\item NEW, it has never been placed on the list;
+	\item OPEN, it is currently on the list;
+	\item CLOSED, it is no longer on the list;
+	\item RAISE/LOWER, its cost is higher/lower than the last time it was on the list;
+\end{itemize}
+
+This method works by iteratively choosing a node from the list and evaluating it; then the node's changes are propagated to all of the neighboring nodes and they are placed on the list. This first process is called expansion. In particular we can emphasize that the D* algorithm begins by searching backwards from the goal node. After being expanded, each node has a backpointer which refers to next node leading to the target where the exact cost is known by each node.
+When an obstacle is detected along the path, all the points that are thwarted, are again placed on the list marked as RAISED. Hence, the method examines RAISED's neighbors to try to reduce the node's cost; otherwise it increases the cost of the RAISED node. If not, the nodes' descendants, which have backpointers, are marked as RAISE. These nodes are calculated and the RAISE state is propagated forming a wave. If it is possible to reduce a RAISED node, its backpointer is updated and the LOWER state is passed to its neighbors. These two waves cannot touch other points so the algorithm worked only on the nodes that are affected by the cost change.
+
+\section{Local Motion Control}
+Local Motion Control is related to the real-time motion of the robot inside in unknown enviroment, where monitoring with the sensors, it can detect where are the obstacles and create a motion to avoid the collision with them. One of the advantages of the local navigation systems is the ability of generating a new path every time the space changes, for example when multiple moving obstacles are identified thanks to the sensors that captured the information in the enviroments. These methods can be divided into directional and velocity space-based approaches.
+
+The most famous directional approaches (generate a direction for the robot/vehicle) are:
+\begin{itemize}
+	\item Potential field method \cite{Khatib1986}, where the robot is represented as a particle and it is subject to forces that are produced by the surrounding environment;
+	\item Virtual Force Field which expands to Vector Field Histogram \cite{Borenstein1991}, where it utilizes a statistical representation of the vehicle's space through the so-called histogram grid;
+	\item Nearness Diagram algorithm \cite{Montano2000}, which  performs a high level information extraction and interpretation of the environment, used to generate the motion commands;
+\end{itemize}
+while the velocity space approaches, that manage the robot/vehicle considering translation and rotation velocities, are:
+\begin{itemize}
+	\item Curvature Velocity method \cite{Simmons1996} which formulates the problem as one of constrained optimization in velocity space;
+	\item Dynamic Window method \cite{Fox1997} which is divided in two main phases; in first one, it generates a valid search space while in the second one it selects an optimal solution in the search space.
+\end{itemize}
+Now we will analyze the general structure of some of these algorithms. In particular it is important to underline that to create a complete navigation system it is necessary that there are both local algorithms and global methods such as those seen previously.
+
+\subsection{Potential Field Method}
+The first local method that we analyzed is the Potential Field; in this strategy the robot/vehicle is represented as a particle that moves in the workspace and it is affected by attractive and repulsive forces that are generated by the surrounding environment. In particular the target propagates an attractive force while the obstacles transmit a repulsive forces. The latter can be evaluated considering only the distance from the obstacles and the instantaneous vehicle velocity and accelerations. Combining these two forces it is possible to compute the trajectory of the robot at every time instant. The total force can be used as input to control the trajectory of the vehicle.
+\subsection{Curvature Velocity Method}
+Another obstacle avoidance problem can be solved applying the
+Curvature Velocity Method where the problem becomes a constrained optimization in the velocity space of a syncro-drive steered robot. This strategy tries to maximize
+the following function:
+\begin{equation}
+\label{eqn:CVM}
+	f(tv,rv)=\alpha_1\text{speed}(tv)+\alpha_2\text{dist}(tv,rv)+\alpha_3\text{head}(rv)
+\end{equation}
+where $tv$ and $rv$ are respectively the robot’s translational and rotational velocities while $\text{speed}(tv)$ represents the speed of the vehicle, $\text{head}(rv)$ is the heading of the robot and $\text{dist}(tv,rv)$ is distance to a set of obstacles within a given limit. These last three terms can be expressed as follows:
+\begin{equation}
+	\text{speed}(tv) = \frac{tv}{tv_{\text{max}}}\qquad 
+	\text{head}(tv) = 1-\frac{\theta_g-rvT_c}{\pi}\qquad
+	\text{dist}(tv,rv)=\frac{D_{\text{limit}}(tv,rv,OBS)}{\text{limit}}.
+\end{equation}
+At each sampling time $T_c$, the constrained optimization problem is solved choosing the transational and rotational velocities to adjuste $\alpha_1,\alpha_2$ and $\alpha_3$ values. In order to limit the search space of possible curvatures of the vehicle in velocity space, the value $D_\text{limit}$ is bounded and discretized. Finally we can classify these intervals in disjoint, contained by, contains or overlapping and they are fundamentals to compute optimal values for the distance function and consequently for the equation (\ref{eqn:CVM}).
+
+\subsection{Dynamic Window method}
+The last obstacle avoidance method that we have analyzed is called Dynamic Window approach; this is a velocity-based local planner that evaluates the optimal speed for a robot rquired to reach the target without colliding. In this algorithm the cartesian goal is translated into a velocity command for a vehicle. First, we can evaluate the desired velocity to the target based on our current position, and the destination; then we select the ammissible linear and angular velocities given the robots dynamics. From all the allowable velocities we determine the closest obstacle for the proposed vehicle velocity. If the distance to the nearest obstacle is within the robots breaking distance and the vehicle is not able to stop in time, we will reject this proposed robot speed.
+Otherwise, we can evaluate the required values for the cost function. If the calculated cost is better than anything else so far, then we set this as our best option. Finally, the desired trajectory is set to the best proposed velocity.
+Hence, this method calculate a valid velocity search space and select the best speed that maximizes the robots clearance and obtains the closest heading to the target.
+
+\section{MPC in Autonomous Driving}
+The algorithms we have developed in this project have a different approach than those mentioned above. In this section we have reported some algorithms based on the MPC used in the field of autonomous navigation. This literature review was fundamental to understand what methods exist and the strategies adopted to solve certain problems.
+In \cite{Frasch2013} the authors addressed the problem of real-time obstacle avoidance on low-friction road surfaces using spatial Nonlinear Model Predictive Control (NMPC). They considered a nonlinear four wheel vehicle dynamics model that includes load transfer and they also used the ACADO Code Generation tool to generate NMPC algorithms based on the real-time iteration scheme for dynamic optimization. An obstacle avoidance problem solved with an MPC approach that integrates the artificial potential field method is discussed in \cite{Manzoor2015} where the controller is combined with the feedback linearization in order to manage the control problem of a single robot with unicycle kinematics and collision avoidance function. However in many traffic emergency situations a collision cannot be prevented by braking alone. This is the reason why in \cite{Werling2012} the authors proposed an obstacle avoidance method based on the NMPC paradigm that simultaneously optimizes steering and braking. In \cite{Multi2017} a path planning and tracking framework is considered to maintain a collision-free path for autonomous vehicles. In particular to track the planned
+trajectory, the proposed controller formulated the tracking task as a multiconstrained model predictive control (MMPC) problem and evaluated the steering angle to prevent the robot  from colliding with a moving obstacle vehicle. Finally we considered another driver assistance method for obstacle avoidance based on constrained model predictive control. The algorithm also in this case was reduced to a convex quadratic programming problem. \cite{Wada2017}. All these methods, based on the MPC paradigm, allowed us to define two different situations where the use this type of controller is required. The first situation we have faced is a collision avoidance problem considering moving obstacles. In the second scenario we have instead built a system that allows tracking of the lane. These two approaches, faced earlier, have been solved through a new type of MPC called Adaptive MPC.

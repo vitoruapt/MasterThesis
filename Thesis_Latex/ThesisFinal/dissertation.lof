@@ -1,0 +1,37 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces Some of the ATLAS project small scale platforms (adapted from \cite {Pereira2012}).\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2}{\ignorespaces The car used in ATLASCAR, based on Ford Escort Station Wagon of 1998 (adapted from \cite {Pereira2012}).\relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {3}{\ignorespaces The vehicle used in ATLASCAR2, based on an electric car, a Mitsubishi iMiEV of 2015 (adapted from \cite {Ricardo:Thesis:2018}).\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Some of the Waymo/Google prototypes tested across multiple locations in the Unided States in recent years.\relax }}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {5}{\ignorespaces BRAiVE prototype developted by VisLab, based on a Hyundai Sonata (adapted from \cite {Broggi2013}).\relax }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {6}{\ignorespaces Navya Shuttle developted in 2016 by Navya Group in France.\relax }}{12}{figure.caption.10}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A discrete Model Predictive Control scheme adapted from \cite {mpctoolbox}.\relax }}{21}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Problem description of collision avoidance on a road with only two lanes.\relax }}{29}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Bicycle model of a car (adapted from \cite {siciliano}).\relax }}{31}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Behaviour planning conditional flowchart.\relax }}{36}{figure.caption.14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Constraints in the case of left overtaking.\relax }}{38}{figure.caption.15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Overall procedure scheme moving obstacle avoidance.\relax }}{39}{figure.caption.16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Simulation of right overtaking with one moving obstacle that moves in the same direction as the vehicle.\relax }}{41}{figure.caption.17}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of right overtaking of one moving obstacle illustrated in Figure \ref {fig:obstacleAvoidance_one_obstacle}.\relax }}{44}{figure.caption.18}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Simulations of overtaking with $N = 2,3,4$ moving obstacles that drive in the opposite direction with respect to the ATLASCAR2.\relax }}{45}{figure.caption.19}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulation of overtaking with six moving obstacles that moves in the opposite direction with respect the vehicle.\relax }}{46}{figure.caption.20}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of overtaking with six moving obstacles illustrated in Figure \ref {fig:obstacleAvoidance_six_obstacles}.\relax }}{47}{figure.caption.21}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Simulation of no overtaking with three moving obstacles that move in the same direction as the vehicle.\relax }}{48}{figure.caption.22}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of no overtaking with three moving obstacles illustrated in Figure \ref {fig:obstacleAvoidance_no_overtaking}.\relax }}{50}{figure.caption.23}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Simulation of braking and overtaking obstacles.\relax }}{51}{figure.caption.24}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Time signals of the ATLASCAR2 in the simulation of braking and overtaking in the situation illustrated in Figure \ref {fig:braking}.\relax }}{53}{figure.caption.25}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Problem description of a lane following system.\relax }}{55}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Overall procedure scheme lane following.\relax }}{63}{figure.caption.27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Vehicle Dynamics of the overall scheme lane following.\relax }}{65}{figure.caption.28}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sensor Dynamics of the overall scheme lane following.\relax }}{67}{figure.caption.29}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Desired double lane change path and its curvature of the ATLASCAR2 in a simulation of \SI {10}{s} with initial position in $(0,0)$.\relax }}{69}{figure.caption.31}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Time signals of the ATLASCAR2 in the simulation with a double lane change path.\relax }}{70}{figure.caption.32}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Desired sinusoidal path and its curvature of the ATLASCAR2 in a simulation of \SI {20}{s} with initial position in $(0,0)$.\relax }}{72}{figure.caption.33}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Time signals of the ATLASCAR2 in the simulation with a sinusoidal path.\relax }}{74}{figure.caption.34}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Desired elliptic path and its curvature of the ATLASCAR2 in a simulation of \SI {20}{s} with initial position in $(0,30)$.\relax }}{75}{figure.caption.35}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Time signals of the ATLASCAR2 in the simulation with an elliptic path.\relax }}{77}{figure.caption.36}
+\addvspace {10\p@ }

@@ -116,6 +116,30 @@ A.~Stentz and I.~C. Mellon, ``Optimal and efficient path planning for unknown
   and dynamic environments,'' {\em International Journal of Robotics and
   Automation}, vol.~10, pp.~89--100, 1993.
 
+\bibitem{Khatib1986}
+O.~Khatib, {\em The Potential Field Approach And Operational Space Formulation
+  In Robot Control}, pp.~367--377.
+\newblock Boston, MA: Springer US, 1986.
+
+\bibitem{Borenstein1991}
+J.~Borenstein and Y.~Koren, ``The vector field histogram -- fast obstacle
+  avoidance for mobile robots,'' {\em IEEE JOURNAL OF ROBOTICS AND AUTOMATION},
+  vol.~7, pp.~278--288, 1991.
+
+\bibitem{Montano2000}
+J.~Minguez and L.~Montano, ``Nearness diagram navigation (nd): a new real time
+  collision avoidance approach,'' vol.~3, pp.~2094 -- 2100 vol.3, 02 2000.
+
+\bibitem{Simmons1996}
+R.~{Simmons}, ``The curvature-velocity method for local obstacle avoidance,''
+  in {\em Proceedings of IEEE International Conference on Robotics and
+  Automation}, vol.~4, pp.~3375--3382 vol.4, April 1996.
+
+\bibitem{Fox1997}
+D.~{Fox}, W.~{Burgard}, and S.~{Thrun}, ``The dynamic window approach to
+  collision avoidance,'' {\em IEEE Robotics Automation Magazine}, vol.~4,
+  pp.~23--33, March 1997.
+
 \bibitem{4651075}
 Y.~{Kuwata}, G.~A. {Fiore}, J.~{Teo}, E.~{Frazzoli}, and J.~P. {How}, ``Motion
   planning for urban driving using rrt,'' in {\em 2008 IEEE/RSJ International

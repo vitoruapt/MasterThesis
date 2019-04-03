@@ -1,0 +1,232 @@
+\begin{thebibliography}{10}
+
+\bibitem{Skoda:Thesis:2016}
+J.~Skoda, ``{3D Navigation for Mobile Robots},'' Master's thesis, Charles
+  University, Prague, 2016.
+
+\bibitem{Bai2015}
+J.~Bai, ``{Robot Navigation Using Velocity Potential Fields and Particle
+  Filters for Obstacle Avoidance},'' Master's thesis, University of Ottawa,
+  Ottawa, 2015.
+
+\bibitem{Gruyer2017}
+D.~Gruyer, V.~Magnier, K.~Hamdi, L.~Claussmann, O.~Orfila, and
+  A.~Rakotonirainy, ``{Perception, information processing and modeling:
+  Critical stages for autonomous driving applications},'' {\em Annual Reviews
+  in Control}, vol.~44, pp.~323--341, 2017.
+
+\bibitem{world2015global}
+WHO, {\em {Global Status Report on Road Safety 2015}}.
+\newblock Nonserial Publication, World Health Organization, 2015.
+
+\bibitem{Katrakazas2015}
+C.~Katrakazas, M.~Quddus, W.~H. Chen, and L.~Deka, ``{Real-time motion planning
+  methods for autonomous on-road driving: State-of-the-art and future research
+  directions},'' {\em Transportation Research Part C: Emerging Technologies},
+  vol.~60, pp.~416--442, 2015.
+
+\bibitem{vsantos2010}
+V.~Santos, J.~Almeida, E.~Avila, D.~Gameiro, M.~Oliveira, R.~Pascoal,
+  R.~Sabino, and P.~Stein, ``{ATLASCAR} - technologies for a computer assisted
+  driving system on board a common automobile,'' in {\em 13th International
+  {IEEE} Conference on Intelligent Transportation Systems, Funchal, Madeira,
+  Portugal, 19-22 September 2010}, pp.~1421--1427, 2010.
+
+\bibitem{Pereira2012}
+J.~F. Pereira, ``{Estacionamento aut{\'{o}}nomo usando perce{\c{c}}{\~{a}}o 3D
+  Autonomous parking using 3D perception},'' disserta\c{c}\~ao de mestrado,
+  Departamento de Engenharia Mec\^anica, Universidade de Aveiro, 2012.
+
+\bibitem{Azevedo2014}
+R.~F. Cabral~de Azevedo, ``{Sensor Fusion of LASER and Vision in Active
+  Pedestrian Detection},'' disserta\c{c}\~ao de mestrado, Departamento de
+  Engenharia Mec\^anica, Universidade de Aveiro, 2014.
+
+\bibitem{Silva2016}
+D.~T. Vieira~da Silva, ``{Calibra\c{c}\~ao Multissensorial e Fus\~ao de Dados
+  Utilizando LIDAR e Vis\~ao},'' disserta\c{c}\~ao de mestrado, Departamento de
+  Engenharia Mec\^anica, Universidade de Aveiro, 2016.
+
+\bibitem{Madureira2017}
+J.~D. {Madureira Correia}, ``{Unidade de Perce\c{c}\~ao Visual e de
+  Profundidade Para o Atlascar2},'' disserta\c{c}\~ao de mestrado, Departamento
+  de Engenharia Mec\^anica, Universidade de Aveiro, 2017.
+
+\bibitem{Ricardo:Thesis:2018}
+R.~Silva, ``{ATLASCAR2 Local Navigation for Autonomous Driving and Driver
+  Assistance},'' Master's thesis, Universidade de Aveiro, Aveiro, 2018.
+
+\bibitem{DColumbia}
+Wikipedia, ``Self-driving car.''
+  \url{https://en.wikipedia.org/wiki/Self-driving\_car}, 2019.
+
+\bibitem{Bimbraw2015}
+K.~Bimbraw, ``{Autonomous Cars: Past, Present and Future - A Review of the
+  Developments in the Last Century, the Present Scenario and the Expected
+  Future of Autonomous Vehicle Technology},'' {\em Proceedings of the 12th
+  International Conference on Informatics in Control, Automation and Robotics},
+  no.~August, pp.~191--198, 2015.
+
+\bibitem{waymoh}
+{Waymo}, ``Waymo - journey.'' \url{https://waymo.com/journey/}, 2018.
+
+\bibitem{waymot}
+{Waymo}, ``Waymo - technology.'' \url{https://waymo.com/tech/}, 2018.
+
+\bibitem{Broggi2010}
+A.~{Broggi}, P.~{Medici}, E.~{Cardarelli}, P.~{Cerri}, A.~{Giacomazzo}, and
+  N.~{Finardi}, ``Development of the control system for the vislab
+  intercontinental autonomous challenge,'' in {\em 13th International IEEE
+  Conference on Intelligent Transportation Systems}, pp.~635--640, Sep. 2010.
+
+\bibitem{Broggi2013}
+A.~Broggi, M.~Buzzoni, S.~Debattisti, P.~Grisleri, M.~C. Laghi, P.~Medici, and
+  P.~Versari, ``{Extensive tests of autonomous driving technologies},'' {\em
+  IEEE Transactions on Intelligent Transportation Systems}, vol.~14, no.~3,
+  pp.~1403--1415, 2013.
+
+\bibitem{Zhang2014}
+R.~Zhang and M.~Pavone, ``Control of robotic mobility-on-demand systems: A
+  queueing-theoretical perspective,'' {\em The International Journal of
+  Robotics Research}, vol.~35, no.~1-3, pp.~186--203, 2016.
+
+\bibitem{vsantos2019}
+V.~Santos, ``{ATLASCAR}: A sample of the quests and concerns for autonomous
+  cars,'' in {\em Informatics in Control, Automation and Robotics: 14th
+  International Conference, ICINCO 2017 Madrid, Spain, July 26-28, 2017 Revised
+  Selected Papers} (O.~Gusikhin and K.~Madani, eds.), Lecture Notes in
+  Electrical Engineering, Springer International Publishing, 2019.
+
+\bibitem{Dijkstra:1959}
+E.~W. Dijkstra, ``A note on two problems in connexion with graphs,'' {\em
+  Numer. Math.}, vol.~1, pp.~269--271, Dec. 1959.
+
+\bibitem{Hart:1968}
+P.~E. {Hart}, N.~J. {Nilsson}, and B.~{Raphael}, ``A formal basis for the
+  heuristic determination of minimum cost paths,'' {\em IEEE Transactions on
+  Systems Science and Cybernetics}, vol.~4, pp.~100--107, July 1968.
+
+\bibitem{Stentz93optimaland}
+A.~Stentz and I.~C. Mellon, ``Optimal and efficient path planning for unknown
+  and dynamic environments,'' {\em International Journal of Robotics and
+  Automation}, vol.~10, pp.~89--100, 1993.
+
+\bibitem{Khatib1986}
+O.~Khatib, {\em The Potential Field Approach And Operational Space Formulation
+  In Robot Control}, pp.~367--377.
+\newblock Boston, MA: Springer US, 1986.
+
+\bibitem{Borenstein1991}
+J.~Borenstein and Y.~Koren, ``The vector field histogram -- fast obstacle
+  avoidance for mobile robots,'' {\em IEEE JOURNAL OF ROBOTICS AND AUTOMATION},
+  vol.~7, pp.~278--288, 1991.
+
+\bibitem{Montano2000}
+J.~Minguez and L.~Montano, ``Nearness diagram navigation: a new real time
+  collision avoidance approach,'' vol.~3, pp.~2094 -- 2100, February 2000.
+
+\bibitem{Simmons1996}
+R.~{Simmons}, ``The curvature-velocity method for local obstacle avoidance,''
+  in {\em Proceedings of IEEE International Conference on Robotics and
+  Automation}, vol.~4, pp.~3375--3382 vol.4, April 1996.
+
+\bibitem{Fox1997}
+D.~{Fox}, W.~{Burgard}, and S.~{Thrun}, ``The dynamic window approach to
+  collision avoidance,'' {\em IEEE Robotics Automation Magazine}, vol.~4,
+  pp.~23--33, March 1997.
+
+\bibitem{Frasch2013}
+J.~V. {Frasch}, A.~{Gray}, M.~{Zanon}, H.~J. {Ferreau}, S.~{Sager},
+  F.~{Borrelli}, and M.~{Diehl}, ``An auto-generated nonlinear mpc algorithm
+  for real-time obstacle avoidance of ground vehicles,'' in {\em 2013 European
+  Control Conference (ECC)}, pp.~4136--4141, July 2013.
+
+\bibitem{Manzoor2015}
+M.~F. {Manzoor} and Q.~{Wu}, ``Control and obstacle avoidance of wheeled mobile
+  robot,'' in {\em 2015 7th International Conference on Computational
+  Intelligence, Communication Systems and Networks}, pp.~235--240, June 2015.
+
+\bibitem{Werling2012}
+M.~{Werling} and D.~{Liccardo}, ``Automatic collision avoidance using
+  model-predictive online optimization,'' in {\em 2012 IEEE 51st IEEE
+  Conference on Decision and Control (CDC)}, pp.~6309--6314, Dec 2012.
+
+\bibitem{Multi2017}
+J.~{Ji}, A.~{Khajepour}, W.~W. {Melek}, and Y.~{Huang}, ``Path planning and
+  tracking for vehicle collision avoidance based on model predictive control
+  with multiconstraints,'' {\em IEEE Transactions on Vehicular Technology},
+  vol.~66, pp.~952--964, Feb 2017.
+
+\bibitem{Wada2017}
+N.~{Wada} and T.~{Matsumoto}, ``Driver assistance for collision avoidance by
+  constrained mpc,'' in {\em 2017 56th Annual Conference of the Society of
+  Instrument and Control Engineers of Japan (SICE)}, pp.~90--93, Sep. 2017.
+
+\bibitem{mpctoolbox}
+A.~Bemporad, M.~Morari, and N.~L. Ricker, ``Model predictive control toolbox:
+  Getting started guide, the math works.''
+  \url{https://www.mathworks.com/help/pdf_doc/mpc/mpc_ug.pdf}, 2018.
+
+\bibitem{siciliano}
+B.~Siciliano, L.~Sciavicco, L.~Villani, and G.~Oriolo, {\em Robotics:
+  Modelling, Planning and Control}.
+\newblock Springer Publishing Company, Incorporated, 1st~ed., 2008.
+
+\bibitem{safety}
+T.~{Xu} and H.~{Yuan}, ``Autonomous vehicle active safety system based on path
+  planning and predictive control,'' in {\em 2016 35th Chinese Control
+  Conference (CCC)}, pp.~8889--8895, July 2016.
+
+\bibitem{swarms}
+W.~Xi and J.~S. {Baras}, ``Mpc based motion control of car-like vehicle
+  swarms,'' in {\em 2007 Mediterranean Conference on Control Automation},
+  pp.~1--6, June 2007.
+
+\bibitem{Adaptive_Mpc_Lane_keeping_borelli}
+M.~Bujarbaruah, X.~Zhang, H.~E. Tseng, and F.~Borrelli, ``Adaptive {MPC} for
+  autonomous lane keeping,'' {\em CoRR}, vol.~abs/1806.04335, 2018.
+
+\bibitem{longitudinal_paper}
+S.~{Li}, K.~{Li}, R.~{Rajamani}, and J.~{Wang}, ``Model predictive
+  multi-objective vehicular adaptive cruise control,'' {\em IEEE Transactions
+  on Control Systems Technology}, vol.~19, pp.~556--566, May 2011.
+
+\bibitem{longitudinal_paper2}
+V.~L. {Bageshwar}, W.~L. {Garrard}, and R.~{Rajamani}, ``Model predictive
+  control of transitional maneuvers for adaptive cruise control vehicles,''
+  {\em IEEE Transactions on Vehicular Technology}, vol.~53, pp.~1573--1585,
+  Sep. 2004.
+
+\bibitem{longitudinal}
+J.~Filip, ``Trajectory tracking for autonomous vehicles,'' Master's thesis,
+  Czech Technical University, 2018.
+
+\bibitem{Falcone2007a}
+P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, H.~E. {Tseng}, and D.~{Hrovat}, ``A
+  model predictive control approach for combined braking and steering in
+  autonomous vehicles,'' in {\em 2007 Mediterranean Conference on Control
+  Automation}, pp.~1--6, June 2007.
+
+\bibitem{Falcone2007b}
+P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, H.~E. {Tseng}, and D.~{Hrovat},
+  ``Predictive active steering control for autonomous vehicle systems,'' {\em
+  IEEE Transactions on Control Systems Technology}, vol.~15, pp.~566--580, May
+  2007.
+
+\bibitem{Falcone2006}
+T.~{Keviczky}, P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, and D.~{Hrovat},
+  ``Predictive control approach to autonomous vehicle steering,'' in {\em 2006
+  American Control Conference}, pp.~6 pp.--, June 2006.
+
+\bibitem{curvature}
+D.~Wang and F.~Qi, ``Trajectory planning for a four-wheel-steering vehicle,''
+  in {\em Proceedings 2001 ICRA. IEEE International Conference on Robotics and
+  Automation (Cat. No.01CH37164)}, vol.~4, pp.~3320--3325, May 2001.
+
+\bibitem{error_model}
+H.~{Yang}, M.~{Guo}, Y.~{Xia}, and L.~{Cheng}, ``Trajectory tracking for
+  wheeled mobile robots via model predictive control with softening
+  constraints,'' {\em IET Control Theory Applications}, vol.~12, no.~2,
+  pp.~206--214, 2018.
+
+\end{thebibliography}

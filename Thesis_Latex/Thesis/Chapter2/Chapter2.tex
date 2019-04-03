@@ -3,11 +3,25 @@ In this chapter we introduce the literature survey of the various algorithms use
 \section{Global Path Searching Method}
 Global path planning uses information about a priori model or a map of the enviroment to evaluate the shortest path that allows the motion from a starting point to the goal position.
 There are a lot of path planning algorithms, like cell decomposition, road map or potential field, where the calculation of a complete trajectory from a start position to one or more goal positions can be computed off-line. However they produce a reliable path if and only if the map of the enviroment is already available. So, this prior knowledge of the space where the robot can move, must be accessible.
-The most famous method developed for global navigation is the Dijkstra algorithm \cite{Dijkstra:1959}. In recent years, an evolution of this method called A* is one of the most used \cite{Hart:1968}: this algorithm gives a complete and optimal global path in static enviroments. However, it was upgraded in D* \cite{Stentz93optimaland} for efficient online searching of a dynamic enviroment, which gives sequences of path points in the known or partially known space. The basic idea of these two methods is the following: minimizing their cost functions, these strategies have the capability of a quickly  redesign when the condistions of the space change, to guarantee an optimal solution of the trajectory from the starting point to the goal location.  
+The most famous method developed for global navigation is the Dijkstra algorithm \cite{Dijkstra:1959}. In recent years, an evolution of this method called A* is one of the most used \cite{Hart:1968}: this algorithm gives a complete and optimal global path in static enviroments. However, it was upgraded in D* \cite{Stentz93optimaland} for efficient online searching of a dynamic enviroment, which gives sequences of path points in the known or partially known space. The basic idea of these two methods is the following: minimizing their cost functions, these strategies have the capability of a quickly  redesign when the condistions of the space change, to guarantee an optimal solution of the trajectory from the starting point to the goal location.
+
 \subsection{The A* Algorithm}
 \subsection{The D* Algorithm}
 \section{Local Motion Control}
-Local Motion Control is related to the real-time motion of the robot inside in unknown enviroment, where monitoring with the sensors, it can detect where are the obstacles and generate a motion to avoid the collision with them.
+Local Motion Control is related to the real-time motion of the robot inside in unknown enviroment, where monitoring with the sensors, it can detect where are the obstacles and create a motion to avoid the collision with them. One of the advantages of the local navigation systems is the ability of generating a new path every time the space changes, for example when multiple moving obstacles are identified thanks to the sensors that captured the information in the enviroments. These methods can be divided into directional and velocity space-based approaches.
+
+The most famous directional approaches (generate a direction for the robot/vehicle) are:
+\begin{itemize}
+	\item Potential field method \cite{Khatib1986}, where the robot is represented as a particle and it is subject to forces that are produced by the surrounding environment;
+	\item Virtual Force Field which expands to Vector Field Histogram \cite{Borenstein1991}, where it utilizes a statistical representation of the vehicle's space through the so-called histogram grid;
+	\item Nearness Diagram algorithm \cite{Montano2000}, which  performs a high level information extraction and interpretation of the environment, used to generate the motion commands;
+\end{itemize}
+while the velocity space approaches, that manage the robot/vehicle considering translation and rotation velocities, are:
+\begin{itemize}
+	\item Curvature Velocity method \cite{Simmons1996} which formulates the problem as one of constrained optimization in velocity space;
+	\item Dynamic Window method \cite{Fox1997} which is divided in two main phases; in first one, it generates a valid search space while in the second one it selects an optimal solution in the search space;
+\end{itemize}
+.
 \subsection{Potential Field Method}
 \subsection{Dynamic Window Approach}
 \subsection{VFF Approach for Obstacle Avoidance}

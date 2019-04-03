@@ -12,55 +12,61 @@ A level-1 auxiliary file: ./Chapter6/Chapter6.aux
 A level-1 auxiliary file: ./Conclusions/Conclusions.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
-Repeated entry---line 1043 of file biblio.bib
+Repeated entry---line 625 of file biblio.bib
+ : @article{Borenstein1991
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1104 of file biblio.bib
  : @mastersthesis{Pereira2012
  :                           ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "waymoh" isn't style-file defined
---line 1145 of file biblio.bib
+--line 1206 of file biblio.bib
 Warning--entry type for "waymot" isn't style-file defined
---line 1154 of file biblio.bib
+--line 1215 of file biblio.bib
+Warning--can't use both author and editor fields in Khatib1986
+Warning--empty booktitle in Montano2000
 Warning--empty booktitle in borelli
 Warning--empty school in longitudinal
-You've used 36 entries,
+You've used 41 entries,
             1876 wiz_defined-function locations,
-            702 strings with 10457 characters,
-and the built_in function-call counts, 9448 in all, are:
-= -- 909
-> -- 384
+            743 strings with 11349 characters,
+and the built_in function-call counts, 11279 in all, are:
+= -- 1106
+> -- 419
 < -- 0
-+ -- 144
-- -- 108
-* -- 663
-:= -- 1349
-add.period$ -- 38
-call.type$ -- 36
-change.case$ -- 38
++ -- 158
+- -- 117
+* -- 787
+:= -- 1569
+add.period$ -- 44
+call.type$ -- 41
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 484
-empty$ -- 900
-format.name$ -- 108
-if$ -- 2303
+cite$ -- 45
+duplicate$ -- 578
+empty$ -- 1084
+format.name$ -- 117
+if$ -- 2769
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 27
-newline$ -- 114
-num.names$ -- 38
-pop$ -- 133
+int.to.str$ -- 41
+missing$ -- 33
+newline$ -- 130
+num.names$ -- 43
+pop$ -- 154
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 343
+skip$ -- 425
 stack$ -- 0
-substring$ -- 600
-swap$ -- 191
+substring$ -- 800
+swap$ -- 240
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 84
-width$ -- 38
-write$ -- 339
-(There was 1 error message)
+warning$ -- 4
+while$ -- 101
+width$ -- 43
+write$ -- 388
+(There were 2 error messages)

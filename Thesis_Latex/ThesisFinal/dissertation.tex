@@ -1,0 +1,69 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{Dissertate}
+\usepackage{siunitx}
+%\usepackage[italian]{babel}
+%\usepackage{latexsym}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+\newcommand{\numberset}{\mathbb}
+%\usepackage{subfigure}
+\usepackage{caption}
+\captionsetup{singlelinecheck=true, justification=raggedright}
+\usepackage[justification=centerfirst]{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{emptypage}
+\usepackage[export]{adjustbox}
+\renewcommand{\vec}[1]{\ensuremath{\boldsymbol{\mathit{#1}}}}
+
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
+\begin{document}
+
+% the front matter
+\input{frontmatter/personalize}
+% \maketitle
+% \copyrightpage
+\frontmatter
+\setstretch{\dnormalspacing}
+ %\abstractpage
+ %\tableofcontents
+ %\authorlist
+ %\listoffigures
+ %\dedicationpage
+ %\acknowledgments
+
+% \doublespacing
+
+% include each chapter...
+\setcounter{chapter}{0}  % start chapter numbering at 0
+\include{Introduction/Introduction}
+\cleardoublepage
+\include{Chapter2/Chapter2}
+\cleardoublepage
+\include{Chapter3/Chapter3}
+\cleardoublepage
+\include{Chapter4/Chapter4}
+\cleardoublepage
+\include{Chapter5/Chapter5}
+\cleardoublepage
+\include{Conclusions/Conclusions}
+\setstretch{\dnormalspacing}
+
+% the back matter
+%\backmatter
+
+ \clearpage
+ \bibliography{references}
+ \addcontentsline{toc}{chapter}{References}
+ \bibliographystyle{ieeetr}
+
+% \include{endmatter/colophon}
+
+\end{document}

@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: Introduction/Introduction.aux
+A level-1 auxiliary file: Chapter2/Chapter2.aux
+A level-1 auxiliary file: Chapter3/Chapter3.aux
+A level-1 auxiliary file: Chapter4/Chapter4.aux
+A level-1 auxiliary file: Chapter5/Chapter5.aux
+A level-1 auxiliary file: Conclusions/Conclusions.aux
+The style file: ieeetr.bst
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 607 of file references.bib
+ : 
+ : address     =     {Prague}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 700 of file references.bib
+ : @article{Borenstein1991
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1179 of file references.bib
+ : @mastersthesis{Pereira2012
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--can't use both author and editor fields in Khatib1986
+Warning--empty booktitle in Montano2000
+You've used 45 entries,
+            1876 wiz_defined-function locations,
+            771 strings with 12126 characters,
+and the built_in function-call counts, 12521 in all, are:
+= -- 1236
+> -- 447
+< -- 0
++ -- 169
+- -- 124
+* -- 863
+:= -- 1724
+add.period$ -- 48
+call.type$ -- 45
+change.case$ -- 47
+chr.to.int$ -- 0
+cite$ -- 47
+duplicate$ -- 648
+empty$ -- 1213
+format.name$ -- 124
+if$ -- 3097
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 36
+newline$ -- 141
+num.names$ -- 47
+pop$ -- 171
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 487
+stack$ -- 0
+substring$ -- 894
+swap$ -- 275
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 113
+width$ -- 47
+write$ -- 430
+(There were 3 error messages)

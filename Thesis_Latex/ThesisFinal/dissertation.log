@@ -1,0 +1,2248 @@
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.10.14)  3 APR 2019 18:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**dissertation.tex
+(./dissertation.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(./Dissertate.cls
+Document Class: Dissertate 2014/03/25 v2.0 Dissertate Class
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count88
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip43
+\RaggedLeftLeftskip=\skip44
+\RaggedRightLeftskip=\skip45
+\CenteringRightskip=\skip46
+\RaggedLeftRightskip=\skip47
+\RaggedRightRightskip=\skip48
+\CenteringParfillskip=\skip49
+\RaggedLeftParfillskip=\skip50
+\RaggedRightParfillskip=\skip51
+\JustifyingParfillskip=\skip52
+\CenteringParindent=\skip53
+\RaggedLeftParindent=\skip54
+\RaggedRightParindent=\skip55
+\JustifyingParindent=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: xetex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2015/09/11 v4.06 LaTeX color/graphics driver for XeTeX (TeX Liv
+e/RRM/JK)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2015/06/22 v2.0b fixes to LaTeX (obsolete)
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.sty
+File: lettrine.sty 2015/08/31 v1.9 (Daniel Flipo)
+\c@DefaultLines=\count92
+\c@DefaultDepth=\count93
+\DefaultFindent=\dimen113
+\DefaultNindent=\dimen114
+\DefaultSlope=\dimen115
+\DiscardVskip=\dimen116
+\L@lbox=\box26
+\L@tbox=\box27
+\c@L@lines=\count94
+\c@L@depth=\count95
+\L@Pindent=\dimen117
+\L@Findent=\dimen118
+\L@Nindent=\dimen119
+\L@lraise=\dimen120
+\L@first=\dimen121
+\L@next=\dimen122
+\L@slope=\dimen123
+\L@height=\dimen124
+\L@novskip=\dimen125
+\LettrineWidth=\dimen126
+\LettrineHeight=\dimen127
+\LettrineDepth=\dimen128
+
+Loading lettrine.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: xetex.def on input line 143.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen129
+\Hy@linkcounter=\count96
+\Hy@pagecounter=\count97
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count98
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `hyperindex' set `true' on input line 4319.
+Package hyperref Info: Option `colorlinks' set `false' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count99
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen130
+\Fld@menulength=\count100
+\Field@Width=\dimen131
+\Fld@charsize=\dimen132
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count101
+\c@Item=\count102
+\c@Hfootnote=\count103
+)
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2012/11/06 v6.83m Hyperref driver for XeTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box28
+\c@Hy@AnnotLevel=\count104
+\HyField@AnnotCount=\count105
+\Fld@listcount=\count106
+\c@bookmark@seq@number=\count107
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
+)
+\Hy@SectionHShift=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen133
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count108
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count109
+\leftroot@=\count110
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count111
+\DOTSCASE@=\count112
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen135
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
+\dotsspace@=\muskip11
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks19
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks20
+\eqnshift@=\dimen136
+\alignsep@=\dimen137
+\tagshift@=\dimen138
+\tagwidth@=\dimen139
+\totwidth@=\dimen140
+\lineht@=\dimen141
+\@envbody=\toks21
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/xelatex/mathspec/mathspec.sty
+Package: mathspec 2009/09/30 v0.2 LaTeX Package (Mathematics font selection for
+ XeLaTeX)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2016/01/19 v6377 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/01/01 v6339 L3 Bootstrap code
+L3 Module: l3names 2015/12/21 v6328 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
+L3 Module: l3str 2016/01/03 v6357 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/01/05 v6366 L3 Integers
+\c_max_int=\count120
+\l_tmpa_int=\count121
+\l_tmpb_int=\count122
+\g_tmpa_int=\count123
+\g_tmpb_int=\count124
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count125
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2015/09/28 v6113 L3 Messages
+L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
+\l_iow_line_count_int=\count126
+\l__iow_target_count_int=\count127
+\l__iow_current_line_int=\count128
+\l__iow_current_word_int=\count129
+\l__iow_current_indentation_int=\count130
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen142
+\c_max_dim=\dimen143
+\l_tmpa_dim=\dimen144
+\l_tmpb_dim=\dimen145
+\g_tmpa_dim=\dimen146
+\g_tmpb_dim=\dimen147
+\c_zero_skip=\skip61
+\c_max_skip=\skip62
+\l_tmpa_skip=\skip63
+\l_tmpb_skip=\skip64
+\g_tmpa_skip=\skip65
+\g_tmpb_skip=\skip66
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count131
+\l_keys_choice_int=\count132
+L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
+\c__fp_leading_shift_int=\count133
+\c__fp_middle_shift_int=\count134
+\c__fp_trailing_shift_int=\count135
+\c__fp_big_leading_shift_int=\count136
+\c__fp_big_middle_shift_int=\count137
+\c__fp_big_trailing_shift_int=\count138
+\c__fp_Bigg_leading_shift_int=\count139
+\c__fp_Bigg_middle_shift_int=\count140
+\c__fp_Bigg_trailing_shift_int=\count141
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box31
+\l_tmpa_box=\box32
+\l_tmpb_box=\box33
+\g_tmpa_box=\box34
+\g_tmpb_box=\box35
+L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
+\l__coffin_internal_box=\box36
+\l__coffin_internal_dim=\dimen148
+\l__coffin_offset_x_dim=\dimen149
+\l__coffin_offset_y_dim=\dimen150
+\l__coffin_x_dim=\dimen151
+\l__coffin_y_dim=\dimen152
+\l__coffin_x_prime_dim=\dimen153
+\l__coffin_y_prime_dim=\dimen154
+\c_empty_coffin=\box37
+\l__coffin_aligned_coffin=\box38
+\l__coffin_aligned_internal_coffin=\box39
+\l_tmpa_coffin=\box40
+\l_tmpb_coffin=\box41
+\l__coffin_display_coffin=\box42
+\l__coffin_display_coord_coffin=\box43
+\l__coffin_display_pole_coffin=\box44
+\l__coffin_display_offset_dim=\dimen155
+\l__coffin_display_x_dim=\dimen156
+\l__coffin_display_y_dim=\dimen157
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen158
+\l__box_bottom_dim=\dimen159
+\l__box_left_dim=\dimen160
+\l__box_right_dim=\dimen161
+\l__box_top_new_dim=\dimen162
+\l__box_bottom_new_dim=\dimen163
+\l__box_left_new_dim=\dimen164
+\l__box_right_new_dim=\dimen165
+\l__box_internal_box=\box45
+\l__coffin_bounding_shift_dim=\dimen166
+\l__coffin_left_corner_dim=\dimen167
+\l__coffin_right_corner_dim=\dimen168
+\l__coffin_bottom_corner_dim=\dimen169
+\l__coffin_top_corner_dim=\dimen170
+\l__coffin_scaled_total_height_dim=\dimen171
+\l__coffin_scaled_width_dim=\dimen172
+L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+File: l3xdvidpfmx.def 2015/11/11 v6250 L3 Experimental driver: xdvipdfmx
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count142
+\l__xparse_m_args_int=\count143
+\l__xparse_mandatory_args_int=\count144
+\l__xparse_processor_int=\count145
+\l__xparse_v_nesting_int=\count146
+)
+Package: fontspec 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
+X
+\l_fontspec_script_int=\count147
+\l_fontspec_language_int=\count148
+\l_fontspec_strnum_int=\count149
+\l__fontspec_tmpa_dim=\dimen173
+\l__fontspec_tmpb_dim=\dimen174
+\l__fontspec_tmpc_dim=\dimen175
+\g__file_internal_ior=\read2
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1enc.def
+File: eu1enc.def 2010/05/27 v0.1h Experimental Unicode font encodings
+)
+LaTeX Font Info:    Try loading font information for EU1+lmr on input line 105.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmr.fd
+File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texlive/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(/usr/share/texmf/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmss.fd
+File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\tipaTiiicode=\count150
+\tipasavetokens=\toks23
+\tipachecktokens=\toks24
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__fontspec_post_arg:w with sig. 'mmO{}' on line 353.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fontspec with sig. 'om' on line 355.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmainfont with sig. 'om' on line 365.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setsansfont with sig. 'om' on line 375.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmonofont with sig. 'om' on line 385.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathrm with sig. 'om' on line 399.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setboldmathrm with sig. 'om' on line 407.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathsf with sig. 'om' on line 415.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathtt with sig. 'om' on line 423.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfamily with sig. 'mom' on line 437.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontface with sig. 'mom' on line 453.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \defaultfontfeatures with sig. 't+om' on line 467.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \addfontfeatures with sig. 'm' on line 529.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfeature with sig. 'mm' on line 540.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newAATfeature with sig. 'mmmm' on line 548.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newopentypefeature with sig. 'mmm' on line 556.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeature with sig. 'mm' on line 577.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 586.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontscript with sig. 'mm' on line 590.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontlanguage with sig. 'mm' on line 594.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 599.
+.................................................
+\l__fontspec_tmp_int=\count151
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 2705.
+LaTeX Info: Redefining \slshape on input line 2710.
+LaTeX Info: Redefining \scshape on input line 2715.
+LaTeX Info: Redefining \upshape on input line 2720.
+\l__fontspec_em_int=\count152
+\l__fontspec_emdef_int=\count153
+LaTeX Info: Redefining \em on input line 2736.
+LaTeX Info: Redefining \emph on input line 2742.
+LaTeX Info: Redefining \- on input line 2746.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \oldstylenums with sig. 'm' on line 2841.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \liningnums with sig. 'm' on line 2845.
+.................................................
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count154
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@eu@=\count155
+\c@eu@i=\count156
+\c@mkern=\count157
+)
+\g__fontspec_family_EBGaramond_int=\count158
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font EB Garamond/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'EBGaramond(0)' created for font 'EB Garamond' with options
+. [Ligatures=TeX,Numbers=OldStyle,Ligatures={Common, TeX},Scale=1.0].
+. 
+. This font family consists of the following NFSS series/shapes:
+. - 'normal' (m/n) with NFSS spec.: <->s*[1.0]"EB
+. Garamond/OT:script=latn;language=DFLT;mapping=tex-text;+onum;+liga;mapping=te
+x-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: <->s*[1.0]"EB
+. Garamond/OT:script=latn;language=DFLT;mapping=tex-text;+onum;+liga;mapping=te
+x-text;+smcp;"-
+. 'italic' (m/it) with NFSS spec.: <->s*[1.0]"EB
+. Garamond/I/OT:script=latn;language=DFLT;mapping=tex-text;+onum;+liga;mapping=
+tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: <->s*[1.0]"EB
+. Garamond/I/OT:script=latn;language=DFLT;mapping=tex-text;+onum;+liga;mapping=
+tex-text;+smcp;"-
+. 'bold italic' (bx/it) with NFSS spec.: <->s*[1.0]"EB
+. Garamond/BI/OT:script=latn;language=DFLT;mapping=tex-text;+onum;+liga;mapping
+=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->s*[1.0]"EB
+. Garamond/BI/OT:script=latn;language=DFLT;mapping=tex-text;+onum;+liga;mapping
+=tex-text;+smcp;"
+.................................................
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 88.
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font EB Garamond/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'EBGaramond(1)' created for font 'EB Garamond' with options
+. [RawFeature={+c2sc,+scmp}].
+. 
+. This font family consists of the following NFSS series/shapes:
+. - 'normal' (m/n) with NFSS spec.: <->"EB
+. Garamond/OT:script=latn;language=DFLT;+c2sc,+scmp;"
+. - 'small caps'  (m/sc) with NFSS spec.: <->"EB
+. Garamond/OT:script=latn;language=DFLT;+c2sc,+scmp;+smcp;"- 'italic' (m/it)
+. with NFSS spec.: <->"EB
+. Garamond/I/OT:script=latn;language=DFLT;+c2sc,+scmp;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"EB
+. Garamond/I/OT:script=latn;language=DFLT;+c2sc,+scmp;+smcp;"- 'bold italic'
+. (bx/it) with NFSS spec.: <->"EB
+. Garamond/BI/OT:script=latn;language=DFLT;+c2sc,+scmp;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"EB
+. Garamond/BI/OT:script=latn;language=DFLT;+c2sc,+scmp;+smcp;"
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Lato Regular scale = 0.8094761101403867.
+.................................................
+\g__fontspec_family_LatoRegular_int=\count159
+.................................................
+. fontspec info: "set-scale"
+. 
+. Lato Regular scale = 0.8094761101403867.
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Lato Bold scale = 0.7992192147531231.
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Lato Regular/I scale = 0.8094761101403867.
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Lato Bold/I scale = 0.7992192147531231.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'LatoRegular(0)' created for font 'Lato Regular' with options
+. [Ligatures=TeX,Scale=MatchLowercase,BoldFont={Lato Bold}].
+. 
+. This font family consists of the following NFSS series/shapes:
+. - 'normal' (m/n) with NFSS spec.: <->s*[0.8094761101403867]"Lato
+. Regular/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: - 'bold' (bx/n) with NFSS spec.:
+. <->s*[0.7992192147531231]"Lato
+. Bold/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: - 'italic' (m/it) with NFSS
+. spec.: <->s*[0.8094761101403867]"Lato
+. Regular/I/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: - 'bold italic' (bx/it)
+. with NFSS spec.: <->s*[0.7992192147531231]"Lato
+. Bold/I/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+.................................................
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen176
+\captionmargin@=\dimen177
+\captionwidth=\dimen178
+\caption@tempdima=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
+)
+Package caption Info: We need package `newfloat' on input line 292.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/newfloat.sty
+Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
+)
+\c@ContinuedFloat=\count160
+Package caption Info: hyperref package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
+\MT@toks=\toks27
+\MT@count=\count161
+LaTeX Info: Redefining \textls on input line 766.
+\MT@outer@kern=\dimen183
+LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
+\MT@listname@count=\count162
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2013/05/23 v2.5a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 254.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip67
+\f@ncyO@elh=\skip68
+\f@ncyO@erh=\skip69
+\f@ncyO@olh=\skip70
+\f@ncyO@orh=\skip71
+\f@ncyO@elf=\skip72
+\f@ncyO@erf=\skip73
+\f@ncyO@olf=\skip74
+\f@ncyO@orf=\skip75
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
+\ttl@box=\box46
+\beforetitleunit=\skip76
+\aftertitleunit=\skip77
+\ttl@plus=\dimen184
+\ttl@minus=\dimen185
+\ttl@toksa=\toks28
+\titlewidth=\dimen186
+\titlewidthlast=\dimen187
+\titlewidthfirst=\dimen188
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip78
+\thanksmargin=\skip79
+\droptitle=\skip80
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip81
+\cftbeforetoctitleskip=\skip82
+\cftaftertoctitleskip=\skip83
+\cftbeforepartskip=\skip84
+\cftpartnumwidth=\skip85
+\cftpartindent=\skip86
+\cftbeforechapskip=\skip87
+\cftchapindent=\skip88
+\cftchapnumwidth=\skip89
+\cftbeforesecskip=\skip90
+\cftsecindent=\skip91
+\cftsecnumwidth=\skip92
+\cftbeforesubsecskip=\skip93
+\cftsubsecindent=\skip94
+\cftsubsecnumwidth=\skip95
+\cftbeforesubsubsecskip=\skip96
+\cftsubsubsecindent=\skip97
+\cftsubsubsecnumwidth=\skip98
+\cftbeforeparaskip=\skip99
+\cftparaindent=\skip100
+\cftparanumwidth=\skip101
+\cftbeforesubparaskip=\skip102
+\cftsubparaindent=\skip103
+\cftsubparanumwidth=\skip104
+\cftbeforeloftitleskip=\skip105
+\cftafterloftitleskip=\skip106
+\cftbeforefigskip=\skip107
+\cftfigindent=\skip108
+\cftfignumwidth=\skip109
+\c@lofdepth=\count163
+\c@lotdepth=\count164
+\cftbeforelottitleskip=\skip110
+\cftafterlottitleskip=\skip111
+\cftbeforetabskip=\skip112
+\cfttabindent=\skip113
+\cfttabnumwidth=\skip114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count165
+\c@@ppsavesec=\count166
+\c@@ppsaveapp=\count167
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip115
+\bibsep=\skip116
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count168
+)
+(/usr/share/texlive/texmf-dist/tex/latex/quotchap/quotchap.sty
+Package: quotchap 2012/10/20 v1.1 Decorative Chapter Headings with Quotes
+\@quotebox=\box47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/block.tss
+File: block.tss 2016/03/15
+)
+\mybibindent=\skip117
+Package hyperref Info: Option `colorlinks' set `true' on input line 214.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2016/03/01 v2.6q A comprehensive (SI) units package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen189
+\extrarowheight=\dimen190
+\NC@list=\toks29
+\extratabsurround=\skip118
+\backup@length=\skip119
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2016/01/19 v6377 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box48
+\l__siunitx_tmp_dim=\dimen191
+\l__siunitx_tmp_int=\count169
+\l__siunitx_number_mantissa_length_int=\count170
+\l__siunitx_number_uncert_length_int=\count171
+\l__siunitx_round_int=\count172
+\l__siunitx_process_decimal_int=\count173
+\l__siunitx_process_uncertainty_int=\count174
+\l__siunitx_process_fixed_int=\count175
+\l__siunitx_process_integer_min_int=\count176
+\l__siunitx_process_precision_int=\count177
+\l__siunitx_group_min_int=\count178
+\l__siunitx_angle_marker_box=\box49
+\l__siunitx_angle_unit_box=\box50
+\l__siunitx_angle_marker_dim=\dimen192
+\l__siunitx_angle_unit_dim=\dimen193
+\l__siunitx_unit_int=\count179
+\l__siunitx_unit_denominator_int=\count180
+\l__siunitx_unit_numerator_int=\count181
+\l__siunitx_unit_prefix_int=\count182
+\l__siunitx_unit_prefix_base_int=\count183
+\l__siunitx_unit_prefix_gram_int=\count184
+\l__siunitx_number_product_int=\count185
+\c__siunitx_one_fill_skip=\skip120
+\l__siunitx_table_unit_align_skip=\skip121
+\l__siunitx_table_exponent_dim=\dimen194
+\l__siunitx_table_integer_dim=\dimen195
+\l__siunitx_table_mantissa_dim=\dimen196
+\l__siunitx_table_marker_dim=\dimen197
+\l__siunitx_table_result_dim=\dimen198
+\l__siunitx_table_uncert_dim=\dimen199
+\l__siunitx_table_fill_pre_dim=\dimen256
+\l__siunitx_table_fill_post_dim=\dimen257
+\l__siunitx_table_fill_mid_dim=\dimen258
+\l__siunitx_table_pre_box=\box51
+\l__siunitx_table_post_box=\box52
+\l__siunitx_table_mantissa_box=\box53
+\l__siunitx_table_result_box=\box54
+\l__siunitx_table_number_align_skip=\skip122
+\l__siunitx_table_text_align_skip=\skip123
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7218.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7221.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7224.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7227.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7230.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7233.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7236.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7251.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \num with sig. 'om' on line 7260.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7269.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrange with sig. 'omm' on line 7278.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7290.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrange with sig. 'ommm' on line 7302.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SI with sig. 'omom' on line 7314.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \sisetup with sig. 'm' on line 7317.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tablenum with sig. 'om' on line 7332.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \si with sig. 'om' on line 7344.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7391.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_numrange:w with sig. 'omm' on line
+. 7393.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7395.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7397.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_SIrange:w with sig. 'ommm' on line
+. 7399.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7400.
+.................................................
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator-language-
+mappings.tex))) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen259
+\lightrulewidth=\dimen260
+\cmidrulewidth=\dimen261
+\belowrulesep=\dimen262
+\belowbottomsep=\dimen263
+\aboverulesep=\dimen264
+\abovetopsep=\dimen265
+\cmidrulesep=\dimen266
+\cmidrulekern=\dimen267
+\defaultaddspace=\dimen268
+\@cmidla=\count186
+\@cmidlb=\count187
+\@aboverulesep=\dimen269
+\@belowrulesep=\dimen270
+\@thisruleclass=\count188
+\@lastruleclass=\count189
+\@thisrulewidth=\dimen271
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+\c@subfigure=\count190
+\c@subtable=\count191
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count192
+\float@exts=\toks30
+\float@box=\box55
+\@float@everytoks=\toks31
+\@floatcapt=\box56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks32
+\c@algorithm=\count193
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count194
+\c@ALG@rem=\count195
+\c@ALG@nested=\count196
+\ALG@tlm=\skip124
+\ALG@thistlm=\skip125
+\c@ALG@Lnr=\count197
+\c@ALG@blocknr=\count198
+\c@ALG@storecount=\count199
+\c@ALG@tmpcounter=\count266
+\ALG@tmplength=\skip126
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box57
+)
+\tc@llx=\dimen272
+\tc@lly=\dimen273
+\tc@urx=\dimen274
+\tc@ury=\dimen275
+Package trimclip Info: Using driver 'tc-xetex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2012/05/13 v1.0 Clipping driver for xetex
+))
+\adjbox@Width=\dimen276
+\adjbox@Height=\dimen277
+\adjbox@Depth=\dimen278
+\adjbox@Totalheight=\dimen279
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count267
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box58
+\sift@deathcycles=\count268
+\@vwid@loff=\dimen280
+\@vwid@roff=\dimen281
+))
+(./dissertation.aux (./Introduction/Introduction.aux) (./Chapter2/Chapter2.aux)
+(./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux) (./Chapter5/Chapter5.aux)
+(./Conclusions/Conclusions.aux))
+\openout1 = `dissertation.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 27.
+ (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 27.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(79.49698pt, 415.55249pt, 119.24553pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=415.55249pt
+* \textheight=556.47656pt
+* \oddsidemargin=46.97554pt
+* \evensidemargin=7.22699pt
+* \topmargin=-8.74641pt
+* \headheight=15.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=98.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemargintrue
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 27.
+\AtBeginShipoutBox=\box59
+Package hyperref Info: Link coloring ON on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count269
+)
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
+
+(./dissertation.out) (./dissertation.out)
+\@outlinefile=\write3
+\openout3 = `dissertation.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \microtypecontext on input line 27.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ebgaramond/mt-EBGaramond.cfg
+File: mt-EBGaramond.cfg 2013/05/22 v1.1 microtype config. file: EB Garamond
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
+ic-dictionary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
+)
+\c__siunitx_mathsf_int=\count270
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\c__siunitx_mathtt_int=\count271
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+(./frontmatter/personalize.tex) (./frontmatter/personalize.tex)
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 33.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 33.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
+(Font)              scaled to size 8.0pt on input line 33.
+Package microtype Info: Character `•' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `℃' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `™' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `−' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
+(Font)              scaled to size 6.0pt on input line 33.
+Package microtype Info: Character `•' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `℃' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `™' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `−' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
+(microtype)             Ignoring protrusion settings for this character.
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
+
+)
+[1
+
+]
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 33.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 33.
+ [2] (./frontmatter/dedication.tex) [3] [4
+
+]
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 33.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+(./frontmatter/thanks.tex
+File: ./figure/logo_ua.png Graphic file (type QTm)
+ <use  "./figure/logo_ua.png" >) [5] [6
+
+]
+(./frontmatter/abstract.tex) [1] [2
+
+] (./dissertation.toc
+
+LaTeX Font Warning: Font shape `EU1/EBGaramond(0)/bx/n' undefined
+(Font)              using `EU1/EBGaramond(0)/m/n' instead on input line 1.
+
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/bx/n' will be
+(Font)              scaled to size 10.95pt on input line 1.
+[3])
+\tf@toc=\write4
+\openout4 = `dissertation.toc'.
+
+ [4]
+\openout2 = `Introduction/Introduction.aux'.
+
+ (./Introduction/Introduction.tex
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 1.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sl' in size <10> not availa
+ble
+(Font)              Font shape `EU1/EBGaramond(0)/m/it' tried instead on input 
+line 1.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\EU1/EBGaramond(0)/m/it/10 “Self-driving cars are the natural extension of ac
+tive safety
+ []
+
+Chapter 1.
+
+Overfull \hbox (8.90958pt too wide) in paragraph at lines 8--9
+\EU1/EBGaramond(0)/bx/n/10.95 In robotic research, the problem of navigation is
+ among the most important. Basically, all autonomous 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 11.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/bx/n' will be
+(Font)              scaled to size 17.28pt on input line 11.
+
+[3]
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 14.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/bx/n' will be
+(Font)              scaled to size 14.4pt on input line 14.
+File: ./figure/modelosatlas1.pdf Graphic file (type QTm)
+ <use  "./figure/modelosatlas1.pdf" >
+LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/bx/n' will be
+(Font)              scaled to size 8.7515pt on input line 20.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `LatoRegular' (encoding: EU1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/bx/n' will be
+(Font)              scaled to size 7.99225pt on input line 20.
+LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/n' will be
+(Font)              scaled to size 8.86378pt on input line 20.
+LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/n' will be
+(Font)              scaled to size 8.09479pt on input line 20.
+File: ./figure/modelosatlas2.pdf Graphic file (type QTm)
+ <use  "./figure/modelosatlas2.pdf" >
+File: ./figure/modelosatlas3.pdf Graphic file (type QTm)
+
+<use  "./figure/modelosatlas3.pdf" >
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/bx/n' will be
+(Font)              scaled to size 12.0pt on input line 33.
+LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/bx/n' will be
+(Font)              scaled to size 9.5907pt on input line 33.
+LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/n' will be
+(Font)              scaled to size 9.71375pt on input line 33.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figure/atlascar1.jpg Graphic file (type QTm)
+<use  "./figure/atlascar1.jpg" > [4]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figure/atlascar2.jpg Graphic file (type QTm)
+<use  "./figure/atlascar2.jpg" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/it' will be
+(Font)              scaled to size 10.95pt on input line 59.
+File: ./figure/veiculos0.png Graphic file (type QTm)
+
+<use  "./figure/veiculos0.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+ \EU1/LatoRegular(0)/m/n/10 self-driving prototype in 2015 (adapted from [[]]).
+| 
+ []
+
+File: ./figure/veiculos1.png Graphic file (type QTm)
+<use  "./figure/veiculos1.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+ \EU1/LatoRegular(0)/m/n/10 self-driving prototype in 2017 (adapted from [[]]).
+| 
+ []
+
+[7] [8]
+File: ./figure/veiculos4.png Graphic file (type QTm)
+ <use  "./figure/veiculos4.png" > [9]
+File: ./figure/veiculos5.png Graphic file (type QTm)
+ <use  "./figure/veiculos5.png" >
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11])
+[12]
+\openout2 = `Chapter2/Chapter2.aux'.
+
+ (./Chapter2/Chapter2.tex
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+[15] [16] [17]
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 64.
+Package microtype Info: Character `•' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `℃' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `™' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `−' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 64.
+Package microtype Info: Character `•' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `℃' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `™' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `−' is missing
+(microtype)             in font `\EU1/EBGaramond(0)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+ [18] [19]) [20] [21] [22
+
+
+]
+\openout2 = `Chapter3/Chapter3.aux'.
+
+ (./Chapter3/Chapter3.tex
+Chapter 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+
+
+]
+File: ./figure/mpc_theory.png Graphic file (type QTm)
+
+<use  "./figure/mpc_theory.png" > [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 67.
+
+[27] [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+[30]) [31] [32
+
+
+]
+\openout2 = `Chapter4/Chapter4.aux'.
+
+ (./Chapter4/Chapter4.tex
+Chapter 4.
+File: ./figure/obstacleAvoidance/obstacleAvoidance.pdf Graphic file (type QTm)
+<use  "./figure/obstacleAvoidance/obstacleAvoidance.pdf" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+File: ./figure/car_model.pdf Graphic file (type QTm)
+
+<use  "./figure/car_model.pdf" > [35] [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+File: ./figure/flowchart/flowchart.pdf Graphic file (type QTm)
+
+<use  "./figure/flowchart/flowchart.pdf" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+File: ./figure/constraint/constraint.pdf Graphic file (type QTm)
+
+<use  "./figure/constraint/constraint.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41]
+File: ./figure/MovingObstacleAvoidance.pdf Graphic file (type QTm)
+ <use  "./figure/MovingObstacleAvoidance.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42]
+File: ./figure/one_obstacle_right_overtaking/overtaking_start.pdf Graphic file 
+(type QTm)
+ <use  "./figure/one_obstacle_right_overtaking/overtaking_start.pdf" >
+File: ./figure/one_obstacle_right_overtaking/overtaking_middle.pdf Graphic file
+ (type QTm)
+
+<use  "./figure/one_obstacle_right_overtaking/overtaking_middle.pdf" >
+File: ./figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf Graphic 
+file (type QTm)
+
+<use  "./figure/one_obstacle_right_overtaking/overtaking_middle_end.pdf" >
+File: ./figure/one_obstacle_right_overtaking/overtaking_end.pdf Graphic file (t
+ype QTm)
+
+<use  "./figure/one_obstacle_right_overtaking/overtaking_end.pdf" > [43]
+[44]
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVsT
+ime.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/one_obstacle_right_overtaking/figure/LongitudinalPositionVs
+Time.pdf" >
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTime.p
+df Graphic file (type QTm)
+
+<use  "../../MATLAB/one_obstacle_right_overtaking/figure/LateralPositionVsTime.
+pdf" >
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf Grap
+hic file (type QTm)
+
+<use  "../../MATLAB/one_obstacle_right_overtaking/figure/VelocityVsTime.pdf" >
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf Grap
+hic file (type QTm)
+
+<use  "../../MATLAB/one_obstacle_right_overtaking/figure/ThrottleVsTime.pdf" >
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pdf
+ Graphic file (type QTm)
+
+<use  "../../MATLAB/one_obstacle_right_overtaking/figure/SteeringAngleVsTime.pd
+f" >
+File: ../../MATLAB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf 
+Graphic file (type QTm)
+
+<use  "../../MATLAB/one_obstacle_right_overtaking/figure/HeadingAngleVsTime.pdf
+" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 269--293
+[][] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 269--293
+[] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 269--293
+[] [] 
+ []
+
+[45]
+File: ./figure/random_N_obstacles/overtaking_random_2.pdf Graphic file (type QT
+m)
+ <use  "./figure/random_N_obstacles/overtaking_random_2.pdf" >
+File: ./figure/random_N_obstacles/overtaking_random.pdf Graphic file (type QTm)
+
+
+<use  "./figure/random_N_obstacles/overtaking_random.pdf" >
+File: ./figure/random_N_obstacles/overtaking_random_1.pdf Graphic file (type QT
+m)
+
+<use  "./figure/random_N_obstacles/overtaking_random_1.pdf" >
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
+ [46]
+
+LaTeX Warning: Text page 47 contains only floats.
+
+[47]
+File: ./figure/6_obstacles/6_obstacles_1.pdf Graphic file (type QTm)
+ <use  "./figure/6_obstacles/6_obstacles_1.pdf" >
+File: ./figure/6_obstacles/6_obstacles_2.pdf Graphic file (type QTm)
+
+<use  "./figure/6_obstacles/6_obstacles_2.pdf" >
+File: ./figure/6_obstacles/6_obstacles_3.pdf Graphic file (type QTm)
+
+<use  "./figure/6_obstacles/6_obstacles_3.pdf" >
+File: ./figure/6_obstacles/6_obstacles_4.pdf Graphic file (type QTm)
+
+<use  "./figure/6_obstacles/6_obstacles_4.pdf" >
+File: ./figure/6_obstacles/6_obstacles_5.pdf Graphic file (type QTm)
+
+<use  "./figure/6_obstacles/6_obstacles_5.pdf" >
+File: ./figure/6_obstacles/6_obstacles_6.pdf Graphic file (type QTm)
+
+<use  "./figure/6_obstacles/6_obstacles_6.pdf" >
+File: ../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf Graphic fi
+le (type QTm)
+
+<use  "../../MATLAB/6_obstacles/figure/LongitudinalPositionVsTime.pdf" >
+File: ../../MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf Graphic file (t
+ype QTm)
+
+<use  "../../MATLAB/6_obstacles/figure/LateralPositionVsTime.pdf" >
+File: ../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf Graphic file (type QTm
+)
+
+<use  "../../MATLAB/6_obstacles/figure/VelocityVsTime.pdf" >
+File: ../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf Graphic file (type QTm
+)
+
+<use  "../../MATLAB/6_obstacles/figure/ThrottleVsTime.pdf" >
+File: ../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf Graphic file (typ
+e QTm)
+
+<use  "../../MATLAB/6_obstacles/figure/SteeringAngleVsTime.pdf" >
+File: ../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf Graphic file (type
+ QTm)
+
+<use  "../../MATLAB/6_obstacles/figure/HeadingAngleVsTime.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 351--375
+[][] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 351--375
+[] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 351--375
+[] [] 
+ []
+
+[48]
+File: ./figure/no_overtaking/no_overtaking_1.pdf Graphic file (type QTm)
+ <use  "./figure/no_overtaking/no_overtaking_1.pdf" >
+File: ./figure/no_overtaking/no_overtaking_1_5.pdf Graphic file (type QTm)
+
+<use  "./figure/no_overtaking/no_overtaking_1_5.pdf" >
+File: ./figure/no_overtaking/no_overtaking_2.pdf Graphic file (type QTm)
+
+<use  "./figure/no_overtaking/no_overtaking_2.pdf" >
+File: ./figure/no_overtaking/no_overtaking_3.pdf Graphic file (type QTm)
+
+<use  "./figure/no_overtaking/no_overtaking_3.pdf" >
+File: ./figure/no_overtaking/no_overtaking_4.pdf Graphic file (type QTm)
+
+<use  "./figure/no_overtaking/no_overtaking_4.pdf" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+
+LaTeX Warning: Text page 50 contains only floats.
+
+[50]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
+ [51]
+File: ../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf Graphic 
+file (type QTm)
+
+<use  "../../MATLAB/no_overtaking/figure/LongitudinalPositionVsTime.pdf" >
+File: ../../MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf Graphic file 
+(type QTm)
+
+<use  "../../MATLAB/no_overtaking/figure/LateralPositionVsTime.pdf" >
+File: ../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf Graphic file (type Q
+Tm)
+
+<use  "../../MATLAB/no_overtaking/figure/VelocityVsTime.pdf" >
+File: ../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf Graphic file (type Q
+Tm)
+
+<use  "../../MATLAB/no_overtaking/figure/ThrottleVsTime.pdf" >
+File: ../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf Graphic file (t
+ype QTm)
+
+<use  "../../MATLAB/no_overtaking/figure/SteeringAngleVsTime.pdf" >
+File: ../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.pdf Graphic file (ty
+pe QTm)
+
+<use  "../../MATLAB/no_overtaking/figure/HeadingAngleVsTime.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 412--436
+[][] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 412--436
+[] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 412--436
+[] [] 
+ []
+
+File: ./figure/three_obstacles_no_overtaking/braking_0.pdf Graphic file (type Q
+Tm)
+<use  "./figure/three_obstacles_no_overtaking/braking_0.pdf" >
+File: ./figure/three_obstacles_no_overtaking/braking_1.pdf Graphic file (type Q
+Tm)
+
+<use  "./figure/three_obstacles_no_overtaking/braking_1.pdf" >
+File: ./figure/three_obstacles_no_overtaking/braking_2.pdf Graphic file (type Q
+Tm)
+
+<use  "./figure/three_obstacles_no_overtaking/braking_2.pdf" >
+File: ./figure/three_obstacles_no_overtaking/braking_3.pdf Graphic file (type Q
+Tm)
+
+<use  "./figure/three_obstacles_no_overtaking/braking_3.pdf" >
+File: ./figure/three_obstacles_no_overtaking/braking_4.pdf Graphic file (type Q
+Tm)
+
+<use  "./figure/three_obstacles_no_overtaking/braking_4.pdf" >
+File: ./figure/three_obstacles_no_overtaking/braking_5.pdf Graphic file (type Q
+Tm)
+
+<use  "./figure/three_obstacles_no_overtaking/braking_5.pdf" >
+File: ./figure/three_obstacles_no_overtaking/braking_6.pdf Graphic file (type Q
+Tm)
+
+<use  "./figure/three_obstacles_no_overtaking/braking_6.pdf" > [52]
+
+LaTeX Warning: Text page 53 contains only floats.
+
+[53]
+Underfull \vbox (badness 3746) has occurred while \output is active []
+
+ [54]
+File: ./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf Gra
+phic file (type QTm)
+
+<use  "./figure/three_obstacles_no_overtaking/LongitudinalPositionVsTime.pdf" >
+File: ./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf Graphic 
+file (type QTm)
+<use  "./figure/three_obstacles_no_overtaking/LateralPositionVsTime.pdf" >
+File: ./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf Graphic file (t
+ype QTm)
+
+<use  "./figure/three_obstacles_no_overtaking/VelocityVsTime.pdf" >
+File: ./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf Graphic file (t
+ype QTm)
+
+<use  "./figure/three_obstacles_no_overtaking/ThrottleVsTime.pdf" >
+File: ./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf Graphic fi
+le (type QTm)
+
+<use  "./figure/three_obstacles_no_overtaking/SteeringAngleVsTime.pdf" >
+File: ./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf Graphic fil
+e (type QTm)
+
+<use  "./figure/three_obstacles_no_overtaking/HeadingAngleVsTime.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 475--499
+[][] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 475--499
+[] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 475--499
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [55]
+
+LaTeX Warning: Text page 56 contains only floats.
+
+[56]
+\openout2 = `Chapter5/Chapter5.aux'.
+
+ (./Chapter5/Chapter5.tex
+Chapter 5.
+File: ./figure/laneFollowing/laneFollowing.pdf Graphic file (type QTm)
+<use  "./figure/laneFollowing/laneFollowing.pdf" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57
+
+
+
+
+]
+[58] [59]
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+[62]
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [63]
+[64]
+File: ./figure/lane_following_AMPC.pdf Graphic file (type QTm)
+ <use  "./figure/lane_following_AMPC.pdf" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+[66]
+File: ./figure/lane_following_AMPC_vehicle_dynamics.pdf Graphic file (type QTm)
+
+ <use  "./figure/lane_following_AMPC_vehicle_dynamics.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[67]
+File: ./figure/lane_following_AMPC_sensor_dynamics.pdf Graphic file (type QTm)
+ <use  "./figure/lane_following_AMPC_sensor_dynamics.pdf" > [68]
+Overfull \hbox (4.33618pt too wide) in paragraph at lines 308--331
+\EU1/EBGaramond(0)/bx/n/10.95 The proposed adaptive MPC algorithm is designed i
+n the MATLAB/Simulink and validated through 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[69]
+File: ../../MATLAB/lane_following_curve/figure/Reference_curve.pdf Graphic file
+ (type QTm)
+ <use  "../../MATLAB/lane_following_curve/figure/Reference_curve.pdf" >
+File: ../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf Graphic file
+ (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 357--367
+[][] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curve
+.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/LongitudinalVelocityVsTime_curv
+e.pdf" >
+File: ../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf 
+Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/LateralVelocityVsTime_curve.pdf
+" >
+File: ../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf Gra
+phic file (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/AccelerationVsTime_curve.pdf" >
+File: ../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf Gr
+aphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/SteeringAngleVsTime_curve.pdf" 
+>
+File: ../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pdf
+ Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/RelativeYawAngleVsTime_curve.pd
+f" >
+File: ../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf
+ Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pd
+f" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 373--404
+[][] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 373--404
+[] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 373--404
+[] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[71]
+
+LaTeX Warning: Text page 72 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+File: ../../MATLAB/lane_following/figure/Reference.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following/figure/Reference.pdf" >
+File: ../../MATLAB/lane_following/figure/Curvature.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following/figure/Curvature.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 419--429
+[][] [] 
+ []
+
+File: ../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf Graphic
+ file (type QTm)
+<use  "../../MATLAB/lane_following/figure/LongitudinalVelocityVsTime.pdf" >
+File: ../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf Graphic file
+ (type QTm)
+
+<use  "../../MATLAB/lane_following/figure/LateralVelocityVsTime.pdf" >
+File: ../../MATLAB/lane_following/figure/AccelerationVsTime.pdf Graphic file (t
+ype QTm)
+
+<use  "../../MATLAB/lane_following/figure/AccelerationVsTime.pdf" >
+File: ../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf Graphic file (
+type QTm)
+
+<use  "../../MATLAB/lane_following/figure/SteeringAngleVsTime.pdf" >
+File: ../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf Graphic fil
+e (type QTm)
+
+<use  "../../MATLAB/lane_following/figure/RelativeYawAngleVsTime.pdf" >
+File: ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf Graphic fil
+e (type QTm)
+
+<use  "../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 437--467
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--467
+[] []
+ []
+
+[73]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../../MATLAB/lane_following_circular_path/figure/Reference_circular.pdf G
+raphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/Reference_circular.pdf"
+ >
+File: ../../MATLAB/lane_following_circular_path/figure/Curvature_circular.pdf G
+raphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/Curvature_circular.pdf"
+ >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 481--491
+[][] [] 
+ []
+
+
+Underfull \vbox (badness 1668) has occurred while \output is active []
+
+ [74]
+
+LaTeX Warning: Text page 75 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+File: ../../MATLAB/lane_following_circular_path/figure/LongitudinalVelocityVsTi
+me_circular.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/LongitudinalVelocityVsT
+ime_circular.pdf" >
+File: ../../MATLAB/lane_following_circular_path/figure/LateralVelocityVsTime_ci
+rcular.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/LateralVelocityVsTime_c
+ircular.pdf" >
+File: ../../MATLAB/lane_following_circular_path/figure/AccelerationVsTime_circu
+lar.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/AccelerationVsTime_circ
+ular.pdf" >
+File: ../../MATLAB/lane_following_circular_path/figure/SteeringAngleVsTime_circ
+ular.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/SteeringAngleVsTime_cir
+cular.pdf" >
+File: ../../MATLAB/lane_following_circular_path/figure/RelativeYawAngleVsTime_c
+ircular.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/RelativeYawAngleVsTime_
+circular.pdf" >
+File: ../../MATLAB/lane_following_circular_path/figure/LateralDeviationVsTime_c
+ircular.pdf Graphic file (type QTm)
+
+<use  "../../MATLAB/lane_following_circular_path/figure/LateralDeviationVsTime_
+circular.pdf" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 504--534
+[][] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 504--534
+[] []
+ []
+
+
+Overfull \hbox (2.4pt too wide) in paragraph at lines 504--534
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [76]
+
+LaTeX Warning: Text page 77 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+[78
+
+
+]
+\openout2 = `Conclusions/Conclusions.aux'.
+
+ (./Conclusions/Conclusions.tex
+Chapter 6.
+File: ./figure/ROS.png Graphic file (type QTm)
+<use  "./figure/ROS.png" >
+File: ./figure/GAZEBO.png Graphic file (type QTm)
+ <use  "./figure/GAZEBO.png" >
+Overfull \hbox (2.4pt too wide) in paragraph at lines 5--11
+[][] [] 
+ []
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79
+
+
+]
+[80] (./dissertation.bbl [81
+
+
+
+]
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 61.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmtt' (encoding: EU1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [82] [83] [84]
+[85] [86])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
+ [87]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
+ (./dissertation.aux (./Introduction/Introduction.aux)
+(./Chapter2/Chapter2.aux) (./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux)
+(./Chapter5/Chapter5.aux) (./Conclusions/Conclusions.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 69.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 69.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 31357 strings out of 493638
+ 584591 string characters out of 6146795
+ 631420 words of memory out of 5000000
+ 34140 multiletter control sequences out of 15000+600000
+ 22235 words of font info for 115 fonts, out of 8000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 60i,19n,107p,10504b,1003s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on dissertation.pdf (97 pages).
