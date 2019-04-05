@@ -211,7 +211,7 @@ for k = 1:length(saveSlope)
 
   %   frame = getframe(gcf); 
  %    writeVideo(writerObj, frame);
-    
+  %  print('overtaking_pres','-dpdf','-r0'); 
     pause(80/car.V/length(T))
     delete(p)
     delete(o)

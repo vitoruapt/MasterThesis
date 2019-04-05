@@ -138,8 +138,6 @@ pdfkeywords=tesi laurea LaTeX}
 \vbox to0pt{\vbox to\textheight{\vfill \includegraphics[width=13.5cm]{unipd-light} \vfill}\vss}
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,32mm)
-\centering
-\includegraphics[height=2.5cm]{unipd-bn}
 %\includegraphics[height=2.1cm]{LogoUniPD}
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,56.5mm)
@@ -199,17 +197,6 @@ pdfkeywords=tesi laurea LaTeX}
 \large ACADEMIC YEAR \@annoaccademico
 \end{textblock*}
 \end{rmfamily}
-\null
-\clearemptydoublepage
-\ifthenelse{\equal{\@dedica}{?}}{}{%
-\pagestyle{empty}
-\null\vfil
-\begin{large}
-\begin{flushleft}
-\@dedica
-\end{flushleft}
-\end{large}
-\vfil\vfil\clearemptydoublepage}
 \end{titlepage}
 }
 \endinput

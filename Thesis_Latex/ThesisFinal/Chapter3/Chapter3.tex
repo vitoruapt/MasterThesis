@@ -5,7 +5,8 @@ In this chapter, the theory of Model Predictive Control is discussed in detail t
 \section{Generic Model Predictive Control problem}
 Model Predictive Control (MPC), also known as Moving Horizon Control (MHC) or Receding Horizon Control (RHC), is a popular method for the control of slow dynamical systems, to generate the required
 control inputs that are calculated at each sampling instance $k$, using the current state as initial
-conditions to solve a finite optimal control problem. Some of the advantages of using MPC are:
+conditions to solve a finite optimal control problem.\\
+Some of the advantages of using MPC, reported in \cite{camacho2004}, are:
 \begin{itemize}
 \item the ability to handle unstable, time variable, non-minimum phase systems;
 \item robustness feature with the uncertainties in the nonlinear systems;
@@ -16,8 +17,7 @@ conditions to solve a finite optimal control problem. Some of the advantages of 
 \end{itemize}
 
 
-The methodology of all the controllers belonging to the MPC family is characterized by the following strategy, represented in Figure \ref{fig:mpc_theory}. The future outputs for a  determined horizon, called  the  prediction horizon, are predicted at each instant $k$ using the process model. These predicted outputs depend on the known values up to instant $k$ (past inputs and outputs) and on the future control signals which are those to be sent to the system and calculated. The set of future control signals is calculated by optimizing a determined criterion to keep the process as close as possible to the reference trajectory. This criterion usually takes the form of a quadratic function of the errors between the predicted output signal and the predicted reference trajectory. The control effort is included in the objective function in most
-cases. 
+The methodology of all the controllers belonging to the MPC family is characterized by the following strategy, represented in Figure \ref{fig:mpc_theory}. The future outputs for a  determined horizon, called  the  prediction horizon, are predicted at each instant $k$ using the process model. These predicted outputs depend on the known values up to instant $k$ (past inputs and outputs) and on the future control signals which are those to be sent to the system and calculated. The set of future control signals is calculated by optimizing a determined criterion to keep the process as close as possible to the reference trajectory. This criterion usually takes the form of a quadratic function of the errors between the predicted output signal and the predicted reference trajectory. The control effort is included in the objective function in most cases \cite{camacho2013model}. 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=\textwidth]{./figure/mpc_theory.png}
@@ -41,12 +41,12 @@ where $\vec{x}(k)\in\mathbb{R}^n$, $\vec{u}(k)\in\mathbb{R}^m$ are the state and
 & & J(\vec{x}(k), \textbf{u}) \\
 & \text{subject to}
 & & \vec{x}_{k+i+1} = \vec{A}\vec{x}_{k+i}+ \vec{B} \vec{u}_{k+i}\quad\forall i=0,\dots N-1;\\
-& & & \vec{x}_{k+i}\in \mathbb{X}\quad\forall i=0,\dots N-1;\\
-& & & \vec{u}_{k+i}\in \mathbb{U}\quad\forall i=0,\dots N-1;\\  
-& & & \vec{x}_{k+N}\in \mathbb{X}_f;\quad\vec{x}_k = \vec{x}(k).
+& & & \vec{x}_{k+i}\in \mathcal{X}\quad\forall i=0,\dots N-1;\\
+& & & \vec{u}_{k+i}\in \mathcal{U}\quad\forall i=0,\dots N-1;\\  
+& & & \vec{x}_{k+N}\in \mathcal{X}_f;\quad\vec{x}_k = \vec{x}(k).
 \end{aligned}
 \end{equation}
-where $\textbf{u}=(\vec{u}_k,\dots,\vec{u}_{k+N-1})$ is a sequence of control inputs, $\vec{x}_{k+i}$ is the state at time $k+i$ as predicted at time $k$, and $N$ is the prediction horizon. The sets $\mathbb{X}\in\mathbb{R}^n$ and $\mathbb{U}\in\mathbb{R}^m$ define the constraints on the state and the input, respectively. Finally, the set $\mathbb{X}_f\subseteq\mathbb{X}$ defines the terminal constraint on the state. If we consider a regulation problem, the system (\ref{eqn:MPC_plant_discrete}) should be steered to the origin and the cost function $J(\vec{x}(k), \textbf{u})$ could be in a quadratic form as follows:
+where $\textbf{u}=(\vec{u}_k,\dots,\vec{u}_{k+N-1})$ is a sequence of control inputs, $\vec{x}_{k+i}$ is the state at time $k+i$ as predicted at time $k$, and $N$ is the prediction horizon. The sets $\mathcal{X}\in\mathbb{R}^n$ and $\mathcal{U}\in\mathbb{R}^m$ define the constraints on the state and the input, respectively. Finally, the set $\mathcal{X}_f\subseteq\mathcal{X}$ defines the terminal constraint on the state. If we consider a regulation problem, the system (\ref{eqn:MPC_plant_discrete}) should be steered to the origin and the cost function $J(\vec{x}(k), \textbf{u})$ could be in a quadratic form as follows:
 \begin{equation}
 \label{eqn:MPC_cost_function_regulation}
 	J(\vec{x}(k), \textbf{u}) = \vec{x}^\intercal_{k+N}\vec{P}_f\vec{x}_{k+N}+\sum_{i=1}^{N}\Big(\vec{x}^\intercal_{k+i}\vec{Q}\vec{x}_{k+i}+\vec{u}_{k+i}^\intercal\vec{R}\vec{u}_{k+i}\Big)
@@ -79,8 +79,9 @@ An MPC has many strengths. Given that the model is discrete and linear it handle
 \begin{enumerate}
 \item the cost function is convex;
 \item the prediction model is linear;
-\item the constraint sets $\mathbb{X}, \mathbb{U}$ are convex.	
+\item the constraint sets $\mathcal{X}, \mathcal{U}$ are convex.	
 \end{enumerate}	
+
 The optimization handles actuator constraints and state constraints naturally in the optimization which allows for
 the process to be operated much closer to the hard constraints, which improves control performance and efficiency. Because of its predictive nature it is able to solve a variety of problems and handle disturbances smoothly.
 

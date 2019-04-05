@@ -217,7 +217,7 @@
 % http://www.gsas.harvard.edu/publications/form_of_the_phd_dissertation.php
 \renewcommand{\frontmatter}{
 	\input{frontmatter/personalize}
-	\maketitle
+	%\maketitle
 	\copyrightpage
 	\dedicationpage
 	\acknowledgments

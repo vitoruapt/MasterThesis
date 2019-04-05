@@ -2,16 +2,17 @@
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{default}
-\usepackage{subcaption}
 \usepackage{afterpage}
 \usepackage{xcolor}
 \usepackage{wrapfig}
-\usepackage{caption}
+\usepackage{caption,subcaption}
+\usepackage[font={small,it}]{caption}
 \usepackage{bbm}
-\usepackage{multimedia}
-
-\newsavebox{\tempbox}
+%\usepackage{movie15}
+%\usepackage{multimedia} 
+%\newsavebox{\tempbox}
 \usetheme{Padova}
+\setbeamertemplate{caption}[numbered]
 \title{Local Path Planning with Moving Obstacle Avoidance based on Adaptive MPC in ATLASCAR2}
 \subtitle{\itshape Tesi di Laurea in Ingegneria dell'Automazione}
 \author{Relatore: Prof. Angelo Cenedese\qquad\quad Laureando: Alberto Franco Correlatore: Prof. Vitor Santos}
@@ -71,11 +72,46 @@
 	\section{Moving Obstacle Avoidance System {\itshape \large (sistema di anticollisione con ostacoli in movimento)}} % ovvero un sistema di anticollisione con ostacoli in movimento.
 		
 	\begin{frame}{Formulazione del Problema} 
-	
+		\begin{columns}[onlytextwidth,T]
+			\begin{column}[c]{0.35\textwidth}
+				\begin{figure}
+					\centering
+					\includegraphics[width=
+					\textwidth]{./images/car_model.pdf}
+					\caption{Bicycle model.}
+					\label{fig:car_model}
+				\end{figure}
+			\end{column}			
+			\begin{column}[c]{0.6\textwidth}
+					 Quality of \textbf{reconstruction} is related to the number
+					of cameras from which the target is visible.
+					We assume that such number is more likely to be
+					higher if the field-of-views are overlapped.
+			\end{column}
+		\end{columns}
 	\end{frame}
 	
 	\begin{frame}{Design Adaptive MPC - parte 1} % progettazione dell'algoritmo di anticollisione basato su un controllore MPC adattivo.
-		
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}[c]{0.72\textwidth}
+		\begin{figure}[!h]
+			\vspace{-2.3em}
+			\centering
+			\includegraphics[width=
+			\textwidth]{./images/flowchart/flowchart.pdf}
+			\captionsetup{singlelinecheck = false, format= hang, justification=raggedright,}
+			\caption{Algoritmo decisionale.}
+			\label{fig:flowchart}
+		\end{figure}
+		\end{column}	
+		\vspace{-1.1em}		
+		\begin{column}[c]{0.27\textwidth}
+			Quality of \textbf{reconstruction} is related to the number
+			of cameras from which the target is visible.
+			We assume that such number is more likely to be
+			higher if the field-of-views are overlapped.
+		\end{column}
+	\end{columns}
 	\end{frame}
 	
 	\begin{frame}{Design Adaptive MPC - parte 2} % progettazione dell'algoritmo di anticollisione basato su un controllore MPC adattivo.
@@ -83,7 +119,23 @@
 	\end{frame}
 	
 	\begin{frame}{Risultati Simulativi}
-		
+		\begin{figure}								
+		\href{run:./video/animation_one_obstacle_left_overtaking.avi}{\includegraphics[width=\textwidth]{./images/one_obstacle_right_overtaking/overtaking_pres.pdf}}
+		\caption{\href{run:./video/animation_one_obstacle_left_overtaking.avi}{Sorpasso a sinistra di un ostacolo in movimento (animazione).}}
+		\label{fig:un_ostacolo}
+		\vspace{-1.5em}
+		\end{figure}
+		\begin{figure}
+		\href{run:./video/animation_6_obstacles.avi}{\includegraphics[width=\textwidth]{./images/6_obstacles/6_obstacles_pres.pdf}}
+		\caption{\href{run:./video/animation_6_obstacles.avi}{Sorpasso di 6 ostacoli in movimento (animazione).}}
+		\label{fig:sei_ostacoli}
+		\vspace{-1.5em}
+		\end{figure}
+		\begin{figure}
+		\href{run:./video/animation_braking_overtaking.avi}{\includegraphics[width=\textwidth]{./images/three_obstacles_no_overtaking/braking_pres.pdf}}
+		\caption{\href{./video/animation_braking_overtaking.avi}{Frenata e sorpasso di 3 ostacoli in movimento (animazione).}}
+		\label{fig:frenata}
+		\end{figure}
 	\end{frame}
 	
 	\section{Lane Following System \qquad\qquad{\itshape\large(sistema di assistenza al mantenimento della corsia)}}  % ovvero un sistema di assistenza al mantenimento della corsia.

@@ -241,7 +241,7 @@ for k = 1:length(saveSlope)
     
   %   frame = getframe(gcf);
  %    writeVideo(writerObj, frame);
-%     print('figure\6_obstacles_2','-dpdf','-r0')
+  %   print('figure\6_obstacles_pres','-dpdf','-r0')
     pause(80/car.V/length(T))
     delete(p)
     for i=1:N
@@ -249,8 +249,8 @@ for k = 1:length(saveSlope)
         delete(safe(i))
     end
 end
-% hold off
-% close(writerObj); % Saves the movie.
+ %hold off
+ %close(writerObj); % Saves the movie.
 %close(f);
 
 %obstacles6Results;

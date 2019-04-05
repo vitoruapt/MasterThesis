@@ -135,6 +135,10 @@ D.~{Fox}, W.~{Burgard}, and S.~{Thrun}, ``The dynamic window approach to
   collision avoidance,'' {\em IEEE Robotics Automation Magazine}, vol.~4,
   pp.~23--33, March 1997.
 
+\bibitem{CVM2003}
+T.~M.~Quasny, L.~Pyeatt, and J.~L.~Moore, ``Curvature-velocity method for
+  differentially steered robots,'' pp.~618--622, 01 2003.
+
 \bibitem{Frasch2013}
 J.~V. {Frasch}, A.~{Gray}, M.~{Zanon}, H.~J. {Ferreau}, S.~{Sager},
   F.~{Borrelli}, and M.~{Diehl}, ``An auto-generated nonlinear mpc algorithm
@@ -161,6 +165,16 @@ J.~{Ji}, A.~{Khajepour}, W.~W. {Melek}, and Y.~{Huang}, ``Path planning and
 N.~{Wada} and T.~{Matsumoto}, ``Driver assistance for collision avoidance by
   constrained mpc,'' in {\em 2017 56th Annual Conference of the Society of
   Instrument and Control Engineers of Japan (SICE)}, pp.~90--93, Sep. 2017.
+
+\bibitem{camacho2004}
+E.~Camacho, C.~Bordons, and C.~Alba, {\em Model Predictive Control}.
+\newblock Advanced Textbooks in Control and Signal Processing, Springer London,
+  2004.
+
+\bibitem{camacho2013model}
+E.~Camacho and C.~Alba, {\em Model Predictive Control}.
+\newblock Advanced Textbooks in Control and Signal Processing, Springer London,
+  2013.
 
 \bibitem{mpctoolbox}
 A.~Bemporad, M.~Morari, and N.~L. Ricker, ``Model predictive control toolbox:
@@ -200,6 +214,10 @@ V.~L. {Bageshwar}, W.~L. {Garrard}, and R.~{Rajamani}, ``Model predictive
 \bibitem{longitudinal}
 J.~Filip, ``Trajectory tracking for autonomous vehicles,'' Master's thesis,
   Czech Technical University, 2018.
+
+\bibitem{Nilsson2015}
+A.~Nilsson, ``{An MPC Approach To Low Speed Lane Guidance},'' Master's thesis,
+  Chalmers University of Technology, Göteborg, 2015.
 
 \bibitem{Falcone2007a}
 P.~{Falcone}, F.~{Borrelli}, J.~{Asgari}, H.~E. {Tseng}, and D.~{Hrovat}, ``A

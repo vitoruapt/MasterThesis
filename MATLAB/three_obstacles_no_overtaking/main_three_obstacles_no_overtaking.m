@@ -235,7 +235,7 @@ for k = 1:length(saveSlope)
     
      %frame = getframe(gcf);
      %writeVideo(writerObj, frame);
-      % print('figure\braking_4','-dpdf','-r0')
+      % print('figure\braking_pres','-dpdf','-r0')
     pause(80/car.V/length(T))
     delete(p)
     for i=1:N

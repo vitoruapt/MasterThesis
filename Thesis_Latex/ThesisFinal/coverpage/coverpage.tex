@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper,oneside,english]{book}
+\usepackage[]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{siunitx}
+%\usepackage[italian]{babel}
+\usepackage{DTGtesi}
+%\usepackage{latexsym}
+\usepackage{booktabs}
+% Pacchetto per l'inserimento del codice Matlab
+\usepackage{xcolor}
+%\usepackage{listings}
+%\lstset{language=Matlab}
+% Pacchetto per l'inserimento delle formule matematiche
+%\usepackage{amsmath}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+\usepackage{amsmath,amssymb}
+\newcommand{\numberset}{\mathbb}
+\newcommand{\C}{\numberset{C}}
+\newcommand{\R}{\numberset{R}}
+%\usepackage{subfigure}
+\usepackage{caption,subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[font={small,it}]{caption}
+\addto\captionsitalian{
+	\renewcommand{\contentsname}
+	{Contents} % ToC will show "Index" instead of "Content"
+}
+
+\graphicspath{{./figure/}}
+
+\renewcommand{\vec}[1]{\ensuremath{\boldsymbol{\mathit{#1}}}}
+
+\hypersetup{
+  % pdfpagelayout=SinglePage, % default
+  % pdfpagemode=UseOutlines,  % default
+  % bookmarksopen,            % default
+  % bookmarksopenlevel=2,     % default
+  linkcolor=black,
+  pdftitle=Title,
+  pdfauthor=Alberto Franco,
+  pdfsubject=Master Thesis in Automation Engineering,
+  pdfkeywords=Master Thesis Automation}
+  % Queste informazioni non vengono stampate, ma sono conservate nel documento pdf. Sono consultabili col menu "File>Document Properites>Description". Vengono buone a scopi archivistici.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          Numerazione delle formule                  %
+% Se non specificato altrimenti, il LaTeX numera le   %
+% formule come (capitolo.formula) (per esempio (2.5)  %
+% e` la quinta formula del secondo capitolo).         %
+% Con le istruzioni seguenti invece la numerazione    %
+% diventa (capitolo.sezione.formula) (per esempio     %
+% (3.2.6) e` la sesta formula della seconda sezione   %
+% del terzo capitolo):                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dati per la prima pagina della tesi %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{SchoolColor}{rgb}{0.71, 0, 0.106} % UNIPD red
+
+\school{Engineering}
+\department{Information Engineering}
+\corsodilaureamagistrale{Ingegneria dell'Automazione}
+\titolo{\textcolor{SchoolColor}{\bfseries Local Path Planning with Moving}\\\textcolor{SchoolColor}{\bfseries Obstacle Avoidance based on}\\\textcolor{SchoolColor}{\bfseries  Adaptive MPC in ATLASCAR2}}
+\supervisor[Prof.]{Angelo Cenedese}
+\cosupervisor[Prof.]{Vitor Santos}
+\mastercandidate{Alberto Franco}
+\matricola{1156523}
+\date{15$^{\text{th}}$ April 2019}
+\annoaccademico{2018/2019}
+
+%%%%%%%%%%%%%%%%%%%%
+% Inizio documento %
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\frontmatter
+
+\maketitle
+
+
+% Ridefiniamo l'etichetta per le figure e le tabelle
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+% Ridefiniamo percentuali per inserimento figure nel testo
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+\end{document}

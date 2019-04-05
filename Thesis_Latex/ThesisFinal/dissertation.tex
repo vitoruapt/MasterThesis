@@ -11,6 +11,7 @@
 \newcommand{\numberset}{\mathbb}
 %\usepackage{subfigure}
 \usepackage{caption}
+\usepackage{pdfpages}
 \captionsetup{singlelinecheck=true, justification=raggedright}
 \usepackage[justification=centerfirst]{subcaption}
 \usepackage{algorithm}
@@ -25,7 +26,7 @@
 \reversemarginpar
 
 \begin{document}
-
+	\includepdf[page=-]{./coverpage/coverpage.pdf}
 % the front matter
 \input{frontmatter/personalize}
 % \maketitle

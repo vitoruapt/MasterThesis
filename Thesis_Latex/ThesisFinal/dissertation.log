@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.10.14)  3 APR 2019 18:12
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.10.14)  5 APR 2019 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1116,10 +1116,43 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisruleclass=\count188
 \@lastruleclass=\count189
 \@thisrulewidth=\dimen271
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count190
+\calc@Bcount=\count191
+\calc@Adimen=\dimen272
+\calc@Bdimen=\dimen273
+\calc@Askip=\skip124
+\calc@Bskip=\skip125
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count192
+\calc@Cskip=\skip126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+)
+\AM@pagewidth=\dimen274
+\AM@pageheight=\dimen275
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/ppxetex.def
+File: ppxetex.def 2015/09/18 v0.5d Pdfpages driver for XeTeX (AM)
+)
+\AM@pagebox=\box55
+\AM@toc@title=\toks30
+\c@AM@survey=\count193
+\AM@templatesizebox=\box56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
-\c@subfigure=\count190
-\c@subtable=\count191
+\c@subfigure=\count194
+\c@subtable=\count195
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
@@ -1128,17 +1161,14 @@ nment
 
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count192
-\float@exts=\toks30
-\float@box=\box55
-\@float@everytoks=\toks31
-\@floatcapt=\box56
+\c@float@type=\count196
+\float@exts=\toks31
+\float@box=\box57
+\@float@everytoks=\toks32
+\@floatcapt=\box58
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\@float@every@algorithm=\toks32
-\c@algorithm=\count193
+\@float@every@algorithm=\toks33
+\c@algorithm=\count197
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
@@ -1147,16 +1177,16 @@ Package: algpseudocode
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count194
-\c@ALG@rem=\count195
-\c@ALG@nested=\count196
-\ALG@tlm=\skip124
-\ALG@thistlm=\skip125
-\c@ALG@Lnr=\count197
-\c@ALG@blocknr=\count198
-\c@ALG@storecount=\count199
-\c@ALG@tmpcounter=\count266
-\ALG@tmplength=\skip126
+\c@ALG@line=\count198
+\c@ALG@rem=\count199
+\c@ALG@nested=\count266
+\ALG@tlm=\skip127
+\ALG@thistlm=\skip128
+\c@ALG@Lnr=\count267
+\c@ALG@blocknr=\count268
+\c@ALG@storecount=\count269
+\c@ALG@tmpcounter=\count270
+\ALG@tmplength=\skip129
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/share/texlive/texmf-dist/tex/latex/emptypage/emptypage.sty
@@ -1175,62 +1205,62 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box57
+\collectedbox=\box59
 )
-\tc@llx=\dimen272
-\tc@lly=\dimen273
-\tc@urx=\dimen274
-\tc@ury=\dimen275
+\tc@llx=\dimen276
+\tc@lly=\dimen277
+\tc@urx=\dimen278
+\tc@ury=\dimen279
 Package trimclip Info: Using driver 'tc-xetex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-xetex.def
 File: tc-xetex.def 2012/05/13 v1.0 Clipping driver for xetex
 ))
-\adjbox@Width=\dimen276
-\adjbox@Height=\dimen277
-\adjbox@Depth=\dimen278
-\adjbox@Totalheight=\dimen279
+\adjbox@Width=\dimen280
+\adjbox@Height=\dimen281
+\adjbox@Depth=\dimen282
+\adjbox@Totalheight=\dimen283
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count267
+\c@checkoddpage=\count271
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box58
-\sift@deathcycles=\count268
-\@vwid@loff=\dimen280
-\@vwid@roff=\dimen281
+\@vwid@box=\box60
+\sift@deathcycles=\count272
+\@vwid@loff=\dimen284
+\@vwid@roff=\dimen285
 ))
 (./dissertation.aux (./Introduction/Introduction.aux) (./Chapter2/Chapter2.aux)
 (./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux) (./Chapter5/Chapter5.aux)
 (./Conclusions/Conclusions.aux))
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 27.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 28.
  (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1267,9 +1297,9 @@ LaTeX Font Info:    ... okay on input line 27.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 27.
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring ON on input line 27.
+LaTeX Info: Redefining \selectfont on input line 28.
+\AtBeginShipoutBox=\box61
+Package hyperref Info: Link coloring ON on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1277,11 +1307,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count269
+\c@section@level=\count273
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./dissertation.out) (./dissertation.out)
 \@outlinefile=\write3
@@ -1290,7 +1320,7 @@ LaTeX Info: Redefining \nameref on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 28.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1307,13 +1337,22 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count270
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+)
+\c__siunitx_mathsf_int=\count274
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1321,7 +1360,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1333,61 +1372,55 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c__siunitx_mathtt_int=\count271
+\c__siunitx_mathtt_int=\count275
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(./frontmatter/personalize.tex) (./frontmatter/personalize.tex)
-LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 33.
-LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 33.
-LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 33.
-Package microtype Info: Character `•' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `℃' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `™' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `−' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/8'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
-(Font)              scaled to size 6.0pt on input line 33.
-Package microtype Info: Character `•' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `℃' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `™' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `−' is missing
-(microtype)             in font `\EU1/EBGaramond(0)/m/sc/6'.
-(microtype)             Ignoring protrusion settings for this character.
 
+Package pdfpages Warning: Option `page' is unknow to \includepdf.
+(pdfpages)                Did you mean `pages'? (Note the `s'!)
+(pdfpages)                OK, I'll proceed as if it were `pages'.
+
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
+<use  "./coverpage/coverpage.pdf" >
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
+ <use  "./coverpage/coverpage.pdf" >
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
+
+<use  "./coverpage/coverpage.pdf"  page1>
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
+
+<use  "./coverpage/coverpage.pdf"  page1>
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
+
+<use  "./coverpage/coverpage.pdf"  page1>
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
+
+<use  "./coverpage/coverpage.pdf"  page1>
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-[1
+File: ./coverpage/coverpage.pdf Graphic file (type QTm)
 
-]
+<use  "./coverpage/coverpage.pdf"  page1> [1
+
+] (./frontmatter/personalize.tex)
+(./frontmatter/personalize.tex)
 LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 33.
+(Font)              scaled to size 12.0pt on input line 34.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 34.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 33.
+(Font)              scaled to size 10.95pt on input line 34.
  [2] (./frontmatter/dedication.tex) [3] [4
 
 ]
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 33.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 34.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -1395,14 +1428,12 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-(./frontmatter/thanks.tex
-File: ./figure/logo_ua.png Graphic file (type QTm)
- <use  "./figure/logo_ua.png" >) [5] [6
+(./frontmatter/thanks.tex) [5] [6
+
+] (./frontmatter/abstract.tex) [1] [2
 
 ]
-(./frontmatter/abstract.tex) [1] [2
-
-] (./dissertation.toc
+(./dissertation.toc
 
 LaTeX Font Warning: Font shape `EU1/EBGaramond(0)/bx/n' undefined
 (Font)              using `EU1/EBGaramond(0)/m/n' instead on input line 1.
@@ -1976,7 +2007,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [67]
 File: ./figure/lane_following_AMPC_sensor_dynamics.pdf Graphic file (type QTm)
  <use  "./figure/lane_following_AMPC_sensor_dynamics.pdf" > [68]
-Overfull \hbox (4.33618pt too wide) in paragraph at lines 308--331
+Overfull \hbox (4.33618pt too wide) in paragraph at lines 307--330
 \EU1/EBGaramond(0)/bx/n/10.95 The proposed adaptive MPC algorithm is designed i
 n the MATLAB/Simulink and validated through 
  []
@@ -1992,7 +2023,7 @@ File: ../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf Graphic file
  (type QTm)
 
 <use  "../../MATLAB/lane_following_curve/figure/Curvature_curve.pdf" >
-Overfull \hbox (2.4pt too wide) in paragraph at lines 357--367
+Overfull \hbox (2.4pt too wide) in paragraph at lines 356--366
 [][] [] 
  []
 
@@ -2028,17 +2059,17 @@ File: ../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pdf
 
 <use  "../../MATLAB/lane_following_curve/figure/LateralDeviationVsTime_curve.pd
 f" >
-Overfull \hbox (2.4pt too wide) in paragraph at lines 373--404
+Overfull \hbox (2.4pt too wide) in paragraph at lines 372--403
 [][] []
  []
 
 
-Overfull \hbox (2.4pt too wide) in paragraph at lines 373--404
+Overfull \hbox (2.4pt too wide) in paragraph at lines 372--403
 [] []
  []
 
 
-Overfull \hbox (2.4pt too wide) in paragraph at lines 373--404
+Overfull \hbox (2.4pt too wide) in paragraph at lines 372--403
 [] [] 
  []
 
@@ -2063,7 +2094,7 @@ File: ../../MATLAB/lane_following/figure/Reference.pdf Graphic file (type QTm)
 File: ../../MATLAB/lane_following/figure/Curvature.pdf Graphic file (type QTm)
 
 <use  "../../MATLAB/lane_following/figure/Curvature.pdf" >
-Overfull \hbox (2.4pt too wide) in paragraph at lines 419--429
+Overfull \hbox (2.4pt too wide) in paragraph at lines 418--428
 [][] [] 
  []
 
@@ -2090,12 +2121,12 @@ File: ../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf Graphic fil
 e (type QTm)
 
 <use  "../../MATLAB/lane_following/figure/LateralDeviationVsTime.pdf" >
-Overfull \hbox (2.4pt too wide) in paragraph at lines 437--467
+Overfull \hbox (2.4pt too wide) in paragraph at lines 436--466
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--467
+Underfull \hbox (badness 10000) in paragraph at lines 436--466
 [] []
  []
 
@@ -2113,7 +2144,7 @@ raphic file (type QTm)
 
 <use  "../../MATLAB/lane_following_circular_path/figure/Curvature_circular.pdf"
  >
-Overfull \hbox (2.4pt too wide) in paragraph at lines 481--491
+Overfull \hbox (2.4pt too wide) in paragraph at lines 480--490
 [][] [] 
  []
 
@@ -2158,17 +2189,17 @@ ircular.pdf Graphic file (type QTm)
 
 <use  "../../MATLAB/lane_following_circular_path/figure/LateralDeviationVsTime_
 circular.pdf" >
-Overfull \hbox (2.4pt too wide) in paragraph at lines 504--534
+Overfull \hbox (2.4pt too wide) in paragraph at lines 503--533
 [][] []
  []
 
 
-Overfull \hbox (2.4pt too wide) in paragraph at lines 504--534
+Overfull \hbox (2.4pt too wide) in paragraph at lines 503--533
 [] []
  []
 
 
-Overfull \hbox (2.4pt too wide) in paragraph at lines 504--534
+Overfull \hbox (2.4pt too wide) in paragraph at lines 503--533
 [] [] 
  []
 
@@ -2223,26 +2254,26 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
  [82] [83] [84]
 [85] [86])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
  [87]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (./dissertation.aux (./Introduction/Introduction.aux)
 (./Chapter2/Chapter2.aux) (./Chapter3/Chapter3.aux) (./Chapter4/Chapter4.aux)
 (./Chapter5/Chapter5.aux) (./Conclusions/Conclusions.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 69.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 69.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 70.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31357 strings out of 493638
- 584591 string characters out of 6146795
- 631420 words of memory out of 5000000
- 34140 multiletter control sequences out of 15000+600000
- 22235 words of font info for 115 fonts, out of 8000000 for 9000
+ 32032 strings out of 493638
+ 595239 string characters out of 6146795
+ 646834 words of memory out of 5000000
+ 34794 multiletter control sequences out of 15000+600000
+ 22219 words of font info for 113 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 60i,19n,107p,10504b,1003s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,19n,107p,10504b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on dissertation.pdf (97 pages).

@@ -1,4 +1,4 @@
-\chapter{Lane Following}
+\chapter{Lane Following System}
 In this chapter we present a Lane Following alghorithm based on Adaptive Model Predictive Control. First we introduced the case-study model, then we designed the controller and the overall procedure scheme. Finally we verified the proposed strategy in different scenarios considering a double lane change, sinusoidal and elliptic/circular paths.
 \section{Problem Formulation}
 A lane-following system is a control system that keeps the vehicle traveling along the centerline of a highway lane, while maintaining a user-set velocity. Figure \ref{fig:laneFollowing} illustrates a typical lane following scenario.
@@ -70,7 +70,7 @@ The equations describing the yaw and lateral motion are:
 	\end{array}
 \end{equation}
 where $F_{yf}$ and $F_{yr}$ are the tire forces at the front and rear axles of the vehicle, which are a function of the cornering stifness of the tires $C_F$ and $C_R$, the steering angle $\delta$ and the vehicle states.
-The ATLASCAR2 travels with a longitudinal velocity $V_x$ and a lateral velocity $V_y$. These two velocities can be used to form a vector describing the resultant velocity and its direction. In this case it is also possible to find the slip angles, the difference between the actual travelling direction of the and where it is pointed (in the previous chapter we assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance):
+The ATLASCAR2 travels with a longitudinal velocity $V_x$ and a lateral velocity $V_y$. These two velocities can be used to form a vector describing the resultant velocity and its direction. In this case it is also possible to find the slip angles, the difference between the actual travelling direction of the wheel and where it is pointed \cite{Nilsson2015} (in the previous chapter we assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance):
 \begin{equation}
 	\label{eqn:alphas}
 	\alpha_f = \delta-\theta_{vf},\qquad\quad
@@ -92,8 +92,7 @@ Finally the lateral tire forces acting on the wheels, $F_{yf}$ and $F_{yr}$, are
 	\label{eqn:lateral_tire_forces}
 	F_{yf} = 2C_F(\delta-\theta_{vf}),\qquad\quad
 	F_{yr} = -2C_R\theta_{vr}
-\end{equation} 
-
+\end{equation}
 Combining (\ref{eqn:yaw_lateral_motion}) and (\ref{eqn:lateral_tire_forces}) gives the following vehicle lateral model from parameters: 
 \begin{equation}
 \label{eqn:lateral_dynamics_simple_model}
@@ -289,7 +288,7 @@ variables are constrained as follows:
 \end{array}
 \end{equation}
 
-Moreover we have specified the weights in the standard MPC cost function. The third output, yaw angle, is allowed to float because there are only two manipulated variables to make it a square system. In this controller, there is no steady-state error in the yaw angle as long as the second output, lateral deviation, reaches 0 at steady state. Finally we have also penalized acceleration change more for smooth driving experience. This controller uses a linear model for the vehicle dynamics and updates the model online as the longitudinal velocity varies.
+Moreover we have specified the weights in the standard MPC cost function. The third output, yaw angle, is allowed to float because there are only two manipulated variables to make it a square system. In this controller, there is no steady-state error in the yaw angle as long as the second output, lateral deviation, reaches $0$ at steady state. Finally we have also penalized acceleration change more for smooth driving experience. This controller uses a linear model for the vehicle dynamics and updates the model online as the longitudinal velocity varies.
 The dynamics of the sensors (Figure \ref{fig:scheme_lane_following_sensor_dynamics}) allows us to calculate two fundamental parameters to reach the goal of keeping the vehicle in its lane and following the curved road by controlling the front steering angle:
 \begin{itemize}
 	\item $e_1$ which is the offset to the center line,
@@ -350,7 +349,7 @@ z_2=\displaystyle\frac{2.4}{43.9}(X_\text{ref}-56.46)-1.2;\\\\
 Y_\text{ref}=\displaystyle\frac{8.1}{2}(1+\tanh(z_1)) - \frac{8.4}{2}(1+\tanh(z_2)).
 \end{array}
 \end{equation}
-Figures \ref{fig:reference_laneFollowing_curve} and \ref{fig:curvature_laneFollowing_curve} represent the first trajectory that the vehicle must perform and the curvature calculated with the previous formula \ref{eqn:curvature}. 
+Figures \ref{fig:reference_laneFollowing_curve} and \ref{fig:curvature_laneFollowing_curve} represent the first trajectory that the vehicle must perform and the curvature calculated with the previous formula (\ref{eqn:curvature}). 
 
 %LANE FOLLOWING SIMPLE CURVE - PATH/CURVATURE
 \begin{figure}[!h]
@@ -431,7 +430,7 @@ Y_\text{ref}&=\displaystyle 5\sin\Big(\frac{X_\text{ref}}{20}\Big)
 \end{figure}
 
 In practice this type of route can be followed by the vehicle when it has to make a slalom between cones or it must go up some hairpin bends in the mountains. Moreover the following figures show the trend of the main parameters confirming that the control strategy used allows the vehicle to follow the path. In particular we simulated also a small error in the sensor dynamics in order to make the simulation more realistic: we added a 3 percent error to the longitudinal velocity and this is evident from the small noise in the graphs of the steering angle (Figure \ref{fig:steering_laneFollowing}) and the lateral deviation (Figure \ref{fig:lateral_deviation_laneFollowing}).
-Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the vehicle longitudinal velocity. Also in this simulation the velocity is equal to the initial condition for longitudinal velocity parameter $V_0$. At run time, we can note that $V_x$ reaches the predefined value of \SI{20}{m/s} and then it stabilizes near the cruising speed because it continues to vary the steering angle to adapt to the path to be followed. In this scenario the lateral deviation and the relative angle yaw do not converge to zero but oscillate. We can however assert that this type of oscillation is due to the type of path we are following. Furthermore the limits of this oscillation are very small indeed: in particular the lateral deviation is less than \SI{1.5}{cm} while the maximum relative yaw angle is \SI{0.04}{rad}. We can therefore state that even in this case the vehicle correctly follows the lane.
+Figure {\ref{fig:longitudinal_velocity_laneFollowing}} shows the evolution of the vehicle longitudinal velocity. Also in this simulation the velocity is equal to the initial condition for longitudinal velocity parameter $V_0$. At run time, we can note that $V_x$ reaches the predefined value of \SI{20}{m/s} and then it stabilizes near the cruising speed because it continues to vary the steering angle to adapt to the path to be followed. In this scenario the lateral deviation and the relative yaw angle do not converge to zero but oscillate. We can however assert that this type of oscillation is due to the type of path we are following. Furthermore the limits of this oscillation are very small indeed: in particular the lateral deviation is less than \SI{1.5}{cm} while the maximum relative yaw angle is \SI{0.04}{rad}. We can therefore state that, even in this case, the vehicle correctly follows the lane.
 %LANE FOLLOWING SINUSOIDAL PATH - SIGNALS
 \begin{figure}[!h]
 	\begin{minipage}[t]{0.5\textwidth}
@@ -498,7 +497,7 @@ However, the minimum lateral displacement is at the expense of the costant cruis
 
 Also in this situation we simulated a small error in the sensor dynamics in order to make the scenario more realistic: we added a 2 percent error to the longitudinal velocity and this is evident from the small noise in the graphs of the steering angle (Figure \ref{fig:steering_laneFollowing_circular}) and the lateral deviation (Figure \ref{fig:lateral_deviation_laneFollowing_circular}).
 
-As previously stated, the vehicle follows the lane and allows us to state that the control system we have designed is efficient and robust.
+As previously stated, the vehicle follows the lane and allows us to affirm that the control system we have designed is efficient and robust.
 %LANE FOLLOWING ELLIPTIC - PATH/CURVATURE
 \begin{figure}[!h]
 	\begin{minipage}[t]{0.5\textwidth}

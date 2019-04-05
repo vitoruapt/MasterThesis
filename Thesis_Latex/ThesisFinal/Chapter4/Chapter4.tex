@@ -1,4 +1,4 @@
-\chapter{Moving Obstacle Avoidance}
+\chapter{Moving Obstacle Avoidance System}
 In this chapter we present an Obstacle Avoidance alghorithm based on Adaptive Model Predictive Control. First we introduced the case-study model, then we designed the controller and the method of decision-making. Finally we verified the proposed strategy in different scenarios.
 
 \section{Problem Formulation}
@@ -11,7 +11,7 @@ The collision avoidance problem is very dependent on the vehicle modeling since 
 	\label{fig:obstacleAvoidance}
 \end{figure}
 
-This is possible if and only if there is a free lane or  sufficient space for overtaking the obstacle. In the case the road is busy with vehicles, the ATLASCAR2 must slow down and adapts its speed to that of the closest obstacle until the scenario changes.
+This is possible if and only if there is a free lane or enough space to overcome the obstacle. If the road is occupied by vehicles, the ATLASCAR2 must slow down and adjust its speed to that of the nearest obstacle until the scenario changes.
 
 \subsection{Car-like Model}
 The model used in this part of the thesis should take into account the kinematic and dynamic aspects of the vehicle. Here, we present a non linear mathematical model of a vehicle used for the development of a collision avoidance system. The model has four states and two inputs:
@@ -53,7 +53,7 @@ The ATLASCAR2 can be modeled using the non-linear kinematic bicycle model descri
 \end{equation}
 
 where $C_L$ is the car length. When the velocity is zero then the rate of change of heading angle is zero, that is, it is not possible to change the vehicle's orientation
-when it is not moving. If the front wheel is orthogonal to the back wheel, i.e. the steering angle is $\frac{\pi}{2}$, the ATLASCAR2 cannot move forward and the model enters an undefined region. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this chapter it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In particular the rate of change of heading angle is referred to as turn rate which can be evaluated with a gyroscope. This yaw rate can also be deduced from the angular velocity of the wheels on the left- and right-hand sides of the vehicle which therefore rotate at different speeds because follow arcs of different radius. We can write the non-holonomic constraint which is an expression for velocity in the vehicle's $y$-direction in the world coordinate frame as follows:
+when it is not moving. If the front wheel is orthogonal to the back wheel, i.e. the steering angle is $\frac{\pi}{2}$, the ATLASCAR2 cannot move forward and the model enters an undefined region. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this chapter it is assumed that the ATLASCAR2 does not slip, so any slippage is thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. In particular the rate of change of heading angle is referred to as turn rate which can be evaluated with a gyroscope. This yaw rate can also be deduced from the angular velocity of the wheels on the left- and right-hand sides of the vehicle which therefore rotate at different speeds because follow arcs of different radius. We can write the non-holonomic constraint which is an expression for velocity in the ATLASCAR2's $y$-direction in the world coordinate frame as follows:
 \begin{equation}
 	\dot{y}\cos\theta-\dot{x}\cos\theta=0.
 \end{equation}
@@ -262,8 +262,8 @@ In other words the constraints are evaluated as follows:
 
 In this simulation only the first three constraints are necessary because there is enough space for the overtaking without braking (the fourth and fifth constraints don't change). The first two constraints are constant and represent the left and right boundary of the road (upper and lower bound on the $y$-coordinate). The third constraint is useful to define a region where the vehicle can navigate; it consists of two parameters ($cS$ and $cI$) that are calculated in the algorithm depending on where the vehicle is located with respect to the obstacle. After calculating these parameters, the matrices $\vec{E}$, $\vec{F}$ and $\vec{G}$ are updated so that the MPC can process the new optimal input. 
 
-Finally we can analyze time signals of the ATLASCAR2 in the simulation of right overtaking of one moving obstacle. Figures \ref{fig:longitudinal_one_moving} and \ref{fig:lateral_one_moving} illustrate the longitudinal and lateral position of the vehicle with respect to time, showing a constant trend with respect to the $x$ component, while a shift from 0 can be noted regarding the $y$ coordinate due to the overcoming of the obstacle. 
-To confirm a uniform trend, the speed of the ATLASCAR2 remains fairly constant. Obviously it is possible to note from Figure \ref{fig:velocity_one_moving} that the velocity decreases very little during the first part of the overtaking phase, and then come back to the cruising speed in the second part. Instead from the remaining Figures \ref{fig:throttle_one_moving}, \ref{fig:delta_one_moving} and \ref{fig:theta_one_moving} we can observe that the throttle $T$ and the steering angle $\delta$ respect the limits we imposed while the heading angle $\theta$ is used to describe the direction the ATLASCAR2 is pointing.
+Finally we can analyze time signals of the ATLASCAR2 in the simulation of right overtaking of one moving obstacle. Figures \ref{fig:longitudinal_one_moving} and \ref{fig:lateral_one_moving} illustrate the longitudinal and lateral positions of the vehicle with respect to time, showing a constant trend with respect to the $x$ component, while a shift from $0$ can be noted regarding the $y$ coordinate due to the overcoming of the obstacle. 
+To confirm a uniform trend, the speed of the ATLASCAR2 remains fairly constant. Obviously it is possible to note from Figure \ref{fig:velocity_one_moving} that the velocity decreases very little during the first part of the overtaking phase, and then comes back to the cruising speed in the second part. Instead from the remaining Figures \ref{fig:throttle_one_moving}, \ref{fig:delta_one_moving} and \ref{fig:theta_one_moving} we can observe that the throttle $T$ and the steering angle $\delta$ respect the limits we imposed while the heading angle $\theta$ is used to describe the direction the ATLASCAR2 is pointing.
 % RESULTS ONE MOVING OBSTACLE
 \begin{figure}[!t] %vs changes to t instead of b
 	\begin{minipage}[t]{0.5\textwidth}
@@ -302,7 +302,7 @@ For a second test, additional obstacles were added to make the scenario more com
 Initially we assumed that the obstacles were located at a distance greater than the LIDAR detection range which is \SI{30}{m}. In this way every time the vehicle overtakes a car, it applies the inactive constraints to go back to the center lane. 
 
 This situation is represented in Figure \ref{fig:obstacleAvoidance_random}
-where there are three different scenarios with $N = 2,3 \text{ and } 4$ moving obstacles that drive with a constant velocity of \SI{8}{m/s} in the opposite direction with respect to the ATLASCAR2. The vehicle is capable of overtaking the obstacles on the right or left depending on their positions with respect to the road. If the $y$-coordinate of the closest obstacle is greater than 0, then the vehicle overtakes to the right, otherwise the overtaking takes place on the left lane.
+where there are three different scenarios with $N = 2,3 \text{ and } 4$ moving obstacles that drive with a constant velocity of \SI{8}{m/s} in the opposite direction with respect to the ATLASCAR2. The vehicle is capable of overtaking the obstacles on the right or left depending on their positions with respect to the road. If the $y$-coordinate of the closest obstacle is greater than $0$, then the vehicle overtakes to the right, otherwise the overtaking takes place on the left lane.
 % MULTIPLE MOVING OBSTACLE
 \begin{figure}[!h]
 	\centering
@@ -319,7 +319,7 @@ where there are three different scenarios with $N = 2,3 \text{ and } 4$ moving o
 	\label{fig:obstacleAvoidance_random}
 \end{figure}
 
-In the Figure \ref{fig:obstacleAvoidance_six_obstacles} we also hypothesized there are six moving obstacles that can drive at different speeds but initially they are at a common distance; they can have a uniform motion or a uniformely accelerated motion. We also improved the code infact in case two obstacles are too close during the simulation and their distance is less than the detection range, which is \SI{30}{m}, the ATLASCAR2 perceives the objects as a single entity and adapts to the situation. The same test can be done with the obstacles that drive in the same direction as the vehicle but to better assess and demonstrate results we decided to show a very unusual scenario. 
+In Figure \ref{fig:obstacleAvoidance_six_obstacles} we also hypothesized there are six moving obstacles that can drive at different speeds but initially they are at a common distance; they can have a uniform motion or a uniformely accelerated motion. We also improved the code infact in case two obstacles are too close during the simulation and their distance is less than the detection range, which is \SI{30}{m}, the ATLASCAR2 perceives the objects as a single entity and adapts to the situation. The same test can be done with the obstacles that drive in the same direction as the vehicle but to better assess and demonstrate results we decided to show a very unusual scenario. 
 % SIX MOVING OBSTACLES
 \begin{figure}[b!]
 	\centering
