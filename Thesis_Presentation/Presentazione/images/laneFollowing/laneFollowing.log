@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  7 JAN 2019 14:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.14)  6 APR 2019 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,21 +697,21 @@ Preview: Tightpage 0 0 0 0
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./car.png>]
 (./laneFollowing.aux) ) 
 Here is how much of TeX's memory you used:
- 19832 strings out of 493029
- 412721 string characters out of 6136233
+ 19829 strings out of 493029
+ 412659 string characters out of 6136233
  399000 words of memory out of 5000000
- 23110 multiletter control sequences out of 15000+600000
+ 23107 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,99p,10441b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on laneFollowing.pdf (1 page, 70939 bytes).
+cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b>
+Output written on laneFollowing.pdf (1 page, 58996 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
