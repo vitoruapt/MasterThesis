@@ -10,6 +10,7 @@
 \usepackage[font={scriptsize,it}]{subcaption}
 \usepackage{bbm}
 \usepackage{siunitx}
+\usepackage{amsmath,amssymb}
 %\usepackage{movie15}
 %\usepackage{multimedia} 
 %\newsavebox{\tempbox}
@@ -82,7 +83,7 @@
 	\end{frame}
 
 
-	\begin{frame}{Model Predictive Control}
+	\begin{frame}{Model Predictive Control - parte 1}
 		Model Predictive Control:
 		\begin{itemize}
 			\item tecnica avanzata basata su ottimizzazione matematica
@@ -94,6 +95,30 @@
 			\item adatta il modello di predizione per cambiare le condizioni operative
 			\item struttura di modello fissa, ma consente ai parametri del modello di evolvere nel tempo
 		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Model Predictive Control - parte 2}
+		Dato un sistema discreto LTI:
+		\begin{equation*}
+		\label{eqn:MPC_plant_discrete}
+		\vec{x}(k+1)=\vec{A}\vec{x}(k)+ \vec{B} \vec{u}(k)
+		\end{equation*}
+		%dove $\vec{x}(k)\in\mathbb{R}^n$, $\vec{u}(k)\in\mathbb{R}^m$.
+		L'idea è quella di minimizzare la funzione obiettivo assicurando che i vincoli siano rispettati:
+		\begin{equation*}
+		\label{eqn:MPC_optimization}
+		\begin{aligned}
+		& \underset{\textbf{u}}{\text{minimizzare}}
+		& & {\text{\itshape
+				\bfseries J}}(\vec{x}(k), \textbf{u}) \\
+		& \text{soggetto a}
+		& & \vec{x}_{k+i+1} = \vec{A}\vec{x}_{k+i}+ \vec{B} \vec{u}_{k+i}\quad\forall i=0,\dots N-1;\\
+		& & & \vec{x}_{k+i}\in \mathcal{X}\quad\forall i=0,\dots N-1;\\
+		& & & \vec{u}_{k+i}\in \mathcal{U}\quad\forall i=0,\dots N-1;\\  
+		& & & \vec{x}_{k+N}\in \mathcal{X}_f;\quad\vec{x}_k = \vec{x}(k).
+		\end{aligned}
+		\end{equation*}
+		%dove $\textbf{u}=(\vec{u}_k,\dots,\vec{u}_{k+N-1})$ sono una sequenza di ingressi di controllo, $\vec{x}_{k+i}$ è lo stato al tempo $k+i$ come predetto al tempo $k$, $N$ è l'orizzonte di predizione. Gli insiemi $\mathbb{X}\in\mathbb{R}^n$ e $\mathbb{U}\in\mathbb{R}^m$ definiscono i vincoli sullo stato e sull'ingresso.Infine l'insieme $\mathbb{X}_f\subseteq\mathbb{X}$ definisce il vincolo finale sullo stato. 
 	\end{frame}
 	
 	\section{Moving Obstacle Avoidance System {\itshape \large (sistema di anticollisione con ostacoli in movimento)}} % ovvero un sistema di anticollisione con ostacoli in movimento.
@@ -363,16 +388,16 @@
 	
 	\begin{frame}{Conclusioni e Sviluppi Futuri}
 		\begin{columns}[onlytextwidth,T]
-			\begin{column}[c]{0.75\textwidth}
+			\begin{column}[c]{0.79\textwidth}
 				\textbf{Conclusioni}:			\begin{itemize}
-					\item Sistema di anticollisione in ambiente dinamico (ostacoli in movimento)
-					\item Sistema di assistenza al mantenimento della corsia (Lane Keeping Assist)
+					\item Sistema di anticollisione in ambiente dinamico
+					\item Sistema Lane Keeping Assist
 				\end{itemize}
 				\textbf{Sviluppi futuri}:
 				\begin{itemize}
-					\item Combinazione dei due metodi in un unico schema di controllo
+					\item Combinazione in un unico schema di controllo
 					\item Implementazione in ambiente ROS-Gazebo
-					\item Uso di dati reali collezionati dai sensori dell'ATLASCAR2 per testare gli algoritmi sviluppati
+					\item Dati reali collezionati dai sensori dell'ATLASCAR2 per testare gli algoritmi
 				\end{itemize}
 			\end{column}
 			\begin{column}[c]{0.20\textwidth}
@@ -388,6 +413,10 @@
 				\end{figure}
 			\end{column}			
 		\end{columns}
+		\vspace{1em}
+		$\Longrightarrow$ A. Franco, 
+		V. Santos, {\itshape ``Short-term Path Planning with Multiple Moving Obstacle Avoidance based on Adaptive MPC''}, IEEE ICARSC 2019, Porto, April 24-26
 	\end{frame}
 
+	\section{Grazie per l'attenzione! \qquad\qquad{\itshape\large(Obrigado)}}
 \end{document}

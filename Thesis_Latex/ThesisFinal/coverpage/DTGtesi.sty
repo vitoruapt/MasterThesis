@@ -61,8 +61,8 @@ pdfkeywords=tesi laurea LaTeX}
 \makeindex
 
 % Nuovi comandi per la formattazione della prima pagina della tesi
-\newcommand{\@school}{Engineering}
-\newcommand{\@department}{Information Engineering}
+\newcommand{\@school}{Ingegneria}
+\newcommand{\@department}{Ingegneria dell'Informazione}
 \newcommand{\@corsodilaurea}{?}
 \newcommand{\@corsodilaureatriennale}{?}
 \newcommand{\@corsodilaureamagistrale}{?}
@@ -146,15 +146,15 @@ pdfkeywords=tesi laurea LaTeX}
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,67mm)
 \centering
-\large SCHOOL OF \@school
+\large SCUOLA DI \@school
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,74mm)
 \centering
-\large  DEPARTMENT OF \@department
+\large  DIPARTIMENTO DI \@department
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,81mm)
 \centering
-\large  SECOND CYCLE DEGREE IN AUTOMATION ENGINEERING
+\large LAUREA MAGISTRALE IN INGEGNERIA DELL'AUTOMAZIONE
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,91mm)
 \centering
@@ -162,7 +162,7 @@ pdfkeywords=tesi laurea LaTeX}
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,100mm)
 \centering
-\Large \textit{\textbf{MASTER THESIS}}
+\Large \textit{\textbf{Tesi di Laurea Magistrale}}
 %\Large \textit{\textbf{TESI DI LAUREA TRIENNALE}}
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,148mm)
@@ -175,26 +175,26 @@ pdfkeywords=tesi laurea LaTeX}
 \end{textblock*}
 % --- RELATORE E CANDIDATO ---
 \begin{textblock*}{187mm}[0,0,5](23mm,187mm)
-\noindent \large \textit{Supervisor:} \@supervisor
+\noindent \large \textit{Relatore:} \@supervisor
 \end{textblock*}
 \ifthenelse{\equal{\@cosupervisor}{?}}{}{
 \begin{textblock*}{187mm}[0,0,5](23mm,196mm)
-\noindent \large \textit{Co-Supervisor:} \@cosupervisor
+\noindent \large \textit{Correlatore:} \@cosupervisor
 \end{textblock*}}
 \begin{textblock*}{187mm}[1,0,5](187mm,220mm)
 \begin{flushright}
-\large \textit{Master Candidate:} \@mastercandidate
+\large \textit{Laureando:} \@mastercandidate
 \end{flushright}
 \end{textblock*}
 \begin{textblock*}{187mm}[1,0,5](187mm,229mm)
 \begin{flushright}
-\large  Registration Number \@matricola
+\large  Matricola \@matricola
 \end{flushright}
 \end{textblock*}
 \begin{textblock*}{210mm}[0.5,0,5](105mm,263mm)
 \centering
 \large \@date \\
-\large ACADEMIC YEAR \@annoaccademico
+\large Anno Accademico \@annoaccademico
 \end{textblock*}
 \end{rmfamily}
 \null

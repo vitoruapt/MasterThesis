@@ -1,5 +1,6 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {italian}
 \select@language {italian}
-\beamer@sectionintoc {1}{Moving Obstacle Avoidance System {\itshape \relax \fontsize {12}{14}\selectfont (sistema di anticollisione con ostacoli in movimento)}}{5}{0}{1}
-\beamer@sectionintoc {2}{Lane Following System \hskip 2em\relax \hskip 2em\relax {\itshape \relax \fontsize {12}{14}\selectfont (sistema di assistenza al mantenimento della corsia)}}{10}{0}{2}
+\beamer@sectionintoc {1}{Moving Obstacle Avoidance System {\itshape \relax \fontsize {12}{14}\selectfont (sistema di anticollisione con ostacoli in movimento)}}{6}{0}{1}
+\beamer@sectionintoc {2}{Lane Following System \hskip 2em\relax \hskip 2em\relax {\itshape \relax \fontsize {12}{14}\selectfont (sistema di assistenza al mantenimento della corsia)}}{11}{0}{2}
+\beamer@sectionintoc {3}{Grazie per l'attenzione! \hskip 2em\relax \hskip 2em\relax {\itshape \relax \fontsize {12}{14}\selectfont (Obrigado)}}{17}{0}{3}
