@@ -1,0 +1,161 @@
+Conference Speech - Albero Franco
+
+Slide 1: TITLE
+
+Good morning, my name is Alberto Franco/Vitor Santos and I will
+present a different strategy for a self-driving car short-term path planning among multiple moving obstacles. The main task is to study and implement a motion planning and execution framework in order to
+make a vehicle coexist with other moving obstacles by avoiding collision and overtake them when necessary and possible. The proposed technique, based on the Model Predictive Control paradigm, solves an optimization problem formulated in terms of cost minimization under constraints.
+
+
+Slide 2: Context of the problem to address
+
+The proposed algorithm was studied for the ATLASCAR project in which the group for Robotics and Automation at the University of Aveiro has setup and
+adapted a common commercial vehicle to provide a versatile framework to develop studies and research. The challenge for this work was to design a local path planing system that drives the ATLASCAR2 in a road lane with multiple moving obstacles.
+
+
+Slide 3: ATLASCAR current local motion planner
+
+The current trajectory generator shows some instability and still needs to be tested with multiple moving obstacles. 
+
+
+Slide 4: Path planning methods
+
+In the literature many collision avoidance methods have been developed
+for wheeled mobile robots; they can be grouped in four categories: graph-search based methods, artificial potential field based methods, meta-heuristic based methods and mathematical optimization based
+methods. The latter are very interesting because they offer a systematic and precise way to take vehicle dynamics and safety constraints into account and can produce optimal control inputs.
+In this case, we want to design an obstacle avoidance system that moves the ATLASCAR2 around a moving obstacle in the lane using throttle
+and steering angle.
+
+
+Slide 5: Adaptive Model Predictive Control
+
+Model Predictive Control is an advanced method that predicts future behavior using a linear-time-invariant (LTI) dynamic model. These predictions are not exact and a good strategy is to make MPC insensitive to
+prediction errors. If the plant is strongly nonlinear or its characteristics vary dramatically with time, MPC performance might become unacceptable because LTI prediction accuracy degrade. A method that can ad-
+dress this degradation by adapting the prediction model for changing operating conditions is called Adaptive MPC: this control strategy uses a fixed model structure, but allows the model parameters to evolve with time.
+Ideally, whenever the controller requires a prediction, it uses a model appropriate for the current conditions.
+
+
+Slide 6: Moving Obstacle Avoidance
+
+Now we will see our Moving Obstacle Avodidance System
+
+
+Slide 7: Problem Formulation - part 1
+
+The ATLASCAR2 is modeled using the nonlinear kinematic bicycle model described by the following equations of motion where where (x, y) are the global coordinates of the contact point between the rear wheel and the ground, θ is the heading angle of the car body with respect to the x -
+axis and v is the linear speed of the car. The control inputs are T the throttle and δ the steering angle. In order to simplify the model, it is assumed that only the front wheel can be steered. Moreover, in this paper it is assumed that the ATLASCAR2 does not slip, so any slippage is
+thus considered as an external disturbance. Under this assumption, the slip angle is zero, meaning that the velocity is directed along the heading of the vehicle. Finally we assume that all the states are measurable.
+
+
+Slide 8: Problem Formulation - part 2
+
+In order to use MPC, the state space model needs to
+be linearized with a first order approximation and also
+re-written in a more compact form.
+The system to be controlled is usually modeled by a discrete state-
+space model in the MPC literature. Therefore, it is
+transformed into a discrete state-space model with the Euler Method
+
+
+Slide 9: Design of Adaptive MPC - part 1
+
+We designed an adaptive Model Predictive Controller that can
+make the ATLASCAR2 maintain a desired velocity and
+stay in the middle of center lane of an highway.
+In the Figure it is depicted a conditional state machine designed for higher-level behavior planning. When an obstacle is detected, it defines an area on the road (in terms of constraints) that the ATLASCAR2
+must not enter during the prediction horizon. At the next
+control interval the area is redefined based on the new
+positions of the vehicle and the obstacle until passing
+is completed. To define the area to avoid, we used the
+following mixed Input/Output constraints where u and y are respectively the manipulated variable vector and the output variable vector, while E , F , G are the constraint matrices that can be updated when the
+controller is running.
+
+
+Slide 10: Design of Adaptive MPC - part 2
+
+Five constraints were defined:
+1) upper bound on the y -coordinate which is a left boundary of the road;
+2) lower bound on the y -coordinate which is a right boundary of the road;
+3) constraint for obstacle avoidance which is a line formed from the vehicle to safe zone corner for left/right passing;
+4) upper bound on the x -coordinate which is the position of the
+closest obstacle;
+5) lower bound on the x -coordinate which is the position of the
+ATLASCAR2.
+
+
+Slide 11: Simulation Results - One Moving Obstacle 
+
+The performances of the proposed adaptive MPC
+based vehicle control method are demonstrated in three
+simulation examples. We tried to choose parameters
+that were as close as possible to a real situation. Here there are the parameters used for all the simulations. Blue paths in all the animations are known only at the end of the simulations but we have decided to report the entire trajectory that the vehicle will perform in every frame.
+In this first simulation the ATLASCAR2 drives in the
+middle of the center lane while the road is completely
+free and when there is an obstacle, the vehicle passes
+it only using the left lane
+
+Slide 12 
+
+Here we reported the alghortithm that summarizes the main steps to compute
+custom constraints for the obstacle; when the vehicle
+detects the obstacle, the constraints are computed as
+follows: if the ATLASCAR2 is already in the adjacent
+lane, it uses the safety zone as the constraint,
+otherwise the vehicle must be above the line formed from
+the ATLASCAR2 to safe zone corner for right passing. If the vehicle is parallel to the obstacle, it uses the safety zone as the constraint and
+finally if it has passed the obstacle, it uses the inactive
+constraint to go back to the center lane.
+
+Slide 13 
+
+The vehicle is capable of overtaking the obstacles on the right or left depending on their positions with respect to the road. If the y -coordinate of the closest obstacle is greater than 0, then the vehicle overtakes to the right, otherwise the overtaking takes place on the left lane. We also hypothesized that the obstacles move at different
+speeds but that they are initially at a common distance.
+In case two obstacles are too close during the simulation
+and their distance is less than the detection range, which
+is 30 m , the ATLASCAR2 perceives the objects as a
+single entity and adapts to the situation.
+
+Slide 14-15
+
+Finally we have improved the code related to the mixed
+Input/Output constraints so that in the case there are
+3 obstacles that block the road and drive at a lower
+speed than the ATLASCAR2, the velocity of the vehicle
+decreases in order to prevent the collision.
+In the first part of the simulation, the
+ATLASCAR2 brakes because there is not enough space
+for overtaking the cars as shown in the first figure. A collision would happen if the vehicle continues to follow the initially planned path with the reference velocity.
+It is possible to notice that the speed decreases because the
+applied throttle is negative, so a consistent deceleration
+is set after ≈ 1.5 s as depicted in the second figure. After a few
+seconds the fastest obstacle moves and makes available
+the left lane. Dramatic changes of steering angle in early
+stage are observed in the third figure and consequently also on
+the heading angle in fourth figure. Then, the ATLASCAR2
+returns to the reference velocity during the overtaking
+of the two obstacles. It is seen that the vehicle avoids
+the obstacles and returns to the road center line with a
+low overshoot.
+
+Slide 16 
+This work proposes an advanced method for short
+term motion planning of an autonomous car based on
+adaptive Model Predictive Control. The central compo-
+nent is an obstacle avoidance system that moves the
+vehicle around different moving obstacles in the lane
+using throttle and steering angle. This system updates
+both the predictive model and the mixed input/output
+constraints at each control interval. The vehicle is also
+able to brake in order to prevent collisions against
+closest obstacles. The flexibility of the concepts used
+in the algorithm allows a multitude of refinements and
+extensions to this work. We can add to this algorithm
+a lane following system that keeps the ATLASCAR2
+traveling along the center line of the lanes on the road by
+adjusting the front steering angle of the car. The future
+work includes the combination of these two control
+strategies in a way that they can operate simultaneously.
+Next expected steps include the migration to ROS-
+Gazebo simulation environment and, later on, the usage
+of real data collected on board the ATLASCAR2 and,
+ultimately, test it in a real autonomous driving scenario.
